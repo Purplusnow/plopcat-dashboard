@@ -24,9 +24,9 @@ from datetime import date, timedelta
 
 from google.cloud import bigquery
 
-PROJECT = os.environ.get("BQ_PROJECT", "plopcat-6d336")
-LOCATION = os.environ.get("BQ_LOCATION", "asia-northeast3")
-DATASET = os.environ.get("BQ_DATASET", "")
+PROJECT = os.environ.get("BQ_PROJECT") or "plopcat-6d336"
+LOCATION = os.environ.get("BQ_LOCATION") or "asia-northeast3"
+DATASET = os.environ.get("BQ_DATASET") or ""
 
 client = bigquery.Client(project=PROJECT, location=LOCATION)
 

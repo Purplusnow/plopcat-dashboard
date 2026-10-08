@@ -20,8 +20,8 @@ from google.cloud import bigquery
 
 import queries as Q
 
-client = bigquery.Client(project=os.environ.get("BQ_PROJECT", "plopcat-6d336"),
-                         location=os.environ.get("BQ_LOCATION", "asia-northeast3"))
+client = bigquery.Client(project=os.environ.get("BQ_PROJECT") or "plopcat-6d336",
+                         location=os.environ.get("BQ_LOCATION") or "asia-northeast3")
 fails = []
 
 

@@ -18,6 +18,15 @@ jobs:
         run: |
           printf '%s' '${{ secrets.GCP_SA_KEY }}' > /tmp/sa.json
           python3 -c "import json;json.load(open('/tmp/sa.json'));print('키 형식 OK')"
+      - name: 쿼리 자가검증
+        # ★수집 전에 **답을 아는 입력**으로 쿼리를 먼저 돌린다. 쿼리가 틀린 채로
+        #   수집하면 그럴듯한 숫자가 JSON 에 박혀서, 틀렸다는 걸 알 길이 없다.
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: /tmp/sa.json
+          BQ_PROJECT: ${{ vars.BQ_PROJECT }}
+          BQ_LOCATION: ${{ vars.BQ_LOCATION }}
+        run: python3 tools/selftest.py
+
       - name: 수집
         env:
           GOOGLE_APPLICATION_CREDENTIALS: /tmp/sa.json

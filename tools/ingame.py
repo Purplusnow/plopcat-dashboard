@@ -24,10 +24,13 @@ import queries as Q
 
 KST = timezone(timedelta(hours=9))      # 수집 스케줄이 KST라 갱신 표기도 KST
 
-PROJECT = os.environ.get("BQ_PROJECT", "plopcat-6d336")
-DATASET = os.environ.get("BQ_DATASET", "")          # 비우면 자동 탐색
-LOCATION = os.environ.get("BQ_LOCATION", "asia-northeast3")
-WINDOW_DAYS = int(os.environ.get("WINDOW_DAYS", "45"))
+# ★os.environ.get(키, 기본값) 은 **빈 문자열도 값으로 친다.** Actions 가
+#   미설정 vars 를 "" 로 넘기면 기본값이 통째로 사라진다(projects//datasets 404 를 봤다).
+#   그래서 전부 `or 기본값` 으로 받는다 — 안 넣어도 돌아가야 한다.
+PROJECT = os.environ.get("BQ_PROJECT") or "plopcat-6d336"
+DATASET = os.environ.get("BQ_DATASET") or ""        # 비우면 자동 탐색
+LOCATION = os.environ.get("BQ_LOCATION") or "asia-northeast3"
+WINDOW_DAYS = int(os.environ.get("WINDOW_DAYS") or "45")
 
 # ★개발자 본인 기기 — 릴리스 빌드라 버전으로는 못 가른다. user_pseudo_id 로 뺀다.
 #   (쉼표로 여러 개. tools/whoami.py 가 후보를 찾아 준다.)
