@@ -1,0 +1,35 @@
+:root{--bg:#14121c;--card:#1e1b2a;--line:#302b42;--tx:#ece7f5;--dim:#9b92b5;
+      --go:#57b94a;--warn:#e8a33b;--bad:#e8484f;--acc:#9b7ddb}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);
+     font:15px/1.6 -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif}
+header{padding:22px 18px 10px;border-bottom:1px solid var(--line)}
+h1{margin:0;font-size:22px;letter-spacing:.5px}
+.sub{color:var(--dim);font-size:13px;margin-top:4px}
+main{padding:18px;max-width:1180px;margin:0 auto}
+section{margin:0 0 30px}
+h2{font-size:17px;margin:0 0 4px;display:flex;align-items:baseline;gap:8px}
+.note{font-size:12px;color:var(--acc);font-weight:400}
+.why{margin:0 0 12px;color:var(--dim);font-size:13px}
+.why b{color:var(--tx)}
+code{background:#000;padding:1px 5px;border-radius:4px;font-size:12px;color:var(--acc)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+@media(max-width:800px){.two{grid-template-columns:1fr}}
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px}
+.kpi .box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+.kpi .box .k{color:var(--dim);font-size:12px}
+.kpi .box .v{font-size:26px;font-weight:700;margin-top:2px}
+.scroll{max-height:380px;overflow:auto;border:1px solid var(--line);border-radius:10px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{padding:7px 10px;text-align:right;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+thead th{position:sticky;top:0;background:var(--card);color:var(--dim);
+         font-weight:600;border-bottom:1px solid var(--line)}
+tbody tr:nth-child(even){background:rgba(255,255,255,.025)}
+.chart{display:flex;align-items:flex-end;gap:1px;height:150px;padding:10px;
+       background:var(--card);border:1px solid var(--line);border-radius:10px;
+       margin-bottom:12px;overflow-x:auto}
+.chart i{flex:0 0 5px;background:var(--go);border-radius:1px;min-height:1px}
+.chart i.warn{background:var(--warn)} .chart i.bad{background:var(--bad)}
+.empty{color:var(--dim);padding:16px;text-align:center}
+footer{padding:16px 18px 40px;color:var(--dim);font-size:12px;text-align:center}

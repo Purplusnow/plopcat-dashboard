@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PLOPCAT BOARD</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>🐾 PLOPCAT BOARD</h1>
+  <div class="sub" id="meta">불러오는 중…</div>
+</header>
+
+<main>
+  <section class="kpi" id="kpi"></section>
+
+  <!-- ①: 이 게임에서 가장 중요한 그림. 꺾이는 레벨 = 벽 = 난이도를 손볼 자리. -->
+  <section>
+    <h2>① 레벨별 클리어율 <span class="note">꺾이는 곳이 벽이다</span></h2>
+    <p class="why">분모는 <b>시작한 사람</b>(<code>level_start</code>)이다.
+      깬 사람만 세면 "어려운 판"과 "아무도 도달 못 한 판"이 똑같이 0으로 보인다.</p>
+    <div id="levelChart" class="chart"></div>
+    <div class="scroll"><table id="levelTable"></table></div>
+  </section>
+
+  <!-- ②③: 클리어율만으로는 안 보이는 것 -->
+  <section class="two">
+    <div>
+      <h2>③ 못 깬 판</h2>
+      <p class="why">벽에 막혀 떠난 유저는 <code>level_clear</code>를 영영 안 쏜다 — 여기서만 보인다.</p>
+      <div class="scroll"><table id="stuckTable"></table></div>
+    </div>
+    <div>
+      <h2>하트가 바닥난 지점</h2>
+      <p class="why">과금·이탈 압력이 걸리는 자리.</p>
+      <div class="scroll"><table id="heartTable"></table></div>
+    </div>
+  </section>
+
+  <!-- ④ 리텐션 기둥 -->
+  <section>
+    <h2>④ 수집 메타 <span class="note">리텐션 기둥</span></h2>
+    <p class="why">완성만 보면 "열어는 봤는데 안 맞춘" 유저가 안 보인다.</p>
+    <div class="kpi" id="album"></div>
+  </section>
+
+  <!-- ⑤ 수익 -->
+  <section class="two">
+    <div>
+      <h2>⑤ 상점 퍼널</h2>
+      <div class="scroll"><table id="shopTable"></table></div>
+    </div>
+    <div>
+      <h2>광고 결과 <span class="note">= 공급 실패율</span></h2>
+      <p class="why"><code>no_ad</code>가 많으면 인벤토리가 없는 것이다.</p>
+      <div class="scroll"><table id="adTable"></table></div>
+    </div>
+  </section>
+
+  <section class="two">
+    <div>
+      <h2>아이템 조달 경로</h2>
+      <p class="why">같은 힌트라도 광고면 광고수익, 젬이면 결제수익, 발바닥이면 둘 다 아니다.</p>
+      <div class="scroll"><table id="boostTable"></table></div>
+    </div>
+    <div>
+      <h2>⑥ 온보딩 척추</h2>
+      <p class="why">계정당 평생 1회라 전체 기간으로 센다(창으로 자르면 코호트가 섞여 역전된다).</p>
+      <div class="scroll"><table id="onbTable"></table></div>
+    </div>
+  </section>
+</main>
+
+<footer id="foot"></footer>
+<script src="app.js"></script>
+</body>
+</html>

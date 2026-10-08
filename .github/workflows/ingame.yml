@@ -1,0 +1,35 @@
+name: ingame
+# 매일 KST 11:20 — 인생 2막 보드와 같은 시각(둘을 나란히 볼 때 기준일이 어긋나지 않게).
+on:
+  schedule: [{cron: "20 2 * * *"}]     # 02:20 UTC = 11:20 KST
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -q google-cloud-bigquery
+      - name: 서비스계정 키 쓰기
+        # ★키는 파일로만 쓰고 로그에 절대 안 남긴다. 레포에 커밋되지 않도록 /tmp 에 둔다.
+        run: |
+          printf '%s' '${{ secrets.GCP_SA_KEY }}' > /tmp/sa.json
+          python3 -c "import json;json.load(open('/tmp/sa.json'));print('키 형식 OK')"
+      - name: 수집
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: /tmp/sa.json
+          BQ_PROJECT: ${{ vars.BQ_PROJECT }}
+          BQ_DATASET: ${{ vars.BQ_DATASET }}
+          BQ_LOCATION: ${{ vars.BQ_LOCATION }}
+          EXCLUDE_USERS: ${{ vars.EXCLUDE_USERS }}
+        run: python3 tools/ingame.py
+      - name: 커밋
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/ingame.json
+          git diff --staged --quiet || git commit -m "지표 갱신 $(date -u +%Y-%m-%d)"
+          git push
