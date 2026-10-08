@@ -20,6 +20,8 @@ from datetime import date, datetime, timedelta, timezone
 
 from google.cloud import bigquery
 
+import queries as Q
+
 KST = timezone(timedelta(hours=9))      # 수집 스케줄이 KST라 갱신 표기도 KST
 
 PROJECT = os.environ.get("BQ_PROJECT", "plopcat-6d336")
@@ -30,6 +32,8 @@ WINDOW_DAYS = int(os.environ.get("WINDOW_DAYS", "45"))
 # ★개발자 본인 기기 — 릴리스 빌드라 버전으로는 못 가른다. user_pseudo_id 로 뺀다.
 #   (쉼표로 여러 개. tools/whoami.py 가 후보를 찾아 준다.)
 EXCLUDE_USERS = [u.strip() for u in os.environ.get("EXCLUDE_USERS", "").split(",") if u.strip()]
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 OUT = os.path.join(os.path.dirname(__file__), "..", "docs", "data", "ingame.json")
 
@@ -72,19 +76,6 @@ def q(sql: str) -> list:
     return [dict(r) for r in client.query(sql).result()]
 
 
-def ev(name: str) -> str:
-    return "event_name = '%s'" % name
-
-
-def p_int(key: str) -> str:
-    """이벤트 파라미터에서 정수 하나."""
-    return ("(SELECT value.int_value FROM UNNEST(event_params) WHERE key = '%s')" % key)
-
-
-def p_str(key: str) -> str:
-    return ("(SELECT value.string_value FROM UNNEST(event_params) WHERE key = '%s')" % key)
-
-
 def main() -> None:
     end = date.today() - timedelta(days=1)          # 마지막으로 landing 됐을 법한 날
     win = (end - timedelta(days=WINDOW_DAYS)).strftime("%Y%m%d")
@@ -104,82 +95,18 @@ def main() -> None:
 
     out["kpi"] = _kpi(rng, end)
 
-    # ── ① 레벨별 클리어율 — 분모가 핵심이다 ───────────────────────────
-    #    level_clear 만 보면 **깬 사람만** 남아(생존 편향) "어려운 판"과
-    #    "아무도 도달 못 한 판"이 똑같이 0 으로 보인다.
-    out["levels"] = q("""
-        WITH s AS (
-          SELECT %s lv, COUNT(DISTINCT user_pseudo_id) started
-          FROM %s WHERE %s GROUP BY lv
-        ), c AS (
-          SELECT %s lv, COUNT(DISTINCT user_pseudo_id) cleared,
-                 AVG(%s) attempts, AVG(%s) over_moves, AVG(%s) secs,
-                 AVG(%s + %s + %s + %s) items
-          FROM %s WHERE %s GROUP BY lv
-        )
-        SELECT s.lv, s.started, IFNULL(c.cleared, 0) cleared,
-               SAFE_DIVIDE(c.cleared, s.started) rate,
-               ROUND(c.attempts, 2) attempts, ROUND(c.over_moves, 2) over_moves,
-               ROUND(c.secs, 1) secs, ROUND(c.items, 2) items
-        FROM s LEFT JOIN c USING (lv)
-        WHERE s.lv IS NOT NULL
-        ORDER BY s.lv LIMIT 400
-    """ % (p_int("level"), TABLE, human("%s AND %s" % (rng, ev("level_start"))),
-           p_int("level"), p_int("attempts"), p_int("over"), p_int("play_secs"),
-           p_int("hints"), p_int("undos"), p_int("tows"), p_int("restarts"),
-           TABLE, human("%s AND %s" % (rng, ev("level_clear")))))
-
-    # ── ③ 못 깬 판 — 벽에 막혀 떠난 유저는 여기서만 보인다 ─────────────
-    out["stuck"] = q("""
-        SELECT %s lv, COUNT(*) n, ROUND(AVG(%s), 2) attempts, ROUND(AVG(%s), 2) hints
-        FROM %s WHERE %s GROUP BY lv HAVING lv IS NOT NULL
-        ORDER BY n DESC LIMIT 25
-    """ % (p_int("level"), p_int("attempts"), p_int("hints"),
-           TABLE, human("%s AND %s" % (rng, ev("level_stuck")))))
-
-    # ── ④ 수집 메타(리텐션 기둥) ──────────────────────────────────────
-    out["album"] = q("""
-        SELECT
-          COUNT(DISTINCT IF(event_name = 'album_open', user_pseudo_id, NULL)) opened,
-          COUNT(DISTINCT IF(event_name = 'picture_done', user_pseudo_id, NULL)) finished,
-          COUNTIF(event_name = 'picture_done') pictures
-        FROM %s WHERE %s
-    """ % (TABLE, human("%s AND event_name IN ('album_open','picture_done')" % rng)))
-
-    # ── ⑤ 수익 ──────────────────────────────────────────────────────
-    out["shop_funnel"] = q("""
-        SELECT event_name step, COUNT(DISTINCT user_pseudo_id) users, COUNT(*) n
-        FROM %s WHERE %s GROUP BY step
-    """ % (TABLE, human("%s AND event_name IN "
-                        "('shop_open','purchase_start','purchase','purchase_fail')" % rng)))
-
-    # 광고 결과 분포 = **공급 실패율**. no_ad 가 많으면 인벤토리가 없는 것이다.
-    out["ads"] = q("""
-        SELECT %s placement, %s result, COUNT(*) n
-        FROM %s WHERE %s GROUP BY placement, result ORDER BY n DESC LIMIT 30
-    """ % (p_str("placement"), p_str("result"),
-           TABLE, human("%s AND %s" % (rng, ev("ad_reward")))))
-
-    # 아이템 조달 경로 — 같은 힌트라도 광고면 광고수익, 젬이면 결제수익, 발바닥이면 둘 다 아니다
-    out["boosters"] = q("""
-        SELECT %s kind, %s source, COUNT(*) n
-        FROM %s WHERE %s GROUP BY kind, source ORDER BY n DESC LIMIT 30
-    """ % (p_str("kind"), p_str("source"),
-           TABLE, human("%s AND %s" % (rng, ev("booster_use")))))
-
-    # 하트 바닥 = 과금·이탈 압력이 걸리는 지점
-    out["out_of_hearts"] = q("""
-        SELECT %s lv, COUNT(*) n FROM %s WHERE %s
-        GROUP BY lv HAVING lv IS NOT NULL ORDER BY n DESC LIMIT 20
-    """ % (p_int("level"), TABLE, human("%s AND %s" % (rng, ev("out_of_hearts")))))
-
-    # ── ⑥ 온보딩 척추(계정당 평생 1회) ────────────────────────────────
-    #    ★평생 이벤트라 **창으로 자르면 코호트가 섞여** 퍼널이 역전된다
-    #      (창 전에 1단계 한 사람 + 창 안에서 5단계 한 사람). 전체 기간으로 센다.
-    out["onboard"] = q("""
-        SELECT %s step, COUNT(DISTINCT user_pseudo_id) users
-        FROM %s WHERE %s GROUP BY step HAVING step IS NOT NULL ORDER BY step
-    """ % (p_int("step"), TABLE, human(ev("onboard_step"))))
+    # ★쿼리는 tools/queries.py 한 곳에만 있다. 여기서 베껴 들면 selftest 와 갈라진다.
+    f_win = human(rng)
+    out["levels"] = q(Q.levels(TABLE, f_win))
+    out["stuck"] = q(Q.stuck(TABLE, f_win))
+    out["album"] = q(Q.album(TABLE, f_win))
+    out["shop_funnel"] = q(Q.shop_funnel(TABLE, f_win))
+    out["ads"] = q(Q.ads(TABLE, f_win))
+    out["boosters"] = q(Q.boosters(TABLE, f_win))
+    out["out_of_hearts"] = q(Q.out_of_hearts(TABLE, f_win))
+    # ★온보딩만 **기간을 안 건다** — 계정당 평생 1회라 창으로 자르면 코호트가 섞여
+    #   퍼널이 역전된다(창 전에 1단계만 한 사람 + 창 안에서 5단계 한 사람).
+    out["onboard"] = q(Q.onboard(TABLE, human("TRUE")))
 
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, "w", encoding="utf-8") as f:
@@ -192,14 +119,7 @@ def main() -> None:
 def _kpi(rng: str, end: date) -> list:
     d1 = end.strftime("%Y%m%d")
     d7 = (end - timedelta(days=6)).strftime("%Y%m%d")
-    return q("""
-        SELECT
-          COUNT(DISTINCT IF(_TABLE_SUFFIX = '%s', user_pseudo_id, NULL)) dau,
-          COUNT(DISTINCT IF(_TABLE_SUFFIX >= '%s', user_pseudo_id, NULL)) wau,
-          COUNT(DISTINCT user_pseudo_id) users,
-          COUNT(DISTINCT IF(event_name = 'first_open', user_pseudo_id, NULL)) new_users
-        FROM %s WHERE %s
-    """ % (d1, d7, TABLE, human(rng)))
+    return q(Q.kpi(TABLE, human(rng), d1, d7))
 
 
 if __name__ == "__main__":

@@ -1,3 +1,4 @@
 sa.json
 *.key.json
 __pycache__/
+.venv/
