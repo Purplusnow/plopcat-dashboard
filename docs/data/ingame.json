@@ -1,19 +1,30 @@
 {
- "updated": "2026-10-09 18:16 KST",
+ "updated": "2026-10-10 07:08 KST",
  "window_days": 45,
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
- "excluded_users": 0,
- "last_table": "20261006",
+ "excluded_users": 5,
+ "last_table": "20261008",
  "kpi": [
   {
    "dau": 0,
    "wau": 1,
    "users": 1,
-   "new_users": 0
+   "new_users": 1
   }
  ],
- "levels": [],
+ "levels": [
+  {
+   "lv": 1,
+   "started": 1,
+   "cleared": 0,
+   "rate": null,
+   "attempts": null,
+   "over_moves": null,
+   "secs": null,
+   "items": null
+  }
+ ],
  "stuck": [],
  "album": [
   {
