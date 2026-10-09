@@ -1,2 +1,30 @@
-{"updated": "아직 수집 전", "kpi": [], "levels": [], "stuck": [], "album": [],
- "shop_funnel": [], "ads": [], "boosters": [], "out_of_hearts": [], "onboard": []}
+{
+ "updated": "2026-10-09 18:16 KST",
+ "window_days": 45,
+ "project": "plopcat-6d336",
+ "dataset": "analytics_549220184",
+ "excluded_users": 0,
+ "last_table": "20261006",
+ "kpi": [
+  {
+   "dau": 0,
+   "wau": 1,
+   "users": 1,
+   "new_users": 0
+  }
+ ],
+ "levels": [],
+ "stuck": [],
+ "album": [
+  {
+   "opened": 0,
+   "finished": 0,
+   "pictures": 0
+  }
+ ],
+ "shop_funnel": [],
+ "ads": [],
+ "boosters": [],
+ "out_of_hearts": [],
+ "onboard": []
+}
