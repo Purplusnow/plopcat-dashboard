@@ -24,6 +24,11 @@ from datetime import date, timedelta
 
 from google.cloud import bigquery
 
+# 내가 테스트에 쓰는 기기 모델. ★출시 **전에만** 쓴다 — 출시 후엔 같은 모델의
+# 진짜 유저가 들어오므로 모델로 거르면 사람을 지우게 된다.
+TEST_MODELS = [m.strip() for m in
+               (os.environ.get("TEST_MODELS") or "SM-G991N,SM-G998B").split(",") if m.strip()]
+
 PROJECT = os.environ.get("BQ_PROJECT") or "plopcat-6d336"
 LOCATION = os.environ.get("BQ_LOCATION") or "asia-northeast3"
 DATASET = os.environ.get("BQ_DATASET") or ""
@@ -81,8 +86,18 @@ def main() -> None:
               % (r["user_pseudo_id"], (r["model"] or "?")[:14], (r["country"] or "-")[:4],
                  days, r["clears"], r["max_level"], r["purchases"], per_day,
                  " ".join(why) if why else ""))
-    print("\n★위에서 본인 기기를 골라 Actions 시크릿/환경변수 EXCLUDE_USERS 에 쉼표로 넣는다.")
-    print("  디버그빌드·지역없음은 ingame.py 가 **이미 자동으로** 뺀다 — 여기엔 참고로만 보인다.")
+    # ★붙여넣을 문자열을 **완성해서** 준다.
+    #   user_pseudo_id 는 **재설치할 때마다 새로 생긴다** — 그래서 목록은 한 번 넣고 끝이 아니라
+    #   테스트 기기를 다시 깔 때마다 늘어난다(실측: 같은 폰이 3개로 잡혔다).
+    #   손으로 id 를 옮겨 적다 한 글자 틀리면 조용히 안 걸러지므로 기계가 만들어 준다.
+    now = [u.strip() for u in os.environ.get("EXCLUDE_USERS", "").split(",") if u.strip()]
+    known = [r["user_pseudo_id"] for r in rows if (r["model"] or "") in TEST_MODELS]
+    merged = list(dict.fromkeys(now + known))
+    print("\n★테스트 기기로 보이는 것(모델 %s)을 합친 EXCLUDE_USERS:" % ", ".join(TEST_MODELS))
+    print("\n%s\n" % ",".join(merged))
+    print("  gh variable set EXCLUDE_USERS -R Purplusnow/plopcat-dashboard --body \"<위 줄>\"")
+    print("\n  ※모델이 같아도 **출시 후엔 진짜 유저일 수 있다**(SM-G991N 은 갤럭시 S21).")
+    print("    출시 전에만 이렇게 쓰고, 이후엔 새로 늘어난 id 만 눈으로 보고 더한다.")
 
 
 if __name__ == "__main__":
