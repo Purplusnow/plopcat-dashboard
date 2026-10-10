@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-11 07:18 KST",
+ "updated": "2026-10-11 07:19 KST",
  "window_days": 45,
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
@@ -117,17 +117,17 @@
    "buys": 0
   },
   {
-   "country": "Brazil",
-   "users": 1,
-   "avg_lv": 4.0,
-   "cleared_any": 1,
-   "buys": 0
-  },
-  {
    "country": "United States",
    "users": 1,
    "avg_lv": 0.0,
    "cleared_any": 0,
+   "buys": 0
+  },
+  {
+   "country": "Brazil",
+   "users": 1,
+   "avg_lv": 4.0,
+   "cleared_any": 1,
    "buys": 0
   }
  ]
