@@ -1,0 +1,6 @@
+{
+ "updated": "",
+ "note": "하루 한 줄. 숫자면 원화, {\"USD\": 8.97} 이면 그날 환율로 환산. 날짜는 모두 KST. ads=마케팅비(Google Ads), admob=광고매출, iap=인앱매출.",
+ "daily": [],
+ "synced": {}
+}

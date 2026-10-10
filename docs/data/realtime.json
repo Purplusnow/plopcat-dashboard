@@ -1,0 +1,144 @@
+{
+ "updated": "2026-10-11 07:08 KST",
+ "project": "plopcat-6d336",
+ "dataset": "analytics_549220184",
+ "day": "20261011",
+ "steps": [
+  {
+   "key": "game_open",
+   "label": "게임 진입"
+  },
+  {
+   "key": "first_move",
+   "label": "첫 수"
+  },
+  {
+   "key": "lv1_clear",
+   "label": "1판 클리어"
+  },
+  {
+   "key": "lv3_clear",
+   "label": "3판"
+  },
+  {
+   "key": "album_first",
+   "label": "미술관 열기"
+  },
+  {
+   "key": "first_piece",
+   "label": "첫 조각"
+  },
+  {
+   "key": "lv10_clear",
+   "label": "10판"
+  },
+  {
+   "key": "first_picture",
+   "label": "첫 그림 완성"
+  },
+  {
+   "key": "lv20_clear",
+   "label": "20판"
+  },
+  {
+   "key": "lv50_clear",
+   "label": "50판"
+  }
+ ],
+ "reach": [
+  {
+   "key": "game_open",
+   "label": "게임 진입",
+   "users": 1
+  },
+  {
+   "key": "first_move",
+   "label": "첫 수",
+   "users": 1
+  },
+  {
+   "key": "lv1_clear",
+   "label": "1판 클리어",
+   "users": 1
+  },
+  {
+   "key": "lv3_clear",
+   "label": "3판",
+   "users": 1
+  },
+  {
+   "key": "album_first",
+   "label": "미술관 열기",
+   "users": 0
+  },
+  {
+   "key": "first_piece",
+   "label": "첫 조각",
+   "users": 0
+  },
+  {
+   "key": "lv10_clear",
+   "label": "10판",
+   "users": 0
+  },
+  {
+   "key": "first_picture",
+   "label": "첫 그림 완성",
+   "users": 0
+  },
+  {
+   "key": "lv20_clear",
+   "label": "20판",
+   "users": 0
+  },
+  {
+   "key": "lv50_clear",
+   "label": "50판",
+   "users": 0
+  }
+ ],
+ "users": [
+  {
+   "uid": "a4896177",
+   "t0": "00:19",
+   "mins": 1.5,
+   "model": "SM-A035M",
+   "country": "Brazil",
+   "city": "Bebedouro",
+   "lang": "pt-br",
+   "ver": "1.0 (v28)",
+   "new": false,
+   "lv": 4,
+   "started": 4,
+   "clears": 4,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 15,
+   "side": [
+    "tut_hand"
+   ],
+   "kind": "human"
+  }
+ ],
+ "bots": 0,
+ "humans": 1,
+ "versions": [
+  {
+   "ver": "1.0 (v28)",
+   "users": 1,
+   "installs": 0
+  }
+ ],
+ "countries": [
+  {
+   "country": "Brazil",
+   "users": 1
+  }
+ ],
+ "purchase_fail": [],
+ "abuse": []
+}

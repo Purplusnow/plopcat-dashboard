@@ -1,81 +1,67 @@
 # PLOPCAT BOARD
 
-퐁당냥(`com.purplusnow.plopcat`) 인게임 지표 보드. 정적 GitHub Pages.
+최종 업데이트: 2026-10-11
 
-**왜 인생 2막 보드(`secondact-dashboard`)에 안 붙였나** — 수집 뼈대는 이미
-`BQ_PROJECT`/`BQ_DATASET` 환경변수로 분리돼 있어 공유할 게 사실상 없고,
-**지표 로직은 겹치는 게 없다**(레벨 진행·그림 수집 vs 환생·도시·방치수익).
-합치면 라이브로 돌아가는 보드를 멀티앱으로 리팩터링해야 하는데, 얻는 건
-"리포 하나 덜 만들기"뿐이다. 앱이 더 쌓여 포트폴리오 뷰가 필요해지면
-**각 앱 보드가 요약 JSON 을 뱉고 상위 보드가 모으는** 구조가 맞다.
+퐁당냥(`com.purplusnow.plopcat`) 지표판. 정적 페이지 + GitHub Actions 수집.
+**https://purplusnow.github.io/plopcat-dashboard/**
 
-## 구조
+브라우저는 BigQuery 를 못 치므로, Actions 가 쿼리를 돌려 `docs/data/*.json` 으로
+떨궈 두고 페이지가 그걸 읽는다. 서버가 없다.
 
-```
-tools/ingame.py   BigQuery(GA4 export) → docs/data/ingame.json   (Actions 가 매일 실행)
-docs/             정적 페이지. JSON 한 장만 읽는다(브라우저는 BigQuery 를 못 친다)
-```
+## 뷰 다섯
 
-## 보는 것 — 퐁당냥은 "진행·난이도·수집·수익" 네 축
+| 뷰 | 보는 것 | 데이터 | 수집 |
+|---|---|---|---|
+| **매출** | 마케팅비 · 광고매출 · 인앱매출 · ROAS | `daily.json` | 손 + 자동(아래) |
+| **인게임** | 클리어율 · 벽 · 리텐션 · 버전비교 · 페이싱 · 위험신호 | `ingame.json` | 매일 11:20 KST |
+| **실시간** | 오늘 들어온 사람이 어디까지 갔나 | `realtime.json` | 30분마다 |
+| **광고** | 리워드 광고 결과 · AdMob 매출 | `ingame.json`+`daily.json` | 〃 |
+| **가입자** | 가입일별 코호트, 한 줄 = 한 사람의 평생 누적 | `users/*.json` | 매일 |
 
-지표 정의의 **단일 출처는 게임 레포의 `docs/ANALYTICS.md`** 다. 여기 쿼리는 그 식을 옮긴 것일 뿐,
-식을 바꾸려면 그쪽부터 고친다.
+## 설계에서 양보하지 않은 것
 
-| | 보는 것 | 왜 |
-|---|---|---|
-| ① 레벨별 클리어율 | `level_clear / level_start` | **분모가 핵심** — `level_clear` 만 보면 깬 사람만 남아(생존 편향) "어려운 판"과 "아무도 도달 못 한 판"이 똑같이 0 으로 보인다 |
-| ② 판당 비용 | 시도·아이템·초과 수·소요 시간 | 깨긴 깨는데 **괴로운 판**은 클리어율로는 안 보인다 |
-| ③ 못 깬 판 | `level_stuck` | 벽에 막혀 떠난 유저는 `level_clear` 를 영영 안 쏜다 — **여기서만** 보인다 |
-| ④ 수집 메타 | `album_open` → `picture_done` | 리텐션 기둥. 완성만 보면 "열어는 봤는데 안 맞춘" 유저가 안 보인다 |
-| ⑤ 수익 | 상점 퍼널 · 광고 결과 분포 · `out_of_hearts` | `booster_use.source` 가 조달 경로(광고/젬/발바닥) 비중을 가른다 |
-
-## ★사람이 아닌 줄을 거른다
-
-셋 다 안 거르면 모수가 통째로 거짓이 된다.
-
-1. **디버그 빌드** — `app_info.version LIKE 'dbg%'`. 개발 중 오토파일럿이 수백 판을 깨서
-   클리어율·레벨 분포를 혼자 뒤집는다.
-2. **Play 사전 출시 보고서 봇** — `IFNULL(geo.country,'') = ''`.
-   빌드를 올릴 때마다 실기기에서 몇 분씩 돌리는데 전부 체류 0분·첫 단계 정지라
-   리텐션·퍼널을 희석한다(인생 2막 실측: 실시간 385명 중 25명).
-3. **개발자 본인 기기** — `EXCLUDE_USERS` 에 `user_pseudo_id` 를 넣는다.
-   릴리스 빌드라 버전으로는 못 가른다. `tools/whoami.py` 가 후보를 찾아 준다.
-
-### 남는 봇 하나는 **일부러 안 거른다**
-
-지역이 잡히는 봇이 업로드 1회당 1~2개 남는다(실측: Pixel 6·미국·62초·`level_start` 1·클리어 0
-— Play 사전 출시 보고서 또는 Test Lab).
-
-이걸 행동으로 거르려면 조건이 **"0클리어 + 1일 접속"**이 되는데, 그건 **이탈한 진짜 유저의
-서명과 똑같다.** 출시 후 가장 중요하게 봐야 할 게 온보딩 이탈인데 그걸 봇으로 오인해 지우면
-**지워진 건 안 보여서** 문제가 있다는 사실조차 모르게 된다.
-
-기기 모델로 거르는 것도 안 된다 — Pixel 6 은 흔한 실기기고 미국은 타겟 시장이다.
-실제 유입이 생기면 묻히는 양이므로 **기준선이 생긴 뒤에 다시 본다.**
-
-## 쿼리 검증 — **답을 아는 입력**으로 잰다
-
-진짜 데이터로는 검증이 안 된다. 출시 전엔 유저가 한 명뿐이라 클리어율이 0.5 로 나와도
-그게 맞는 값인지 쿼리가 틀린 건지 구분할 수가 없다.
-
-```bash
-python3 tools/selftest.py     # 합성 GA4 이벤트를 CTE 로 넣고 실제 BigQuery 엔진에서 돌린다
-```
-
-★쿼리는 `tools/queries.py` **한 곳에만** 있고 수집기와 검사가 같은 문자열을 쓴다.
-검사가 쿼리를 베껴 들고 있으면 진짜 쿼리를 고쳐도 검사는 멀쩡히 통과한다
-(이 포트폴리오에서 이미 한 번 비싸게 배웠다 — 클라우드 조정 규칙 복사본 사건).
-
-잡는 것 예: 아무도 못 깬 레벨이 LEFT JOIN 아니면 **결과에서 사라진다**(그게 바로 벽인데),
-`album_open` 을 건수로 세면 두 번 연 사람이 2명이 된다, 봇·디버그·본인 기기가 분모에 남는다.
+- **퍼널 정의는 한 곳** — `tools/funnel.py`. 실시간·가입자·인게임 세 화면이 같이 쓴다.
+  세 화면이 다른 퍼널을 말하면 비교가 불가능해진다.
+  그리고 그 정의가 **게임(`analytics.gd` ONB_STEPS)과 같은지** selftest 가 대조한다 —
+  게임이 단계를 바꿨는데 여기가 그대로면 화면이 조용히 다른 퍼널을 말한다.
+- **거른 줄을 보여 준다** — 모수에서 뺀 사람을 사유별로 화면에 띄운다.
+  조용히 지우면 진짜 유저를 봇으로 오인해도 알 길이 없다.
+  실시간 뷰는 아예 지우지 않고 **딱지만** 붙인다.
+- **답을 아는 입력으로 검산** — `tools/selftest.py` 가 합성 GA4 행을 만들어
+  쿼리를 돌린다. 수집 **전에** CI 에서 돌아간다. 유저가 몇 명뿐인 지금
+  실데이터로는 "0.5가 맞는 값인지 쿼리가 틀린 건지" 구분이 안 된다.
+- **리텐션 분모는 그 코호트** — 전체 유저로 나누면 어제 설치한 코호트가 D7을
+  채울 시간이 없어 가짜 우하향이 나온다.
+- **버전 비교는 같은 관측창**(설치 후 1시간) — 안 그러면 멀쩡한 버전이 회귀로 보인다.
+- **intraday 중복 금지** — `events_*` 와일드카드는 intraday 를 **이미** 잡는다.
+  따로 UNION 하면 두 번 세고, 같은 날짜가 양쪽에 있어도 두 번 센다.
 
 ## 돌리기
 
 ```bash
-export GOOGLE_APPLICATION_CREDENTIALS=/path/sa.json
-export BQ_PROJECT=<GCP 프로젝트>        # 기본 plopcat-6d336
-export BQ_DATASET=analytics_<GA4속성ID>  # 비우면 자동 탐색
-python3 tools/ingame.py
+export GOOGLE_APPLICATION_CREDENTIALS=~/dev/keystore/plopcat-bq.json
+export EXCLUDE_USERS="$(gh variable get EXCLUDE_USERS -R Purplusnow/plopcat-dashboard)"
+
+python3 tools/selftest.py     # 쿼리 검산 — 늘 먼저
+python3 tools/ingame.py       # 인게임 + 매일
+python3 tools/users.py        # 가입자 코호트
+python3 tools/realtime.py     # 오늘
+python3 tools/whoami.py       # 내 기기 후보 찾기 → EXCLUDE_USERS
 ```
 
-Actions 는 시크릿 `GCP_SA_KEY`(BigQuery Data Viewer + Job User)를 쓴다.
+## 아직 비어 있는 것 — 형이 넣어야 채워진다
+
+| 무엇 | 왜 비었나 | 넣는 법 |
+|---|---|---|
+| **마케팅비** | Google Ads 를 아직 안 돌렸다 | 돌리기 시작하면 Ads 스크립트를 붙이거나 `daily.json` 에 손으로 |
+| **AdMob 매출** | 퐁당냥 전용 자격증명이 없다 | AdMob API OAuth(**새로 발급** — 다른 프로젝트 것 재사용 금지) |
+| **인앱매출** | 아직 실결제가 없다 | GA4 `purchase` 가 쌓이면 자동 |
+
+⚠ **다른 프로젝트의 키·토큰·계정 식별자는 가져오지 않는다.** 이 리포의
+`config.json` 에 든 세율·환율폴백·국가티어 표만 인생 2막에서 가져왔는데,
+그건 Play 콘솔에 적힌 **공개된 사실**이지 연동정보가 아니다.
+
+## 설정
+
+Actions 변수(`gh variable`): `BQ_PROJECT` `BQ_DATASET` `BQ_LOCATION` `EXCLUDE_USERS`
+시크릿: `GCP_SA_KEY` (BigQuery 데이터 뷰어 + 작업 사용자)

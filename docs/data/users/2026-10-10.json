@@ -1,0 +1,41 @@
+{
+ "date": "2026-10-10",
+ "users": [
+  {
+   "uid": "4dbba68f",
+   "model": "SM-S911N",
+   "country": "South Korea",
+   "lang": "ko-kr",
+   "ver": "1.0 (v23)",
+   "days": 1,
+   "last": "20261010",
+   "lv": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 0
+  },
+  {
+   "uid": "5bd81882",
+   "model": "SM-A166B",
+   "country": "South Korea",
+   "lang": "ko-kr",
+   "ver": "1.0 (v23)",
+   "days": 1,
+   "last": "20261010",
+   "lv": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": true,
+   "reached": 3
+  }
+ ]
+}

@@ -40,3 +40,35 @@ footer{padding:16px 18px 40px;color:var(--dim);font-size:12px;text-align:center}
   padding:6px 13px;font-size:13px;color:#9fb0c8}
 .filtered .chip b{color:#e8eef7;font-weight:700}
 .filtered .chip.tot{background:#242c3c;color:#cdd8e8}
+
+/* ── 뷰 탭 ──────────────────────────────────────────────────────────── */
+.viewnav{display:flex;gap:6px;flex-wrap:wrap;padding:0 16px 14px;max-width:1180px;margin:0 auto}
+.vtab{background:#161b26;border:1px solid #2b3446;color:#9fb0c8;border-radius:999px;
+  padding:8px 18px;font-size:14px;font-weight:600;cursor:pointer}
+.vtab:hover{border-color:#3d4a63;color:#cdd8e8}
+.vtab.is-on{background:#2a6fd6;border-color:#2a6fd6;color:#fff}
+.view.off{display:none}
+
+/* 날짜 알약 — 가입자 코호트 고르기 */
+.daypills{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.daypills button{background:#161b26;border:1px solid #2b3446;color:#9fb0c8;
+  border-radius:8px;padding:5px 11px;font-size:13px;cursor:pointer}
+.daypills button.is-on{background:#2a6fd6;border-color:#2a6fd6;color:#fff}
+
+/* 사람/봇 딱지 — 지우지 않고 표시만 한다 */
+.tag{font-size:11px;padding:2px 8px;border-radius:999px;white-space:nowrap}
+.t-human{background:#17432f;color:#6ee7a8}
+.t-bot{background:#3a2c17;color:#e8b473}
+.t-dbg{background:#2b2b3a;color:#a2a6c8}
+.t-me{background:#2a3550;color:#8fb4ee}
+
+.dim{color:#6b7a90;font-size:11px}
+.bad-t{color:#ff8e72}
+table.empty td{color:#6b7a90}
+.box .s{font-size:11px;color:#6b7a90;margin-top:3px}
+
+/* 누적 막대 */
+.chartbox{display:flex;align-items:flex-end;gap:2px;height:140px;
+  background:#121722;border:1px solid #222a39;border-radius:10px;padding:10px}
+.chartbox i{flex:1;background:#2a6fd6;border-radius:2px 2px 0 0;min-height:1px}
+.chartbox i.bad{background:#eb6834}

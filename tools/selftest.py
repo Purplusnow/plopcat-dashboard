@@ -18,6 +18,7 @@ import sys
 
 from google.cloud import bigquery
 
+import funnel as F
 import queries as Q
 
 client = bigquery.Client(project=os.environ.get("BQ_PROJECT") or "plopcat-6d336",
@@ -35,10 +36,14 @@ def chk(name, got, want):
 
 def ev(day, user, name, params=(), version="1.0 (v23)", country="KR", model="SM-S911N"):
     """GA4 events_* 한 줄을 흉내 낸다. 실제 스키마와 같은 모양이어야 의미가 있다."""
+    # ★NULL 에 **타입을 붙인다.** 맨 NULL 을 쓰면 BigQuery 가 string_value 칼럼을
+    #   INT64 로 추론해서(첫 줄이 전부 NULL 이면), 문자열 파라미터를 읽는 쿼리가
+    #   "No matching signature for operator = ... INT64, STRING" 으로 터진다.
+    #   실제 GA4 스키마와 **모양이 같아야** 이 하네스가 의미를 갖는다.
     ps = ",".join(
         "STRUCT('%s' AS key, STRUCT(%s AS int_value, %s AS string_value) AS value)"
-        % (k, v if isinstance(v, int) else "NULL",
-           "NULL" if isinstance(v, int) else "'%s'" % v)
+        % (k, v if isinstance(v, int) else "CAST(NULL AS INT64)",
+           "CAST(NULL AS STRING)" if isinstance(v, int) else "'%s'" % v)
         for k, v in params)
     return ("STRUCT('%s' AS _TABLE_SUFFIX, '%s' AS user_pseudo_id, '%s' AS event_name,"
             " STRUCT(%s AS country) AS geo, STRUCT('%s' AS version) AS app_info,"
@@ -57,7 +62,32 @@ def run(sql):
     return [dict(r) for r in client.query(sql).result()]
 
 
+def check_funnel_matches_game():
+    """★퍼널 정의가 **게임과 같은지** 대조한다.
+
+    tools/funnel.py 는 scripts/autoload/analytics.gd 의 ONB_STEPS 를 옮겨 적은 것이다.
+    게임이 단계를 추가·개명했는데 여기가 그대로면, 화면은 멀쩡히 그려지면서
+    **조용히 다른 퍼널**을 말한다 — 이게 제일 무서운 고장이다.
+
+    게임 레포가 옆에 없으면(Actions 환경) 건너뛴다. 그 경우 사람이 볼 수 있게 말은 한다.
+    """
+    import re
+    g = os.path.expanduser("~/dev/plopcat/scripts/autoload/analytics.gd")
+    if not os.path.exists(g):
+        print("  · 게임 레포가 없어 퍼널 대조를 건너뛴다 (로컬에서 한 번은 돌릴 것)")
+        return
+    src = open(g, encoding="utf-8").read()
+    m = re.search(r"const ONB_STEPS := \{(.*?)\}", src, re.S)
+    if not m:
+        fails.append("게임에서 ONB_STEPS 를 못 찾았다")
+        print("  ❌ 게임에서 ONB_STEPS 를 못 찾았다")
+        return
+    game = re.findall(r'"([a-z0-9_]+)"', m.group(1))
+    chk("★퍼널 단계가 게임(analytics.gd ONB_STEPS)과 같다", F.STEP_KEYS, game)
+
+
 def main():
+    check_funnel_matches_game()
     # ── ① 레벨별 클리어율 ────────────────────────────────────────────
     # 정답을 손으로 만든다:
     #   L1 : 3명 시작, 3명 클리어        → 100%
@@ -114,6 +144,60 @@ def main():
     d9 = {r["lv"]: r for r in run(Q.levels(table(dup), df))}
     chk("중복이 섞여도 클리어율이 100%", round(d9[9]["rate"], 3) if 9 in d9 else None, 1.0)
     chk("중복이 섞여도 시작은 1명", d9[9]["started"] if 9 in d9 else None, 1)
+
+    # ── ①-c 코호트 리텐션 ─────────────────────────────────────────
+    # 답을 손으로 만든다. 1/1 에 2명(a,b), 1/2 에 1명(c) 설치.
+    #   a: 1/1,1/2,1/3 접속  → D1,D2 생존
+    #   b: 1/1 만            → 어디에도 안 남음
+    #   c: 1/2,1/3           → 그 코호트의 D1 생존
+    # 따라서 코호트 20260101 은 size 2, D1=1(50%), D2=1(50%)
+    #       코호트 20260102 는 size 1, D1=1(100%)
+    # ★흔한 실수: 전체 유저(3명)로 나눠 D1=33% 로 쓰는 것. 분모는 **그 코호트**다.
+    ret = []
+    for d in ["20260101", "20260102", "20260103"]:
+        if d != "20260103":
+            ret.append(ev(d, "a", "level_start", [("level", 1)]))
+    ret.append(ev("20260103", "a", "level_start", [("level", 1)]))
+    ret.append(ev("20260101", "b", "level_start", [("level", 1)]))
+    ret.append(ev("20260102", "c", "level_start", [("level", 1)]))
+    ret.append(ev("20260103", "c", "level_start", [("level", 1)]))
+    rf = Q.human("TRUE", "20260103", [])
+    rr = run(Q.retention(table(ret), rf))
+    got = {}
+    for r in rr:
+        got.setdefault(r["cohort"], {"size": r["size"]})
+        if r["n"] is not None:
+            got[r["cohort"]][r["n"]] = r["u"]
+    chk("코호트 20260101 크기 2", got.get("20260101", {}).get("size"), 2)
+    chk("★그 코호트의 D1 = 1 (전체 3명으로 나누지 않는다)",
+        got.get("20260101", {}).get(1), 1)
+    chk("그 코호트의 D2 = 1", got.get("20260101", {}).get(2), 1)
+    chk("나중 코호트 20260102 크기 1", got.get("20260102", {}).get("size"), 1)
+    chk("★D0 은 세지 않는다(늘 100%라 칸만 먹는다)",
+        0 in got.get("20260101", {}), False)
+
+    # ── ①-d 버전 비교는 **같은 관측창**으로 ───────────────────────────
+    # 새 버전은 코호트가 어려서 '아직 안 깬' 사람이 많다. 설치 후 1시간으로 잘라야
+    # 모든 버전이 같은 조건을 받는다. 답: 두 버전 모두 1시간 안엔 1판씩이다.
+    vr = [
+        ev("20260101", "old1", "level_clear",
+           [("level", 1), ("secs_since_install", 100), ("attempts", 1), ("over", 0),
+            ("play_secs", 9), ("hints", 0), ("undos", 0), ("tows", 0), ("restarts", 0)],
+           version="1.0 (v1)"),
+        # 옛 버전 유저는 **하루 뒤에** 10판을 더 깼다 — 창을 안 걸면 이게 섞인다
+        ev("20260102", "old1", "level_clear",
+           [("level", 10), ("secs_since_install", 90000), ("attempts", 1), ("over", 0),
+            ("play_secs", 9), ("hints", 0), ("undos", 0), ("tows", 0), ("restarts", 0)],
+           version="1.0 (v1)"),
+        ev("20260101", "new1", "level_clear",
+           [("level", 1), ("secs_since_install", 200), ("attempts", 1), ("over", 0),
+            ("play_secs", 9), ("hints", 0), ("undos", 0), ("tows", 0), ("restarts", 0)],
+           version="1.0 (v2)"),
+    ]
+    vv = {r["ver"]: r for r in run(Q.versions(table(vr), rf))}
+    chk("★버전 비교는 설치 1시간 창으로 자른다(옛 버전의 이튿날이 안 섞인다)",
+        vv["1.0 (v1)"]["avg_lv_1h"], 1.0)
+    chk("새 버전도 같은 창", vv["1.0 (v2)"]["avg_lv_1h"], 1.0)
 
     chk("봇·디버그·본인 기기가 분모에서 빠진다", lv[1]["started"], 3)
     chk("L2 평균 시도", lv[2]["attempts"], 3.0)

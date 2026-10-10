@@ -154,12 +154,40 @@ def main() -> None:
     #   퍼널이 역전된다(창 전에 1단계만 한 사람 + 창 안에서 5단계 한 사람).
     out["onboard"] = q(Q.onboard(TABLE, human("TRUE")))
 
+    # ── 인생 2막 수준으로 올리며 더한 것들 (2026-10-11) ───────────────
+    # ★리텐션·버전비교는 **기간을 걸지 않는다.** 코호트가 창 밖으로 잘리면
+    #   D7 을 채울 시간이 없는 코호트만 남아 리텐션이 가짜로 우하향한다.
+    f_all = human("TRUE")
+    out["retention"] = _ret(q(Q.retention(TABLE, f_all)))
+    out["versions"] = q(Q.versions(TABLE, f_all))
+    out["pacing"] = q(Q.pacing(TABLE, f_win))
+    out["risk"] = q(Q.risk(TABLE, f_all))
+    out["side_steps"] = q(Q.side_steps(TABLE, f_all))
+    out["countries"] = q(Q.countries(TABLE, f_all))
+
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=1)
     k = out["kpi"][0] if out["kpi"] else {}
     print("✓ %s — DAU %s · 신규 %s · 누적 %s · 레벨 %d행"
           % (OUT, k.get("dau"), k.get("new_users"), k.get("users"), len(out["levels"])))
+
+
+def _ret(rows: list) -> list:
+    """납작한 (코호트, n, u) 를 코호트별 한 줄로 접는다.
+
+    ★비율은 **여기서** 낸다 — 화면에서 나누면 분모를 잘못 잡기 쉽다
+      (코호트 크기가 아니라 전날 수로 나누는 실수).
+    """
+    out = {}
+    for r in rows:
+        c = out.setdefault(r["cohort"], {"cohort": r["cohort"], "size": r["size"] or 0, "d": []})
+        if r["n"] is None:
+            continue                      # 그 코호트에 재방문이 0 인 경우(LEFT JOIN)
+        out[r["cohort"]]["d"].append({
+            "n": r["n"], "u": r["u"],
+            "rate": round(r["u"] / c["size"], 3) if c["size"] else None})
+    return sorted(out.values(), key=lambda x: x["cohort"], reverse=True)
 
 
 def _kpi(rng: str, end: date) -> list:

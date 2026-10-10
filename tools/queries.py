@@ -25,6 +25,15 @@ def p_str(key: str) -> str:
 #: 날짜 하나를 가리키는 식. events_* 와일드카드는 **events_intraday_YYYYMMDD 도 같이 잡고**,
 #: 그때 _TABLE_SUFFIX 는 'intraday_20261010' 이라 날짜 비교가 전부 어긋난다.
 #: 날짜를 비교하는 자리에서는 _TABLE_SUFFIX 대신 **반드시 이걸** 쓴다.
+def INT(k: str) -> str:
+    """이벤트 파라미터의 정수값. ★GA4 UI 에선 빈칸으로 보이지만 raw 에는 멀쩡히 있다."""
+    return "(SELECT value.int_value FROM UNNEST(event_params) WHERE key='%s')" % k
+
+
+def STR(k: str) -> str:
+    return "(SELECT value.string_value FROM UNNEST(event_params) WHERE key='%s')" % k
+
+
 DAY = "IF(STARTS_WITH(_TABLE_SUFFIX,'intraday_'), SUBSTR(_TABLE_SUFFIX,10), _TABLE_SUFFIX)"
 
 
@@ -163,3 +172,118 @@ SELECT {st} step, COUNT(DISTINCT user_pseudo_id) users
 FROM {t} WHERE {f} AND event_name = 'onboard_step'
 GROUP BY step HAVING step IS NOT NULL ORDER BY step
 """.format(t=table, f=filt, st=p_int("step"))
+
+
+# ══════════════════════════════════════════════════════════════════════
+#  아래는 "인생 2막 수준"으로 올리면서 더한 것들 (2026-10-11)
+# ══════════════════════════════════════════════════════════════════════
+
+def retention(table: str, filt: str, max_day: int = 14) -> str:
+    """코호트 리텐션 — 설치일 × Day n. **한 줄 = (코호트, n)** 로 납작하게 돌려준다.
+
+    ★분모가 **그 날 설치한 사람**이다. 전체 유저로 나누면 어제 설치한 코호트가
+      D7 을 채울 시간이 없어서 리텐션이 영영 우하향으로 보인다(가짜 하락).
+    ★D0 은 세지 않는다 — 설치한 날 접속한 건 당연해서 늘 100%다. 칸만 먹는다.
+    ★납작하게 주는 이유: 한 줄 안에서 ARRAY 를 만들려면 상관 서브쿼리가 필요한데
+      그건 GROUP BY 와 안 맞는다(실제로 400 을 받았다). 모양 맞추기는 파이썬이 한다.
+    """
+    return """
+WITH j AS (
+  SELECT user_pseudo_id uid, MIN({day}) d0
+  FROM {t} WHERE {f} GROUP BY uid
+), a AS (
+  SELECT DISTINCT user_pseudo_id uid, {day} d FROM {t} WHERE {f}
+), x AS (
+  SELECT j.d0 cohort,
+    DATE_DIFF(PARSE_DATE('%Y%m%d', a.d), PARSE_DATE('%Y%m%d', j.d0), DAY) n,
+    a.uid uid
+  FROM j JOIN a USING (uid)
+), sz AS (
+  SELECT d0 cohort, COUNT(DISTINCT uid) size FROM j GROUP BY cohort
+)
+SELECT sz.cohort, sz.size, x.n, COUNT(DISTINCT x.uid) u
+FROM sz LEFT JOIN x ON x.cohort = sz.cohort AND x.n BETWEEN 1 AND {m}
+GROUP BY sz.cohort, sz.size, x.n
+ORDER BY sz.cohort DESC, x.n
+""".format(t=table, f=filt, day=DAY, m=max_day)
+
+
+def versions(table: str, filt: str) -> str:
+    """버전 비교 — 바꾼 게 **나아졌는지**를 보는 유일한 자리.
+
+    ★같은 관측창으로 재야 한다. 새 버전은 코호트가 어려서 '아직 안 깬' 사람이 많고,
+      그걸 모르고 비교하면 멀쩡한 버전을 회귀로 오인한다(인생 2막에서 실제로 겪었다).
+      그래서 **설치 후 1시간 안의 행동만** 센다 — 모든 버전이 같은 1시간을 받는다.
+    """
+    return """
+WITH u AS (
+  SELECT user_pseudo_id uid, ANY_VALUE(app_info.version) ver,
+    MAX(IF(event_name='level_clear' AND {ss} <= 3600, {lv}, NULL)) lv1h,
+    COUNTIF(event_name='level_clear' AND {ss} <= 3600) clears1h,
+    COUNTIF(event_name='onboard_step' AND {step}='lv1_clear') lv1,
+    COUNTIF(event_name='app_remove') rm,
+    MAX({ss}) secs
+  FROM {t} WHERE {f} GROUP BY uid
+)
+SELECT ver, COUNT(*) users,
+  ROUND(AVG(lv1h), 1) avg_lv_1h,
+  ROUND(AVG(clears1h), 1) avg_clears_1h,
+  ROUND(SAFE_DIVIDE(COUNTIF(lv1 > 0), COUNT(*)), 3) lv1_rate,
+  ROUND(SAFE_DIVIDE(COUNTIF(rm > 0), COUNT(*)), 3) remove_rate,
+  ROUND(AVG(secs) / 60, 1) avg_mins
+FROM u GROUP BY ver ORDER BY ver DESC
+""".format(t=table, f=filt, lv=INT("level"), ss=INT("secs_since_install"), step=STR("step"))
+
+
+def pacing(table: str, filt: str) -> str:
+    """진행 페이싱 — 구간마다 **몇 분** 걸리는가.
+
+    ★클리어율만 보면 '느린 구간'이 안 보인다. 다 깨긴 깨는데 한 판에 10분씩 걸리면
+      그게 이탈 지점이다. play_secs 의 중앙값을 쓴다(평균은 한 명의 방치가 뒤집는다).
+    """
+    return """
+SELECT DIV({lv} - 1, 10) * 10 + 1 band,
+  COUNT(DISTINCT user_pseudo_id) users, COUNT(*) clears,
+  ROUND(APPROX_QUANTILES({sec}, 2)[OFFSET(1)], 0) median_secs,
+  ROUND(AVG({mv} - {ms}), 1) over_moves
+FROM {t} WHERE {f} AND event_name='level_clear' AND {lv} IS NOT NULL
+GROUP BY band ORDER BY band
+""".format(t=table, f=filt, lv=INT("level"), sec=INT("play_secs"),
+           mv=INT("moves"), ms=INT("minsol"))
+
+
+def risk(table: str, filt: str) -> str:
+    """위험 신호 — 게임이 스스로 쏜 abuse.
+
+    ★granted=true 가 진짜 문제다. '탐지는 했는데 **못 막은**' 건이고,
+      유료 상품이 공짜로 나간 것이라 매출에 바로 닿는다.
+    """
+    return """
+SELECT {r} reason, COUNTIF({g}='true') granted, COUNT(*) n,
+  COUNT(DISTINCT user_pseudo_id) users
+FROM {t} WHERE {f} AND event_name='abuse'
+GROUP BY reason ORDER BY granted DESC, n DESC
+""".format(t=table, f=filt, r=STR("reason"), g=STR("granted"))
+
+
+def side_steps(table: str, filt: str) -> str:
+    """곁가지 — 처음 만나는 기능들. 척추가 아니라 **발견율**로 본다."""
+    return """
+SELECT {s} step, COUNT(DISTINCT user_pseudo_id) users
+FROM {t} WHERE {f} AND event_name='side_step' GROUP BY step ORDER BY users DESC
+""".format(t=table, f=filt, s=STR("step"))
+
+
+def countries(table: str, filt: str) -> str:
+    """국가별 — 어디서 오고, 거기서 **깨는가**."""
+    return """
+WITH u AS (
+  SELECT user_pseudo_id uid, ANY_VALUE(geo.country) c,
+    MAX(IF(event_name='level_clear', {lv}, 0)) lv,
+    COUNTIF(event_name='purchase') buys
+  FROM {t} WHERE {f} GROUP BY uid
+)
+SELECT c country, COUNT(*) users, ROUND(AVG(lv), 1) avg_lv,
+  COUNTIF(lv > 0) cleared_any, SUM(buys) buys
+FROM u GROUP BY c ORDER BY users DESC LIMIT 25
+""".format(t=table, f=filt, lv=INT("level"))

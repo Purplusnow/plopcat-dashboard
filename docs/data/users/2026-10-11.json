@@ -1,0 +1,23 @@
+{
+ "date": "2026-10-11",
+ "users": [
+  {
+   "uid": "a4896177",
+   "model": "SM-A035M",
+   "country": "Brazil",
+   "lang": "pt-br",
+   "ver": "1.0 (v28)",
+   "days": 1,
+   "last": "20261011",
+   "lv": 4,
+   "clears": 4,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": true,
+   "reached": 15
+  }
+ ]
+}
