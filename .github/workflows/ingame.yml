@@ -37,6 +37,14 @@ jobs:
         run: |
           python3 tools/ingame.py
           python3 tools/users.py
+      - name: 페이지 검사
+        # ★Pages 가 200 을 준다고 화면이 그려지는 건 아니다. app.js 가 한 줄에서
+        #   터지면 흰 화면이 뜨는데 배포는 "성공"으로 남는다. 실데이터와 **빈 데이터**
+        #   둘 다로 끝까지 돌려 본다 — 지금은 대부분 섹션이 비어 있는 게 평소 상태다.
+        run: |
+          node tools/pagetest.js
+          MODE=empty node tools/pagetest.js
+
       - name: 커밋
         run: |
           git config user.name  "github-actions[bot]"

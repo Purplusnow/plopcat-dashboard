@@ -47,7 +47,15 @@ python3 tools/ingame.py       # 인게임 + 매일
 python3 tools/users.py        # 가입자 코호트
 python3 tools/realtime.py     # 오늘
 python3 tools/whoami.py       # 내 기기 후보 찾기 → EXCLUDE_USERS
+
+node tools/pagetest.js             # 페이지가 실데이터로 끝까지 그려지나
+MODE=empty node tools/pagetest.js  # 데이터가 하나도 없어도 안 터지나
 ```
+
+★`pagetest` 는 브라우저 없이 최소 DOM 을 만들어 `app.js` 를 **진짜 파일로** 돌린다.
+Pages 가 200 을 준다고 화면이 그려지는 건 아니다 — 한 줄에서 터지면 흰 화면이 뜨는데
+배포는 "성공"으로 남는다. 빈 데이터 모드가 특히 중요하다: 지금은 대부분의 섹션이
+비어 있는 게 **평소 상태**고, 수집기가 하루 실패해도 같은 상황이 된다.
 
 ## 아직 비어 있는 것 — 형이 넣어야 채워진다
 
