@@ -33,7 +33,7 @@ def chk(name, got, want):
         fails.append(name)
 
 
-def ev(day, user, name, params=(), version="1.0 (v23)", country="KR"):
+def ev(day, user, name, params=(), version="1.0 (v23)", country="KR", model="SM-S911N"):
     """GA4 events_* 한 줄을 흉내 낸다. 실제 스키마와 같은 모양이어야 의미가 있다."""
     ps = ",".join(
         "STRUCT('%s' AS key, STRUCT(%s AS int_value, %s AS string_value) AS value)"
@@ -42,9 +42,11 @@ def ev(day, user, name, params=(), version="1.0 (v23)", country="KR"):
         for k, v in params)
     return ("STRUCT('%s' AS _TABLE_SUFFIX, '%s' AS user_pseudo_id, '%s' AS event_name,"
             " STRUCT(%s AS country) AS geo, STRUCT('%s' AS version) AS app_info,"
+            " STRUCT(%s AS mobile_model_name) AS device,"
             " [%s] AS event_params)"
             % (day, user, name,
-               "NULL" if country is None else "'%s'" % country, version, ps))
+               "NULL" if country is None else "'%s'" % country, version,
+               "NULL" if model is None else "'%s'" % model, ps))
 
 
 def table(rows):
@@ -76,15 +78,43 @@ def main():
     rows.append(ev("20260101", "bot", "level_start", [("level", 1)], country=None))
     rows.append(ev("20260101", "dbg1", "level_start", [("level", 1)], version="dbg 20260101"))
     rows.append(ev("20260101", "me", "level_start", [("level", 1)]))
+    rows.append(ev("20260101", "nomodel", "level_start", [("level", 1)], model=None))
 
-    filt = ("IFNULL(geo.country,'') != '' AND IFNULL(app_info.version,'') NOT LIKE 'dbg%'"
-            " AND user_pseudo_id NOT IN ('me')")
+    # ★규칙을 베끼지 않는다 — 수집기가 쓰는 **그 함수**를 부른다.
+    #   예전엔 여기에 필터를 손으로 적어 놨는데, 그러면 수집기 규칙을 바꿔도
+    #   검사는 옛 규칙으로 통과한다(검사가 아니라 장식이 된다).
+    filt = Q.human("TRUE", "20251231", ["me"])
     lv = {r["lv"]: r for r in run(Q.levels(table(rows), filt))}
 
     chk("L1 클리어율 100%", round(lv[1]["rate"], 3), 1.0)
     chk("L2 클리어율 33.3%", round(lv[2]["rate"], 3), 0.333)
     chk("★아무도 못 깬 L3 이 결과에 남는다", 3 in lv, True)
     chk("L3 클리어 0", lv[3]["cleared"] if 3 in lv else None, 0)
+    # ── ①-b ★intraday 중복 ────────────────────────────────────────
+    # 내가 실제로 당한 함정이다. events_* 와일드카드는 **events_intraday_* 도 같이 잡는다.**
+    # 그 사실을 모르고 UNION 을 하거나 날짜 중복을 안 막으면 같은 사람이 두 번 세어진다.
+    # 답을 알고 재 본다: 한 사람이 같은 판을 세 테이블에 남겼을 때 **1명**이어야 한다.
+    dup = [
+        # 닫힌 일일 테이블(20260101) — 쓴다
+        ev("20260101", "z", "level_start", [("level", 9)]),
+        # 같은 날짜의 intraday — **중복이므로 버려야 한다**
+        ev("intraday_20260101", "z", "level_start", [("level", 9)]),
+        # 아직 안 닫힌 날짜의 intraday — 이건 **써야** 오늘 일이 오늘 보인다
+        ev("intraday_20260102", "z", "level_clear",
+           [("level", 9), ("attempts", 1), ("over", 0), ("play_secs", 5),
+            ("hints", 0), ("undos", 0), ("tows", 0), ("restarts", 0)]),
+    ]
+    df = Q.human("TRUE", "20260101", [])
+    n = run("SELECT COUNT(*) c, COUNT(DISTINCT user_pseudo_id) u FROM %s WHERE %s"
+            % (table(dup), df))[0]
+    chk("★같은 날짜의 intraday 는 버린다(두 번 세지 않는다)", n["c"], 2)
+    chk("★안 닫힌 날짜의 intraday 는 쓴다(오늘 일이 오늘 보인다)",
+        run("SELECT COUNT(*) c FROM %s WHERE %s AND event_name='level_clear'"
+            % (table(dup), df))[0]["c"], 1)
+    d9 = {r["lv"]: r for r in run(Q.levels(table(dup), df))}
+    chk("중복이 섞여도 클리어율이 100%", round(d9[9]["rate"], 3) if 9 in d9 else None, 1.0)
+    chk("중복이 섞여도 시작은 1명", d9[9]["started"] if 9 in d9 else None, 1)
+
     chk("봇·디버그·본인 기기가 분모에서 빠진다", lv[1]["started"], 3)
     chk("L2 평균 시도", lv[2]["attempts"], 3.0)
     chk("L2 평균 아이템(1+2+0+1)", lv[2]["items"], 4.0)

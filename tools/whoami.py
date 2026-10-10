@@ -11,6 +11,10 @@
   3. 결제가 있는데 매출이 0 — 라이선스 테스터(테스트 결제는 과금되지 않는다)
   4. 기기 모델이 내가 쓰는 것과 같음
 
+★intraday 테이블까지 읽는다. 일일 테이블은 하루 이상 늦게 닫혀서, 그것만 보면
+  **오늘 깐 테스트 기기가 안 보인다** — 정작 지금 지표를 더럽히고 있는 그 기기다.
+  (여기선 중복이 문제가 안 된다. 세는 게 "누구인가"지 "몇 건인가"가 아니다.)
+
 ★출력은 **후보 목록**이지 정답이 아니다. 눈으로 보고 EXCLUDE_USERS 에 넣는다.
   자동으로 빼지 않는 이유: 진짜 헤비 유저를 봇으로 오인해 지우면 그 사실을
   알아챌 방법이 없다(지워진 건 안 보인다).
@@ -20,9 +24,14 @@
     python3 tools/whoami.py
 """
 import os
+import sys
 from datetime import date, timedelta
 
 from google.cloud import bigquery
+
+# ★날짜 식은 queries.py 가 단일 출처다. 여기서 또 쓰면 한쪽만 고쳐져 갈라진다.
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import queries as Q
 
 # 내가 테스트에 쓰는 기기 모델. ★출시 **전에만** 쓴다 — 출시 후엔 같은 모델의
 # 진짜 유저가 들어오므로 모델로 거르면 사람을 지우게 된다.
@@ -58,11 +67,11 @@ SELECT
   COUNTIF(event_name = 'purchase') purchases,
   MAX((SELECT value.int_value FROM UNNEST(event_params) WHERE key = 'level')) max_level
 FROM {t}
-WHERE _TABLE_SUFFIX >= '{w}' AND _TABLE_SUFFIX NOT LIKE 'intraday%'
+WHERE {day} >= '{w}'
 GROUP BY user_pseudo_id
 ORDER BY clears DESC
 LIMIT 50
-""".format(t=TABLE, w=WIN)
+""".format(t=TABLE, w=WIN, day=Q.DAY)
 
 
 def main() -> None:

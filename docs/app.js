@@ -25,6 +25,15 @@ fetch("data/ingame.json?" + Date.now()).then(r => r.json()).then(d => {
     ["신규(기간)", n(k.new_users)], ["누적(기간)", n(k.users)],
   ].map(([a, b]) => `<div class="box"><div class="k">${a}</div><div class="v">${b}</div></div>`).join("");
 
+  // ★뺀 것들. 지금은 모수의 대부분이 사람이 아니다 — 그걸 숨기면 "유저가 없다"가
+  //   버그로 읽히고, 반대로 안 빼면 "유저가 많다"는 거짓이 된다. 둘 다 보여 준다.
+  const fl = d.filtered || [];
+  const flSum = fl.reduce((a, r) => a + (r.users || 0), 0);
+  $("filtered").innerHTML = fl.length
+    ? fl.map(r => `<span class="chip"><b>${n(r.users)}</b> ${r.reason}</span>`).join("")
+      + `<span class="chip tot">합계 <b>${n(flSum)}</b></span>`
+    : "<span class='chip'>뺀 것 없음</span>";
+
   // ① 클리어율 — 막대 색으로 벽을 눈에 띄게 한다(80%↓ 주의, 50%↓ 위험)
   const lv = d.levels || [];
   $("levelChart").innerHTML = lv.map(r => {

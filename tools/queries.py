@@ -22,15 +22,49 @@ def p_str(key: str) -> str:
     return "(SELECT value.string_value FROM UNNEST(event_params) WHERE key = '%s')" % key
 
 
+#: 날짜 하나를 가리키는 식. events_* 와일드카드는 **events_intraday_YYYYMMDD 도 같이 잡고**,
+#: 그때 _TABLE_SUFFIX 는 'intraday_20261010' 이라 날짜 비교가 전부 어긋난다.
+#: 날짜를 비교하는 자리에서는 _TABLE_SUFFIX 대신 **반드시 이걸** 쓴다.
+DAY = "IF(STARTS_WITH(_TABLE_SUFFIX,'intraday_'), SUBSTR(_TABLE_SUFFIX,10), _TABLE_SUFFIX)"
+
+
+def human(cond: str, last_daily: str, exclude=()) -> str:
+    """사람이 아닌 줄을 걷어낸 WHERE 조각. **수집기도 검사도 이 함수를 부른다.**
+
+    ★예전엔 selftest 가 같은 규칙을 **베껴** 들고 있었다. 그러면 수집기 쪽 규칙을
+      바꿔도 검사는 옛 규칙으로 통과한다 — 검사가 아니라 장식이 된다.
+
+    거르는 것:
+      · 중복 intraday — 일일 테이블이 이미 닫은 날짜. events_* 와일드카드는
+        intraday 도 같이 잡으므로, 안 막으면 그 날짜가 **두 번** 세어진다.
+      · 지역이 없는 줄 — Play 사전 출시 보고서 봇(업로드마다 수십 대가 돈다)
+      · 기기 모델이 없는 줄 — 진짜 폰은 모델명을 늘 보낸다. 모델만 비고 지역은
+        잡히는 줄이 있었다(체류 4초, 첫 판에서 정지) — 지역 조건으로는 안 걸린다.
+      · 디버그 빌드 — 오토파일럿이 수백 판을 깨서 클리어율을 혼자 뒤집는다
+      · 개발자 본인 — exclude 로 받은 user_pseudo_id
+    ※BigQuery 에서 NULL != '' 은 TRUE 가 아니다. IFNULL 로 감싸야 둘 다 걸린다.
+    """
+    out = ("(%s)"
+           " AND (NOT STARTS_WITH(_TABLE_SUFFIX,'intraday_')"
+           " OR SUBSTR(_TABLE_SUFFIX,10) > '%s')"
+           " AND IFNULL(geo.country,'') != ''"
+           " AND IFNULL(device.mobile_model_name,'') != ''"
+           " AND IFNULL(app_info.version,'') NOT LIKE 'dbg%%'") % (cond, last_daily)
+    ids = [u for u in exclude if u]
+    if ids:
+        out += " AND user_pseudo_id NOT IN (%s)" % ",".join("'%s'" % u for u in ids)
+    return out
+
+
 def kpi(table: str, filt: str, d1: str, d7: str) -> str:
     return """
 SELECT
-  COUNT(DISTINCT IF(_TABLE_SUFFIX = '{d1}', user_pseudo_id, NULL)) dau,
-  COUNT(DISTINCT IF(_TABLE_SUFFIX >= '{d7}', user_pseudo_id, NULL)) wau,
+  COUNT(DISTINCT IF({day} = '{d1}', user_pseudo_id, NULL)) dau,
+  COUNT(DISTINCT IF({day} >= '{d7}', user_pseudo_id, NULL)) wau,
   COUNT(DISTINCT user_pseudo_id) users,
   COUNT(DISTINCT IF(event_name = 'first_open', user_pseudo_id, NULL)) new_users
 FROM {t} WHERE {f}
-""".format(t=table, f=filt, d1=d1, d7=d7)
+""".format(t=table, f=filt, d1=d1, d7=d7, day=DAY)
 
 
 def levels(table: str, filt: str) -> str:

@@ -1,22 +1,41 @@
 {
- "updated": "2026-10-10 17:39 KST",
+ "updated": "2026-10-10 19:10 KST",
  "window_days": 45,
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
- "excluded_users": 5,
- "last_table": "20261008",
+ "excluded_users": 7,
+ "last_table": "intraday_20261010",
+ "last_daily": "20261009",
+ "filtered": [
+  {
+   "reason": "구글 자동스캔(지역 없음)",
+   "users": 42
+  },
+  {
+   "reason": "모델명 없음(스캔 의심)",
+   "users": 1
+  },
+  {
+   "reason": "디버그 빌드(개발용)",
+   "users": 2
+  },
+  {
+   "reason": "개발자 기기(지정 제외)",
+   "users": 7
+  }
+ ],
  "kpi": [
   {
-   "dau": 0,
-   "wau": 1,
-   "users": 1,
-   "new_users": 1
+   "dau": 2,
+   "wau": 3,
+   "users": 3,
+   "new_users": 2
   }
  ],
  "levels": [
   {
    "lv": 1,
-   "started": 1,
+   "started": 3,
    "cleared": 0,
    "rate": null,
    "attempts": null,
@@ -33,7 +52,13 @@
    "pictures": 0
   }
  ],
- "shop_funnel": [],
+ "shop_funnel": [
+  {
+   "step": "shop_open",
+   "users": 1,
+   "n": 1
+  }
+ ],
  "ads": [],
  "boosters": [],
  "out_of_hearts": [],

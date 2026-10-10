@@ -60,30 +60,71 @@ TABLE = "`%s.%s.events_*`" % (PROJECT, DS)
 
 
 # ─────────────────────────────────────────────────────────────────────
-# ★사람이 아닌 줄을 거른다. 셋 다 안 거르면 모수가 통째로 거짓이 된다.
-#   · 디버그 빌드 — 오토파일럿이 수백 판을 깨서 클리어율을 혼자 뒤집는다
-#   · 지역이 안 잡히는 줄 — Play 사전 출시 보고서 봇(체류 0분·첫 단계 정지)
-#   · 개발자 본인 — EXCLUDE_USERS
-#   ※BigQuery 에서 NULL != '' 은 TRUE 가 아니므로 IFNULL 로 감싸야 둘 다 걸린다.
+# ★오늘 일이 오늘 보이게 — intraday 도 읽는다.
+#
+# GA4 일일 테이블(events_YYYYMMDD)은 **하루 이상 늦게** 닫힌다. 그것만 보면
+# 대시보드가 늘 이틀 뒤를 가리킨다(실제로 last_table 이 20261008 에 멈춰 있었다).
+# events_intraday_YYYYMMDD 는 거의 실시간이라 그걸 덧댄다.
+#
+# ★함정 둘:
+#   ① events_* 와일드카드는 **intraday 도 이미 잡는다.** 그래서 따로 UNION 하면
+#      같은 이벤트를 두 번 센다(내가 즉석 쿼리에서 실제로 당했다 — 모든 줄이 2배로 나왔다).
+#      여기서는 UNION 하지 않고, 와일드카드가 주는 걸 **걸러서** 쓴다.
+#   ② 같은 날짜가 일일·intraday 양쪽에 있으면 역시 두 번 세어진다. 일일 테이블이
+#      닫히는 순간 그 날짜의 intraday 가 중복이 된다. 그래서 **마지막 일일 날짜보다
+#      뒤인 intraday 만** 쓴다.
+def last_daily_day() -> str:
+    r = q("SELECT MAX(_TABLE_SUFFIX) t FROM %s WHERE _TABLE_SUFFIX NOT LIKE 'intraday%%'" % TABLE)
+    return (r[0]["t"] if r and r[0]["t"] else "00000000")
+
+
+#: 날짜 비교는 전부 이 식으로 — queries.py 와 **같은 정의**를 가져다 쓴다(두 벌이 되면 갈라진다)
+DAY = Q.DAY
+
+
 def human(cond: str) -> str:
-    base = ("(%s) AND _TABLE_SUFFIX NOT LIKE 'intraday%%'"
-            " AND IFNULL(geo.country,'') != ''"
-            " AND IFNULL(app_info.version,'') NOT LIKE 'dbg%%'") % cond
+    """★규칙은 queries.Q.human 한 곳에 있다 — 여기서 다시 쓰지 않는다.
+    tools/selftest.py 가 **같은 함수**를 합성 데이터로 검산한다."""
+    return Q.human(cond, LAST_DAILY, EXCLUDE_USERS)
+
+
+# ★걸러낸 걸 **보여 준다.** 조용히 지우면 지워진 걸 알 길이 없다 — 진짜 유저를
+#   봇으로 오인해 지워도 아무 표시가 안 난다. 사유별로 세어 대시보드에 띄운다.
+def filtered_counts(rng: str) -> list:
+    reasons = [
+        ("구글 자동스캔(지역 없음)", "IFNULL(geo.country,'') = ''"),
+        ("모델명 없음(스캔 의심)", "IFNULL(geo.country,'') != '' AND IFNULL(device.mobile_model_name,'') = ''"),
+        ("디버그 빌드(개발용)", "IFNULL(app_info.version,'') LIKE 'dbg%'"),
+    ]
     if EXCLUDE_USERS:
         ids = ",".join("'%s'" % u for u in EXCLUDE_USERS)
-        base += " AND user_pseudo_id NOT IN (%s)" % ids
-    return base
+        reasons.append(("개발자 기기(지정 제외)", "user_pseudo_id IN (%s)" % ids))
+    out = []
+    for label, cond in reasons:
+        n = q("SELECT COUNT(DISTINCT user_pseudo_id) n FROM %s WHERE (%s) AND (%s)"
+              % (TABLE, rng, cond))
+        out.append({"reason": label, "users": n[0]["n"] if n else 0})
+    return out
 
 
 def q(sql: str) -> list:
     return [dict(r) for r in client.query(sql).result()]
 
 
+#: 일일 테이블이 닫힌 마지막 날짜. 이 뒤의 intraday 만 덧댄다(중복 방지).
+#: ★여기서 계산한다 — q() 가 정의된 **뒤**여야 하고, human() 이 쓰기 **전**이어야 한다.
+LAST_DAILY = last_daily_day()
+
+
 def main() -> None:
-    end = date.today() - timedelta(days=1)          # 마지막으로 landing 됐을 법한 날
+    # ★끝을 **오늘**로 둔다. 예전엔 '어제'였다 — 일일 테이블이 늦게 닫히니 어쩔 수 없었지만,
+    #   이제 intraday 를 읽으므로 오늘 일이 오늘 보인다.
+    end = date.today()
     win = (end - timedelta(days=WINDOW_DAYS)).strftime("%Y%m%d")
     end_s = end.strftime("%Y%m%d")
-    rng = "_TABLE_SUFFIX BETWEEN '%s' AND '%s'" % (win, end_s)
+    # ★날짜 비교에 _TABLE_SUFFIX 를 그대로 쓰면 intraday 가 통째로 빠진다
+    #   ('intraday_20261010' 은 '20261010' 과 문자열 비교가 안 맞는다). DAY 를 쓴다.
+    rng = "%s BETWEEN '%s' AND '%s'" % (DAY, win, end_s)
 
     out = {
         "updated": datetime.now(KST).strftime("%Y-%m-%d %H:%M") + " KST",
@@ -96,6 +137,8 @@ def main() -> None:
     out["last_table"] = (q("SELECT MAX(_TABLE_SUFFIX) t FROM %s WHERE %s"
                            % (TABLE, human("TRUE"))) or [{"t": None}])[0]["t"]
 
+    out["last_daily"] = LAST_DAILY            # 일일 테이블이 닫힌 데까지
+    out["filtered"] = filtered_counts(rng)   # 사람이 아니라고 보고 뺀 것들
     out["kpi"] = _kpi(rng, end)
 
     # ★쿼리는 tools/queries.py 한 곳에만 있다. 여기서 베껴 들면 selftest 와 갈라진다.
