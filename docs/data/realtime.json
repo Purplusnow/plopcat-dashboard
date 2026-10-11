@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-11 15:12 KST",
+ "updated": "2026-10-11 15:13 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261011",
@@ -319,11 +319,11 @@
    "users": 2
   },
   {
-   "country": "Iran",
+   "country": "Brazil",
    "users": 1
   },
   {
-   "country": "Brazil",
+   "country": "Iran",
    "users": 1
   }
  ],
