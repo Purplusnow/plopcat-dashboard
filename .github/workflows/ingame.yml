@@ -42,6 +42,7 @@ jobs:
         #   터지면 흰 화면이 뜨는데 배포는 "성공"으로 남는다. 실데이터와 **빈 데이터**
         #   둘 다로 끝까지 돌려 본다 — 지금은 대부분 섹션이 비어 있는 게 평소 상태다.
         run: |
+          python3 tools/wftest.py
           node tools/pagetest.js
           MODE=empty node tools/pagetest.js
 

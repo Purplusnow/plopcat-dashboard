@@ -27,12 +27,13 @@ jobs:
           BQ_DATASET: ${{ vars.BQ_DATASET }}
           BQ_LOCATION: ${{ vars.BQ_LOCATION }}
           EXCLUDE_USERS: ${{ vars.EXCLUDE_USERS }}
-        run: python3 tools/ingame.py
+        run: python3 tools/realtime.py
       - name: 페이지 검사
         # ★Pages 가 200 을 준다고 화면이 그려지는 건 아니다. app.js 가 한 줄에서
         #   터지면 흰 화면이 뜨는데 배포는 "성공"으로 남는다. 실데이터와 **빈 데이터**
         #   둘 다로 끝까지 돌려 본다 — 지금은 대부분 섹션이 비어 있는 게 평소 상태다.
         run: |
+          python3 tools/wftest.py
           node tools/pagetest.js
           MODE=empty node tools/pagetest.js
 
@@ -40,7 +41,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/data/ingame.json
+          git add docs/data/realtime.json
           git diff --staged --quiet || git commit -m "실시간 갱신 $(date -u +%Y-%m-%dT%H:%MZ)"
           # ★실시간은 30분마다 커밋한다. 충돌이 잦으므로 되감고 다시 올린다
           #   (수집기가 만드는 파일 한 장이라 rebase 로 잃을 게 없다).

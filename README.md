@@ -33,6 +33,11 @@
 - **리텐션 분모는 그 코호트** — 전체 유저로 나누면 어제 설치한 코호트가 D7을
   채울 시간이 없어 가짜 우하향이 나온다.
 - **버전 비교는 같은 관측창**(설치 후 1시간) — 안 그러면 멀쩡한 버전이 회귀로 보인다.
+- **워크플로가 제 일을 하는지도 검사한다** — `realtime.yml` 이 `realtime.py` 가 아니라
+  `ingame.py` 를 돌리고 있었다(2026-10-11). 실행은 매번 success, 커밋 메시지도
+  "실시간 갱신"이었는데 `realtime.json` 은 하루 종일 그대로였다. 조용한 거짓 성공이다.
+  `tools/wftest.py` 가 "이름이 X 인 워크플로는 `tools/X.py` 를 돌리고 `data/X.json` 을
+  커밋한다"를 강제한다.
 - **intraday 중복 금지** — `events_*` 와일드카드는 intraday 를 **이미** 잡는다.
   따로 UNION 하면 두 번 세고, 같은 날짜가 양쪽에 있어도 두 번 센다.
 
@@ -48,6 +53,7 @@ python3 tools/users.py        # 가입자 코호트
 python3 tools/realtime.py     # 오늘
 python3 tools/whoami.py       # 내 기기 후보 찾기 → EXCLUDE_USERS
 
+python3 tools/wftest.py            # 워크플로가 제 스크립트를 돌리나
 node tools/pagetest.js             # 페이지가 실데이터로 끝까지 그려지나
 MODE=empty node tools/pagetest.js  # 데이터가 하나도 없어도 안 터지나
 ```
