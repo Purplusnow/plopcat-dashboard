@@ -117,15 +117,14 @@ SELECT * FROM me ORDER BY t0 DESC LIMIT 300
             "kind": kind,
         }
         seen[kind] = seen.get(kind, 0) + 1
-        # ★봇·스캔과 디버그 빌드는 **줄도 안 보여 준다**(형 지시 2026-10-11).
-        #   업로드마다 수십 대가 돌아서 목록이 그것들로 덮인다 — 정작 봐야 할
-        #   사람이 스크롤 아래로 밀린다. 다만 **몇 개를 뺐는지는 숫자로 남긴다**
-        #   (조용히 지우면 진짜 유저를 봇으로 오인해도 알 길이 없다).
-        if kind in ("bot", "dbg"):
+        # ★사람이 아닌 줄은 **목록에 아예 안 넣는다**(형 지시 2026-10-11).
+        #   봇·스캔은 업로드마다 수십 대가 돌고, 내 기기는 버전 바꿀 때마다 새 uid 가
+        #   생긴다 — 둘 다 목록을 덮어서 정작 봐야 할 사람이 스크롤 아래로 밀린다.
+        #   ★다만 **몇 개를 뺐는지는 숫자로 남긴다**(KPI 의 봇·내기기 칸).
+        #   조용히 지우면 진짜 유저를 봇으로 오인해도 알 길이 없다.
+        if kind != "human":
             continue
         users.append(rec)
-        if kind != "human":
-            continue                      # 내 기기는 줄은 남기되 집계에선 뺀다
         for i, k in enumerate(F.STEP_KEYS):
             if k in onb:
                 reach[k] += 1

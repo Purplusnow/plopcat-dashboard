@@ -79,6 +79,14 @@ setTimeout(() => {
     // 내용이 **실제로 채워졌는지**. 빈 문자열이면 그린 게 없다는 뜻이다.
     // 빈 데이터 모드에서는 "안 그려짐"이 정상이다 — **터지지만 않으면** 통과.
     if (!EMPTY) {
+      // ★실시간 목록에는 **사람만** 있어야 한다. 봇·내 기기가 한 줄이라도 섞이면
+      //   형이 그걸 실유저로 읽는다(실제로 '한국 유저 10명'이 전부 내 기기였다).
+      try {
+        const rt = JSON.parse(fs.readFileSync(path.join(DOCS, "data/realtime.json"), "utf8"));
+        const bad = (rt.users || []).filter(u => u.kind !== "human");
+        if (bad.length) fails.push(`실시간 목록에 사람 아닌 줄 ${bad.length}개 (${bad.map(u => u.kind).join(",")})`);
+        if (!rt.kinds) fails.push("걸러낸 수(kinds)가 없다 — 조용히 지우면 안 된다");
+      } catch (e) { fails.push("realtime.json 을 못 읽는다: " + e.message); }
       const want = ["kpi", "levelTable", "retTable", "verTable", "rt-reach", "rev-table"];
       for (const id of want) {
         const e = store[id];

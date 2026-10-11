@@ -222,9 +222,9 @@ VIEW.realtime = async () => {
     for (let i = names.length - 1; i >= 0; i--) if (r.reached & (1 << i)) return names[i];
     return "–";
   };
-  const TAG = { human: "사람", bot: "봇·스캔", dbg: "디버그", me: "내 기기" };
+  // ★목록에는 사람만 온다(realtime.py 가 거기서 거른다). 딱지 열이 전부 "사람"이면
+  //   자리만 먹으므로 뺐다 — 몇 개를 걸렀는지는 위 KPI 가 말한다.
   table($("rt-users"), d.users || [], [
-    ["", r => `<span class="tag t-${r.kind}">${TAG[r.kind] || r.kind}</span>`],
     ["시각", r => r.t0], ["분", r => r.mins],
     ["기기", r => r.model || "–"], ["지역", r => r.country || "–"],
     ["버전", r => r.ver || "–"],
