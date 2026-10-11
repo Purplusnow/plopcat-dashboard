@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12 04:18 KST",
+ "updated": "2026-10-12 08:01 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261012",
@@ -49,55 +49,340 @@
   {
    "key": "game_open",
    "label": "게임 진입",
-   "users": 20
+   "users": 29
   },
   {
    "key": "first_move",
    "label": "첫 수",
-   "users": 20
+   "users": 29
   },
   {
    "key": "lv1_clear",
    "label": "1판 클리어",
-   "users": 20
+   "users": 28
   },
   {
    "key": "lv3_clear",
    "label": "3판",
-   "users": 18
+   "users": 24
   },
   {
    "key": "album_first",
    "label": "미술관 열기",
-   "users": 19
+   "users": 26
   },
   {
    "key": "first_piece",
    "label": "첫 조각",
-   "users": 15
+   "users": 23
   },
   {
    "key": "lv10_clear",
    "label": "10판",
-   "users": 13
+   "users": 19
   },
   {
    "key": "first_picture",
    "label": "첫 그림 완성",
-   "users": 6
+   "users": 11
   },
   {
    "key": "lv20_clear",
    "label": "20판",
-   "users": 5
+   "users": 10
   },
   {
    "key": "lv50_clear",
    "label": "50판",
-   "users": 4
+   "users": 6
   }
  ],
  "users": [
+  {
+   "uid": "679ff1d8",
+   "t0": "06:34",
+   "mins": 1.8,
+   "model": "SM-A528B",
+   "country": "Iran",
+   "city": "Isfahan",
+   "lang": "fa-ir",
+   "ver": "1.0 (v29)",
+   "new": false,
+   "lv": 43,
+   "started": 43,
+   "clears": 8,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "8d7dc93d",
+   "t0": "06:22",
+   "mins": 2.4,
+   "model": "25028PC03G",
+   "country": "Iran",
+   "city": "Ahvaz",
+   "lang": "ar-iq",
+   "ver": "1.0 (v29)",
+   "new": true,
+   "lv": 0,
+   "started": 1,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 3,
+   "side": [
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "360284df",
+   "t0": "05:42",
+   "mins": 1.5,
+   "model": "SM-A235F",
+   "country": "Iran",
+   "city": "Tehran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v29)",
+   "new": false,
+   "lv": 1,
+   "started": 2,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 7,
+   "side": [
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "2b522ba2",
+   "t0": "05:21",
+   "mins": 5.4,
+   "model": "SM-A346E",
+   "country": "Iran",
+   "city": null,
+   "lang": "fa-ir",
+   "ver": "1.0 (v36)",
+   "new": true,
+   "lv": 35,
+   "started": 35,
+   "clears": 35,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 511,
+   "side": [
+    "gate_final",
+    "gate_pieces",
+    "gate_tut",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "050c29c5",
+   "t0": "04:49",
+   "mins": 99.8,
+   "model": "SM-A346E",
+   "country": "Iran",
+   "city": null,
+   "lang": "fa-ir",
+   "ver": "1.0 (v36)",
+   "new": true,
+   "lv": 1,
+   "started": 1,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 55,
+   "side": [
+    "gate_tut",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "73c26ee9",
+   "t0": "04:43",
+   "mins": 99.8,
+   "model": "23129RAA4G",
+   "country": "Iran",
+   "city": "Shiraz",
+   "lang": "en-au",
+   "ver": "1.0 (v36)",
+   "new": true,
+   "lv": 59,
+   "started": 59,
+   "clears": 59,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 1023,
+   "side": [
+    "first_hint",
+    "gate_final",
+    "gate_pieces",
+    "gate_tut",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "3d5eac0f",
+   "t0": "04:40",
+   "mins": 3.5,
+   "model": "SM-A065F",
+   "country": "Iran",
+   "city": "Isfahan",
+   "lang": "fa-ir",
+   "ver": "1.0 (v29)",
+   "new": true,
+   "lv": 13,
+   "started": 13,
+   "clears": 13,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 127,
+   "side": [
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "2a650911",
+   "t0": "04:28",
+   "mins": 0.1,
+   "model": "24117RN76G",
+   "country": "Iran",
+   "city": "Tabriz",
+   "lang": "fa-ir",
+   "ver": "1.0 (v36)",
+   "new": true,
+   "lv": 0,
+   "started": 1,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "3b56ccc9",
+   "t0": "04:22",
+   "mins": 2.4,
+   "model": "23117RA68G",
+   "country": "Iran",
+   "city": "Zahedan",
+   "lang": "fa-ir",
+   "ver": "1.0 (v36)",
+   "new": false,
+   "lv": 30,
+   "started": 30,
+   "clears": 14,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 384,
+   "side": [
+    "gate_final",
+    "gate_pieces"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "273b2dd9",
+   "t0": "04:20",
+   "mins": 2.4,
+   "model": "23053RN02A",
+   "country": "Iran",
+   "city": "Tehran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v36)",
+   "new": true,
+   "lv": 5,
+   "started": 5,
+   "clears": 5,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 63,
+   "side": [
+    "gate_pieces",
+    "gate_tut",
+    "lang_change",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "89609acf",
+   "t0": "04:02",
+   "mins": 2.2,
+   "model": "SM-A546E",
+   "country": "Iran",
+   "city": "Shiraz",
+   "lang": "fa-ir",
+   "ver": "1.0 (v29)",
+   "new": true,
+   "lv": 15,
+   "started": 15,
+   "clears": 15,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 127,
+   "side": [
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
   {
    "uid": "7b069ca6",
    "t0": "03:52",
@@ -127,23 +412,23 @@
   {
    "uid": "57008f9f",
    "t0": "03:22",
-   "mins": 2.0,
+   "mins": 20.5,
    "model": "SM-G975F",
    "country": "Iran",
    "city": "Tehran",
    "lang": "en-au",
    "ver": "1.0 (v29)",
    "new": true,
-   "lv": 18,
-   "started": 19,
-   "clears": 18,
+   "lv": 87,
+   "started": 88,
+   "clears": 87,
    "stuck": 0,
    "ads": 0,
-   "shops": 0,
+   "shops": 1,
    "buys": 0,
    "removed": false,
    "abuse": 0,
-   "reached": 127,
+   "reached": 895,
    "side": [
     "tut_hand"
    ],
@@ -152,24 +437,29 @@
   {
    "uid": "c3de0be2",
    "t0": "03:08",
-   "mins": 0.1,
+   "mins": 4.8,
    "model": "SM-A047F",
    "country": "Iran",
    "city": "Rasht",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
    "new": true,
-   "lv": 0,
-   "started": 0,
-   "clears": 0,
+   "lv": 20,
+   "started": 21,
+   "clears": 20,
    "stuck": 0,
    "ads": 0,
    "shops": 0,
    "buys": 0,
    "removed": false,
    "abuse": 0,
-   "reached": 0,
-   "side": [],
+   "reached": 511,
+   "side": [
+    "gate_final",
+    "gate_pieces",
+    "gate_tut",
+    "tut_hand"
+   ],
    "kind": "human"
   },
   {
@@ -268,6 +558,29 @@
    "side": [
     "tut_hand"
    ],
+   "kind": "human"
+  },
+  {
+   "uid": "b49c6633",
+   "t0": "01:54",
+   "mins": 0.5,
+   "model": "SM-A127F",
+   "country": "Iran",
+   "city": "Hamedan",
+   "lang": "fa-ir",
+   "ver": "1.0 (v29)",
+   "new": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
    "kind": "human"
   },
   {
@@ -660,8 +973,8 @@
    "t0": "00:43",
    "mins": 72.3,
    "model": "220333QPG",
-   "country": "Iran",
-   "city": "Ahvaz",
+   "country": "Brazil",
+   "city": "Vinhedo",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
    "new": true,
@@ -765,26 +1078,27 @@
   {
    "uid": "8cee6fe3",
    "t0": "00:37",
-   "mins": 131.1,
+   "mins": 137.7,
    "model": "DUB-LX1",
    "country": "Iran",
    "city": "Tehran",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
    "new": true,
-   "lv": 7,
-   "started": 7,
-   "clears": 7,
+   "lv": 14,
+   "started": 14,
+   "clears": 14,
    "stuck": 0,
    "ads": 0,
    "shops": 0,
    "buys": 0,
    "removed": false,
    "abuse": 0,
-   "reached": 31,
+   "reached": 255,
    "side": [
     "first_restart",
     "first_tow",
+    "gate_final",
     "gate_pieces",
     "gate_tut",
     "tut_hand"
@@ -923,19 +1237,19 @@
   {
    "uid": "1b4d7b5d",
    "t0": "00:06",
-   "mins": 21.9,
+   "mins": 280.3,
    "model": "SM-A736B",
    "country": "Iran",
    "city": "Tehran",
    "lang": "en-gb",
    "ver": "1.0 (v29)",
    "new": false,
-   "lv": 141,
-   "started": 141,
-   "clears": 30,
+   "lv": 200,
+   "started": 200,
+   "clears": 89,
    "stuck": 0,
    "ads": 0,
-   "shops": 1,
+   "shops": 2,
    "buys": 0,
    "removed": false,
    "abuse": 0,
@@ -968,35 +1282,40 @@
   }
  ],
  "kinds": {
-  "human": 34,
+  "human": 46,
   "bot": 0,
   "me": 0,
   "dbg": 0
  },
  "bots": 0,
- "humans": 34,
+ "humans": 46,
  "versions": [
   {
    "ver": "1.0 (v36)",
-   "users": 22,
-   "installs": 18
+   "users": 28,
+   "installs": 23
   },
   {
    "ver": "1.0 (v29)",
-   "users": 12,
-   "installs": 5
+   "users": 18,
+   "installs": 8
   }
  ],
  "countries": [
   {
    "country": "Iran",
-   "users": 32,
-   "vpn": 5
+   "users": 44,
+   "vpn": 6
   },
   {
    "country": "Brazil",
-   "users": 2,
-   "vpn": 2
+   "users": 1,
+   "vpn": 1
+  },
+  {
+   "country": "Indonesia",
+   "users": 1,
+   "vpn": 1
   }
  ],
  "purchase_fail": [],
