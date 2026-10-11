@@ -72,3 +72,8 @@ table.empty td{color:#6b7a90}
   background:#121722;border:1px solid #222a39;border-radius:10px;padding:10px}
 .chartbox i{flex:1;background:#2a6fd6;border-radius:2px 2px 0 0;min-height:1px}
 .chartbox i.bad{background:#eb6834}
+
+/* 레벨 축 — 막대와 같은 flex 에 태워 칸을 맞춘다(좌표 계산 금지) */
+.axis{display:flex;gap:2px;padding:4px 10px 0;max-width:100%}
+.axis i{flex:1;min-width:0;font-style:normal;font-size:10px;color:#6b7a90;
+  text-align:center;white-space:nowrap;overflow:visible}

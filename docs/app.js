@@ -89,6 +89,14 @@ fetch("data/ingame.json?" + Date.now()).then(r => r.json()).then(d => {
     const cls = v < .5 ? "bad" : v < .8 ? "warn" : "";
     return `<i class="${cls}" style="height:${Math.max(1, v * 100)}%" title="L${r.lv} ${pct(v)} (${r.cleared}/${r.started})"></i>`;
   }).join("");
+  // ★막대와 **같은 수의 칸**을 깔고 눈금에만 글자를 넣는다.
+  //   좌표로 계산해 얹으면 폭이 바뀔 때마다 어긋난다 — 같은 flex 에 태우면 저절로 맞는다.
+  // ★간격은 **레벨 수에 따라 벌린다.** 5 로 고정하면 1200판에서 글자가 240개 겹쳐
+  //   까만 띠가 된다. 화면에 20개쯤만 남도록 5→10→25→50→100 으로 올린다.
+  const step = [5, 10, 25, 50, 100, 250].find(s => lv.length / s <= 20) || 500;
+  $("levelAxis").innerHTML = lv.map(r =>
+    `<i>${r.lv % step === 0 || r.lv === 1 ? r.lv : ""}</i>`).join("");
+
   table($("levelTable"), lv, [
     ["레벨", r => "L" + r.lv], ["시작", r => n(r.started)], ["클리어", r => n(r.cleared)],
     ["클리어율", r => pct(r.rate)], ["시도", r => r.attempts ?? "–"],
