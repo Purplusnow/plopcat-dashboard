@@ -26,6 +26,8 @@ import queries as Q
 PROJECT = os.environ.get("BQ_PROJECT") or "plopcat-6d336"
 LOCATION = os.environ.get("BQ_LOCATION") or "asia-northeast3"
 EXCLUDE = [u.strip() for u in os.environ.get("EXCLUDE_USERS", "").split(",") if u.strip()]
+TEST_MODELS = [m.strip() for m in
+               (os.environ.get("TEST_MODELS") or "SM-G998B,SM-G991N").split(",") if m.strip()]
 DIR = os.path.join(os.path.dirname(__file__), "..", "docs", "data", "users")
 
 client = bigquery.Client(project=PROJECT, location=LOCATION)
@@ -42,7 +44,7 @@ def q(sql):
 def main():
     last_daily = q("SELECT MAX(_TABLE_SUFFIX) t FROM %s WHERE _TABLE_SUFFIX NOT LIKE 'intraday%%'"
                    % T)[0]["t"] or "00000000"
-    f = Q.human("TRUE", last_daily, EXCLUDE)
+    f = Q.human("TRUE", last_daily, EXCLUDE, TEST_MODELS)
     rows = q("""
 SELECT user_pseudo_id uid,
   MIN({day}) joined,

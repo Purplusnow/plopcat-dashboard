@@ -35,6 +35,9 @@ WINDOW_DAYS = int(os.environ.get("WINDOW_DAYS") or "45")
 # ★개발자 본인 기기 — 릴리스 빌드라 버전으로는 못 가른다. user_pseudo_id 로 뺀다.
 #   (쉼표로 여러 개. tools/whoami.py 가 후보를 찾아 준다.)
 EXCLUDE_USERS = [u.strip() for u in os.environ.get("EXCLUDE_USERS", "").split(",") if u.strip()]
+## 내 테스트 기기 모델 — uid 가 재설치마다 바뀌는 걸 모델로 막는다(queries.human 주석 참고)
+TEST_MODELS = [m.strip() for m in
+               (os.environ.get("TEST_MODELS") or "SM-G998B,SM-G991N").split(",") if m.strip()]
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
@@ -85,7 +88,7 @@ DAY = Q.DAY
 def human(cond: str) -> str:
     """★규칙은 queries.Q.human 한 곳에 있다 — 여기서 다시 쓰지 않는다.
     tools/selftest.py 가 **같은 함수**를 합성 데이터로 검산한다."""
-    return Q.human(cond, LAST_DAILY, EXCLUDE_USERS)
+    return Q.human(cond, LAST_DAILY, EXCLUDE_USERS, TEST_MODELS)
 
 
 # ★걸러낸 걸 **보여 준다.** 조용히 지우면 지워진 걸 알 길이 없다 — 진짜 유저를
@@ -99,6 +102,9 @@ def filtered_counts(rng: str) -> list:
     if EXCLUDE_USERS:
         ids = ",".join("'%s'" % u for u in EXCLUDE_USERS)
         reasons.append(("개발자 기기(지정 제외)", "user_pseudo_id IN (%s)" % ids))
+    if TEST_MODELS:
+        ms = ",".join("'%s'" % m for m in TEST_MODELS)
+        reasons.append(("내 테스트 기기(모델)", "IFNULL(device.mobile_model_name,'') IN (%s)" % ms))
     out = []
     for label, cond in reasons:
         n = q("SELECT COUNT(DISTINCT user_pseudo_id) n FROM %s WHERE (%s) AND (%s)"

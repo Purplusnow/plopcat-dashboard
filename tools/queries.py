@@ -37,7 +37,7 @@ def STR(k: str) -> str:
 DAY = "IF(STARTS_WITH(_TABLE_SUFFIX,'intraday_'), SUBSTR(_TABLE_SUFFIX,10), _TABLE_SUFFIX)"
 
 
-def human(cond: str, last_daily: str, exclude=()) -> str:
+def human(cond: str, last_daily: str, exclude=(), test_models=()) -> str:
     """사람이 아닌 줄을 걷어낸 WHERE 조각. **수집기도 검사도 이 함수를 부른다.**
 
     ★예전엔 selftest 가 같은 규칙을 **베껴** 들고 있었다. 그러면 수집기 쪽 규칙을
@@ -62,6 +62,15 @@ def human(cond: str, last_daily: str, exclude=()) -> str:
     ids = [u for u in exclude if u]
     if ids:
         out += " AND user_pseudo_id NOT IN (%s)" % ",".join("'%s'" % u for u in ids)
+    # ★내 테스트 기기는 **모델로도** 뺀다. user_pseudo_id 는 재설치마다 새로 생겨서
+    #   EXCLUDE_USERS 가 늘 하루 늦는다 — 실제로 하루에 10개가 '한국 실유저'로
+    #   잡혔고(SM-G998B, v28~v36 재설치), 그걸 보고 "한국 유저가 안 붙는다"는
+    #   틀린 결론까지 냈다(2026-10-11). 모델로 막으면 그 날로 끝난다.
+    # ⚠출시 후엔 같은 모델의 진짜 유저가 들어오므로 그때는 이 목록을 비운다.
+    ms = [m for m in test_models if m]
+    if ms:
+        out += " AND IFNULL(device.mobile_model_name,'') NOT IN (%s)" % ",".join(
+            "'%s'" % m for m in ms)
     return out
 
 

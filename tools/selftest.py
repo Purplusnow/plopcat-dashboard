@@ -109,11 +109,14 @@ def main():
     rows.append(ev("20260101", "dbg1", "level_start", [("level", 1)], version="dbg 20260101"))
     rows.append(ev("20260101", "me", "level_start", [("level", 1)]))
     rows.append(ev("20260101", "nomodel", "level_start", [("level", 1)], model=None))
+    # ★내 테스트 기기 — uid 는 매번 새로 생기므로 **모델로** 걸러야 한다.
+    #   실제로 하루에 10개가 '한국 실유저'로 잡혔다(2026-10-11).
+    rows.append(ev("20260101", "newuid1", "level_start", [("level", 1)], model="SM-G998B"))
 
     # ★규칙을 베끼지 않는다 — 수집기가 쓰는 **그 함수**를 부른다.
     #   예전엔 여기에 필터를 손으로 적어 놨는데, 그러면 수집기 규칙을 바꿔도
     #   검사는 옛 규칙으로 통과한다(검사가 아니라 장식이 된다).
-    filt = Q.human("TRUE", "20251231", ["me"])
+    filt = Q.human("TRUE", "20251231", ["me"], ["SM-G998B"])
     lv = {r["lv"]: r for r in run(Q.levels(table(rows), filt))}
 
     chk("L1 클리어율 100%", round(lv[1]["rate"], 3), 1.0)
@@ -134,7 +137,7 @@ def main():
            [("level", 9), ("attempts", 1), ("over", 0), ("play_secs", 5),
             ("hints", 0), ("undos", 0), ("tows", 0), ("restarts", 0)]),
     ]
-    df = Q.human("TRUE", "20260101", [])
+    df = Q.human("TRUE", "20260101", [], [])
     n = run("SELECT COUNT(*) c, COUNT(DISTINCT user_pseudo_id) u FROM %s WHERE %s"
             % (table(dup), df))[0]
     chk("★같은 날짜의 intraday 는 버린다(두 번 세지 않는다)", n["c"], 2)
@@ -161,7 +164,7 @@ def main():
     ret.append(ev("20260101", "b", "level_start", [("level", 1)]))
     ret.append(ev("20260102", "c", "level_start", [("level", 1)]))
     ret.append(ev("20260103", "c", "level_start", [("level", 1)]))
-    rf = Q.human("TRUE", "20260103", [])
+    rf = Q.human("TRUE", "20260103", [], [])
     rr = run(Q.retention(table(ret), rf))
     got = {}
     for r in rr:
@@ -199,7 +202,7 @@ def main():
         vv["1.0 (v1)"]["avg_lv_1h"], 1.0)
     chk("새 버전도 같은 창", vv["1.0 (v2)"]["avg_lv_1h"], 1.0)
 
-    chk("봇·디버그·본인 기기가 분모에서 빠진다", lv[1]["started"], 3)
+    chk("봇·디버그·본인기기·테스트모델이 분모에서 빠진다", lv[1]["started"], 3)
     chk("L2 평균 시도", lv[2]["attempts"], 3.0)
     chk("L2 평균 아이템(1+2+0+1)", lv[2]["items"], 4.0)
     chk("L2 평균 초과 수", lv[2]["over_moves"], 4.0)

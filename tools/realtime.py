@@ -27,6 +27,11 @@ KST = timezone(timedelta(hours=9))
 PROJECT = os.environ.get("BQ_PROJECT") or "plopcat-6d336"
 LOCATION = os.environ.get("BQ_LOCATION") or "asia-northeast3"
 EXCLUDE = [u.strip() for u in os.environ.get("EXCLUDE_USERS", "").split(",") if u.strip()]
+## 내 테스트 기기 모델. ★uid 는 **재설치할 때마다 새로 생겨서** EXCLUDE_USERS 가
+## 늘 하루 늦는다(실제로 매번 새 uid 가 '사람'으로 잡혔다). 모델로도 가른다.
+## ⚠출시 후엔 같은 모델의 **진짜 유저**가 들어오므로 그때는 이 목록을 비운다.
+TEST_MODELS = [m.strip() for m in
+               (os.environ.get("TEST_MODELS") or "SM-G998B,SM-G991N").split(",") if m.strip()]
 OUT = os.path.join(os.path.dirname(__file__), "..", "docs", "data", "realtime.json")
 
 client = bigquery.Client(project=PROJECT, location=LOCATION)
@@ -92,7 +97,7 @@ me AS (
 SELECT * FROM me ORDER BY t0 DESC LIMIT 300
 """.format(t=T, d=day, lv=p_int("level"), step=p_str("step")))
 
-    users, reach = [], {k: 0 for k in F.STEP_KEYS}
+    users, reach, seen = [], {k: 0 for k in F.STEP_KEYS}, {}
     for r in rows:
         onb = set((r["onb"] or "").split(","))
         kind = _classify(r)
@@ -111,13 +116,16 @@ SELECT * FROM me ORDER BY t0 DESC LIMIT 300
             "side": sorted(x for x in (r["side"] or "").split(",") if x),
             "kind": kind,
         }
+        seen[kind] = seen.get(kind, 0) + 1
+        # ★봇·스캔과 디버그 빌드는 **줄도 안 보여 준다**(형 지시 2026-10-11).
+        #   업로드마다 수십 대가 돌아서 목록이 그것들로 덮인다 — 정작 봐야 할
+        #   사람이 스크롤 아래로 밀린다. 다만 **몇 개를 뺐는지는 숫자로 남긴다**
+        #   (조용히 지우면 진짜 유저를 봇으로 오인해도 알 길이 없다).
+        if kind in ("bot", "dbg"):
+            continue
         users.append(rec)
-        # ★'사람'은 human 하나뿐이다. 봇·내 기기·디버그 빌드는 전부 아니다.
-        #   예전엔 len(users) - bots 로 셌는데, 그러면 내 블루스택과 디버그 빌드가
-        #   사람으로 잡혀 "사람 4명"이 떴다(실제로는 2명이었다). 줄은 다 남기고
-        #   **세는 건 딱지로** 가른다.
         if kind != "human":
-            continue                      # 도달 집계에서만 뺀다(줄은 남긴다)
+            continue                      # 내 기기는 줄은 남기되 집계에선 뺀다
         for i, k in enumerate(F.STEP_KEYS):
             if k in onb:
                 reach[k] += 1
@@ -128,32 +136,43 @@ SELECT * FROM me ORDER BY t0 DESC LIMIT 300
         "steps": [{"key": k, "label": l} for k, l in F.ONB_STEPS],
         "reach": [{"key": k, "label": F.STEP_LABELS[k], "users": reach[k]} for k in F.STEP_KEYS],
         "users": users,
-        "kinds": {k: sum(1 for u in users if u["kind"] == k)
-                  for k in ("human", "bot", "me", "dbg")},
-        "bots": sum(1 for u in users if u["kind"] == "bot"),
-        "humans": sum(1 for u in users if u["kind"] == "human"),
+        # ★seen 은 **빼기 전** 수다. users 에는 봇·디버그가 없으므로 거기서 세면 0 이 된다.
+        "kinds": {k: seen.get(k, 0) for k in ("human", "bot", "me", "dbg")},
+        "bots": seen.get("bot", 0),
+        "humans": seen.get("human", 0),
     }
+    # ★아래 집계들도 **사람만** 센다(형 지시). 예전엔 봇·스캔이 그대로 섞여서
+    #   "버전별 설치 11" 같은 수가 전부 구글 스캔이었다.
+    #   조건을 한 줄로 만들어 모든 쿼리가 같이 쓴다 — 각자 적으면 하나를 빠뜨린다.
+    only_human = ("IFNULL(geo.country,'') != '' AND IFNULL(device.mobile_model_name,'') != ''"
+                  " AND IFNULL(app_info.version,'') NOT LIKE 'dbg%'")
+    if EXCLUDE:
+        only_human += " AND user_pseudo_id NOT IN (%s)" % ",".join("'%s'" % u for u in EXCLUDE)
+    if TEST_MODELS:
+        only_human += " AND IFNULL(device.mobile_model_name,'') NOT IN (%s)" % ",".join(
+            "'%s'" % m for m in TEST_MODELS)
+
     out["versions"] = q("""
 SELECT app_info.version ver, COUNT(DISTINCT user_pseudo_id) users,
   COUNTIF(event_name='first_open') installs
-FROM {t} WHERE _TABLE_SUFFIX='{d}' GROUP BY ver ORDER BY users DESC
-""".format(t=T, d=day))
+FROM {t} WHERE _TABLE_SUFFIX='{d}' AND {h} GROUP BY ver ORDER BY users DESC
+""".format(t=T, d=day, h=only_human))
     out["countries"] = q("""
 SELECT IFNULL(geo.country,'(없음)') country, COUNT(DISTINCT user_pseudo_id) users
-FROM {t} WHERE _TABLE_SUFFIX='{d}' GROUP BY country ORDER BY users DESC LIMIT 20
-""".format(t=T, d=day))
+FROM {t} WHERE _TABLE_SUFFIX='{d}' AND {h} GROUP BY country ORDER BY users DESC LIMIT 20
+""".format(t=T, d=day, h=only_human))
     # ★변조 APK 차단이 **작동 중인지** 본다. 차단이 늘면 좋은 신호지만,
     #   정상 유저가 섞여 막히면 매출이 조용히 0 이 된다 — 그래서 사유별로 센다.
     out["purchase_fail"] = q("""
 SELECT {r} reason, COUNT(*) n, COUNT(DISTINCT user_pseudo_id) users
-FROM {t} WHERE _TABLE_SUFFIX='{d}' AND event_name='purchase_fail'
+FROM {t} WHERE _TABLE_SUFFIX='{d}' AND {h} AND event_name='purchase_fail'
 GROUP BY reason ORDER BY n DESC
-""".format(t=T, d=day, r=p_str("reason")))
+""".format(t=T, d=day, h=only_human, r=p_str("reason")))
     out["abuse"] = q("""
 SELECT {r} reason, COUNTIF({g}='true') granted, COUNT(*) n
-FROM {t} WHERE _TABLE_SUFFIX='{d}' AND event_name='abuse'
+FROM {t} WHERE _TABLE_SUFFIX='{d}' AND {h} AND event_name='abuse'
 GROUP BY reason ORDER BY n DESC
-""".format(t=T, d=day, r=p_str("reason"), g=p_str("granted")))
+""".format(t=T, d=day, h=only_human, r=p_str("reason"), g=p_str("granted")))
 
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     json.dump(out, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
@@ -166,7 +185,7 @@ def _classify(r):
     """사람인가 — ★지우지 않고 **딱지만** 붙인다. 화면에서 걸러 보거나 같이 본다."""
     if (r["ver"] or "").startswith("dbg"):
         return "dbg"
-    if r["uid"] in EXCLUDE:
+    if r["uid"] in EXCLUDE or (r["model"] or "") in TEST_MODELS:
         return "me"
     if not (r["country"] or "") or not (r["model"] or ""):
         return "bot"
