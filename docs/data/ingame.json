@@ -1,11 +1,11 @@
 {
- "updated": "2026-10-11 07:19 KST",
+ "updated": "2026-10-11 10:06 KST",
  "window_days": 45,
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "excluded_users": 7,
  "last_table": "intraday_20261011",
- "last_daily": "20261009",
+ "last_daily": "20261010",
  "filtered": [
   {
    "reason": "구글 자동스캔(지역 없음)",
@@ -26,22 +26,52 @@
  ],
  "kpi": [
   {
-   "dau": 2,
-   "wau": 3,
-   "users": 3,
-   "new_users": 2
+   "dau": 1,
+   "wau": 4,
+   "users": 4,
+   "new_users": 3
   }
  ],
  "levels": [
   {
    "lv": 1,
-   "started": 3,
-   "cleared": 0,
-   "rate": null,
-   "attempts": null,
-   "over_moves": null,
-   "secs": null,
-   "items": null
+   "started": 4,
+   "cleared": 1,
+   "rate": 0.25,
+   "attempts": 1.0,
+   "over_moves": 8.0,
+   "secs": 33.0,
+   "items": 0.0
+  },
+  {
+   "lv": 2,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 3.0,
+   "secs": 16.0,
+   "items": 0.0
+  },
+  {
+   "lv": 3,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 1.0,
+   "secs": 5.0,
+   "items": 0.0
+  },
+  {
+   "lv": 4,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 1.0,
+   "secs": 4.0,
+   "items": 0.0
   }
  ],
  "stuck": [],
@@ -100,7 +130,15 @@
    "avg_mins": 0.7
   }
  ],
- "pacing": [],
+ "pacing": [
+  {
+   "band": 1,
+   "users": 1,
+   "clears": 4,
+   "median_secs": 5.0,
+   "over_moves": 3.3
+  }
+ ],
  "risk": [],
  "side_steps": [
   {
@@ -117,17 +155,17 @@
    "buys": 0
   },
   {
-   "country": "United States",
-   "users": 1,
-   "avg_lv": 0.0,
-   "cleared_any": 0,
-   "buys": 0
-  },
-  {
    "country": "Brazil",
    "users": 1,
    "avg_lv": 4.0,
    "cleared_any": 1,
+   "buys": 0
+  },
+  {
+   "country": "United States",
+   "users": 1,
+   "avg_lv": 0.0,
+   "cleared_any": 0,
    "buys": 0
   }
  ]
