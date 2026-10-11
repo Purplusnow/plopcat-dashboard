@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-11 16:40 KST",
+ "updated": "2026-10-11 18:10 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261011",
@@ -49,60 +49,403 @@
   {
    "key": "game_open",
    "label": "게임 진입",
-   "users": 3
+   "users": 16
   },
   {
    "key": "first_move",
    "label": "첫 수",
-   "users": 3
+   "users": 16
   },
   {
    "key": "lv1_clear",
    "label": "1판 클리어",
-   "users": 3
+   "users": 15
   },
   {
    "key": "lv3_clear",
    "label": "3판",
-   "users": 3
+   "users": 13
   },
   {
    "key": "album_first",
    "label": "미술관 열기",
-   "users": 1
+   "users": 8
   },
   {
    "key": "first_piece",
    "label": "첫 조각",
-   "users": 0
+   "users": 4
   },
   {
    "key": "lv10_clear",
    "label": "10판",
-   "users": 2
+   "users": 9
   },
   {
    "key": "first_picture",
    "label": "첫 그림 완성",
-   "users": 0
+   "users": 1
   },
   {
    "key": "lv20_clear",
    "label": "20판",
-   "users": 1
+   "users": 6
   },
   {
    "key": "lv50_clear",
    "label": "50판",
-   "users": 1
+   "users": 2
   }
  ],
  "users": [
   {
-   "uid": "a4bce965",
-   "t0": "16:32",
+   "uid": "ec84f866",
+   "t0": "18:02",
+   "mins": 1.1,
+   "model": "IN2025",
+   "country": "",
+   "city": "",
+   "lang": "en-us",
+   "ver": "1.0 (v31)",
+   "new": true,
+   "lv": 0,
+   "started": 1,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [
+    "tut_hand"
+   ],
+   "kind": "bot"
+  },
+  {
+   "uid": "eccf8bd5",
+   "t0": "18:00",
+   "mins": 0.1,
+   "model": "IN2025",
+   "country": "",
+   "city": "",
+   "lang": "en-us",
+   "ver": "1.0 (v31)",
+   "new": true,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "bot"
+  },
+  {
+   "uid": "fb9a02e2",
+   "t0": "17:59",
+   "mins": 0.1,
+   "model": "IN2025",
+   "country": "",
+   "city": "",
+   "lang": "en-us",
+   "ver": "1.0 (v31)",
+   "new": true,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "bot"
+  },
+  {
+   "uid": "9ec7ef8c",
+   "t0": "17:55",
    "mins": 0.0,
-   "model": "SM-A127F",
+   "model": "LLY-NX1",
+   "country": "Brazil",
+   "city": "Sao Paulo",
+   "lang": "fa-af",
+   "ver": "1.0 (v29)",
+   "new": true,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "4613a2d3",
+   "t0": "17:52",
+   "mins": 0.0,
+   "model": "SM-G998B",
+   "country": "South Korea",
+   "city": "Seoul",
+   "lang": "ko-kr",
+   "ver": "1.0 (v30)",
+   "new": true,
+   "lv": 0,
+   "started": 1,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "c18106c6",
+   "t0": "17:49",
+   "mins": 1.1,
+   "model": "IN2025",
+   "country": "",
+   "city": "",
+   "lang": "en-us",
+   "ver": "1.0 (v30)",
+   "new": true,
+   "lv": 0,
+   "started": 1,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "bot"
+  },
+  {
+   "uid": "ca7a9678",
+   "t0": "17:47",
+   "mins": 0.3,
+   "model": "SM-A556E",
+   "country": "Iran",
+   "city": "Tehran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v29)",
+   "new": true,
+   "lv": 0,
+   "started": 1,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 3,
+   "side": [
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "b1b6c9a3",
+   "t0": "17:45",
+   "mins": 18.4,
+   "model": "24117RN76G",
+   "country": "Chile",
+   "city": "Colina",
+   "lang": "fa-ir",
+   "ver": "1.0 (v29)",
+   "new": true,
+   "lv": 74,
+   "started": 74,
+   "clears": 74,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 3,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 1023,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "72a4d51f",
+   "t0": "17:43",
+   "mins": 8.1,
+   "model": "SM-G998B",
+   "country": "South Korea",
+   "city": "Seoul",
+   "lang": "ko-kr",
+   "ver": "1.0 (v30)",
+   "new": true,
+   "lv": 1,
+   "started": 2,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 7,
+   "side": [
+    "nudge_later",
+    "nudge_shown",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "1681cf50",
+   "t0": "17:43",
+   "mins": 6.0,
+   "model": "SM-A705MN",
+   "country": "Iran",
+   "city": "Tehran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v29)",
+   "new": true,
+   "lv": 28,
+   "started": 29,
+   "clears": 28,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 351,
+   "side": [
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "7128dff2",
+   "t0": "17:43",
+   "mins": 0.4,
+   "model": "IN2025",
+   "country": "",
+   "city": "",
+   "lang": "en-us",
+   "ver": "1.0 (v30)",
+   "new": true,
+   "lv": 0,
+   "started": 1,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [
+    "tut_hand"
+   ],
+   "kind": "bot"
+  },
+  {
+   "uid": "c960d8e8",
+   "t0": "17:35",
+   "mins": 10.0,
+   "model": "23021RAAEG",
+   "country": "Brazil",
+   "city": "Vinhedo",
+   "lang": "fa-ir",
+   "ver": "1.0 (v29)",
+   "new": true,
+   "lv": 42,
+   "started": 42,
+   "clears": 42,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 383,
+   "side": [
+    "first_ad",
+    "first_tow",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "53a9eb4f",
+   "t0": "17:34",
+   "mins": 18.5,
+   "model": "SM-G973F",
+   "country": "Iran",
+   "city": "Tehran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v29)",
+   "new": true,
+   "lv": 8,
+   "started": 8,
+   "clears": 8,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 15,
+   "side": [
+    "first_restart",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "0ad882d4",
+   "t0": "17:27",
+   "mins": 39.3,
+   "model": "SM-A505F",
+   "country": "Iran",
+   "city": "Tehran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v29)",
+   "new": true,
+   "lv": 6,
+   "started": 6,
+   "clears": 6,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 63,
+   "side": [
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "cadd27de",
+   "t0": "17:10",
+   "mins": 0.0,
+   "model": "SM-A225F",
    "country": "Iran",
    "city": "Tehran",
    "lang": "fa-ir",
@@ -122,17 +465,43 @@
    "kind": "human"
   },
   {
-   "uid": "9322c3fe",
-   "t0": "16:26",
-   "mins": 0.0,
-   "model": "Redmi Note 8 Pro",
+   "uid": "7227ac69",
+   "t0": "16:56",
+   "mins": 1.8,
+   "model": "23117RA68G",
    "country": "Iran",
    "city": "Tehran",
-   "lang": "en-gb",
+   "lang": "fa-ir",
+   "ver": "1.0 (v29)",
+   "new": true,
+   "lv": 15,
+   "started": 16,
+   "clears": 15,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 79,
+   "side": [
+    "first_ad",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "de2ad9da",
+   "t0": "16:40",
+   "mins": 0.1,
+   "model": "SM-A546E",
+   "country": "Brazil",
+   "city": "Vinhedo",
+   "lang": "fa-ir",
    "ver": "1.0 (v29)",
    "new": true,
    "lv": 0,
-   "started": 0,
+   "started": 1,
    "clears": 0,
    "stuck": 0,
    "ads": 0,
@@ -141,7 +510,60 @@
    "removed": false,
    "abuse": 0,
    "reached": 0,
-   "side": [],
+   "side": [
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "a4bce965",
+   "t0": "16:32",
+   "mins": 6.5,
+   "model": "SM-A127F",
+   "country": "Iran",
+   "city": "Tehran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v29)",
+   "new": true,
+   "lv": 6,
+   "started": 7,
+   "clears": 6,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 15,
+   "side": [
+    "first_restart",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "9322c3fe",
+   "t0": "16:26",
+   "mins": 10.5,
+   "model": "Redmi Note 8 Pro",
+   "country": "Iran",
+   "city": "Tehran",
+   "lang": "en-gb",
+   "ver": "1.0 (v29)",
+   "new": true,
+   "lv": 1,
+   "started": 2,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 23,
+   "side": [
+    "tut_hand"
+   ],
    "kind": "human"
   },
   {
@@ -168,6 +590,32 @@
    "kind": "human"
   },
   {
+   "uid": "8b6b57b6",
+   "t0": "16:20",
+   "mins": 44.1,
+   "model": "2201117TG",
+   "country": "Iran",
+   "city": "Shiraz",
+   "lang": "fa-ir",
+   "ver": "1.0 (v29)",
+   "new": false,
+   "lv": 24,
+   "started": 24,
+   "clears": 24,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 383,
+   "side": [
+    "first_ad",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
    "uid": "360284df",
    "t0": "16:18",
    "mins": 0.1,
@@ -191,26 +639,54 @@
    "kind": "human"
   },
   {
-   "uid": "f9f4ab9d",
+   "uid": "3089be13",
    "t0": "16:15",
-   "mins": 0.0,
-   "model": "M2003J15SC",
+   "mins": 3.0,
+   "model": "23129RAA4G",
    "country": "Iran",
-   "city": "Tehran",
+   "city": null,
    "lang": "fa-ir",
    "ver": "1.0 (v29)",
    "new": true,
-   "lv": 0,
-   "started": 0,
-   "clears": 0,
+   "lv": 29,
+   "started": 29,
+   "clears": 29,
    "stuck": 0,
    "ads": 0,
    "shops": 0,
    "buys": 0,
    "removed": false,
    "abuse": 0,
-   "reached": 0,
-   "side": [],
+   "reached": 351,
+   "side": [
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "f9f4ab9d",
+   "t0": "16:15",
+   "mins": 4.5,
+   "model": "M2003J15SC",
+   "country": "Iran",
+   "city": "Tehran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v29)",
+   "new": true,
+   "lv": 12,
+   "started": 13,
+   "clears": 12,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 79,
+   "side": [
+    "first_ad",
+    "tut_hand"
+   ],
    "kind": "human"
   },
   {
@@ -242,7 +718,7 @@
   {
    "uid": "0e9a1ee0",
    "t0": "14:37",
-   "mins": 3.0,
+   "mins": 185.8,
    "model": "SM-G998B",
    "country": "South Korea",
    "city": "Seoul",
@@ -256,7 +732,7 @@
    "ads": 0,
    "shops": 0,
    "buys": 0,
-   "removed": false,
+   "removed": true,
    "abuse": 0,
    "reached": 55,
    "side": [
@@ -435,41 +911,55 @@
   }
  ],
  "kinds": {
-  "human": 8,
-  "bot": 4,
+  "human": 22,
+  "bot": 9,
   "me": 2,
   "dbg": 0
  },
- "bots": 4,
- "humans": 8,
+ "bots": 9,
+ "humans": 22,
  "versions": [
   {
    "ver": "1.0 (v29)",
-   "users": 11,
-   "installs": 11
+   "users": 23,
+   "installs": 22
+  },
+  {
+   "ver": "1.0 (v30)",
+   "users": 4,
+   "installs": 4
   },
   {
    "ver": "1.0 (v28)",
    "users": 3,
    "installs": 1
+  },
+  {
+   "ver": "1.0 (v31)",
+   "users": 3,
+   "installs": 3
   }
  ],
  "countries": [
   {
    "country": "Iran",
-   "users": 6
+   "users": 15
   },
   {
    "country": "",
-   "users": 4
-  },
-  {
-   "country": "South Korea",
-   "users": 2
+   "users": 9
   },
   {
    "country": "Brazil",
-   "users": 2
+   "users": 7
+  },
+  {
+   "country": "South Korea",
+   "users": 4
+  },
+  {
+   "country": "Chile",
+   "users": 1
   }
  ],
  "purchase_fail": [],
