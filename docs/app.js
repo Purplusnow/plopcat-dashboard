@@ -34,15 +34,34 @@ fetch("data/ingame.json?" + Date.now()).then(r => r.json()).then(d => {
   // ── ⑦~⑩ 더한 섹션들 ──────────────────────────────────────────────
   // 리텐션은 **가로가 Day n** 인 표다. 코호트마다 길이가 달라(어린 코호트는 짧다)
   // 열을 고정하고 빈 칸은 비워 둔다 — 없는 걸 0%로 그리면 "이탈했다"로 읽힌다.
+  // ⑦ 리텐션 — **히트맵**으로 그린다. 표로 두면 숫자만 늘어서 "어디서 꺾이는지"가 안 보인다.
   const ret = d.retention || [];
-  const maxN = ret.reduce((a, r) => Math.max(a, ...(r.d || []).map(x => x.n)), 0);
-  table($("retTable"), ret, [
-    ["설치일", r => r.cohort], ["명", r => n(r.size)],
-    ...Array.from({ length: maxN }, (_, i) => ["D" + (i + 1), r => {
-      const x = (r.d || []).find(y => y.n === i + 1);
-      return x ? `${pct(x.rate)}<span class="dim"> ${x.u}</span>` : "";
-    }]),
-  ]);
+  // ★가로 칸 수는 **데이터가 아니라 달력**이 정한다. 가장 오래된 코호트가 몇 밤을
+  //   지났는지로 잡아야, 아직 안 온 날이 빈 칸으로 남는다.
+  const dayNum = s => Date.UTC(+s.slice(0, 4), +s.slice(4, 6) - 1, +s.slice(6, 8)) / 864e5;
+  const today = d.updated ? dayNum(d.updated.slice(0, 10).replace(/-/g, "")) : 0;
+  const span = ret.reduce((a, r) => Math.max(a, today - dayNum(r.cohort)), 0);
+  const cols = Math.min(Math.max(span, 1), 14);
+  if (!ret.length) { $("retChart").innerHTML = "<p class='why'>아직 코호트가 없습니다.</p>"; }
+  else {
+    const head = `<div class="rrow rhead"><i class="rlab">설치일</i><i class="rsz">명</i>` +
+      Array.from({ length: cols }, (_, i) => `<i>D${i + 1}</i>`).join("") + "</div>";
+    const body = ret.map(r => {
+      const age = today - dayNum(r.cohort);
+      const cells = Array.from({ length: cols }, (_, i) => {
+        const nd = i + 1;
+        if (nd > age) return `<i class="rc none" title="아직 안 온 날"></i>`;  // 0%가 아니다
+        const x = (r.d || []).find(y => y.n === nd);
+        const v = x ? x.rate : 0;            // 그 날이 지났는데 기록이 없으면 진짜 0
+        const a = Math.min(1, v * 2.2);      // 20%만 돼도 눈에 띄게
+        return `<i class="rc" style="background:rgba(42,111,214,${0.08 + a * 0.82})"
+                 title="${r.cohort} D${nd} — ${x ? x.u : 0}명 / ${r.size}명">${v ? Math.round(v * 100) : ""}</i>`;
+      }).join("");
+      return `<div class="rrow"><i class="rlab">${r.cohort.slice(4, 6)}-${r.cohort.slice(6, 8)}</i>` +
+             `<i class="rsz">${n(r.size)}</i>${cells}</div>`;
+    }).join("");
+    $("retChart").innerHTML = head + body;
+  }
   table($("verTable"), d.versions || [], [
     ["버전", r => r.ver], ["명", r => n(r.users)],
     ["1시간 내 최고판", r => r.avg_lv_1h ?? "–"],

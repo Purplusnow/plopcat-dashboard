@@ -87,7 +87,7 @@ setTimeout(() => {
         if (bad.length) fails.push(`실시간 목록에 사람 아닌 줄 ${bad.length}개 (${bad.map(u => u.kind).join(",")})`);
         if (!rt.kinds) fails.push("걸러낸 수(kinds)가 없다 — 조용히 지우면 안 된다");
       } catch (e) { fails.push("realtime.json 을 못 읽는다: " + e.message); }
-      const want = ["kpi", "levelTable", "retTable", "verTable", "rt-reach", "rev-table"];
+      const want = ["kpi", "levelTable", "retChart", "verTable", "rt-reach", "rev-table"];
       for (const id of want) {
         const e = store[id];
         if (!e || (!e.innerHTML && !e.textContent))
