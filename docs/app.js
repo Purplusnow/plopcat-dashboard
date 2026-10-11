@@ -203,9 +203,13 @@ VIEW.revenue = async () => {
 VIEW.realtime = async () => {
   const d = await get("data/realtime.json");
   if (!d) { $("rt-kpi").innerHTML = "<p class='why'>실시간 데이터가 아직 없습니다.</p>"; return; }
+  // ★'사람'은 human 딱지만이다. 내 기기·디버그 빌드를 사람으로 세면 숫자가 거짓이 된다.
+  const kk = d.kinds || {};
   kpiBox("rt-kpi", [
-    ["오늘 사람", n(d.humans)], ["봇·스캔", n(d.bots)],
-    ["전체 줄", n((d.users || []).length)], ["기준일", d.day || "–"],
+    ["오늘 사람", n(d.humans), "바깥에서 들어온 사람"],
+    ["봇·스캔", n(d.bots), "업로드마다 도는 구글 스캔"],
+    ["내 기기·디버그", n((kk.me || 0) + (kk.dbg || 0)), "숫자에서 뺀 것"],
+    ["기준일", d.day || "–"],
   ]);
   const top = (d.reach && d.reach[0] && d.reach[0].users) || 0;
   table($("rt-reach"), d.reach || [], [

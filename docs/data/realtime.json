@@ -289,8 +289,14 @@
    "kind": "human"
   }
  ],
+ "kinds": {
+  "human": 2,
+  "bot": 4,
+  "me": 2,
+  "dbg": 0
+ },
  "bots": 4,
- "humans": 4,
+ "humans": 2,
  "versions": [
   {
    "ver": "1.0 (v29)",

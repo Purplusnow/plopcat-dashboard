@@ -93,7 +93,6 @@ SELECT * FROM me ORDER BY t0 DESC LIMIT 300
 """.format(t=T, d=day, lv=p_int("level"), step=p_str("step")))
 
     users, reach = [], {k: 0 for k in F.STEP_KEYS}
-    bots = 0
     for r in rows:
         onb = set((r["onb"] or "").split(","))
         kind = _classify(r)
@@ -113,9 +112,12 @@ SELECT * FROM me ORDER BY t0 DESC LIMIT 300
             "kind": kind,
         }
         users.append(rec)
-        if kind == "bot":
-            bots += 1
-            continue                      # 봇은 **도달 집계에서만** 뺀다(줄은 남긴다)
+        # ★'사람'은 human 하나뿐이다. 봇·내 기기·디버그 빌드는 전부 아니다.
+        #   예전엔 len(users) - bots 로 셌는데, 그러면 내 블루스택과 디버그 빌드가
+        #   사람으로 잡혀 "사람 4명"이 떴다(실제로는 2명이었다). 줄은 다 남기고
+        #   **세는 건 딱지로** 가른다.
+        if kind != "human":
+            continue                      # 도달 집계에서만 뺀다(줄은 남긴다)
         for i, k in enumerate(F.STEP_KEYS):
             if k in onb:
                 reach[k] += 1
@@ -126,8 +128,10 @@ SELECT * FROM me ORDER BY t0 DESC LIMIT 300
         "steps": [{"key": k, "label": l} for k, l in F.ONB_STEPS],
         "reach": [{"key": k, "label": F.STEP_LABELS[k], "users": reach[k]} for k in F.STEP_KEYS],
         "users": users,
-        "bots": bots,
-        "humans": len(users) - bots,
+        "kinds": {k: sum(1 for u in users if u["kind"] == k)
+                  for k in ("human", "bot", "me", "dbg")},
+        "bots": sum(1 for u in users if u["kind"] == "bot"),
+        "humans": sum(1 for u in users if u["kind"] == "human"),
     }
     out["versions"] = q("""
 SELECT app_info.version ver, COUNT(DISTINCT user_pseudo_id) users,
@@ -153,7 +157,9 @@ GROUP BY reason ORDER BY n DESC
 
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     json.dump(out, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    print("✓ realtime %s — %d명(사람 %d · 봇 %d)" % (day, len(users), out["humans"], bots))
+    k = out["kinds"]
+    print("✓ realtime %s — %d줄 (사람 %d · 봇 %d · 내기기 %d · 디버그 %d)"
+          % (day, len(users), k["human"], k["bot"], k["me"], k["dbg"]))
 
 
 def _classify(r):
