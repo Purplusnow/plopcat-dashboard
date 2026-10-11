@@ -92,13 +92,14 @@
 
   <!-- ★여기부터가 "인생 2막 수준"으로 올리며 더한 것들 -->
   <section>
-    <h2>⑦ 코호트 리텐션 <span class="note">설치일 × Day n</span></h2>
+    <h2>⑦ 코호트 리텐션 <span class="note">설치일 × Day n · 히트맵(빨강=높음)</span></h2>
     <p class="why">분모는 <b>그 날 설치한 사람</b>이다. 전체 유저로 나누면 어제 설치한
        코호트가 D7을 채울 시간이 없어 리텐션이 가짜로 우하향한다.
        D0은 늘 100%라 뺐다.
        ★<b>아직 안 온 날</b>(코호트가 어려서 그 날이 오지 않음)과 <b>0%</b>는 다르다 —
        앞은 빈 칸, 뒤는 숫자로 보여 준다. 섞으면 멀쩡한 코호트가 급락한 것처럼 보인다.</p>
-    <div class="scroll"><div id="retChart" class="rethm"></div></div>
+    <div class="scroll"><table id="retChart" class="cohtable"></table></div>
+    <p class="chart-note" id="retNote"></p>
   </section>
 
   <section>

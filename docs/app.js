@@ -34,34 +34,44 @@ fetch("data/ingame.json?" + Date.now()).then(r => r.json()).then(d => {
   // ── ⑦~⑩ 더한 섹션들 ──────────────────────────────────────────────
   // 리텐션은 **가로가 Day n** 인 표다. 코호트마다 길이가 달라(어린 코호트는 짧다)
   // 열을 고정하고 빈 칸은 비워 둔다 — 없는 걸 0%로 그리면 "이탈했다"로 읽힌다.
-  // ⑦ 리텐션 — **히트맵**으로 그린다. 표로 두면 숫자만 늘어서 "어디서 꺾이는지"가 안 보인다.
+  // ⑦ 리텐션 히트맵 — 세로로 코호트 편차, 가로로 감쇠를 본다.
+  // ★색은 0%→옅은 노랑, 높을수록 주황→빨강(50%에서 포화). 파랑 농도보다 눈이 빨리 읽는다.
+  // ★"아직 안 온 날"은 **·** 로 둔다. 0% 로 그리면 어제 깐 코호트가 D2~D14 전부 0 인
+  //   급락 그래프가 돼서, 멀쩡한 코호트가 망한 것처럼 보인다.
   const ret = d.retention || [];
-  // ★가로 칸 수는 **데이터가 아니라 달력**이 정한다. 가장 오래된 코호트가 몇 밤을
-  //   지났는지로 잡아야, 아직 안 온 날이 빈 칸으로 남는다.
+  const RN = 14;
   const dayNum = s => Date.UTC(+s.slice(0, 4), +s.slice(4, 6) - 1, +s.slice(6, 8)) / 864e5;
   const today = d.updated ? dayNum(d.updated.slice(0, 10).replace(/-/g, "")) : 0;
-  const span = ret.reduce((a, r) => Math.max(a, today - dayNum(r.cohort)), 0);
-  const cols = Math.min(Math.max(span, 1), 14);
-  if (!ret.length) { $("retChart").innerHTML = "<p class='why'>아직 코호트가 없습니다.</p>"; }
-  else {
-    const head = `<div class="rrow rhead"><i class="rlab">설치일</i><i class="rsz">명</i>` +
-      Array.from({ length: cols }, (_, i) => `<i>D${i + 1}</i>`).join("") + "</div>";
-    const body = ret.map(r => {
+  const heat = p => {
+    const t = Math.min(p / 50, 1);                 // 50% 에서 포화
+    return `hsl(${(55 - 55 * t).toFixed(0)},95%,${(90 - 42 * t).toFixed(0)}%)`;
+  };
+  if (!ret.length) {
+    $("retChart").innerHTML = "<tbody><tr><td>아직 코호트가 없습니다</td></tr></tbody>";
+  } else {
+    let h = '<thead><tr><th class="stick">설치일</th><th>신규</th>';
+    for (let k = 1; k <= RN; k++) h += `<th>D${k}</th>`;
+    h += "</tr></thead><tbody>";
+    for (const r of ret) {                          // 수집기가 이미 최신순으로 준다
       const age = today - dayNum(r.cohort);
-      const cells = Array.from({ length: cols }, (_, i) => {
-        const nd = i + 1;
-        if (nd > age) return `<i class="rc none" title="아직 안 온 날"></i>`;  // 0%가 아니다
-        const x = (r.d || []).find(y => y.n === nd);
-        const v = x ? x.rate : 0;            // 그 날이 지났는데 기록이 없으면 진짜 0
-        const a = Math.min(1, v * 2.2);      // 20%만 돼도 눈에 띄게
-        return `<i class="rc" style="background:rgba(42,111,214,${0.08 + a * 0.82})"
-                 title="${r.cohort} D${nd} — ${x ? x.u : 0}명 / ${r.size}명">${v ? Math.round(v * 100) : ""}</i>`;
-      }).join("");
-      return `<div class="rrow"><i class="rlab">${r.cohort.slice(4, 6)}-${r.cohort.slice(6, 8)}</i>` +
-             `<i class="rsz">${n(r.size)}</i>${cells}</div>`;
-    }).join("");
-    $("retChart").innerHTML = head + body;
+      h += `<tr><td class="stick">${r.cohort.slice(4, 6)}-${r.cohort.slice(6, 8)}</td>` +
+           `<td class="num">${n(r.size)}</td>`;
+      for (let k = 1; k <= RN; k++) {
+        if (k > age) { h += '<td class="num coh-na" title="아직 안 온 날">·</td>'; continue; }
+        const x = (r.d || []).find(y => y.n === k);
+        const p = Math.round((x ? x.rate : 0) * 100);   // 그 날이 지났는데 없으면 진짜 0
+        const lg = 90 - 42 * Math.min(p / 50, 1);
+        h += `<td class="num fcell" style="background:${heat(p)};color:${lg < 55 ? "#fff" : "#333"}"` +
+             ` title="${r.cohort} D${k} — ${x ? x.u : 0}명 / ${r.size}명">${p}%</td>`;
+      }
+      h += "</tr>";
+    }
+    $("retChart").innerHTML = h + "</tbody>";
   }
+  $("retNote").textContent =
+    `설치일 코호트 × D1~D${RN} 복귀율 · 셀 = 그 코호트 중 **정확히 n일 뒤** 접속한 비율 · ` +
+    `· = 아직 안 온 날(0% 아님) · 최신 설치일이 위`;
+
   table($("verTable"), d.versions || [], [
     ["버전", r => r.ver], ["명", r => n(r.users)],
     ["1시간 내 최고판", r => r.avg_lv_1h ?? "–"],

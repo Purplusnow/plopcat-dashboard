@@ -78,12 +78,13 @@ table.empty td{color:#6b7a90}
 .axis i{flex:1;min-width:0;font-style:normal;font-size:10px;color:#6b7a90;
   text-align:center;white-space:nowrap;overflow:visible}
 
-/* 리텐션 히트맵 — 진할수록 많이 돌아왔다. 빈 칸은 "아직 안 온 날"이지 0% 가 아니다. */
-.rethm{display:flex;flex-direction:column;gap:3px;min-width:420px}
-.rrow{display:flex;gap:3px;align-items:stretch}
-.rrow i{font-style:normal;font-size:12px;display:flex;align-items:center;justify-content:center}
-.rlab{width:54px;color:#9fb0c8;justify-content:flex-start!important}
-.rsz{width:38px;color:#6b7a90}
-.rhead i{color:#6b7a90;font-size:11px;height:18px}
-.rc{flex:1;min-width:30px;height:30px;border-radius:5px;color:#eaf1fb;font-weight:700}
-.rc.none{background:repeating-linear-gradient(45deg,#161b26,#161b26 4px,#1b2130 4px,#1b2130 8px)}
+/* 리텐션 히트맵(인생 2막과 같은 눈금) — 0% 옅은 노랑 → 50%+ 빨강. ·=아직 안 온 날 */
+.cohtable{border-collapse:separate;border-spacing:2px;min-width:620px}
+.cohtable th{font-size:11px;color:#6b7a90;font-weight:600;padding:2px 4px;white-space:nowrap}
+.cohtable td{font-size:12px;padding:5px 6px;text-align:center;border-radius:4px;white-space:nowrap}
+.cohtable td.stick,.cohtable th.stick{position:sticky;left:0;background:#121722;text-align:left;
+  color:#9fb0c8;z-index:1}
+.cohtable td.num{font-variant-numeric:tabular-nums}
+.cohtable td.fcell{font-weight:700}
+.cohtable td.coh-na{color:#3d4a63;background:#141926}
+.chart-note{font-size:11px;color:#6b7a90;margin:8px 2px 0;line-height:1.5}
