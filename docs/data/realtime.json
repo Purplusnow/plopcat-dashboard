@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12 00:16 KST",
+ "updated": "2026-10-12 00:39 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261012",
@@ -99,6 +99,98 @@
  ],
  "users": [
   {
+   "uid": "47c54972",
+   "t0": "00:37",
+   "mins": 0.0,
+   "model": "M2101K6I",
+   "country": "Brazil",
+   "city": "Vinhedo",
+   "lang": "fa-ir",
+   "ver": "1.0 (v36)",
+   "new": true,
+   "lv": 0,
+   "started": 1,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "8cee6fe3",
+   "t0": "00:37",
+   "mins": 0.1,
+   "model": "DUB-LX1",
+   "country": "Brazil",
+   "city": "Sao Paulo",
+   "lang": "fa-ir",
+   "ver": "1.0 (v36)",
+   "new": true,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "c2a0c65d",
+   "t0": "00:33",
+   "mins": 2.9,
+   "model": "SM-A266B",
+   "country": "Iran",
+   "city": "Shiraz",
+   "lang": "fa-ir",
+   "ver": "1.0 (v29)",
+   "new": false,
+   "lv": 115,
+   "started": 116,
+   "clears": 6,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "362cb56f",
+   "t0": "00:30",
+   "mins": 0.0,
+   "model": "SM-A137F",
+   "country": "Brazil",
+   "city": "Sao Paulo",
+   "lang": "fa-ir",
+   "ver": "1.0 (v36)",
+   "new": true,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
    "uid": "2dfc36c1",
    "t0": "00:12",
    "mins": 0.0,
@@ -195,28 +287,33 @@
   }
  ],
  "kinds": {
-  "human": 4,
+  "human": 8,
   "bot": 0,
   "me": 0,
   "dbg": 0
  },
  "bots": 0,
- "humans": 4,
+ "humans": 8,
  "versions": [
   {
    "ver": "1.0 (v36)",
-   "users": 3,
-   "installs": 2
+   "users": 6,
+   "installs": 5
   },
   {
    "ver": "1.0 (v29)",
-   "users": 1,
+   "users": 2,
    "installs": 0
   }
  ],
  "countries": [
   {
    "country": "Iran",
+   "users": 4,
+   "vpn": 0
+  },
+  {
+   "country": "Brazil",
    "users": 3,
    "vpn": 0
   },
