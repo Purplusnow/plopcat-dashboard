@@ -15,8 +15,11 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 WF = ROOT / ".github" / "workflows"
 # 이름 → (돌려야 하는 스크립트들, 커밋해야 하는 경로들)
-#: 어느 워크플로에서 돌아도 되는 것 — 수집이 아니라 **검사**다
-OK_ANYWHERE = {"tools/selftest.py"}
+#: 어느 워크플로에서 돌아도 되는 것 — 수집이 아니라 **검사**다.
+#: ★이름으로 가른다. 목록으로 두면 검사를 하나 더 만들 때마다 여기도 고쳐야 하고,
+#:   실제로 이 가드가 **자기 자신을** 남의 스크립트라고 잡았다.
+def is_check(path: str) -> bool:
+    return path.endswith("test.py") or path.endswith("test.js")
 WANT = {
     "ingame": (["tools/ingame.py", "tools/users.py"], ["docs/data/ingame.json", "docs/data/users"]),
     "realtime": (["tools/realtime.py"], ["docs/data/realtime.json"]),
@@ -37,7 +40,9 @@ def main() -> int:
         for sc in scripts:
             if sc not in runs:
                 bad.append("%s.yml 이 %s 를 안 돌린다 (돌리는 것: %s)" % (name, sc, sorted(runs) or "없음"))
-        for extra in runs - set(scripts) - OK_ANYWHERE:
+        for extra in runs - set(scripts):
+            if is_check(extra):
+                continue
             bad.append("%s.yml 이 남의 스크립트 %s 를 돌린다" % (name, extra))
         for p in paths:
             if p not in adds:
