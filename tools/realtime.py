@@ -81,7 +81,7 @@ me AS (
     MAX(IF(event_name='level_clear', {lv}, NULL)) max_clear,
     COUNTIF(event_name='level_clear') clears,
     COUNTIF(event_name='level_stuck') stuck,
-    COUNTIF(event_name='ad_reward') ads,
+    COUNTIF(event_name='ad_watch') ads,
     COUNTIF(event_name='shop_open') shops,
     COUNTIF(event_name='purchase') buys,
     COUNTIF(event_name='app_remove') > 0 removed,

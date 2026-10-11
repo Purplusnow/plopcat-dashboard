@@ -223,9 +223,9 @@ def main():
     chk("완성 그림 건수", ar["pictures"], 2)
 
     # ── ⑤ 광고 결과 ─────────────────────────────────────────────────
-    ad = [ev("20260101", "a", "ad_reward", [("placement", "hint"), ("result", "earned")]),
-          ev("20260101", "b", "ad_reward", [("placement", "hint"), ("result", "earned")]),
-          ev("20260101", "c", "ad_reward", [("placement", "hint"), ("result", "no_ad")])]
+    ad = [ev("20260101", "a", "ad_watch", [("placement", "hint"), ("result", "earned")]),
+          ev("20260101", "b", "ad_watch", [("placement", "hint"), ("result", "earned")]),
+          ev("20260101", "c", "ad_watch", [("placement", "hint"), ("result", "no_ad")])]
     adr = run(Q.ads(table(ad), "TRUE"))
     chk("광고 결과가 많은 순", (adr[0]["result"], adr[0]["n"]), ("earned", 2))
 

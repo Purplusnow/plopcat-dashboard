@@ -136,10 +136,15 @@ GROUP BY step
 
 
 def ads(table: str, filt: str) -> str:
-    """광고 결과 분포 = **공급 실패율**. no_ad 가 많으면 인벤토리가 없는 것이다."""
+    """광고 결과 분포 = **공급 실패율**. no_ad 가 많으면 인벤토리가 없는 것이다.
+    ★이름이 ad_watch 다. 예전엔 ad_reward 였는데 **Firebase 예약 이름**이라
+    커스텀 전송이 조용히 버려졌다(2026-10-11 확인: 광고를 본 사람 8명인데 우리가
+    보낸 ad_reward 는 0건). 과거 데이터를 같이 읽을 필요가 없다 — 애초에 하나도
+    안 들어왔다. BigQuery 에 보이는 옛 ad_reward 는 AdMob 이 자동으로 쏜 것이다.
+    """
     return """
 SELECT {pl} placement, {rs} result, COUNT(*) n
-FROM {t} WHERE {f} AND event_name = 'ad_reward'
+FROM {t} WHERE {f} AND event_name = 'ad_watch'
 GROUP BY placement, result ORDER BY n DESC LIMIT 30
 """.format(t=table, f=filt, pl=p_str("placement"), rs=p_str("result"))
 
