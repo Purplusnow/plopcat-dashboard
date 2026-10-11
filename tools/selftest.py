@@ -250,6 +250,28 @@ def main():
     chk("전면 실패율 1/3", sm["inter"]["fail_rate"], 0.333)
     chk("사람 수는 중복을 지운다(전면 a 2건=1명)", sm["inter"]["users"], 2)
 
+    # ── ⑤-b ★VPN: 한 사람이 여러 나라로 잡힌다 ─────────────────────
+    # 답을 손으로: a 는 Iran 3건 + Brazil 1건 → **Iran 한 명**(가장 많은 나라).
+    #             b 는 Brazil 만 → Brazil 한 명.
+    # 틀린 방식 둘:
+    #   · GROUP BY geo.country 로 세면 a 가 두 나라에 들어가 합계가 3이 된다.
+    #   · ANY_VALUE 로 집으면 a 가 Iran 일지 Brazil 일지 **실행마다 달라진다**.
+    cty = []
+    for i in range(3):
+        cty.append(ev("20260101", "a", "level_clear",
+                      [("level", 1), ("attempts", 1), ("over", 0), ("play_secs", 5),
+                       ("hints", 0), ("undos", 0), ("tows", 0), ("restarts", 0)],
+                      country="Iran"))
+    cty.append(ev("20260101", "a", "level_start", [("level", 2)], country="Brazil"))
+    cty.append(ev("20260101", "b", "level_start", [("level", 1)], country="Brazil"))
+    cf = Q.human("TRUE", "20251231", [], [])
+    cr = {r["country"]: r for r in run(Q.countries(table(cty), cf))}
+    chk("★VPN 유저는 한 나라에만 센다", sorted(cr), ["Brazil", "Iran"])
+    chk("가장 많이 찍힌 나라로 간다(a→Iran)", cr["Iran"]["users"], 1)
+    chk("합계가 사람 수를 넘지 않는다", sum(r["users"] for r in cr.values()), 2)
+    chk("★나라가 둘이던 사람을 숨기지 않는다(vpn)", cr["Iran"]["vpn"], 1)
+    chk("한 나라만 쓴 사람은 vpn 0", cr["Brazil"]["vpn"], 0)
+
     # ── ⑥ 온보딩 ───────────────────────────────────────────────────
     ob = [ev("20260101", "a", "onboard_step", [("step", 1)]),
           ev("20260101", "a", "onboard_step", [("step", 1)]),   # 같은 사람 중복

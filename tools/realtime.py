@@ -156,9 +156,19 @@ SELECT app_info.version ver, COUNT(DISTINCT user_pseudo_id) users,
   COUNTIF(event_name='first_open') installs
 FROM {t} WHERE _TABLE_SUFFIX='{d}' AND {h} GROUP BY ver ORDER BY users DESC
 """.format(t=T, d=day, h=only_human))
+    # ★사람당 나라를 **하나로** 정한다 — 인게임 뷰와 같은 규칙(queries.countries 주석).
+    #   그냥 GROUP BY 로 세면 VPN 유저가 여러 나라에 중복으로 들어가 합계가 유저 수를
+    #   넘는다(실측: 브라질 9 인데 실제로는 7명이 이란과 같은 사람이었다).
     out["countries"] = q("""
-SELECT IFNULL(geo.country,'(없음)') country, COUNT(DISTINCT user_pseudo_id) users
-FROM {t} WHERE _TABLE_SUFFIX='{d}' AND {h} GROUP BY country ORDER BY users DESC LIMIT 20
+WITH ec AS (
+  SELECT user_pseudo_id uid, geo.country c, COUNT(*) n
+  FROM {t} WHERE _TABLE_SUFFIX='{d}' AND {h} GROUP BY uid, c
+), pick AS (
+  SELECT uid, ARRAY_AGG(c ORDER BY n DESC, c LIMIT 1)[OFFSET(0)] c, COUNT(*) > 1 vpn
+  FROM ec GROUP BY uid
+)
+SELECT c country, COUNT(*) users, COUNTIF(vpn) vpn
+FROM pick GROUP BY country ORDER BY users DESC LIMIT 20
 """.format(t=T, d=day, h=only_human))
     # ★변조 APK 차단이 **작동 중인지** 본다. 차단이 늘면 좋은 신호지만,
     #   정상 유저가 섞여 막히면 매출이 조용히 0 이 된다 — 그래서 사유별로 센다.

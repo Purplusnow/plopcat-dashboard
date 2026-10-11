@@ -56,8 +56,11 @@ fetch("data/ingame.json?" + Date.now()).then(r => r.json()).then(d => {
     ["클리어", r => n(r.clears)], ["중앙 초", r => n(r.median_secs)],
     ["초과 수", r => r.over_moves ?? "–"],
   ]);
+  // ★VPN 칸은 숨기지 않는다. 이란은 Play 가 공식 서비스하지 않아 VPN 이 기본이고,
+  //   그래서 "브라질 유저"의 상당수가 사실 이란 사람이다. 그걸 모르면 시장을 잘못 읽는다.
   table($("ctryTable"), d.countries || [], [
     ["국가", r => r.country || "–"], ["명", r => n(r.users)],
+    ["VPN", r => r.vpn ? `<span class="dim">${n(r.vpn)}</span>` : ""],
     ["평균 레벨", r => r.avg_lv ?? "–"], ["1판이라도", r => n(r.cleared_any)],
     ["결제", r => n(r.buys)],
   ]);
@@ -233,7 +236,8 @@ VIEW.realtime = async () => {
     ["결제", r => n(r.buys)], ["삭제", r => r.removed ? "예" : ""],
   ]);
   table($("rt-ver"), d.versions || [], [["버전", r => r.ver], ["사람", r => n(r.users)], ["설치", r => n(r.installs)]]);
-  table($("rt-ctry"), d.countries || [], [["국가", r => r.country], ["사람", r => n(r.users)]]);
+  table($("rt-ctry"), d.countries || [], [["국가", r => r.country], ["사람", r => n(r.users)],
+    ["VPN", r => r.vpn ? `<span class="dim">${n(r.vpn)}</span>` : ""]]);
   table($("rt-fail"), d.purchase_fail || [], [["사유", r => r.reason || "–"], ["건", r => n(r.n)], ["사람", r => n(r.users)]]);
   table($("rt-abuse"), d.abuse || [], [["사유", r => r.reason || "–"], ["지급됨", r => n(r.granted)], ["건", r => n(r.n)]]);
 };

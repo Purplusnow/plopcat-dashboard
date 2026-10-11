@@ -321,15 +321,37 @@ FROM {t} WHERE {f} AND event_name='side_step' GROUP BY step ORDER BY users DESC
 
 
 def countries(table: str, filt: str) -> str:
-    """국가별 — 어디서 오고, 거기서 **깨는가**."""
+    """국가별 — 어디서 오고, 거기서 **깨는가**.
+
+    ★한 사람이 **여러 나라로 잡힌다.** GA4 는 이벤트마다 IP 로 위치를 찍는데
+      VPN 을 쓰면 그때그때 달라진다 — 실측(2026-10-11): 실유저 38명 중 8명이
+      나라가 둘 이상이었고, 조합이 전부 'Iran + 어딘가'였다(Brazil·Chile·Germany).
+      이란은 Play 가 공식 서비스하지 않아 VPN 이 사실상 기본이다.
+
+    그래서 **사람당 나라를 하나로 정한다** — 이벤트가 가장 많은 나라(동률은 이름순).
+      · 그냥 GROUP BY geo.country 로 세면 **같은 사람이 여러 나라에 중복**으로 들어가
+        합계가 유저 수보다 커진다(실시간 뷰가 그랬다: 브라질 9).
+      · ANY_VALUE 로 집으면 **실행할 때마다 값이 바뀐다**(인게임 뷰가 그랬다: 브라질 5).
+      둘 다 틀렸고, 둘이 서로 달라서 형이 알아챘다.
+
+    vpn 칸은 **숨기지 않고 보여 준다** — 나라가 둘 이상이던 사람 수다.
+    """
     return """
-WITH u AS (
-  SELECT user_pseudo_id uid, ANY_VALUE(geo.country) c,
+WITH ec AS (
+  SELECT user_pseudo_id uid, geo.country c, COUNT(*) n
+  FROM {t} WHERE {f} GROUP BY uid, c
+), pick AS (
+  SELECT uid, ARRAY_AGG(c ORDER BY n DESC, c LIMIT 1)[OFFSET(0)] c,
+    COUNT(*) > 1 vpn
+  FROM ec GROUP BY uid
+), u AS (
+  SELECT user_pseudo_id uid,
     MAX(IF(event_name='level_clear', {lv}, 0)) lv,
     COUNTIF(event_name='purchase') buys
   FROM {t} WHERE {f} GROUP BY uid
 )
-SELECT c country, COUNT(*) users, ROUND(AVG(lv), 1) avg_lv,
-  COUNTIF(lv > 0) cleared_any, SUM(buys) buys
-FROM u GROUP BY c ORDER BY users DESC LIMIT 25
+SELECT pick.c country, COUNT(*) users, ROUND(AVG(u.lv), 1) avg_lv,
+  COUNTIF(u.lv > 0) cleared_any, SUM(u.buys) buys, COUNTIF(pick.vpn) vpn
+FROM pick JOIN u USING (uid)
+GROUP BY country ORDER BY users DESC LIMIT 25
 """.format(t=table, f=filt, lv=INT("level"))
