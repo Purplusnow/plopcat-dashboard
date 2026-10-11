@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-11 13:32 KST",
+ "updated": "2026-10-11 14:06 KST",
  "window_days": 45,
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
@@ -9,7 +9,7 @@
  "filtered": [
   {
    "reason": "구글 자동스캔(지역 없음)",
-   "users": 42
+   "users": 45
   },
   {
    "reason": "모델명 없음(스캔 의심)",
