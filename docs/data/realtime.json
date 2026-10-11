@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-11 16:32 KST",
+ "updated": "2026-10-11 16:40 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261011",
@@ -242,24 +242,26 @@
   {
    "uid": "0e9a1ee0",
    "t0": "14:37",
-   "mins": 0.0,
+   "mins": 3.0,
    "model": "SM-G998B",
    "country": "South Korea",
    "city": "Seoul",
    "lang": "ko-kr",
    "ver": "1.0 (v29)",
    "new": true,
-   "lv": 0,
-   "started": 0,
-   "clears": 0,
+   "lv": 1,
+   "started": 2,
+   "clears": 1,
    "stuck": 0,
    "ads": 0,
    "shops": 0,
    "buys": 0,
    "removed": false,
    "abuse": 0,
-   "reached": 0,
-   "side": [],
+   "reached": 55,
+   "side": [
+    "tut_hand"
+   ],
    "kind": "me"
   },
   {
