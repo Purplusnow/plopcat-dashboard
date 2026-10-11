@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-11 14:09 KST",
+ "updated": "2026-10-11 15:09 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261011",
@@ -99,6 +99,98 @@
  ],
  "users": [
   {
+   "uid": "0e9a1ee0",
+   "t0": "14:37",
+   "mins": 0.0,
+   "model": "SM-G998B",
+   "country": "South Korea",
+   "city": "Seoul",
+   "lang": "ko-kr",
+   "ver": "1.0 (v29)",
+   "new": true,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "440bcf42",
+   "t0": "14:37",
+   "mins": 0.0,
+   "model": "2409BRN2CY",
+   "country": "Iran",
+   "city": null,
+   "lang": "fa-ir",
+   "ver": "1.0 (v28)",
+   "new": true,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "3446d154",
+   "t0": "14:36",
+   "mins": 0.0,
+   "model": "SM-G998B",
+   "country": "South Korea",
+   "city": "Seoul",
+   "lang": "ko-kr",
+   "ver": "1.0 (v28)",
+   "new": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "me"
+  },
+  {
+   "uid": "23b26789",
+   "t0": "14:11",
+   "mins": 0.0,
+   "model": "IN2025",
+   "country": "",
+   "city": "",
+   "lang": "en-us",
+   "ver": "1.0 (v29)",
+   "new": true,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "bot"
+  },
+  {
    "uid": "8d9680b9",
    "t0": "14:00",
    "mins": 0.6,
@@ -197,27 +289,35 @@
    "kind": "human"
   }
  ],
- "bots": 3,
- "humans": 1,
+ "bots": 4,
+ "humans": 4,
  "versions": [
   {
    "ver": "1.0 (v29)",
-   "users": 3,
-   "installs": 3
+   "users": 5,
+   "installs": 5
   },
   {
    "ver": "1.0 (v28)",
-   "users": 1,
-   "installs": 0
+   "users": 3,
+   "installs": 1
   }
  ],
  "countries": [
   {
    "country": "",
-   "users": 3
+   "users": 4
+  },
+  {
+   "country": "South Korea",
+   "users": 2
   },
   {
    "country": "Brazil",
+   "users": 1
+  },
+  {
+   "country": "Iran",
    "users": 1
   }
  ],
