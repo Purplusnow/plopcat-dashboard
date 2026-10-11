@@ -242,14 +242,29 @@ VIEW.realtime = async () => {
 VIEW.ads = async () => {
   const [ig, cfg, dy] = await Promise.all(
     [get("data/ingame.json"), get("data/config.json"), get("data/daily.json")]);
+  // ★전면과 보상을 **나눠서** 본다. 한 표에 섞으면 "광고가 잘 나온다"가
+  //   전면 때문인지 보상 때문인지 알 수 없고, 둘은 고치는 법이 다르다.
+  //   가르는 규칙은 쿼리(queries.AD_KIND)가 단일 출처다 — 여기선 kind 만 읽는다.
   const ads = (ig && ig.ads) || [];
-  const shown = ads.reduce((a, r) => a + (r.n || r.events || 0), 0);
+  const sum = (ig && ig.ad_summary) || [];
+  const pick = k => sum.find(r => r.kind === k) || {};
+  const iv = pick("inter"), rw = pick("reward");
   kpiBox("ad-kpi", [
-    ["리워드 광고 결과", n(ads.length)],
-    ["총 건수", n(shown)],
-    ["AdMob 수집", (dy && dy.synced && dy.synced.admob) ? "켜짐" : "아직 없음"],
+    ["전면 노출", n(iv.shows || 0), iv.users ? `${n(iv.users)}명` : ""],
+    ["보상 노출", n(rw.shows || 0), rw.users ? `${n(rw.users)}명` : ""],
+    ["전면 실패율", iv.shows ? pct(iv.fail_rate) : "–"],
+    ["보상 실패율", rw.shows ? pct(rw.fail_rate) : "–"],
   ]);
-  table($("ad-reward"), ads, Object.keys(ads[0] || {}).map(k => [k, r => fmt(r[k])]));
+  const KIND = { inter: "🎬 전면", reward: "🎁 보상" };
+  table($("ad-summary"), sum, [
+    ["종류", r => KIND[r.kind] || r.kind], ["노출", r => n(r.shows)],
+    ["사람", r => n(r.users)], ["실패", r => n(r.failed)],
+    ["실패율", r => pct(r.fail_rate)],
+  ]);
+  const cols = [["자리", r => r.placement || "–"], ["결과", r => r.result || "–"],
+                ["건수", r => n(r.n)], ["사람", r => n(r.users)]];
+  table($("ad-inter"), ads.filter(r => r.kind === "inter"), cols);
+  table($("ad-reward"), ads.filter(r => r.kind === "reward"), cols);
   const rows = ((dy && dy.daily) || []).filter(r => r.admob);
   $("ad-note").textContent = rows.length
     ? "AdMob API 에서 받은 일별 광고매출이다."

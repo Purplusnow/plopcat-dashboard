@@ -226,8 +226,26 @@ def main():
     ad = [ev("20260101", "a", "ad_watch", [("placement", "hint"), ("result", "earned")]),
           ev("20260101", "b", "ad_watch", [("placement", "hint"), ("result", "earned")]),
           ev("20260101", "c", "ad_watch", [("placement", "hint"), ("result", "no_ad")])]
+    # ★전면광고도 섞는다. 게임은 전면을 placement="inter" 로 쏜다(ads.gd).
+    #   답을 손으로: 보상 3건(earned 2 · no_ad 1) / 전면 3건(dismissed 2 · failed 1)
+    ad += [ev("20260101", "a", "ad_watch", [("placement", "inter"), ("result", "dismissed")]),
+           ev("20260101", "b", "ad_watch", [("placement", "inter"), ("result", "dismissed")]),
+           ev("20260101", "a", "ad_watch", [("placement", "inter"), ("result", "failed")])]
     adr = run(Q.ads(table(ad), "TRUE"))
-    chk("광고 결과가 많은 순", (adr[0]["result"], adr[0]["n"]), ("earned", 2))
+    by = {}
+    for r in adr:
+        by.setdefault(r["kind"], []).append(r)
+    chk("★전면과 보상이 나뉜다", sorted(by), ["inter", "reward"])
+    chk("보상 결과가 많은 순", (by["reward"][0]["result"], by["reward"][0]["n"]), ("earned", 2))
+    chk("전면 결과가 많은 순", (by["inter"][0]["result"], by["inter"][0]["n"]), ("dismissed", 2))
+
+    sm = {r["kind"]: r for r in run(Q.ad_summary(table(ad), "TRUE"))}
+    chk("보상 노출 3건", sm["reward"]["shows"], 3)
+    chk("전면 노출 3건", sm["inter"]["shows"], 3)
+    # ★실패율 분모는 **그 종류의 전체 노출**이다(자리별 평균이 아니다)
+    chk("보상 실패율 1/3", sm["reward"]["fail_rate"], 0.333)
+    chk("전면 실패율 1/3", sm["inter"]["fail_rate"], 0.333)
+    chk("사람 수는 중복을 지운다(전면 a 2건=1명)", sm["inter"]["users"], 2)
 
     # ── ⑥ 온보딩 ───────────────────────────────────────────────────
     ob = [ev("20260101", "a", "onboard_step", [("step", 1)]),

@@ -135,18 +135,50 @@ GROUP BY step
 """.format(t=table, f=filt)
 
 
+#: 전면광고와 보상광고를 가르는 규칙. **한 곳에만** 둔다 — 화면과 쿼리가
+#: 각자 가지면 갈라진다. 게임은 전면을 placement="inter" 로 쏘고(ads.gd),
+#: 보상은 그 자리 이름(hint/heart/skip)으로 쏜다.
+AD_KIND = "IF({pl} = 'inter', 'inter', 'reward')"
+
+
 def ads(table: str, filt: str) -> str:
-    """광고 결과 분포 = **공급 실패율**. no_ad 가 많으면 인벤토리가 없는 것이다.
+    """광고 — **전면과 보상을 나눠서** 본다(형 요청 2026-10-11).
+
+    둘은 성격이 완전히 다르다:
+      · 전면(inter) — 유저가 원해서 보는 게 아니다. 많이 띄울수록 돈이 되지만
+        이탈도 같이 는다. 봐야 할 건 **노출 수**와 failed 비율이다.
+      · 보상(reward) — 유저가 **자기 발로** 본다. 여기가 죽으면 무과금 유저의
+        숨구멍이 막힌다. 봐야 할 건 자리(hint/heart/skip)별 **공급 실패율**이다.
+        no_ad 가 많으면 인벤토리가 없는 것이고, 그건 우리 잘못이 아니라 시장이다.
+
     ★이름이 ad_watch 다. 예전엔 ad_reward 였는데 **Firebase 예약 이름**이라
     커스텀 전송이 조용히 버려졌다(2026-10-11 확인: 광고를 본 사람 8명인데 우리가
     보낸 ad_reward 는 0건). 과거 데이터를 같이 읽을 필요가 없다 — 애초에 하나도
     안 들어왔다. BigQuery 에 보이는 옛 ad_reward 는 AdMob 이 자동으로 쏜 것이다.
     """
     return """
-SELECT {pl} placement, {rs} result, COUNT(*) n
+SELECT {kind} kind, {pl} placement, {rs} result,
+  COUNT(*) n, COUNT(DISTINCT user_pseudo_id) users
 FROM {t} WHERE {f} AND event_name = 'ad_watch'
-GROUP BY placement, result ORDER BY n DESC LIMIT 30
-""".format(t=table, f=filt, pl=p_str("placement"), rs=p_str("result"))
+GROUP BY kind, placement, result ORDER BY kind, n DESC LIMIT 40
+""".format(t=table, f=filt, pl=p_str("placement"), rs=p_str("result"),
+           kind=AD_KIND.format(pl=p_str("placement")))
+
+
+def ad_summary(table: str, filt: str) -> str:
+    """종류별 한 줄 요약 — 노출·사람·실패율.
+
+    ★실패율의 분모는 **그 종류의 전체 노출**이다. 자리별로 나눠 평균을 내면
+      적게 뜬 자리가 과대 대표된다.
+    """
+    return """
+SELECT {kind} kind, COUNT(*) shows, COUNT(DISTINCT user_pseudo_id) users,
+  COUNTIF({rs} IN ('failed','no_ad')) failed,
+  ROUND(SAFE_DIVIDE(COUNTIF({rs} IN ('failed','no_ad')), COUNT(*)), 3) fail_rate
+FROM {t} WHERE {f} AND event_name = 'ad_watch'
+GROUP BY kind ORDER BY shows DESC
+""".format(t=table, f=filt, rs=p_str("result"),
+           kind=AD_KIND.format(pl=p_str("placement")))
 
 
 def boosters(table: str, filt: str) -> str:

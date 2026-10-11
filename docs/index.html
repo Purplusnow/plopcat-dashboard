@@ -188,9 +188,24 @@
 <div class="view off" data-view="ads">
   <section class="kpi" id="ad-kpi"></section>
   <section>
-    <h2>리워드 광고 <span class="note">GA4 ad_watch — 자리별 결과</span></h2>
-    <p class="why">유저가 스스로 보는 광고다. 여기가 죽으면 무과금 유저의 숨구멍이 막힌다.</p>
-    <div class="scroll"><table id="ad-reward"></table></div>
+    <h2>종류별 요약 <span class="note">전면 vs 보상</span></h2>
+    <p class="why">둘은 성격이 완전히 다르다. <b>전면</b>은 유저가 원해서 보는 게 아니라
+       많이 띄울수록 돈이 되지만 이탈도 같이 는다. <b>보상</b>은 자기 발로 보는 것이라,
+       여기가 죽으면 무과금 유저의 숨구멍이 막힌다.</p>
+    <div class="scroll"><table id="ad-summary"></table></div>
+  </section>
+
+  <section class="two">
+    <div>
+      <h2>🎬 전면광고 <span class="note">placement=inter</span></h2>
+      <p class="why">failed 가 늘면 광고가 안 떠서 그냥 넘어간 것이다 — 수익이 샌다.</p>
+      <div class="scroll"><table id="ad-inter"></table></div>
+    </div>
+    <div>
+      <h2>🎁 보상광고 <span class="note">자리별 결과</span></h2>
+      <p class="why">no_ad 가 많으면 인벤토리가 없는 것이고, 그건 우리 잘못이 아니라 시장이다.</p>
+      <div class="scroll"><table id="ad-reward"></table></div>
+    </div>
   </section>
   <section>
     <h2>AdMob 매출</h2>

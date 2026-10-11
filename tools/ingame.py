@@ -148,6 +148,7 @@ def main() -> None:
     out["album"] = q(Q.album(TABLE, f_win))
     out["shop_funnel"] = q(Q.shop_funnel(TABLE, f_win))
     out["ads"] = q(Q.ads(TABLE, f_win))
+    out["ad_summary"] = q(Q.ad_summary(TABLE, f_win))
     out["boosters"] = q(Q.boosters(TABLE, f_win))
     out["out_of_hearts"] = q(Q.out_of_hearts(TABLE, f_win))
     # ★온보딩만 **기간을 안 건다** — 계정당 평생 1회라 창으로 자르면 코호트가 섞여
