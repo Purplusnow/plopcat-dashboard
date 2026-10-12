@@ -58,19 +58,27 @@ fetch("data/ingame.json?" + Date.now()).then(r => r.json()).then(d => {
            `<td class="num">${n(r.size)}</td>`;
       for (let k = 1; k <= RN; k++) {
         if (k > age) { h += '<td class="num coh-na" title="아직 안 온 날">·</td>'; continue; }
+        // ★k === age 면 **그 날이 지금 지나는 중**이다. D1 은 설치 다음 날이 다 가야
+        //   확정인데, 오늘이 바로 그 다음 날이면 아직 차는 중이다(형 지적 2026-10-12).
+        //   확정값과 같은 모양으로 그리면, 옛 코호트의 완결된 수와 나란히 놓여
+        //   "떨어졌다"로 읽힌다. 지금 값은 **바닥값**이라 + 를 붙이고 흐리게 둔다.
+        const live = k === age;
         const x = (r.d || []).find(y => y.n === k);
-        const p = Math.round((x ? x.rate : 0) * 100);   // 그 날이 지났는데 없으면 진짜 0
+        const p = Math.round((x ? x.rate : 0) * 100);   // 그 날이 다 지났는데 없으면 진짜 0
         const lg = 90 - 42 * Math.min(p / 50, 1);
-        h += `<td class="num fcell" style="background:${heat(p)};color:${lg < 55 ? "#fff" : "#333"}"` +
-             ` title="${r.cohort} D${k} — ${x ? x.u : 0}명 / ${r.size}명">${p}%</td>`;
+        h += `<td class="num fcell${live ? " live" : ""}" ` +
+             `style="background:${heat(p)};color:${lg < 55 ? "#fff" : "#333"}"` +
+             ` title="${r.cohort} D${k} — ${x ? x.u : 0}명 / ${r.size}명` +
+             `${live ? " · 오늘이 그 날이라 아직 차는 중(최소값)" : ""}">${p}%${live ? "+" : ""}</td>`;
       }
       h += "</tr>";
     }
     $("retChart").innerHTML = h + "</tbody>";
   }
-  $("retNote").textContent =
-    `설치일 코호트 × D1~D${RN} 복귀율 · 셀 = 그 코호트 중 **정확히 n일 뒤** 접속한 비율 · ` +
-    `· = 아직 안 온 날(0% 아님) · 최신 설치일이 위`;
+  $("retNote").innerHTML =
+    `설치일 코호트 × D1~D${RN} 복귀율 · 셀 = 그 코호트 중 <b>정확히 n일 뒤</b> 접속한 비율 · ` +
+    `<span class="coh-na">·</span> = 아직 안 온 날(0% 아님) · ` +
+    `<b>N%+</b> = 오늘이 그 날이라 <b>아직 차는 중</b>(최소값, 자정에 확정) · 최신 설치일이 위`;
 
   table($("verTable"), d.versions || [], [
     ["버전", r => r.ver], ["명", r => n(r.users)],

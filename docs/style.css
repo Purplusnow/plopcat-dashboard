@@ -87,4 +87,6 @@ table.empty td{color:#6b7a90}
 .cohtable td.num{font-variant-numeric:tabular-nums}
 .cohtable td.fcell{font-weight:700}
 .cohtable td.coh-na{color:#3d4a63;background:#141926}
+/* 아직 차는 중인 칸 — 점선 테두리로 "확정 아님"을 표시한다 */
+.cohtable td.live{outline:1px dashed rgba(255,255,255,.55);outline-offset:-2px;opacity:.85}
 .chart-note{font-size:11px;color:#6b7a90;margin:8px 2px 0;line-height:1.5}

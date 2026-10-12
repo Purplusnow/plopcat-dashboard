@@ -87,6 +87,26 @@ setTimeout(() => {
         if (bad.length) fails.push(`실시간 목록에 사람 아닌 줄 ${bad.length}개 (${bad.map(u => u.kind).join(",")})`);
         if (!rt.kinds) fails.push("걸러낸 수(kinds)가 없다 — 조용히 지우면 안 된다");
       } catch (e) { fails.push("realtime.json 을 못 읽는다: " + e.message); }
+      // ★리텐션 칸이 **세 상태**로 그려지는지 — 그려진 결과로 본다.
+      //   소스를 글자로 뒤지면 **주석에 걸려 통과한다**(실제로 그랬다).
+      //   D1 은 설치 다음 날이 다 가야 확정인데 오늘이 그 날이면 차는 중이다.
+      //   확정값처럼 그리면 옛 코호트의 완결된 수와 나란히 놓여 "떨어졌다"로 읽힌다.
+      const rc = (store["retChart"] || {}).innerHTML || "";
+      try {
+        const ig = JSON.parse(fs.readFileSync(path.join(DOCS, "data/ingame.json"), "utf8"));
+        const dn = s => Date.UTC(+s.slice(0, 4), +s.slice(4, 6) - 1, +s.slice(6, 8)) / 864e5;
+        const td = dn(ig.updated.slice(0, 10).replace(/-/g, ""));
+        const ret = ig.retention || [];
+        // 오늘이 'D n 당일'인 코호트가 하나라도 있으면 그 칸은 미완성 표시여야 한다
+        const anyLive = ret.some(r => td - dn(r.cohort) >= 1);
+        const anyNA = ret.some(r => td - dn(r.cohort) < 14);
+        if (anyLive && !/class="num fcell live"/.test(rc))
+          fails.push("리텐션에 '아직 차는 중' 칸 표시가 없다 — 미완성 값이 확정으로 보인다");
+        if (anyLive && !/%\+/.test(rc))
+          fails.push("리텐션 미완성 칸에 + 가 없다 — 최소값임을 알 수 없다");
+        if (anyNA && !/coh-na/.test(rc))
+          fails.push("리텐션에 '아직 안 온 날' 칸이 없다 — 0% 로 그리면 급락으로 보인다");
+      } catch (e) { fails.push("리텐션 검사 실패: " + e.message); }
       const want = ["kpi", "levelTable", "retChart", "verTable", "rt-reach", "rev-table"];
       for (const id of want) {
         const e = store[id];
