@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12 15:30 KST",
+ "updated": "2026-10-12 15:56 KST",
  "window_days": 45,
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
@@ -30,18 +30,18 @@
  ],
  "kpi": [
   {
-   "dau": 62,
-   "wau": 119,
-   "users": 119,
-   "new_users": 117
+   "dau": 64,
+   "wau": 120,
+   "users": 120,
+   "new_users": 118
   }
  ],
  "levels": [
   {
    "lv": 1,
-   "started": 108,
+   "started": 109,
    "cleared": 96,
-   "rate": 0.8888888888888888,
+   "rate": 0.8807339449541285,
    "attempts": 1.01,
    "over_moves": 2.18,
    "secs": 17.0,
@@ -2048,7 +2048,7 @@
  ],
  "album": [
   {
-   "opened": 76,
+   "opened": 77,
    "finished": 23,
    "pictures": 45
   }
@@ -2110,7 +2110,7 @@
  "retention": [
   {
    "cohort": "20261012",
-   "size": 45,
+   "size": 46,
    "d": []
   },
   {
@@ -2119,8 +2119,8 @@
    "d": [
     {
      "n": 1,
-     "u": 17,
-     "rate": 0.239
+     "u": 18,
+     "rate": 0.254
     }
    ]
   },
@@ -2138,12 +2138,12 @@
  "versions": [
   {
    "ver": "1.0 (v36)",
-   "users": 44,
+   "users": 45,
    "avg_lv_1h": 19.8,
-   "avg_clears_1h": 14.1,
-   "lv1_rate": 0.773,
-   "remove_rate": 0.364,
-   "avg_mins": 84.3
+   "avg_clears_1h": 13.8,
+   "lv1_rate": 0.756,
+   "remove_rate": 0.356,
+   "avg_mins": 107.5
   },
   {
    "ver": "1.0 (v29)",
@@ -2152,7 +2152,7 @@
    "avg_clears_1h": 21.0,
    "lv1_rate": 0.857,
    "remove_rate": 0.343,
-   "avg_mins": 112.9
+   "avg_mins": 118.2
   },
   {
    "ver": "1.0 (v28)",
@@ -2319,7 +2319,7 @@
  "side_steps": [
   {
    "step": "tut_hand",
-   "users": 100
+   "users": 101
   },
   {
    "step": "gate_tut",
@@ -2339,7 +2339,7 @@
   },
   {
    "step": "first_restart",
-   "users": 11
+   "users": 12
   },
   {
    "step": "first_tow",
@@ -2369,19 +2369,19 @@
  "countries": [
   {
    "country": "Iran",
-   "users": 100,
-   "avg_lv": 25.4,
+   "users": 102,
+   "avg_lv": 24.9,
    "cleared_any": 85,
    "buys": 0,
-   "vpn": 17
+   "vpn": 18
   },
   {
    "country": "Brazil",
-   "users": 12,
-   "avg_lv": 9.7,
+   "users": 11,
+   "avg_lv": 10.5,
    "cleared_any": 10,
    "buys": 0,
-   "vpn": 4
+   "vpn": 3
   },
   {
    "country": "Chile",
@@ -2502,7 +2502,7 @@
  "wall_sales": [
   {
    "band": 1,
-   "players": 108,
+   "players": 109,
    "stuck": 0,
    "out_of_hearts": 0,
    "buys": 0,
