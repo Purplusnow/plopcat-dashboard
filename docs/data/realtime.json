@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12 09:06 KST",
+ "updated": "2026-10-12 09:20 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261012",
@@ -49,17 +49,17 @@
   {
    "key": "game_open",
    "label": "게임 진입",
-   "users": 30
+   "users": 31
   },
   {
    "key": "first_move",
    "label": "첫 수",
-   "users": 30
+   "users": 31
   },
   {
    "key": "lv1_clear",
    "label": "1판 클리어",
-   "users": 29
+   "users": 30
   },
   {
    "key": "lv3_clear",
@@ -101,24 +101,27 @@
   {
    "uid": "2b90991c",
    "t0": "09:03",
-   "mins": 0.0,
+   "mins": 8.9,
    "model": "SM-G610M",
    "country": "Brazil",
    "city": "Aracaju",
    "lang": "pt-br",
    "ver": "1.0 (v36)",
    "new": true,
-   "lv": 0,
-   "started": 0,
-   "clears": 0,
+   "lv": 1,
+   "started": 1,
+   "clears": 1,
    "stuck": 0,
    "ads": 0,
    "shops": 0,
    "buys": 0,
-   "removed": false,
+   "removed": true,
    "abuse": 0,
-   "reached": 0,
-   "side": [],
+   "reached": 7,
+   "side": [
+    "gate_tut",
+    "tut_hand"
+   ],
    "kind": "human"
   },
   {
