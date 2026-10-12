@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12 11:33 KST",
+ "updated": "2026-10-12 12:05 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261012",
@@ -49,22 +49,22 @@
   {
    "key": "game_open",
    "label": "게임 진입",
-   "users": 34
+   "users": 35
   },
   {
    "key": "first_move",
    "label": "첫 수",
-   "users": 34
+   "users": 35
   },
   {
    "key": "lv1_clear",
    "label": "1판 클리어",
-   "users": 33
+   "users": 34
   },
   {
    "key": "lv3_clear",
    "label": "3판",
-   "users": 28
+   "users": 29
   },
   {
    "key": "album_first",
@@ -79,7 +79,7 @@
   {
    "key": "lv10_clear",
    "label": "10판",
-   "users": 23
+   "users": 24
   },
   {
    "key": "first_picture",
@@ -89,7 +89,7 @@
   {
    "key": "lv20_clear",
    "label": "20판",
-   "users": 12
+   "users": 13
   },
   {
    "key": "lv50_clear",
@@ -98,6 +98,31 @@
   }
  ],
  "users": [
+  {
+   "uid": "92528d37",
+   "t0": "11:28",
+   "mins": 27.2,
+   "model": "SM-A505F",
+   "country": "Iran",
+   "city": "Tehran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v29)",
+   "new": true,
+   "lv": 33,
+   "started": 34,
+   "clears": 33,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 335,
+   "side": [
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
   {
    "uid": "df398502",
    "t0": "11:10",
@@ -1469,13 +1494,13 @@
   }
  ],
  "kinds": {
-  "human": 53,
-  "bot": 0,
+  "human": 54,
+  "bot": 5,
   "me": 1,
   "dbg": 0
  },
- "bots": 0,
- "humans": 53,
+ "bots": 5,
+ "humans": 54,
  "versions": [
   {
    "ver": "1.0 (v36)",
@@ -1484,14 +1509,14 @@
   },
   {
    "ver": "1.0 (v29)",
-   "users": 18,
-   "installs": 8
+   "users": 19,
+   "installs": 9
   }
  ],
  "countries": [
   {
    "country": "Iran",
-   "users": 44,
+   "users": 45,
    "vpn": 6
   },
   {
