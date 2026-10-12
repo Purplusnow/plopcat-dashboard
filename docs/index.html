@@ -18,6 +18,7 @@
   <button class="vtab" data-view="revenue" type="button">매출</button>
   <button class="vtab is-on" data-view="ingame" type="button">인게임</button>
   <button class="vtab" data-view="realtime" type="button">실시간</button>
+  <button class="vtab" data-view="items" type="button">아이템</button>
   <button class="vtab" data-view="ads" type="button">광고</button>
   <button class="vtab" data-view="users" type="button">가입자</button>
 </nav>
@@ -184,6 +185,46 @@
       <h2>⚠ 어뷰징</h2>
       <p class="why">granted=예 가 진짜 문제다 — 탐지는 했는데 <b>못 막은</b> 건이다.</p>
       <div class="scroll"><table id="rt-abuse"></table></div>
+    </div>
+  </section>
+</div>
+
+<!-- ══ 아이템(주력 BM) ═══════════════════════════════════════════════ -->
+<div class="view off" data-view="items">
+  <section class="kpi" id="it-kpi"></section>
+
+  <section>
+    <h2>막힘 × 구매 <span class="note">상점이 제자리에 서 있나</span></h2>
+    <p class="why">이 탭의 핵심 표다. <b>막히는 구간에서 실제로 사는가</b>를 본다.
+       막힘이 많은데 구매가 0이면 값이 비싸거나 상점이 안 보이는 것이고,
+       <b>둘 다 적으면 난이도가 낮은 것</b>이다 — 그땐 상점을 고칠 게 아니라 판을 고쳐야 한다.</p>
+    <div class="scroll"><table id="it-wall"></table></div>
+  </section>
+
+  <section class="two">
+    <div>
+      <h2>아이템 × 지불수단</h2>
+      <p class="why">★<b>free·ad·혜택은 공짜로 받은 것</b>이라 매출과 섞으면 안 된다.
+         쓴 돈은 발바닥·젬일 때만 의미가 있다.</p>
+      <div class="scroll"><table id="it-source"></table></div>
+    </div>
+    <div>
+      <h2>상점 종류별 열람</h2>
+      <p class="why">연 것과 산 것의 간격이 곧 전환 손실이다.</p>
+      <div class="scroll"><table id="it-shop"></table></div>
+    </div>
+  </section>
+
+  <section class="two">
+    <div>
+      <h2>구간별 사용·지출 <span class="note">10판 단위</span></h2>
+      <div class="scroll"><table id="it-level"></table></div>
+    </div>
+    <div>
+      <h2>첫 유료 사용 구간 <span class="note">지갑이 처음 열리는 곳</span></h2>
+      <p class="why">평균이 아니라 분포로 본다 — 한 명이 100판에서 산 게 평균을 끌어올리면
+         "다들 늦게 산다"로 읽힌다.</p>
+      <div class="scroll"><table id="it-first"></table></div>
     </div>
   </section>
 </div>

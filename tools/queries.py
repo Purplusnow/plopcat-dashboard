@@ -355,3 +355,99 @@ SELECT pick.c country, COUNT(*) users, ROUND(AVG(u.lv), 1) avg_lv,
 FROM pick JOIN u USING (uid)
 GROUP BY country ORDER BY users DESC LIMIT 25
 """.format(t=table, f=filt, lv=INT("level"))
+
+
+# ══════════════════════════════════════════════════════════════════════
+#  아이템 구입(주력 BM) — 2026-10-12
+# ══════════════════════════════════════════════════════════════════════
+
+#: 돈을 쓴 것만. free/ad/perk 는 **공짜로 받은 것**이라 매출 분석에 섞으면 안 된다.
+PAID = "IN ('paw','gem')"
+
+
+def item_by_source(table: str, filt: str) -> str:
+    """아이템 × 지불수단 — 무엇을 무엇으로 사나.
+
+    ★free/ad/perk 를 같이 세면 "치우기가 제일 많이 팔린다"가 된다. 실제로는
+      공짜로 받은 것이다. 쓴 돈(cost)은 **paw/gem 일 때만** 의미가 있다.
+    """
+    return """
+SELECT {k} kind, {s} source, COUNT(*) uses,
+  COUNT(DISTINCT user_pseudo_id) users,
+  SUM(IFNULL({c},0)) spent
+FROM {t} WHERE {f} AND event_name='booster_use'
+GROUP BY kind, source ORDER BY kind, uses DESC
+""".format(t=table, f=filt, k=STR("kind"), s=STR("source"), c=INT("cost"))
+
+
+def item_by_level(table: str, filt: str, band: int = 10) -> str:
+    """구간별 — **어느 판에서 지갑이 열리나.**
+
+    ★이게 이 탭의 핵심이다. 난이도 곡선과 겹쳐 보면 "막히는 구간 = 파는 구간"이
+      맞는지 알 수 있다. 안 맞으면 상점이 엉뚱한 데 서 있는 것이다.
+    """
+    return """
+SELECT DIV({lv} - 1, {b}) * {b} + 1 band,
+  COUNT(DISTINCT user_pseudo_id) users,
+  COUNTIF({s} {paid}) paid_uses,
+  COUNTIF(NOT ({s} {paid})) free_uses,
+  SUM(IF({s}='gem', IFNULL({c},0), 0)) gems,
+  SUM(IF({s}='paw', IFNULL({c},0), 0)) paws
+FROM {t} WHERE {f} AND event_name='booster_use' AND {lv} IS NOT NULL
+GROUP BY band ORDER BY band
+""".format(t=table, f=filt, b=band, lv=INT("level"), s=STR("source"),
+           c=INT("cost"), paid=PAID)
+
+
+def item_first_buy(table: str, filt: str) -> str:
+    """**첫 유료 사용**이 몇 판째인가 — 지갑이 처음 열리는 지점.
+
+    ★평균이 아니라 분포로 본다. 한 명이 100판에서 산 게 평균을 끌어올리면
+      "다들 늦게 산다"로 읽힌다.
+    """
+    return """
+WITH f AS (
+  SELECT user_pseudo_id uid, MIN({lv}) lv
+  FROM {t} WHERE {f} AND event_name='booster_use' AND {s} {paid} AND {lv} IS NOT NULL
+  GROUP BY uid)
+SELECT DIV(lv - 1, 10) * 10 + 1 band, COUNT(*) users
+FROM f GROUP BY band ORDER BY band
+""".format(t=table, f=filt, lv=INT("level"), s=STR("source"), paid=PAID)
+
+
+def shop_by_level(table: str, filt: str) -> str:
+    """상점을 **어느 판에서 여나** — 연 것과 산 것의 간격이 전환 손실이다."""
+    return """
+SELECT {k} kind, COUNT(*) opens, COUNT(DISTINCT user_pseudo_id) users
+FROM {t} WHERE {f} AND event_name='shop_open'
+GROUP BY kind ORDER BY opens DESC
+""".format(t=table, f=filt, k=STR("kind"))
+
+
+def wall_vs_sales(table: str, filt: str, band: int = 10) -> str:
+    """막힘 × 구매 — **막히는 구간에서 실제로 사나.**
+
+    ★상점이 제자리에 있는지 보는 유일한 방법이다. 막힘은 많은데 구매가 0 이면
+      값이 비싸거나 상점이 안 보이는 것이고, 둘 다 적으면 난이도가 낮은 것이다.
+    """
+    return """
+WITH s AS (
+  SELECT DIV({lv} - 1, {b}) * {b} + 1 band, COUNT(*) stuck
+  FROM {t} WHERE {f} AND event_name='level_stuck' GROUP BY band
+), h AS (
+  SELECT DIV({lv} - 1, {b}) * {b} + 1 band, COUNT(*) ooh
+  FROM {t} WHERE {f} AND event_name='out_of_hearts' GROUP BY band
+), p AS (
+  SELECT DIV({lv} - 1, {b}) * {b} + 1 band, COUNT(*) buys,
+    SUM(IF({src}='gem', IFNULL({c},0), 0)) gems
+  FROM {t} WHERE {f} AND event_name='booster_use' AND {src} {paid} GROUP BY band
+), c AS (
+  SELECT DIV({lv} - 1, {b}) * {b} + 1 band, COUNT(DISTINCT user_pseudo_id) players
+  FROM {t} WHERE {f} AND event_name='level_start' GROUP BY band
+)
+SELECT c.band, c.players, IFNULL(s.stuck,0) stuck, IFNULL(h.ooh,0) out_of_hearts,
+  IFNULL(p.buys,0) buys, IFNULL(p.gems,0) gems
+FROM c LEFT JOIN s USING (band) LEFT JOIN h USING (band) LEFT JOIN p USING (band)
+ORDER BY c.band
+""".format(t=table, f=filt, b=band, lv=INT("level"), src=STR("source"),
+           c=INT("cost"), paid=PAID)

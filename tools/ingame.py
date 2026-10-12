@@ -172,6 +172,14 @@ def main() -> None:
     out["side_steps"] = q(Q.side_steps(TABLE, f_all))
     out["countries"] = q(Q.countries(TABLE, f_all))
 
+    # ── 아이템 구입(주력 BM) ──────────────────────────────────────────
+    # ★기간을 안 건다. 구매는 드물어서 45일 창으로 자르면 표가 통째로 빈다.
+    out["item_source"] = q(Q.item_by_source(TABLE, f_all))
+    out["item_level"] = q(Q.item_by_level(TABLE, f_all))
+    out["item_first"] = q(Q.item_first_buy(TABLE, f_all))
+    out["shop_kinds"] = q(Q.shop_by_level(TABLE, f_all))
+    out["wall_sales"] = q(Q.wall_vs_sales(TABLE, f_all))
+
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=1)

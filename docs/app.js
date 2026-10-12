@@ -287,6 +287,54 @@ VIEW.realtime = async () => {
   table($("rt-abuse"), d.abuse || [], [["사유", r => r.reason || "–"], ["지급됨", r => n(r.granted)], ["건", r => n(r.n)]]);
 };
 
+// ── 아이템(주력 BM) ───────────────────────────────────────────────────
+VIEW.items = async () => {
+  const d = await get("data/ingame.json");
+  if (!d) { $("it-kpi").innerHTML = "<p class='why'>데이터가 없습니다.</p>"; return; }
+  const src = d.item_source || [], lvl = d.item_level || [];
+  const first = d.item_first || [], wall = d.wall_sales || [];
+  // ★유료만 센다. free/ad/perk 는 공짜로 받은 것이라 매출이 아니다.
+  const PAID = new Set(["paw", "gem"]);
+  const paid = src.filter(r => PAID.has(r.source));
+  const gems = paid.reduce((a, r) => a + (r.source === "gem" ? r.spent : 0), 0);
+  const paws = paid.reduce((a, r) => a + (r.source === "paw" ? r.spent : 0), 0);
+  const buyers = Math.max(0, ...paid.map(r => r.users), 0);
+  kpiBox("it-kpi", [
+    ["유료 사용", n(paid.reduce((a, r) => a + r.uses, 0)), "발바닥·젬으로 산 것"],
+    ["산 사람", n(buyers)],
+    ["쓴 젬", n(gems)],
+    ["쓴 발바닥", n(paws)],
+  ]);
+  table($("it-wall"), wall, [
+    ["구간", r => `${r.band}~${r.band + 9}`],
+    ["플레이어", r => n(r.players)],
+    ["막힘", r => r.stuck ? `<b class="bad-t">${n(r.stuck)}</b>` : "0"],
+    ["하트고갈", r => n(r.out_of_hearts)],
+    ["유료 사용", r => r.buys ? `<b>${n(r.buys)}</b>` : "0"],
+    ["쓴 젬", r => n(r.gems)],
+  ]);
+  const KN = { hint: "💡 힌트", undo: "↩️ 되돌리기", tow: "🧹 치우기", heart: "❤️ 하트" };
+  const SN = { paw: "🐾 발바닥", gem: "💎 젬", ad: "📺 광고", free: "무료", perk: "혜택" };
+  table($("it-source"), src, [
+    ["아이템", r => KN[r.kind] || r.kind],
+    ["지불", r => `<span class="${PAID.has(r.source) ? "" : "dim"}">${SN[r.source] || r.source}</span>`],
+    ["횟수", r => n(r.uses)], ["사람", r => n(r.users)],
+    ["쓴 값", r => PAID.has(r.source) ? n(r.spent) : "<span class='dim'>–</span>"],
+  ]);
+  table($("it-shop"), d.shop_kinds || [], [
+    ["상점", r => ({ gem: "💎 젬", heart: "❤️ 하트", paw: "🐾 발바닥" })[r.kind] || r.kind],
+    ["연 횟수", r => n(r.opens)], ["사람", r => n(r.users)],
+  ]);
+  table($("it-level"), lvl, [
+    ["구간", r => `${r.band}~${r.band + 9}`], ["사람", r => n(r.users)],
+    ["유료", r => n(r.paid_uses)], ["무료", r => `<span class="dim">${n(r.free_uses)}</span>`],
+    ["젬", r => n(r.gems)], ["발바닥", r => n(r.paws)],
+  ]);
+  table($("it-first"), first, [
+    ["구간", r => `${r.band}~${r.band + 9}`], ["사람", r => n(r.users)],
+  ]);
+};
+
 // ── 광고 ──────────────────────────────────────────────────────────────
 VIEW.ads = async () => {
   const [ig, cfg, dy] = await Promise.all(

@@ -272,6 +272,39 @@ def main():
     chk("★나라가 둘이던 사람을 숨기지 않는다(vpn)", cr["Iran"]["vpn"], 1)
     chk("한 나라만 쓴 사람은 vpn 0", cr["Brazil"]["vpn"], 0)
 
+    # ── ⑤-c ★아이템 구입(주력 BM) ─────────────────────────────────
+    # 답을 손으로: a 가 젬으로 치우기(25) · 발바닥으로 힌트(75) · **무료** 되돌리기.
+    #             b 가 젬으로 하트(20). → 유료 3건 / 무료 1건, 젬 45 · 발바닥 75.
+    # ★무료를 매출에 섞으면 "치우기가 제일 잘 팔린다"가 된다 — 실제론 공짜로 받은 것이다.
+    it = [
+      ev("20260101", "a", "booster_use", [("kind","tow"),("source","gem"),("level",12),("cost",25)]),
+      ev("20260101", "a", "booster_use", [("kind","hint"),("source","paw"),("level",14),("cost",75)]),
+      ev("20260101", "a", "booster_use", [("kind","undo"),("source","free"),("level",3),("cost",0)]),
+      ev("20260101", "b", "booster_use", [("kind","heart"),("source","gem"),("level",21),("cost",20)]),
+      ev("20260101", "b", "level_start", [("level", 21)]),
+      ev("20260101", "a", "level_start", [("level", 12)]),
+      ev("20260101", "a", "level_stuck", [("level", 12), ("restarts",3), ("hints",2), ("attempts",4)]),
+    ]
+    itf = Q.human("TRUE", "20251231", [], [])
+    bysrc = {(r["kind"], r["source"]): r for r in run(Q.item_by_source(table(it), itf))}
+    chk("★무료와 유료가 섞이지 않는다", sorted(set(k[1] for k in bysrc)), ["free","gem","paw"])
+    chk("젬 치우기 쓴 값", bysrc[("tow","gem")]["spent"], 25)
+    chk("발바닥 힌트 쓴 값", bysrc[("hint","paw")]["spent"], 75)
+    chk("무료는 쓴 값 0", bysrc[("undo","free")]["spent"], 0)
+
+    bylv = {r["band"]: r for r in run(Q.item_by_level(table(it), itf))}
+    chk("11~20 구간 유료 2건", bylv[11]["paid_uses"], 2)
+    chk("11~20 구간 젬 25", bylv[11]["gems"], 25)
+    chk("11~20 구간 발바닥 75", bylv[11]["paws"], 75)
+    chk("1~10 구간은 무료만", bylv[1]["paid_uses"], 0)
+
+    fb = {r["band"]: r["users"] for r in run(Q.item_first_buy(table(it), itf))}
+    chk("★첫 유료는 **유료 건만** 본다(a 는 12판, 3판 아님)", sorted(fb), [11, 21])
+    chk("11 구간 첫 구매자 1명", fb[11], 1)
+
+    ws = {r["band"]: r for r in run(Q.wall_vs_sales(table(it), itf))}
+    chk("막힘과 구매가 같은 줄에 선다", (ws[11]["stuck"], ws[11]["buys"]), (1, 2))
+
     # ── ⑥ 온보딩 ───────────────────────────────────────────────────
     ob = [ev("20260101", "a", "onboard_step", [("step", 1)]),
           ev("20260101", "a", "onboard_step", [("step", 1)]),   # 같은 사람 중복
