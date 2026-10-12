@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12 10:38 KST",
+ "updated": "2026-10-12 11:06 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261012",
@@ -49,17 +49,17 @@
   {
    "key": "game_open",
    "label": "게임 진입",
-   "users": 33
+   "users": 34
   },
   {
    "key": "first_move",
    "label": "첫 수",
-   "users": 33
+   "users": 34
   },
   {
    "key": "lv1_clear",
    "label": "1판 클리어",
-   "users": 32
+   "users": 33
   },
   {
    "key": "lv3_clear",
@@ -69,12 +69,12 @@
   {
    "key": "album_first",
    "label": "미술관 열기",
-   "users": 29
+   "users": 30
   },
   {
    "key": "first_piece",
    "label": "첫 조각",
-   "users": 26
+   "users": 27
   },
   {
    "key": "lv10_clear",
@@ -98,6 +98,32 @@
   }
  ],
  "users": [
+  {
+   "uid": "ced2cd94",
+   "t0": "10:46",
+   "mins": 1.1,
+   "model": "2201116TG",
+   "country": "Brazil",
+   "city": "Sao Paulo",
+   "lang": "fa-ir",
+   "ver": "1.0 (v36)",
+   "new": true,
+   "lv": 1,
+   "started": 1,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 55,
+   "side": [
+    "gate_tut",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
   {
    "uid": "c773efb9",
    "t0": "10:30",
@@ -1216,8 +1242,8 @@
    "t0": "00:37",
    "mins": 137.7,
    "model": "DUB-LX1",
-   "country": "Iran",
-   "city": "Tehran",
+   "country": "Brazil",
+   "city": "Sao Paulo",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
    "new": true,
@@ -1418,18 +1444,18 @@
   }
  ],
  "kinds": {
-  "human": 51,
+  "human": 52,
   "bot": 0,
   "me": 0,
   "dbg": 0
  },
  "bots": 0,
- "humans": 51,
+ "humans": 52,
  "versions": [
   {
    "ver": "1.0 (v36)",
-   "users": 33,
-   "installs": 28
+   "users": 34,
+   "installs": 29
   },
   {
    "ver": "1.0 (v29)",
@@ -1445,18 +1471,18 @@
   },
   {
    "country": "Brazil",
-   "users": 5,
-   "vpn": 1
-  },
-  {
-   "country": "Indonesia",
-   "users": 1,
+   "users": 6,
    "vpn": 1
   },
   {
    "country": "Chile",
    "users": 1,
    "vpn": 0
+  },
+  {
+   "country": "Indonesia",
+   "users": 1,
+   "vpn": 1
   }
  ],
  "purchase_fail": [],
