@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12 18:20 KST",
+ "updated": "2026-10-12 18:25 KST",
  "window_days": 45,
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
@@ -9,7 +9,7 @@
  "filtered": [
   {
    "reason": "구글 자동스캔(지역 없음)",
-   "users": 98
+   "users": 100
   },
   {
    "reason": "모델명 없음(스캔 의심)",
@@ -50,37 +50,37 @@
   {
    "lv": 2,
    "started": 96,
-   "cleared": 89,
-   "rate": 0.9270833333333334,
+   "cleared": 90,
+   "rate": 0.9375,
    "attempts": 1.0,
-   "over_moves": 1.62,
-   "secs": 46.4,
+   "over_moves": 1.61,
+   "secs": 46.0,
    "items": 0.0
   },
   {
    "lv": 3,
-   "started": 89,
-   "cleared": 89,
+   "started": 90,
+   "cleared": 90,
    "rate": 1.0,
    "attempts": 1.0,
-   "over_moves": 1.42,
-   "secs": 6.1,
+   "over_moves": 1.43,
+   "secs": 6.2,
    "items": 0.0
   },
   {
    "lv": 4,
-   "started": 88,
-   "cleared": 88,
+   "started": 89,
+   "cleared": 89,
    "rate": 1.0,
    "attempts": 1.0,
-   "over_moves": 1.43,
-   "secs": 3.9,
+   "over_moves": 1.45,
+   "secs": 4.0,
    "items": 0.0
   },
   {
    "lv": 5,
-   "started": 85,
-   "cleared": 85,
+   "started": 86,
+   "cleared": 86,
    "rate": 1.0,
    "attempts": 1.0,
    "over_moves": 1.49,
@@ -89,9 +89,9 @@
   },
   {
    "lv": 6,
-   "started": 84,
+   "started": 85,
    "cleared": 83,
-   "rate": 0.9880952380952381,
+   "rate": 0.9764705882352941,
    "attempts": 1.0,
    "over_moves": 1.31,
    "secs": 4.7,
@@ -774,7 +774,7 @@
    "rate": 1.0,
    "attempts": 1.0,
    "over_moves": 2.25,
-   "secs": 24.2,
+   "secs": 24.3,
    "items": 0.0
   },
   {
@@ -2411,8 +2411,8 @@
    "avg_lv_1h": 25.1,
    "avg_clears_1h": 21.1,
    "lv1_rate": 0.87,
-   "remove_rate": 0.362,
-   "avg_mins": 202.7
+   "remove_rate": 0.377,
+   "avg_mins": 206.8
   },
   {
    "ver": "1.0 (v28)",
@@ -2437,7 +2437,7 @@
   {
    "band": 1,
    "users": 102,
-   "clears": 845,
+   "clears": 849,
    "median_secs": 4.0,
    "over_moves": 1.6
   },
@@ -2651,10 +2651,10 @@
   {
    "country": "Iran",
    "users": 104,
-   "avg_lv": 29.0,
+   "avg_lv": 29.1,
    "cleared_any": 91,
    "buys": 0,
-   "vpn": 19
+   "vpn": 20
   },
   {
    "country": "Brazil",

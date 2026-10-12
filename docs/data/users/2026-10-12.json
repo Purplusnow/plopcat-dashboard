@@ -466,7 +466,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 127
   },
   {
@@ -614,6 +614,24 @@
    "reached": 63
   },
   {
+   "uid": "be422994",
+   "model": "SM-A346E",
+   "country": "Iran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v29)",
+   "days": 1,
+   "last": "20261012",
+   "lv": 5,
+   "clears": 5,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 31
+  },
+  {
    "uid": "28b528a8",
    "model": "SM-S721B",
    "country": "Iran",
@@ -683,24 +701,6 @@
    "spend": 0.0,
    "pics": 0,
    "removed": true,
-   "reached": 23
-  },
-  {
-   "uid": "be422994",
-   "model": "SM-A346E",
-   "country": "Iran",
-   "lang": "fa-ir",
-   "ver": "1.0 (v29)",
-   "days": 1,
-   "last": "20261012",
-   "lv": 1,
-   "clears": 1,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 0,
-   "removed": false,
    "reached": 23
   },
   {
