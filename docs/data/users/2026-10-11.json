@@ -20,6 +20,24 @@
    "reached": 847
   },
   {
+   "uid": "b1b6c9a3",
+   "model": "24117RN76G",
+   "country": "Iran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v29)",
+   "days": 2,
+   "last": "20261012",
+   "lv": 120,
+   "clears": 120,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 5,
+   "removed": false,
+   "reached": 1023
+  },
+  {
    "uid": "c2a0c65d",
    "model": "SM-A266B",
    "country": "Iran",
@@ -36,24 +54,6 @@
    "pics": 0,
    "removed": false,
    "reached": 847
-  },
-  {
-   "uid": "b1b6c9a3",
-   "model": "24117RN76G",
-   "country": "Chile",
-   "lang": "fa-ir",
-   "ver": "1.0 (v29)",
-   "days": 1,
-   "last": "20261011",
-   "lv": 86,
-   "clears": 86,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 4,
-   "removed": false,
-   "reached": 1023
   },
   {
    "uid": "da1da493",
@@ -164,6 +164,24 @@
    "reached": 1023
   },
   {
+   "uid": "9322c3fe",
+   "model": "Redmi Note 8 Pro",
+   "country": "Iran",
+   "lang": "en-gb",
+   "ver": "1.0 (v29)",
+   "days": 2,
+   "last": "20261012",
+   "lv": 50,
+   "clears": 50,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 863
+  },
+  {
    "uid": "02591422",
    "model": "2502FRA65G",
    "country": "Iran",
@@ -234,24 +252,6 @@
    "pics": 0,
    "removed": false,
    "reached": 383
-  },
-  {
-   "uid": "9322c3fe",
-   "model": "Redmi Note 8 Pro",
-   "country": "Iran",
-   "lang": "en-gb",
-   "ver": "1.0 (v29)",
-   "days": 2,
-   "last": "20261012",
-   "lv": 40,
-   "clears": 40,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 0,
-   "removed": false,
-   "reached": 351
   },
   {
    "uid": "39ea3569",
@@ -1051,8 +1051,8 @@
    "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
-   "days": 1,
-   "last": "20261011",
+   "days": 2,
+   "last": "20261012",
    "lv": 1,
    "clears": 1,
    "stuck": 0,
@@ -1060,7 +1060,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 55
   },
   {
@@ -1116,6 +1116,24 @@
    "pics": 0,
    "removed": false,
    "reached": 55
+  },
+  {
+   "uid": "f2264d90",
+   "model": "25078RA3EA",
+   "country": "Iran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v29)",
+   "days": 2,
+   "last": "20261012",
+   "lv": 1,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 7
   },
   {
    "uid": "04c62428",
@@ -1228,11 +1246,11 @@
   {
    "uid": "b374c5e7",
    "model": "SM-A165F",
-   "country": "Chile",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v29)",
-   "days": 1,
-   "last": "20261011",
+   "days": 2,
+   "last": "20261012",
    "lv": 0,
    "clears": 0,
    "stuck": 0,
@@ -1241,7 +1259,7 @@
    "spend": 0.0,
    "pics": 0,
    "removed": false,
-   "reached": 16
+   "reached": 17
   },
   {
    "uid": "ca7a9678",
@@ -1260,24 +1278,6 @@
    "pics": 0,
    "removed": true,
    "reached": 3
-  },
-  {
-   "uid": "f2264d90",
-   "model": "25078RA3EA",
-   "country": "Iran",
-   "lang": "fa-ir",
-   "ver": "1.0 (v29)",
-   "days": 1,
-   "last": "20261011",
-   "lv": 0,
-   "clears": 0,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 0,
-   "removed": false,
-   "reached": 0
   }
  ]
 }
