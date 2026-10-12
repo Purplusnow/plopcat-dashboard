@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12 20:16 KST",
+ "updated": "2026-10-12 20:17 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261012",
@@ -473,7 +473,7 @@
    "mins": 261.0,
    "model": "SM-A346E",
    "country": "Iran",
-   "city": "Tehran",
+   "city": "Semnan",
    "lang": "fa-ir",
    "ver": "1.0 (v29)",
    "new": true,
@@ -1870,8 +1870,8 @@
    "t0": "00:37",
    "mins": 137.7,
    "model": "DUB-LX1",
-   "country": "Iran",
-   "city": "Tehran",
+   "country": "Brazil",
+   "city": "Sao Paulo",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
    "new": true,
@@ -2075,11 +2075,11 @@
  ],
  "kinds": {
   "human": 77,
-  "bot": 43,
+  "bot": 44,
   "me": 2,
   "dbg": 0
  },
- "bots": 43,
+ "bots": 44,
  "humans": 77,
  "versions": [
   {
