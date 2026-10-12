@@ -74,13 +74,25 @@ def main():
     # ── 한 줄 = 한 사람. 오늘 처음 연 사람만(first_open) ─────────────
     rows = q("""
 WITH e AS (SELECT * FROM {t} WHERE _TABLE_SUFFIX='{d}'),
+cc AS (
+  -- ★사람당 나라를 **하나로** 정한다(이벤트 최다, 동률은 이름순).
+  --   ANY_VALUE 로 집으면 **돌릴 때마다 값이 바뀐다** — 아래 국가 집계는 이미 이렇게
+  --   고쳤는데 이 목록만 ANY_VALUE 로 남아 있어서, 같은 사람이 목록엔 Brazil,
+  --   국가표엔 Iran 으로 나올 수 있었다(형이 전에 잡은 그 버그와 같은 종류다).
+  SELECT uid, ARRAY_AGG(c ORDER BY n DESC, c LIMIT 1)[SAFE_OFFSET(0)] c, COUNT(*) > 1 vpn
+  FROM (SELECT user_pseudo_id uid, IFNULL(geo.country,'') c, COUNT(*) n
+        FROM e GROUP BY uid, c)
+  GROUP BY uid),
 me AS (
   SELECT user_pseudo_id uid,
     MIN(event_timestamp) t0, MAX(event_timestamp) t1,
     ANY_VALUE(device.mobile_model_name) model,
-    ANY_VALUE(geo.country) country, ANY_VALUE(geo.city) city,
+    ANY_VALUE(geo.city) city,
     ANY_VALUE(device.language) lang,
-    ANY_VALUE(app_info.version) ver,
+    -- ★버전은 **마지막 이벤트 기준**이다. ANY_VALUE 면 하루 중에 업데이트한 사람의
+    --   버전이 임의로 집혀서, 지금처럼 신버전 전파를 지켜볼 때 옛 버전으로 보일 수 있다.
+    ARRAY_AGG(app_info.version IGNORE NULLS
+              ORDER BY event_timestamp DESC LIMIT 1)[SAFE_OFFSET(0)] ver,
     COUNTIF(event_name='first_open') > 0 is_new,
     MAX(IF(event_name='level_start', {lv}, NULL)) max_start,
     MAX(IF(event_name='level_clear', {lv}, NULL)) max_clear,
@@ -94,7 +106,8 @@ me AS (
     STRING_AGG(DISTINCT IF(event_name='onboard_step', {step}, NULL)) onb,
     STRING_AGG(DISTINCT IF(event_name='side_step', {step}, NULL)) side
   FROM e GROUP BY uid)
-SELECT * FROM me ORDER BY t0 DESC LIMIT 300
+SELECT me.*, cc.c country, cc.vpn FROM me JOIN cc USING (uid)
+ORDER BY t0 DESC LIMIT 300
 """.format(t=T, d=day, lv=p_int("level"), step=p_str("step")))
 
     users, reach, seen = [], {k: 0 for k in F.STEP_KEYS}, {}
@@ -107,6 +120,7 @@ SELECT * FROM me ORDER BY t0 DESC LIMIT 300
             "mins": round((r["t1"] - r["t0"]) / 6e7, 1),
             "model": r["model"], "country": r["country"], "city": r["city"],
             "lang": r["lang"], "ver": r["ver"], "new": bool(r["is_new"]),
+            "vpn": bool(r["vpn"]),
             "lv": r["max_clear"] or 0, "started": r["max_start"] or 0,
             "clears": r["clears"], "stuck": r["stuck"], "ads": r["ads"],
             "shops": r["shops"], "buys": r["buys"], "removed": bool(r["removed"]),
