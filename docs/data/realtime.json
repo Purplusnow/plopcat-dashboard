@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12 12:05 KST",
+ "updated": "2026-10-12 13:13 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261012",
@@ -49,7 +49,7 @@
   {
    "key": "game_open",
    "label": "게임 진입",
-   "users": 35
+   "users": 36
   },
   {
    "key": "first_move",
@@ -94,10 +94,33 @@
   {
    "key": "lv50_clear",
    "label": "50판",
-   "users": 7
+   "users": 8
   }
  ],
  "users": [
+  {
+   "uid": "2cbc96bc",
+   "t0": "12:48",
+   "mins": 0.0,
+   "model": "2201117TG",
+   "country": "Iran",
+   "city": "Tehran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v36)",
+   "new": true,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
   {
    "uid": "92528d37",
    "t0": "11:28",
@@ -126,7 +149,7 @@
   {
    "uid": "df398502",
    "t0": "11:10",
-   "mins": 0.2,
+   "mins": 6.8,
    "model": "SM-A225M",
    "country": "Brazil",
    "city": "Araraquara",
@@ -142,7 +165,7 @@
    "buys": 0,
    "removed": false,
    "abuse": 0,
-   "reached": 0,
+   "reached": 1,
    "side": [
     "tut_hand"
    ],
@@ -1007,23 +1030,23 @@
   {
    "uid": "00a55b43",
    "t0": "01:15",
-   "mins": 16.9,
+   "mins": 681.4,
    "model": "STK-L21",
-   "country": "Brazil",
-   "city": "Sao Paulo",
+   "country": "Iran",
+   "city": "Shiraz",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
    "new": true,
-   "lv": 31,
-   "started": 32,
-   "clears": 31,
+   "lv": 57,
+   "started": 57,
+   "clears": 57,
    "stuck": 0,
    "ads": 1,
    "shops": 0,
    "buys": 0,
    "removed": false,
    "abuse": 0,
-   "reached": 511,
+   "reached": 1023,
    "side": [
     "first_ad",
     "first_hint",
@@ -1494,18 +1517,18 @@
   }
  ],
  "kinds": {
-  "human": 54,
+  "human": 55,
   "bot": 5,
   "me": 1,
   "dbg": 0
  },
  "bots": 5,
- "humans": 54,
+ "humans": 55,
  "versions": [
   {
    "ver": "1.0 (v36)",
-   "users": 35,
-   "installs": 30
+   "users": 36,
+   "installs": 31
   },
   {
    "ver": "1.0 (v29)",
@@ -1516,7 +1539,7 @@
  "countries": [
   {
    "country": "Iran",
-   "users": 45,
+   "users": 46,
    "vpn": 6
   },
   {
@@ -1525,14 +1548,14 @@
    "vpn": 1
   },
   {
-   "country": "Chile",
-   "users": 1,
-   "vpn": 0
-  },
-  {
    "country": "Indonesia",
    "users": 1,
    "vpn": 1
+  },
+  {
+   "country": "Chile",
+   "users": 1,
+   "vpn": 0
   }
  ],
  "purchase_fail": [],
