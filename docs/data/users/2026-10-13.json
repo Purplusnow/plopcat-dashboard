@@ -1,0 +1,23 @@
+{
+ "date": "2026-10-13",
+ "users": [
+  {
+   "uid": "62c5dacc",
+   "model": "2303CRA44A",
+   "country": "Iran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v36)",
+   "days": 1,
+   "last": "20261013",
+   "lv": 32,
+   "clears": 32,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 2,
+   "removed": false,
+   "reached": 511
+  }
+ ]
+}
