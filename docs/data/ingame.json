@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12 20:09 KST",
+ "updated": "2026-10-12 20:22 KST",
  "window_days": 45,
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
@@ -9,7 +9,7 @@
  "filtered": [
   {
    "reason": "구글 자동스캔(지역 없음)",
-   "users": 117
+   "users": 118
   },
   {
    "reason": "모델명 없음(스캔 의심)",
@@ -335,7 +335,7 @@
    "attempts": 1.0,
    "over_moves": 1.85,
    "secs": 228.3,
-   "items": 0.02
+   "items": 0.03
   },
   {
    "lv": 31,
@@ -2306,6 +2306,17 @@
    "hints": 2.0
   }
  ],
+ "fails": [],
+ "fail_summary": [
+  {
+   "fail_users": 0,
+   "fails": 0,
+   "players": 117,
+   "buy_gem": 0,
+   "buy_ad": 0,
+   "gems_spent": 0
+  }
+ ],
  "album": [
   {
    "opened": 85,
@@ -2398,21 +2409,21 @@
  "versions": [
   {
    "ver": "1.0 (v36)",
-   "users": 50,
-   "avg_lv_1h": 20.4,
+   "users": 49,
+   "avg_lv_1h": 20.5,
    "avg_clears_1h": 16.1,
-   "lv1_rate": 0.84,
-   "remove_rate": 0.36,
-   "avg_mins": 175.1
+   "lv1_rate": 0.837,
+   "remove_rate": 0.367,
+   "avg_mins": 166.4
   },
   {
    "ver": "1.0 (v29)",
-   "users": 69,
-   "avg_lv_1h": 24.7,
-   "avg_clears_1h": 21.1,
-   "lv1_rate": 0.884,
-   "remove_rate": 0.377,
-   "avg_mins": 244.7
+   "users": 70,
+   "avg_lv_1h": 24.6,
+   "avg_clears_1h": 21.0,
+   "lv1_rate": 0.886,
+   "remove_rate": 0.371,
+   "avg_mins": 249.5
   },
   {
    "ver": "1.0 (v28)",
