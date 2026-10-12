@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12 18:20 KST",
+ "updated": "2026-10-12 19:08 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261012",
@@ -49,27 +49,27 @@
   {
    "key": "game_open",
    "label": "게임 진입",
-   "users": 45
+   "users": 47
   },
   {
    "key": "first_move",
    "label": "첫 수",
-   "users": 44
+   "users": 46
   },
   {
    "key": "lv1_clear",
    "label": "1판 클리어",
-   "users": 43
+   "users": 45
   },
   {
    "key": "lv3_clear",
    "label": "3판",
-   "users": 37
+   "users": 38
   },
   {
    "key": "album_first",
    "label": "미술관 열기",
-   "users": 39
+   "users": 40
   },
   {
    "key": "first_piece",
@@ -99,6 +99,78 @@
  ],
  "users": [
   {
+   "uid": "023396f3",
+   "t0": "18:45",
+   "mins": 0.6,
+   "model": "SM-A055F",
+   "country": "Iran",
+   "city": "Karaj",
+   "lang": "fa-ir",
+   "ver": "1.0 (v36)",
+   "new": true,
+   "lv": 1,
+   "started": 1,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 23,
+   "side": [
+    "gate_tut",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "b633a1bb",
+   "t0": "18:32",
+   "mins": 0.0,
+   "model": "SM-N920C",
+   "country": "Iran",
+   "city": "Karaj",
+   "lang": "fa-ir",
+   "ver": "1.0 (v36)",
+   "new": true,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "b1b6c9a3",
+   "t0": "18:25",
+   "mins": 10.0,
+   "model": "24117RN76G",
+   "country": "Iran",
+   "city": "Tehran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v29)",
+   "new": false,
+   "lv": 120,
+   "started": 120,
+   "clears": 34,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
    "uid": "876cc047",
    "t0": "17:58",
    "mins": 0.0,
@@ -119,6 +191,31 @@
    "abuse": 0,
    "reached": 0,
    "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "f2264d90",
+   "t0": "17:31",
+   "mins": 2.0,
+   "model": "25078RA3EA",
+   "country": "Iran",
+   "city": "Isfahan",
+   "lang": "fa-ir",
+   "ver": "1.0 (v29)",
+   "new": false,
+   "lv": 1,
+   "started": 2,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 7,
+   "side": [
+    "tut_hand"
+   ],
    "kind": "human"
   },
   {
@@ -322,23 +419,23 @@
   {
    "uid": "be422994",
    "t0": "14:00",
-   "mins": 0.5,
+   "mins": 261.0,
    "model": "SM-A346E",
    "country": "Iran",
-   "city": "Semnan",
+   "city": "Tehran",
    "lang": "fa-ir",
    "ver": "1.0 (v29)",
    "new": true,
-   "lv": 1,
-   "started": 2,
-   "clears": 1,
+   "lv": 5,
+   "started": 6,
+   "clears": 5,
    "stuck": 0,
    "ads": 0,
    "shops": 0,
    "buys": 0,
    "removed": false,
    "abuse": 0,
-   "reached": 23,
+   "reached": 31,
    "side": [
     "tut_hand"
    ],
@@ -841,9 +938,9 @@
   {
    "uid": "3d5eac0f",
    "t0": "04:40",
-   "mins": 3.5,
+   "mins": 820.7,
    "model": "SM-A065F",
-   "country": "Iran",
+   "country": "United States",
    "city": "Isfahan",
    "lang": "fa-ir",
    "ver": "1.0 (v29)",
@@ -855,7 +952,7 @@
    "ads": 0,
    "shops": 0,
    "buys": 0,
-   "removed": false,
+   "removed": true,
    "abuse": 0,
    "reached": 127,
    "side": [
@@ -1773,7 +1870,7 @@
   {
    "uid": "362cb56f",
    "t0": "00:30",
-   "mins": 18.5,
+   "mins": 1115.9,
    "model": "SM-A137F",
    "country": "Brazil",
    "city": "Sao Paulo",
@@ -1926,30 +2023,30 @@
   }
  ],
  "kinds": {
-  "human": 71,
-  "bot": 24,
+  "human": 75,
+  "bot": 35,
   "me": 2,
   "dbg": 0
  },
- "bots": 24,
- "humans": 71,
+ "bots": 35,
+ "humans": 75,
  "versions": [
   {
    "ver": "1.0 (v36)",
-   "users": 41,
-   "installs": 35
+   "users": 43,
+   "installs": 37
   },
   {
    "ver": "1.0 (v29)",
-   "users": 30,
+   "users": 32,
    "installs": 11
   }
  ],
  "countries": [
   {
    "country": "Iran",
-   "users": 63,
-   "vpn": 9
+   "users": 67,
+   "vpn": 10
   },
   {
    "country": "Brazil",
@@ -1957,14 +2054,14 @@
    "vpn": 0
   },
   {
-   "country": "Chile",
-   "users": 1,
-   "vpn": 0
-  },
-  {
    "country": "Indonesia",
    "users": 1,
    "vpn": 1
+  },
+  {
+   "country": "Chile",
+   "users": 1,
+   "vpn": 0
   }
  ],
  "purchase_fail": [],
