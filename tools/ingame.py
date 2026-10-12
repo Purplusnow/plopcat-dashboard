@@ -151,6 +151,9 @@ def main() -> None:
     f_win = human(rng)
     out["levels"] = q(Q.levels(TABLE, f_win))
     out["stuck"] = q(Q.stuck(TABLE, f_win))
+    # ★v46 의 수 제한(첫 실패 상태) — 게임은 level_fail 을 보내는데 여기서 안 보고 있었다.
+    out["fails"] = q(Q.fails(TABLE, f_win))
+    out["fail_summary"] = q(Q.fail_summary(TABLE, f_win))
     out["album"] = q(Q.album(TABLE, f_win))
     out["shop_funnel"] = q(Q.shop_funnel(TABLE, f_win))
     out["ads"] = q(Q.ads(TABLE, f_win))

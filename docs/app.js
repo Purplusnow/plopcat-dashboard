@@ -141,6 +141,32 @@ fetch("data/ingame.json?" + Date.now()).then(r => r.json()).then(d => {
     ["초", r => r.secs ?? "–"],
   ]);
 
+  // ★수 제한 — 실패율이 10%를 넘으면 조여야 하고, 2% 아래면 풀어도 된다.
+  //   색으로 표시해 둔다. 숫자만 늘어놓으면 어느 판이 문제인지 눈에 안 들어온다.
+  table($("failTable"), d.fails, [
+    ["레벨", r => "L" + r.lv],
+    ["막힌 사람", r => n(r.users)],
+    ["건수", r => n(r.n)],
+    ["시작", r => n(r.started)],
+    ["실패율", r => r.rate == null ? "–"
+      : `<b class="${r.rate >= 0.10 ? "bad-t" : (r.rate < 0.02 ? "dim" : "")}">${pct(r.rate)}</b>`],
+    ["평균 수", r => r.moves ?? "–"],
+    ["제한", r => r.lim ?? "–"]]);
+  {
+    const fs = (d.fail_summary && d.fail_summary[0]) || null;
+    const el = $("failLead");
+    if (el) {
+      if (!fs || !fs.players) el.textContent = "아직 데이터 없음 — v46 이 유저에게 닿아야 찍힌다";
+      else {
+        const rate = fs.players ? fs.fail_users / fs.players : 0;
+        el.innerHTML = `한 번이라도 막힌 사람 <b>${n(fs.fail_users)}</b>/${n(fs.players)}`
+          + ` (<b>${pct(rate)}</b>) · 실패 ${n(fs.fails)}건`
+          + ` · 빠져나간 방법 — 💎 ${n(fs.buy_gem)}회(젬 ${n(fs.gems_spent)})`
+          + ` · 📺 ${n(fs.buy_ad)}회`;
+      }
+    }
+  }
+
   table($("stuckTable"), d.stuck, [
     ["레벨", r => "L" + r.lv], ["건수", r => n(r.n)],
     ["평균 시도", r => r.attempts ?? "–"], ["평균 힌트", r => r.hints ?? "–"]]);

@@ -216,6 +216,38 @@ def main():
     chk("그 판 건수", sr[0]["n"], 2)
     chk("평균 시도 (5+3)/2", sr[0]["attempts"], 4.0)
 
+    # ── ③-2 ★수 제한 실패 (v46) ────────────────────────────────────
+    # a 는 L7 에서 **두 번** 막혔다(수를 사서 이어 하다 또 막힘), b 는 한 번.
+    # 건수만 보면 3, 사람은 2 — 둘을 가려야 "한 사람이 열 번"과 "열 사람이 한 번"이 구분된다.
+    fe = [ev("20260101", "a", "level_start", [("level", 7)]),
+          ev("20260101", "b", "level_start", [("level", 7)]),
+          ev("20260101", "c", "level_start", [("level", 7)]),
+          ev("20260101", "a", "level_start", [("level", 9)]),
+          ev("20260101", "a", "level_fail", [("level", 7), ("moves", 21), ("limit", 21)]),
+          ev("20260101", "a", "level_fail", [("level", 7), ("moves", 26), ("limit", 26)]),
+          ev("20260101", "b", "level_fail", [("level", 7), ("moves", 21), ("limit", 21)]),
+          ev("20260101", "a", "level_fail", [("level", 9), ("moves", 13), ("limit", 13)]),
+          # 빠져나간 방법 — 젬으로 한 번, 광고로 한 번
+          ev("20260101", "a", "booster_use",
+             [("kind", "moves"), ("source", "gem"), ("cost", 10)]),
+          ev("20260101", "b", "booster_use",
+             [("kind", "moves"), ("source", "ad"), ("cost", 0)]),
+          # ★다른 부스터는 섞이면 안 된다
+          ev("20260101", "c", "booster_use",
+             [("kind", "hint"), ("source", "gem"), ("cost", 5)])]
+    fr = {r["lv"]: r for r in run(Q.fails(table(fe), "TRUE"))}
+    chk("★사람이 많이 막힌 판이 맨 위", list(fr)[0], 7)
+    chk("L7 막힌 **사람** 2명", fr[7]["users"], 2)
+    chk("★L7 막힌 **건수**는 3 (한 사람이 두 번)", fr[7]["n"], 3)
+    chk("L7 분모는 시작한 사람 3명", fr[7]["started"], 3)
+    chk("L7 실패율 2/3", round(fr[7]["rate"], 3), 0.667)
+    fs = run(Q.fail_summary(table(fe), "TRUE"))[0]
+    chk("한 번이라도 막힌 사람 2명", fs["fail_users"], 2)
+    chk("실패 건수 4건", fs["fails"], 4)
+    chk("★젬으로 수를 산 건수(힌트 구매가 안 섞인다)", fs["buy_gem"], 1)
+    chk("광고로 수를 받은 건수", fs["buy_ad"], 1)
+    chk("쓴 젬(수 구매분만)", fs["gems_spent"], 10)
+
     # ── ④ 수집 메타 ─────────────────────────────────────────────────
     al = [ev("20260101", "a", "album_open"), ev("20260101", "a", "album_open"),
           ev("20260101", "b", "album_open"),

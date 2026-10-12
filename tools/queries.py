@@ -124,6 +124,54 @@ GROUP BY lv HAVING lv IS NOT NULL ORDER BY n DESC LIMIT 25
 """.format(t=table, f=filt, lv=p_int("level"), att=p_int("attempts"), h=p_int("hints"))
 
 
+def fails(table: str, filt: str) -> str:
+    """★수 제한 실패 — v46(2026-10-12)에 들어간 **이 게임의 첫 실패 상태**.
+
+    왜 필요한가: 게임이 보내는 `level_fail` 을 대시보드가 **아예 조회하지 않고 있었다.**
+    수 제한을 넣어 놓고 "얼마나 물리는지"를 못 보면 조일 근거가 없다.
+
+    ★`level_stuck`(못 깬 판)과 **다르다.** stuck 은 떠난 사람이고, fail 은 수를 다 쓴
+      사건이다. 한 사람이 같은 판에서 여러 번 fail 할 수 있다(수를 사서 이어 하면).
+      그래서 건수(n)와 **사람 수(users)를 같이** 본다 — 건수만 보면 한 사람이
+      열 번 막힌 판과 열 사람이 한 번씩 막힌 판이 똑같아 보인다.
+
+    실패율의 분모는 **그 판을 시작한 사람**이다(level_start). 클리어한 사람으로 나누면
+    "막혀서 못 깬 사람"이 분모에서 빠져 실패율이 **과소**로 나온다.
+    """
+    return """
+WITH f AS (
+  SELECT {lv} lv, COUNT(*) n, COUNT(DISTINCT user_pseudo_id) users,
+         ROUND(AVG({mv}), 1) moves, ROUND(AVG({lim}), 1) lim
+  FROM {t} WHERE {f} AND event_name = 'level_fail' GROUP BY lv
+), s AS (
+  SELECT {lv} lv, COUNT(DISTINCT user_pseudo_id) started
+  FROM {t} WHERE {f} AND event_name = 'level_start' GROUP BY lv
+)
+SELECT f.lv, f.users, f.n, s.started,
+       SAFE_DIVIDE(f.users, s.started) rate, f.moves, f.lim
+FROM f LEFT JOIN s USING (lv)
+WHERE f.lv IS NOT NULL ORDER BY f.users DESC, f.lv LIMIT 30
+""".format(t=table, f=filt, lv=p_int("level"), mv=p_int("moves"), lim=p_int("limit"))
+
+
+def fail_summary(table: str, filt: str) -> str:
+    """수 제한 한 줄 요약 — 전체에서 **몇 명이 한 번이라도 막혔나**, 그리고 어떻게 빠져나갔나.
+
+    ★빠져나간 방법(booster_use kind='moves')을 같이 본다. 실패만 세면 "막혔다"까지만
+      알고, 그게 **돈이 됐는지**(gem) 광고가 됐는지(ad) 그냥 떠났는지를 모른다.
+    """
+    return """
+SELECT
+  COUNT(DISTINCT IF(event_name='level_fail', user_pseudo_id, NULL)) fail_users,
+  COUNTIF(event_name='level_fail') fails,
+  COUNT(DISTINCT IF(event_name='level_start', user_pseudo_id, NULL)) players,
+  COUNTIF(event_name='booster_use' AND {k}='moves' AND {s}='gem') buy_gem,
+  COUNTIF(event_name='booster_use' AND {k}='moves' AND {s}='ad') buy_ad,
+  SUM(IF(event_name='booster_use' AND {k}='moves' AND {s}='gem', {c}, 0)) gems_spent
+FROM {t} WHERE {f}
+""".format(t=table, f=filt, k=p_str("kind"), s=p_str("source"), c=p_int("cost"))
+
+
 def album(table: str, filt: str) -> str:
     """④ 수집 메타 — 완성만 보면 '열어는 봤는데 안 맞춘' 유저가 안 보인다."""
     return """
