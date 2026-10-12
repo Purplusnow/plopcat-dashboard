@@ -44,13 +44,15 @@ WITH ev AS (
   SELECT user_pseudo_id uid, event_name, event_timestamp ts,
          geo.country country, device.language lang, device.mobile_model_name model,
          traffic_source.name ts_name, traffic_source.medium ts_medium,
-         traffic_source.source ts_source
+         traffic_source.source ts_source,
+         IF(STARTS_WITH(_TABLE_SUFFIX,'intraday_'),
+            SUBSTR(_TABLE_SUFFIX,10), _TABLE_SUFFIX) day
   FROM {t}
   WHERE geo.country IS NOT NULL AND geo.country != ''
     AND (device.mobile_model_name IS NULL OR device.mobile_model_name NOT IN ({models}))
 ), first_ev AS (          -- 설치 시점(= 가장 이른 이벤트)의 나라
   SELECT uid,
-    ARRAY_AGG(STRUCT(country, lang, ts_name, ts_medium, ts_source)
+    ARRAY_AGG(STRUCT(country, lang, ts_name, ts_medium, ts_source, day)
               ORDER BY ts LIMIT 1)[OFFSET(0)] f
   FROM ev GROUP BY uid
 ), open_ev AS (           -- first_open 이벤트가 따로 있으면 그쪽이 더 정확하다
@@ -63,7 +65,8 @@ WITH ev AS (
 )
 SELECT d.uid, d.c dom_country, d.multi,
        IFNULL(o.c, f.f.country) install_country,
-       f.f.lang lang, f.f.ts_name campaign, f.f.ts_medium medium, f.f.ts_source source
+       f.f.lang lang, f.f.ts_name campaign, f.f.ts_medium medium, f.f.ts_source source,
+       f.f.day install_day
 FROM dom d
 LEFT JOIN first_ev f USING (uid)
 LEFT JOIN open_ev o USING (uid)
@@ -77,8 +80,24 @@ def main() -> None:
     def is_fa(r):
         return str(r.get("lang") or "").lower().startswith("fa")
 
-    # ① 설치 국가 × 대표 국가 — 여기가 질문의 핵심
-    print("═══ ① 설치 시점 국가 → 평소 국가 (명)  ★다르면 설치할 때만 VPN 을 켠 것 ═══")
+    # ⓞ ★★돈 낸 캠페인이 데려온 사람의 정체 — 이게 지출 판단의 숫자다
+    print("═══ ⓞ ★캠페인별 — 데려온 사람이 누구인가 ═══")
+    by_c = defaultdict(list)
+    for r in rows:
+        by_c[r.get("campaign") or "(출처없음)"].append(r)
+    for c, rs in sorted(by_c.items(), key=lambda kv: -len(kv[1])):
+        fa = sum(1 for r in rs if is_fa(r))
+        icc = Counter(r["install_country"] for r in rs)
+        dom = Counter(r["dom_country"] for r in rs)
+        print("  %s" % c)
+        print("     데려온 사람 %d명 · 페르시아어 **%d명(%.0f%%)**" % (len(rs), fa, 100.0*fa/len(rs)))
+        print("     설치 시점 국가:", dict(icc.most_common(6)))
+        print("     평소 국가     :", dict(dom.most_common(6)))
+        days = sorted({r.get("install_day") for r in rs if r.get("install_day")})
+        if days: print("     설치일        : %s ~ %s (%d일)" % (days[0], days[-1], len(days)))
+
+    # ① 설치 국가 × 대표 국가
+    print("\n═══ ① 설치 시점 국가 → 평소 국가 (명)  ★다르면 설치할 때만 VPN 을 켠 것 ═══")
     cross = Counter((r["install_country"], r["dom_country"]) for r in rows)
     for (ic, dc), n in cross.most_common(25):
         mark = "  ← 설치≠평소" if ic != dc else ""
