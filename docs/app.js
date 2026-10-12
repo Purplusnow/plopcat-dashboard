@@ -64,12 +64,17 @@ fetch("data/ingame.json?" + Date.now()).then(r => r.json()).then(d => {
         //   "떨어졌다"로 읽힌다. 지금 값은 **바닥값**이라 + 를 붙이고 흐리게 둔다.
         const live = k === age;
         const x = (r.d || []).find(y => y.n === k);
-        const p = Math.round((x ? x.rate : 0) * 100);   // 그 날이 다 지났는데 없으면 진짜 0
+        // ★표시는 **소수 1째자리**(형 요청 2026-10-13). 정수로 반올림하면 38.0 과 38.4 가
+        //   같은 칸으로 보여서, 코호트 간 차이를 읽을 수 없다 — 지금처럼 코호트가
+        //   수십 명 규모면 한 명이 1.4%p 라 반올림이 그 한 명을 통째로 지운다.
+        //   색·대비 계산은 숫자(p)로, 글자는 문자열(ps)로 나눈다.
+        const p = (x ? x.rate : 0) * 100;               // 그 날이 다 지났는데 없으면 진짜 0
+        const ps = p.toFixed(1);
         const lg = 90 - 42 * Math.min(p / 50, 1);
         h += `<td class="num fcell${live ? " live" : ""}" ` +
              `style="background:${heat(p)};color:${lg < 55 ? "#fff" : "#333"}"` +
              ` title="${r.cohort} D${k} — ${x ? x.u : 0}명 / ${r.size}명` +
-             `${live ? " · 오늘이 그 날이라 아직 차는 중(최소값)" : ""}">${p}%${live ? "+" : ""}</td>`;
+             `${live ? " · 오늘이 그 날이라 아직 차는 중(최소값)" : ""}">${ps}%${live ? "+" : ""}</td>`;
       }
       h += "</tr>";
     }
