@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-13 04:26 KST",
+ "updated": "2026-10-13 08:14 KST",
  "window_days": 45,
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
@@ -2381,7 +2381,7 @@
  "retention": [
   {
    "cohort": "20261013",
-   "size": 8,
+   "size": 19,
    "d": []
   },
   {
@@ -2390,8 +2390,8 @@
    "d": [
     {
      "n": 1,
-     "u": 8,
-     "rate": 0.145
+     "u": 11,
+     "rate": 0.2
     }
    ]
   },
@@ -2406,8 +2406,8 @@
     },
     {
      "n": 2,
-     "u": 4,
-     "rate": 0.056
+     "u": 6,
+     "rate": 0.085
     }
    ]
   },
@@ -2425,21 +2425,21 @@
  "versions": [
   {
    "ver": "1.0 (v46)",
-   "users": 5,
-   "avg_lv_1h": 12.5,
-   "avg_clears_1h": 10.0,
-   "lv1_rate": 0.8,
-   "remove_rate": 0.2,
-   "avg_mins": 3.4
+   "users": 11,
+   "avg_lv_1h": 6.8,
+   "avg_clears_1h": 5.5,
+   "lv1_rate": 0.818,
+   "remove_rate": 0.182,
+   "avg_mins": 2.5
   },
   {
    "ver": "1.0 (v36)",
-   "users": 54,
-   "avg_lv_1h": 19.9,
-   "avg_clears_1h": 15.6,
-   "lv1_rate": 0.852,
-   "remove_rate": 0.37,
-   "avg_mins": 284.4
+   "users": 56,
+   "avg_lv_1h": 19.4,
+   "avg_clears_1h": 15.3,
+   "lv1_rate": 0.857,
+   "remove_rate": 0.393,
+   "avg_mins": 331.7
   },
   {
    "ver": "1.0 (v35)",
@@ -2452,21 +2452,21 @@
   },
   {
    "ver": "1.0 (v29)",
-   "users": 73,
-   "avg_lv_1h": 24.4,
-   "avg_clears_1h": 20.4,
-   "lv1_rate": 0.877,
-   "remove_rate": 0.425,
-   "avg_mins": 364.9
+   "users": 74,
+   "avg_lv_1h": 25.3,
+   "avg_clears_1h": 21.2,
+   "lv1_rate": 0.878,
+   "remove_rate": 0.419,
+   "avg_mins": 414.0
   },
   {
    "ver": "1.0 (v28)",
-   "users": 2,
+   "users": 3,
    "avg_lv_1h": 4.5,
-   "avg_clears_1h": 4.5,
-   "lv1_rate": 1.0,
-   "remove_rate": 1.0,
-   "avg_mins": 86.5
+   "avg_clears_1h": 3.0,
+   "lv1_rate": 0.667,
+   "remove_rate": 0.667,
+   "avg_mins": 57.7
   },
   {
    "ver": "1.0 (v23)",
@@ -2645,15 +2645,15 @@
  "side_steps": [
   {
    "step": "tut_hand",
-   "users": 119
+   "users": 127
   },
   {
    "step": "gate_tut",
-   "users": 45
+   "users": 49
   },
   {
    "step": "gate_pieces",
-   "users": 40
+   "users": 41
   },
   {
    "step": "gate_final",
@@ -2665,15 +2665,15 @@
   },
   {
    "step": "first_restart",
-   "users": 15
+   "users": 16
   },
   {
    "step": "first_undo",
-   "users": 11
+   "users": 12
   },
   {
    "step": "first_tow",
-   "users": 10
+   "users": 11
   },
   {
    "step": "first_hint",
@@ -2699,17 +2699,17 @@
  "countries": [
   {
    "country": "Iran",
-   "users": 115,
-   "avg_lv": 30.9,
-   "cleared_any": 102,
+   "users": 117,
+   "avg_lv": 33.0,
+   "cleared_any": 104,
    "buys": 0,
-   "vpn": 24
+   "vpn": 25
   },
   {
    "country": "Brazil",
-   "users": 15,
-   "avg_lv": 11.1,
-   "cleared_any": 13,
+   "users": 23,
+   "avg_lv": 7.8,
+   "cleared_any": 19,
    "buys": 0,
    "vpn": 3
   },
@@ -2730,6 +2730,14 @@
    "vpn": 0
   },
   {
+   "country": "United States",
+   "users": 1,
+   "avg_lv": 0.0,
+   "cleared_any": 0,
+   "buys": 0,
+   "vpn": 0
+  },
+  {
    "country": "Thailand",
    "users": 1,
    "avg_lv": 0.0,
@@ -2744,46 +2752,45 @@
    "cleared_any": 1,
    "buys": 0,
    "vpn": 1
-  },
-  {
-   "country": "United States",
-   "users": 1,
-   "avg_lv": 0.0,
-   "cleared_any": 0,
-   "buys": 0,
-   "vpn": 0
   }
  ],
  "item_source": [
   {
    "kind": "hint",
    "source": "free",
-   "uses": 14,
+   "uses": 16,
    "users": 8,
    "spent": 0
   },
   {
    "kind": "tow",
    "source": "free",
-   "uses": 11,
-   "users": 10,
+   "uses": 14,
+   "users": 11,
    "spent": 0
+  },
+  {
+   "kind": "tow",
+   "source": "gem",
+   "uses": 1,
+   "users": 1,
+   "spent": 25
   },
   {
    "kind": "undo",
    "source": "free",
-   "uses": 13,
-   "users": 11,
+   "uses": 22,
+   "users": 12,
    "spent": 0
   }
  ],
  "item_level": [
   {
    "band": 1,
-   "users": 4,
-   "paid_uses": 0,
-   "free_uses": 7,
-   "gems": 0,
+   "users": 5,
+   "paid_uses": 1,
+   "free_uses": 9,
+   "gems": 25,
    "paws": 0
   },
   {
@@ -2804,17 +2811,25 @@
   },
   {
    "band": 31,
-   "users": 7,
+   "users": 8,
    "paid_uses": 0,
-   "free_uses": 11,
+   "free_uses": 12,
    "gems": 0,
    "paws": 0
   },
   {
    "band": 51,
-   "users": 2,
+   "users": 3,
    "paid_uses": 0,
-   "free_uses": 3,
+   "free_uses": 4,
+   "gems": 0,
+   "paws": 0
+  },
+  {
+   "band": 81,
+   "users": 1,
+   "paid_uses": 0,
+   "free_uses": 1,
    "gems": 0,
    "paws": 0
   },
@@ -2825,38 +2840,83 @@
    "free_uses": 2,
    "gems": 0,
    "paws": 0
+  },
+  {
+   "band": 151,
+   "users": 1,
+   "paid_uses": 0,
+   "free_uses": 3,
+   "gems": 0,
+   "paws": 0
+  },
+  {
+   "band": 161,
+   "users": 1,
+   "paid_uses": 0,
+   "free_uses": 3,
+   "gems": 0,
+   "paws": 0
+  },
+  {
+   "band": 201,
+   "users": 1,
+   "paid_uses": 0,
+   "free_uses": 1,
+   "gems": 0,
+   "paws": 0
+  },
+  {
+   "band": 221,
+   "users": 1,
+   "paid_uses": 0,
+   "free_uses": 1,
+   "gems": 0,
+   "paws": 0
+  },
+  {
+   "band": 251,
+   "users": 1,
+   "paid_uses": 0,
+   "free_uses": 1,
+   "gems": 0,
+   "paws": 0
   }
  ],
- "item_first": [],
+ "item_first": [
+  {
+   "band": 1,
+   "users": 1
+  }
+ ],
  "shop_kinds": [
   {
    "kind": "gem",
-   "opens": 17,
-   "users": 9
+   "opens": 23,
+   "users": 10
   },
   {
    "kind": "paw",
-   "opens": 10,
-   "users": 3
+   "opens": 13,
+   "users": 4
   },
   {
    "kind": "heart",
-   "opens": 6,
-   "users": 4
+   "opens": 8,
+   "users": 5
   }
  ],
  "wall_sales": [
   {
    "band": 1,
-   "players": 127,
+   "players": 136,
    "stuck": 0,
    "out_of_hearts": 0,
-   "buys": 0,
-   "gems": 0
+   "buys": 1,
+   "gems": 25
   },
   {
    "band": 11,
-   "players": 83,
+   "players": 85,
    "stuck": 0,
    "out_of_hearts": 0,
    "buys": 0,
@@ -2864,7 +2924,7 @@
   },
   {
    "band": 21,
-   "players": 55,
+   "players": 57,
    "stuck": 0,
    "out_of_hearts": 0,
    "buys": 0,
@@ -2872,7 +2932,7 @@
   },
   {
    "band": 31,
-   "players": 40,
+   "players": 42,
    "stuck": 1,
    "out_of_hearts": 0,
    "buys": 0,
@@ -2880,7 +2940,7 @@
   },
   {
    "band": 41,
-   "players": 28,
+   "players": 29,
    "stuck": 0,
    "out_of_hearts": 0,
    "buys": 0,
@@ -2888,7 +2948,7 @@
   },
   {
    "band": 51,
-   "players": 22,
+   "players": 23,
    "stuck": 0,
    "out_of_hearts": 0,
    "buys": 0,
@@ -2896,7 +2956,7 @@
   },
   {
    "band": 61,
-   "players": 16,
+   "players": 18,
    "stuck": 0,
    "out_of_hearts": 0,
    "buys": 0,
@@ -2904,7 +2964,7 @@
   },
   {
    "band": 71,
-   "players": 14,
+   "players": 15,
    "stuck": 0,
    "out_of_hearts": 0,
    "buys": 0,
@@ -2912,7 +2972,7 @@
   },
   {
    "band": 81,
-   "players": 13,
+   "players": 14,
    "stuck": 0,
    "out_of_hearts": 0,
    "buys": 0,
@@ -2920,7 +2980,7 @@
   },
   {
    "band": 91,
-   "players": 9,
+   "players": 10,
    "stuck": 0,
    "out_of_hearts": 0,
    "buys": 0,
@@ -2928,7 +2988,7 @@
   },
   {
    "band": 101,
-   "players": 9,
+   "players": 10,
    "stuck": 0,
    "out_of_hearts": 0,
    "buys": 0,
@@ -2936,7 +2996,7 @@
   },
   {
    "band": 111,
-   "players": 8,
+   "players": 9,
    "stuck": 0,
    "out_of_hearts": 0,
    "buys": 0,
@@ -2944,7 +3004,7 @@
   },
   {
    "band": 121,
-   "players": 7,
+   "players": 8,
    "stuck": 0,
    "out_of_hearts": 0,
    "buys": 0,
@@ -2952,7 +3012,7 @@
   },
   {
    "band": 131,
-   "players": 6,
+   "players": 7,
    "stuck": 0,
    "out_of_hearts": 0,
    "buys": 0,
@@ -2976,7 +3036,7 @@
   },
   {
    "band": 161,
-   "players": 4,
+   "players": 5,
    "stuck": 0,
    "out_of_hearts": 0,
    "buys": 0,
@@ -2984,7 +3044,7 @@
   },
   {
    "band": 171,
-   "players": 3,
+   "players": 4,
    "stuck": 0,
    "out_of_hearts": 0,
    "buys": 0,
@@ -2992,7 +3052,7 @@
   },
   {
    "band": 181,
-   "players": 3,
+   "players": 4,
    "stuck": 0,
    "out_of_hearts": 0,
    "buys": 0,
@@ -3000,7 +3060,7 @@
   },
   {
    "band": 191,
-   "players": 2,
+   "players": 3,
    "stuck": 0,
    "out_of_hearts": 0,
    "buys": 0,
@@ -3008,7 +3068,7 @@
   },
   {
    "band": 201,
-   "players": 1,
+   "players": 2,
    "stuck": 0,
    "out_of_hearts": 0,
    "buys": 0,
@@ -3016,7 +3076,7 @@
   },
   {
    "band": 211,
-   "players": 1,
+   "players": 2,
    "stuck": 0,
    "out_of_hearts": 0,
    "buys": 0,
@@ -3024,6 +3084,30 @@
   },
   {
    "band": 221,
+   "players": 2,
+   "stuck": 0,
+   "out_of_hearts": 0,
+   "buys": 0,
+   "gems": 0
+  },
+  {
+   "band": 231,
+   "players": 2,
+   "stuck": 0,
+   "out_of_hearts": 0,
+   "buys": 0,
+   "gems": 0
+  },
+  {
+   "band": 241,
+   "players": 2,
+   "stuck": 0,
+   "out_of_hearts": 0,
+   "buys": 0,
+   "gems": 0
+  },
+  {
+   "band": 251,
    "players": 1,
    "stuck": 0,
    "out_of_hearts": 0,
