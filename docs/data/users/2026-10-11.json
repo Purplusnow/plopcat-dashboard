@@ -454,11 +454,11 @@
   {
    "uid": "6bf661a7",
    "model": "SM-A165F",
-   "country": "Brazil",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v29)",
-   "days": 1,
-   "last": "20261011",
+   "days": 2,
+   "last": "20261012",
    "lv": 20,
    "clears": 20,
    "stuck": 0,
@@ -466,7 +466,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 351
   },
   {
