@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12 09:20 KST",
+ "updated": "2026-10-12 10:34 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261012",
@@ -49,37 +49,37 @@
   {
    "key": "game_open",
    "label": "게임 진입",
-   "users": 31
+   "users": 33
   },
   {
    "key": "first_move",
    "label": "첫 수",
-   "users": 31
+   "users": 33
   },
   {
    "key": "lv1_clear",
    "label": "1판 클리어",
-   "users": 30
+   "users": 32
   },
   {
    "key": "lv3_clear",
    "label": "3판",
-   "users": 26
+   "users": 28
   },
   {
    "key": "album_first",
    "label": "미술관 열기",
-   "users": 27
+   "users": 29
   },
   {
    "key": "first_piece",
    "label": "첫 조각",
-   "users": 24
+   "users": 26
   },
   {
    "key": "lv10_clear",
    "label": "10판",
-   "users": 21
+   "users": 23
   },
   {
    "key": "first_picture",
@@ -98,6 +98,85 @@
   }
  ],
  "users": [
+  {
+   "uid": "c773efb9",
+   "t0": "10:30",
+   "mins": 0.2,
+   "model": "2201117TG",
+   "country": "Chile",
+   "city": "Colina",
+   "lang": "fa-ir",
+   "ver": "1.0 (v36)",
+   "new": true,
+   "lv": 0,
+   "started": 1,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "d450f26b",
+   "t0": "10:22",
+   "mins": 3.0,
+   "model": "Moto E13",
+   "country": "Brazil",
+   "city": "Rio de Janeiro",
+   "lang": "pt-br",
+   "ver": "1.0 (v36)",
+   "new": true,
+   "lv": 12,
+   "started": 12,
+   "clears": 12,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 127,
+   "side": [
+    "gate_pieces",
+    "gate_tut",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "48a95ab4",
+   "t0": "10:06",
+   "mins": 23.6,
+   "model": "SM-A057M",
+   "country": "Brazil",
+   "city": null,
+   "lang": "pt-br",
+   "ver": "1.0 (v36)",
+   "new": true,
+   "lv": 12,
+   "started": 12,
+   "clears": 12,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 127,
+   "side": [
+    "gate_pieces",
+    "gate_tut",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
   {
    "uid": "2b90991c",
    "t0": "09:03",
@@ -1339,18 +1418,18 @@
   }
  ],
  "kinds": {
-  "human": 48,
+  "human": 51,
   "bot": 0,
   "me": 0,
   "dbg": 0
  },
  "bots": 0,
- "humans": 48,
+ "humans": 51,
  "versions": [
   {
    "ver": "1.0 (v36)",
-   "users": 30,
-   "installs": 25
+   "users": 33,
+   "installs": 28
   },
   {
    "ver": "1.0 (v29)",
@@ -1366,13 +1445,18 @@
   },
   {
    "country": "Brazil",
-   "users": 3,
+   "users": 5,
    "vpn": 1
   },
   {
    "country": "Indonesia",
    "users": 1,
    "vpn": 1
+  },
+  {
+   "country": "Chile",
+   "users": 1,
+   "vpn": 0
   }
  ],
  "purchase_fail": [],
