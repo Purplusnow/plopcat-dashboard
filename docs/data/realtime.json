@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12 13:55 KST",
+ "updated": "2026-10-12 14:47 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261012",
@@ -49,12 +49,12 @@
   {
    "key": "game_open",
    "label": "게임 진입",
-   "users": 37
+   "users": 38
   },
   {
    "key": "first_move",
    "label": "첫 수",
-   "users": 36
+   "users": 37
   },
   {
    "key": "lv1_clear",
@@ -74,7 +74,7 @@
   {
    "key": "first_piece",
    "label": "첫 조각",
-   "users": 28
+   "users": 29
   },
   {
    "key": "lv10_clear",
@@ -84,12 +84,12 @@
   {
    "key": "first_picture",
    "label": "첫 그림 완성",
-   "users": 14
+   "users": 15
   },
   {
    "key": "lv20_clear",
    "label": "20판",
-   "users": 14
+   "users": 15
   },
   {
    "key": "lv50_clear",
@@ -98,6 +98,54 @@
   }
  ],
  "users": [
+  {
+   "uid": "31684dcb",
+   "t0": "14:43",
+   "mins": 0.9,
+   "model": "2303CRA44A",
+   "country": "Iran",
+   "city": "Isfahan",
+   "lang": "fa-ir",
+   "ver": "1.0 (v29)",
+   "new": true,
+   "lv": 0,
+   "started": 1,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 3,
+   "side": [
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "04c62428",
+   "t0": "14:10",
+   "mins": 0.0,
+   "model": "23106RN0DA",
+   "country": "United States",
+   "city": null,
+   "lang": "fa-ir",
+   "ver": "1.0 (v36)",
+   "new": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
   {
    "uid": "6bf661a7",
    "t0": "13:14",
@@ -1367,8 +1415,8 @@
    "t0": "00:37",
    "mins": 137.7,
    "model": "DUB-LX1",
-   "country": "Iran",
-   "city": "Tehran",
+   "country": "Brazil",
+   "city": "Sao Paulo",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
    "new": true,
@@ -1471,24 +1519,26 @@
   {
    "uid": "2dfc36c1",
    "t0": "00:12",
-   "mins": 2.2,
+   "mins": 121.6,
    "model": "SM-A528B",
-   "country": "Russia",
-   "city": "Sao Paulo",
+   "country": "Iran",
+   "city": "Rasht",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
    "new": true,
-   "lv": 11,
-   "started": 12,
-   "clears": 11,
+   "lv": 30,
+   "started": 30,
+   "clears": 30,
    "stuck": 0,
    "ads": 0,
    "shops": 0,
    "buys": 0,
    "removed": false,
    "abuse": 0,
-   "reached": 95,
+   "reached": 511,
    "side": [
+    "first_tow",
+    "gate_final",
     "gate_pieces",
     "gate_tut",
     "tut_hand"
@@ -1569,38 +1619,43 @@
   }
  ],
  "kinds": {
-  "human": 57,
-  "bot": 5,
+  "human": 59,
+  "bot": 6,
   "me": 1,
   "dbg": 0
  },
- "bots": 5,
- "humans": 57,
+ "bots": 6,
+ "humans": 59,
  "versions": [
   {
    "ver": "1.0 (v36)",
-   "users": 37,
+   "users": 38,
    "installs": 32
   },
   {
    "ver": "1.0 (v29)",
-   "users": 20,
-   "installs": 9
+   "users": 21,
+   "installs": 10
   }
  ],
  "countries": [
   {
    "country": "Iran",
-   "users": 48,
-   "vpn": 6
+   "users": 50,
+   "vpn": 7
   },
   {
    "country": "Brazil",
-   "users": 7,
-   "vpn": 1
+   "users": 6,
+   "vpn": 0
   },
   {
    "country": "Chile",
+   "users": 1,
+   "vpn": 0
+  },
+  {
+   "country": "United States",
    "users": 1,
    "vpn": 0
   },
