@@ -2,24 +2,6 @@
  "date": "2026-10-13",
  "users": [
   {
-   "uid": "bbd7785c",
-   "model": "23106RN0DA",
-   "country": "Chile",
-   "lang": "fa-ir",
-   "ver": "1.0 (v29)",
-   "days": 1,
-   "last": "20261013",
-   "lv": 161,
-   "clears": 3,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 0,
-   "removed": false,
-   "reached": 0
-  },
-  {
    "uid": "bc066d2b",
    "model": "23021RAAEG",
    "country": "Iran",
@@ -70,7 +52,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 1,
-   "removed": false,
+   "removed": true,
    "reached": 511
   },
   {
@@ -110,6 +92,24 @@
    "reached": 127
   },
   {
+   "uid": "2501c49e",
+   "model": "Moto G24",
+   "country": "Brazil",
+   "lang": "pt-br",
+   "ver": "1.0 (v46)",
+   "days": 1,
+   "last": "20261013",
+   "lv": 12,
+   "clears": 12,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": true,
+   "reached": 127
+  },
+  {
    "uid": "b5f22888",
    "model": "SM-G610M",
    "country": "Brazil",
@@ -119,6 +119,24 @@
    "last": "20261013",
    "lv": 7,
    "clears": 7,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 63
+  },
+  {
+   "uid": "65e9b14c",
+   "model": "SM-A075M",
+   "country": "Brazil",
+   "lang": "pt-br",
+   "ver": "1.0 (v46)",
+   "days": 1,
+   "last": "20261013",
+   "lv": 6,
+   "clears": 6,
    "stuck": 0,
    "ads": 0,
    "buys": 0,
@@ -146,6 +164,24 @@
    "reached": 63
   },
   {
+   "uid": "79a4dd2f",
+   "model": "220333QL",
+   "country": "Brazil",
+   "lang": "pt-br",
+   "ver": "1.0 (v46)",
+   "days": 1,
+   "last": "20261013",
+   "lv": 2,
+   "clears": 2,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": true,
+   "reached": 23
+  },
+  {
    "uid": "0028cfca",
    "model": "SM-A042M",
    "country": "Brazil",
@@ -160,7 +196,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 55
   },
   {
@@ -236,6 +272,24 @@
    "reached": 7
   },
   {
+   "uid": "cfae533a",
+   "model": "SM-A065M",
+   "country": "Brazil",
+   "lang": "pt-br",
+   "ver": "1.0 (v46)",
+   "days": 1,
+   "last": "20261013",
+   "lv": 1,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": true,
+   "reached": 23
+  },
+  {
    "uid": "e7c5b218",
    "model": "Moto G06",
    "country": "Brazil",
@@ -254,8 +308,8 @@
    "reached": 7
   },
   {
-   "uid": "2501c49e",
-   "model": "Moto G24",
+   "uid": "315f2ab0",
+   "model": "SM-A715F",
    "country": "Brazil",
    "lang": "pt-br",
    "ver": "1.0 (v46)",
@@ -270,6 +324,60 @@
    "pics": 0,
    "removed": false,
    "reached": 0
+  },
+  {
+   "uid": "466384ef",
+   "model": "23053RN02A",
+   "country": "Brazil",
+   "lang": "pt-br",
+   "ver": "1.0 (v46)",
+   "days": 1,
+   "last": "20261013",
+   "lv": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 1
+  },
+  {
+   "uid": "587a1a9e",
+   "model": "Moto G05",
+   "country": "Brazil",
+   "lang": "pt-br",
+   "ver": "1.0 (v46)",
+   "days": 1,
+   "last": "20261013",
+   "lv": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 1
+  },
+  {
+   "uid": "773d493c",
+   "model": "SM-A042M",
+   "country": "Brazil",
+   "lang": "pt-br",
+   "ver": "1.0 (v36)",
+   "days": 1,
+   "last": "20261013",
+   "lv": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 1
   },
   {
    "uid": "8868db60",
@@ -288,6 +396,24 @@
    "pics": 0,
    "removed": false,
    "reached": 0
+  },
+  {
+   "uid": "9ec051c2",
+   "model": "SM-A235M",
+   "country": "Brazil",
+   "lang": "pt-br",
+   "ver": "1.0 (v46)",
+   "days": 1,
+   "last": "20261013",
+   "lv": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 16
   },
   {
    "uid": "d1455a9b",
@@ -324,24 +450,6 @@
    "pics": 0,
    "removed": false,
    "reached": 17
-  },
-  {
-   "uid": "ee0b32aa",
-   "model": "SM-J710F",
-   "country": "Iran",
-   "lang": "ar-ae",
-   "ver": "1.0 (v29)",
-   "days": 1,
-   "last": "20261013",
-   "lv": 0,
-   "clears": 0,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 0,
-   "removed": false,
-   "reached": 0
   }
  ]
 }
