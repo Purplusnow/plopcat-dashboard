@@ -22,7 +22,7 @@
   {
    "uid": "bbd7785c",
    "model": "23106RN0DA",
-   "country": "Chile",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v29)",
    "days": 3,
@@ -40,7 +40,7 @@
   {
    "uid": "c2a0c65d",
    "model": "SM-A266B",
-   "country": "Iran",
+   "country": "Brazil",
    "lang": "fa-ir",
    "ver": "1.0 (v29)",
    "days": 3,
@@ -52,7 +52,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 847
   },
   {
@@ -1210,7 +1210,7 @@
   {
    "uid": "b49c6633",
    "model": "SM-A127F",
-   "country": "Indonesia",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v29)",
    "days": 3,
