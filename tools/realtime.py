@@ -53,8 +53,27 @@ def today_suffix():
     return r[0]["d"] if r and r[0]["d"] else ""
 
 
+#: 이 실행이 BigQuery 에서 **긁은 바이트**. 비용은 긁은 양으로 매겨진다(월 1TB 무료).
+#: ★안 재면 "비싼가?"에 영원히 추측으로 답하게 된다 — 실제로 형이 물었다(2026-10-13).
+_SCANNED = [0]
+
+
+def _bill(job) -> None:
+    _SCANNED[0] += int(job.total_bytes_processed or 0)
+
+
+def scan_report() -> str:
+    gb = _SCANNED[0] / 1024 ** 3
+    # $6.25/TB (us/asia 표준). 월 1TB 는 무료라 대부분 0 원이지만, 추세는 보여 준다.
+    return "BigQuery 긁은 양 %.1f MB (%.4f GB) · 이 요금제 기준 약 $%.5f · 월 1TB 무료" % (
+        _SCANNED[0] / 1024 ** 2, gb, gb / 1024 * 6.25)
+
+
 def q(sql):
-    return [dict(r) for r in client.query(sql).result()]
+    job = client.query(sql)
+    rows = [dict(r) for r in job.result()]
+    _bill(job)
+    return rows
 
 
 def p_int(k):
@@ -202,6 +221,7 @@ GROUP BY reason ORDER BY n DESC
     k = out["kinds"]
     print("✓ realtime %s — %d줄 (사람 %d · 봇 %d · 내기기 %d · 디버그 %d)"
           % (day, len(users), k["human"], k["bot"], k["me"], k["dbg"]))
+    print("  " + scan_report())
 
 
 def _classify(r):

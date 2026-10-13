@@ -113,8 +113,27 @@ def filtered_counts(rng: str) -> list:
     return out
 
 
+#: 이 실행이 BigQuery 에서 **긁은 바이트**. 비용은 긁은 양으로 매겨진다(월 1TB 무료).
+#: ★안 재면 "비싼가?"에 영원히 추측으로 답하게 된다 — 실제로 형이 물었다(2026-10-13).
+_SCANNED = [0]
+
+
+def _bill(job) -> None:
+    _SCANNED[0] += int(job.total_bytes_processed or 0)
+
+
+def scan_report() -> str:
+    gb = _SCANNED[0] / 1024 ** 3
+    # $6.25/TB (us/asia 표준). 월 1TB 는 무료라 대부분 0 원이지만, 추세는 보여 준다.
+    return "BigQuery 긁은 양 %.1f MB (%.4f GB) · 이 요금제 기준 약 $%.5f · 월 1TB 무료" % (
+        _SCANNED[0] / 1024 ** 2, gb, gb / 1024 * 6.25)
+
+
 def q(sql: str) -> list:
-    return [dict(r) for r in client.query(sql).result()]
+    job = client.query(sql)
+    rows = [dict(r) for r in job.result()]
+    _bill(job)
+    return rows
 
 
 #: 일일 테이블이 닫힌 마지막 날짜. 이 뒤의 intraday 만 덧댄다(중복 방지).
@@ -189,6 +208,7 @@ def main() -> None:
     k = out["kpi"][0] if out["kpi"] else {}
     print("✓ %s — DAU %s · 신규 %s · 누적 %s · 레벨 %d행"
           % (OUT, k.get("dau"), k.get("new_users"), k.get("users"), len(out["levels"])))
+    print("  " + scan_report())
 
 
 def _ret(rows: list) -> list:
