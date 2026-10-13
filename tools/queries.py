@@ -36,6 +36,13 @@ def STR(k: str) -> str:
 
 DAY = "IF(STARTS_WITH(_TABLE_SUFFIX,'intraday_'), SUBSTR(_TABLE_SUFFIX,10), _TABLE_SUFFIX)"
 
+#: app_info.version 은 "1.0 (v46)" 꼴이다 — 거기서 숫자만.
+VER_NUM = r"SAFE_CAST(REGEXP_EXTRACT(app_info.version, r'v(\d+)') AS INT64)"
+
+#: ★수 제한이 **처음 프로덕션에 나간** 버전. 그 아래 버전은 제한이 없어서 실패할 수 없다.
+#:  v41~v45 는 빌드만 하고 올리지 않았으므로 라이브 기준 첫 버전은 46 이다.
+LIMIT_FIRST_VER = 46
+
 
 def human(cond: str, last_daily: str, exclude=(), test_models=()) -> str:
     """사람이 아닌 줄을 걷어낸 WHERE 조각. **수집기도 검사도 이 함수를 부른다.**
@@ -137,6 +144,13 @@ def fails(table: str, filt: str) -> str:
 
     실패율의 분모는 **그 판을 시작한 사람**이다(level_start). 클리어한 사람으로 나누면
     "막혀서 못 깬 사람"이 분모에서 빠져 실패율이 **과소**로 나온다.
+
+    ★★분모를 **제한이 있는 버전**으로 한정한다(started_lim). 수 제한은 v46 부터
+      프로덕션에 나갔는데, 그 전 버전(v29·v36)에는 제한 자체가 없어서 **실패할 수가
+      없다.** 그들을 분모에 넣으면 실패율이 통째로 희석된다 — 실제로 lv32 에서
+      1/1 로 막힌 것이 1/44 = 2.3% 로 보였다(2026-10-13). 섞인 기간엔 이게 거짓말을 한다.
+      ※rate(전체 분모)도 같이 남긴다 — 버전이 전부 넘어간 뒤엔 둘이 같아지고,
+        그때까지는 **둘의 차이가 곧 '아직 안 넘어온 사람'의 크기**다.
     """
     return """
 WITH f AS (
@@ -144,14 +158,17 @@ WITH f AS (
          ROUND(AVG({mv}), 1) moves, ROUND(AVG({lim}), 1) lim
   FROM {t} WHERE {f} AND event_name = 'level_fail' GROUP BY lv
 ), s AS (
-  SELECT {lv} lv, COUNT(DISTINCT user_pseudo_id) started
+  SELECT {lv} lv, COUNT(DISTINCT user_pseudo_id) started,
+         COUNT(DISTINCT IF({vnum} >= {lvmin}, user_pseudo_id, NULL)) started_lim
   FROM {t} WHERE {f} AND event_name = 'level_start' GROUP BY lv
 )
-SELECT f.lv, f.users, f.n, s.started,
-       SAFE_DIVIDE(f.users, s.started) rate, f.moves, f.lim
+SELECT f.lv, f.users, f.n, s.started, s.started_lim,
+       SAFE_DIVIDE(f.users, s.started) rate,
+       SAFE_DIVIDE(f.users, s.started_lim) rate_lim, f.moves, f.lim
 FROM f LEFT JOIN s USING (lv)
 WHERE f.lv IS NOT NULL ORDER BY f.users DESC, f.lv LIMIT 30
-""".format(t=table, f=filt, lv=p_int("level"), mv=p_int("moves"), lim=p_int("limit"))
+""".format(t=table, f=filt, lv=p_int("level"), mv=p_int("moves"), lim=p_int("limit"),
+           vnum=VER_NUM, lvmin=LIMIT_FIRST_VER)
 
 
 def fail_summary(table: str, filt: str) -> str:

@@ -152,9 +152,13 @@ fetch("data/ingame.json?" + Date.now()).then(r => r.json()).then(d => {
     ["레벨", r => "L" + r.lv],
     ["막힌 사람", r => n(r.users)],
     ["건수", r => n(r.n)],
-    ["시작", r => n(r.started)],
-    ["실패율", r => r.rate == null ? "–"
-      : `<b class="${r.rate >= 0.10 ? "bad-t" : (r.rate < 0.02 ? "dim" : "")}">${pct(r.rate)}</b>`],
+    ["시작(전체)", r => n(r.started)],
+    ["시작(제한O)", r => n(r.started_lim)],
+    // ★실패율은 **제한이 있는 버전**만으로 잰다. 제한 없는 옛 버전을 분모에 넣으면
+    //   실패할 수 없는 사람들이 섞여 희석된다(lv32 에서 1/1 이 1/44=2.3% 로 보였다).
+    ["실패율(제한O)", r => r.rate_lim == null ? "–"
+      : `<b class="${r.rate_lim >= 0.10 ? "bad-t" : (r.rate_lim < 0.02 ? "dim" : "")}">${pct(r.rate_lim)}</b>`],
+    ["참고: 전체", r => r.rate == null ? "–" : `<span class="dim">${pct(r.rate)}</span>`],
     ["평균 수", r => r.moves ?? "–"],
     ["제한", r => r.lim ?? "–"]]);
   {

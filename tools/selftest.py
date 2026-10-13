@@ -240,7 +240,25 @@ def main():
     chk("L7 막힌 **사람** 2명", fr[7]["users"], 2)
     chk("★L7 막힌 **건수**는 3 (한 사람이 두 번)", fr[7]["n"], 3)
     chk("L7 분모는 시작한 사람 3명", fr[7]["started"], 3)
-    chk("L7 실패율 2/3", round(fr[7]["rate"], 3), 0.667)
+    chk("L7 실패율(전체 분모) 2/3", round(fr[7]["rate"], 3), 0.667)
+    # ★제한이 없는 옛 버전(ev 의 기본 version="1.0 (v23)")은 **실패할 수 없다** —
+    #   분모에 넣으면 실패율이 희석된다. 위 fe 는 전부 v23 이라 started_lim 이 0 이어야 한다.
+    chk("★제한 없는 버전은 분모에서 빠진다", fr[7]["started_lim"], 0)
+    chk("그래서 제한 기준 실패율은 계산 불가(None)", fr[7]["rate_lim"], None)
+    # ★버전이 섞인 상황 — 실패율이 **제한 있는 버전**으로만 계산되는가.
+    #   실측 사고(2026-10-13): lv32 에서 v46 유저 1명이 1명 중 막혔는데, 제한이 없던
+    #   v29·v36 유저 43명이 분모에 섞여 2.3% 로 보였다. 섞인 기간엔 이게 거짓말을 한다.
+    mx = [ev("20260101", "x", "level_start", [("level", 32)], version="1.0 (v46)"),
+          ev("20260101", "y", "level_start", [("level", 32)], version="1.0 (v29)"),
+          ev("20260101", "z", "level_start", [("level", 32)], version="1.0 (v36)"),
+          ev("20260101", "x", "level_fail",
+             [("level", 32), ("moves", 21), ("limit", 21)], version="1.0 (v46)")]
+    mr = {r["lv"]: r for r in run(Q.fails(table(mx), "TRUE"))}
+    chk("섞인 입력: 전체 분모 3명", mr[32]["started"], 3)
+    chk("★제한 있는 버전만 1명", mr[32]["started_lim"], 1)
+    chk("★제한 기준 실패율 100%", round(mr[32]["rate_lim"], 3), 1.0)
+    chk("참고용 전체 실패율은 33.3%", round(mr[32]["rate"], 3), 0.333)
+
     fs = run(Q.fail_summary(table(fe), "TRUE"))[0]
     chk("한 번이라도 막힌 사람 2명", fs["fail_users"], 2)
     chk("실패 건수 4건", fs["fails"], 4)
