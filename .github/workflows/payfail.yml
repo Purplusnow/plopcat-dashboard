@@ -1,0 +1,28 @@
+name: payfail
+# 결제 실패 **일회성 조사** — 이란이라서 실패하는 건가, 우리 버그인가.
+#
+# ★대시보드 파일을 건드리지 않는다. 결과는 **이 실행 로그에만** 찍힌다.
+#   한 번 답을 내면 끝나는 질문이라 상시 지표로 만들지 않는다(매일 쿼리 비용만 든다).
+#   스케줄도 없다 — 손으로 돌릴 때만.
+on:
+  workflow_dispatch:
+jobs:
+  look:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -q google-cloud-bigquery
+      - name: 서비스계정 키 쓰기
+        run: |
+          printf '%s' '${{ secrets.GCP_SA_KEY }}' > /tmp/sa.json
+          python3 -c "import json;json.load(open('/tmp/sa.json'));print('키 형식 OK')"
+      - name: 조사
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: /tmp/sa.json
+          BQ_PROJECT: ${{ vars.BQ_PROJECT }}
+          BQ_DATASET: ${{ vars.BQ_DATASET }}
+          BQ_LOCATION: ${{ vars.BQ_LOCATION }}
+          TEST_MODELS: ${{ vars.TEST_MODELS }}
+        run: python3 tools/payfail.py
