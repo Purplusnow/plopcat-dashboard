@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-13 17:33 KST",
+ "updated": "2026-10-13 17:36 KST",
  "window_days": 45,
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
@@ -2638,7 +2638,9 @@
    "users": 1,
    "n": 1,
    "started": 108,
+   "started_lim": 11,
    "rate": 0.009259259259259259,
+   "rate_lim": 0.09090909090909091,
    "moves": 9.0,
    "lim": 9.0
   },
@@ -2647,7 +2649,9 @@
    "users": 1,
    "n": 1,
    "started": 96,
+   "started_lim": 8,
    "rate": 0.010416666666666666,
+   "rate_lim": 0.125,
    "moves": 11.0,
    "lim": 11.0
   },
@@ -2656,7 +2660,9 @@
    "users": 1,
    "n": 1,
    "started": 44,
+   "started_lim": 1,
    "rate": 0.022727272727272728,
+   "rate_lim": 1.0,
    "moves": 21.0,
    "lim": 21.0
   }
@@ -2685,12 +2691,12 @@
    "n": 40
   },
   {
-   "step": "purchase_fail",
+   "step": "purchase_start",
    "users": 5,
    "n": 18
   },
   {
-   "step": "purchase_start",
+   "step": "purchase_fail",
    "users": 5,
    "n": 18
   }
@@ -3110,7 +3116,7 @@
    "vpn": 0
   },
   {
-   "country": "Thailand",
+   "country": "United States",
    "users": 1,
    "avg_lv": 0.0,
    "cleared_any": 0,
@@ -3134,7 +3140,7 @@
    "vpn": 0
   },
   {
-   "country": "United States",
+   "country": "Thailand",
    "users": 1,
    "avg_lv": 0.0,
    "cleared_any": 0,
