@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-13 10:48 KST",
+ "updated": "2026-10-13 12:07 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261013",
@@ -49,37 +49,37 @@
   {
    "key": "game_open",
    "label": "게임 진입",
-   "users": 22
+   "users": 25
   },
   {
    "key": "first_move",
    "label": "첫 수",
-   "users": 18
+   "users": 21
   },
   {
    "key": "lv1_clear",
    "label": "1판 클리어",
-   "users": 19
+   "users": 22
   },
   {
    "key": "lv3_clear",
    "label": "3판",
-   "users": 11
+   "users": 13
   },
   {
    "key": "album_first",
    "label": "미술관 열기",
-   "users": 15
+   "users": 18
   },
   {
    "key": "first_piece",
    "label": "첫 조각",
-   "users": 10
+   "users": 12
   },
   {
    "key": "lv10_clear",
    "label": "10판",
-   "users": 7
+   "users": 8
   },
   {
    "key": "first_picture",
@@ -98,6 +98,88 @@
   }
  ],
  "users": [
+  {
+   "uid": "43e6aed8",
+   "t0": "11:37",
+   "mins": 0.8,
+   "model": "SM-A566E",
+   "country": "Brazil",
+   "city": null,
+   "lang": "pt-br",
+   "ver": "1.0 (v46)",
+   "new": true,
+   "vpn": false,
+   "lv": 1,
+   "started": 1,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 23,
+   "side": [
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "aa90761a",
+   "t0": "11:05",
+   "mins": 1.8,
+   "model": "Moto G05",
+   "country": "Brazil",
+   "city": null,
+   "lang": "pt-br",
+   "ver": "1.0 (v46)",
+   "new": true,
+   "vpn": false,
+   "lv": 10,
+   "started": 11,
+   "clears": 10,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 127,
+   "side": [
+    "gate_pieces",
+    "gate_tut",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "bdb98935",
+   "t0": "10:59",
+   "mins": 3.6,
+   "model": "moto g(30)",
+   "country": "Brazil",
+   "city": "Cachoeiro de Itapemirim",
+   "lang": "pt-br",
+   "ver": "1.0 (v46)",
+   "new": true,
+   "vpn": false,
+   "lv": 6,
+   "started": 7,
+   "clears": 6,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 63,
+   "side": [
+    "gate_pieces",
+    "gate_tut",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
   {
    "uid": "587a1a9e",
    "t0": "10:38",
@@ -676,7 +758,7 @@
    "mins": 11.0,
    "model": "2201117TG",
    "country": "Iran",
-   "city": "Tehran",
+   "city": "Ahvaz",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
    "new": false,
@@ -1245,18 +1327,18 @@
   }
  ],
  "kinds": {
-  "human": 44,
+  "human": 47,
   "bot": 0,
   "me": 0,
   "dbg": 0
  },
  "bots": 0,
- "humans": 44,
+ "humans": 47,
  "versions": [
   {
    "ver": "1.0 (v46)",
-   "users": 18,
-   "installs": 18
+   "users": 21,
+   "installs": 21
   },
   {
    "ver": "1.0 (v36)",
@@ -1282,7 +1364,7 @@
   },
   {
    "country": "Brazil",
-   "users": 20,
+   "users": 23,
    "vpn": 0
   },
   {
@@ -1303,17 +1385,17 @@
    "users": 1
   },
   {
-   "reason": "canceled",
-   "n": 1,
-   "users": 1
-  },
-  {
    "reason": "no_details:premium_pack",
    "n": 1,
    "users": 1
   },
   {
    "reason": "no_details:starter_pack",
+   "n": 1,
+   "users": 1
+  },
+  {
+   "reason": "canceled",
    "n": 1,
    "users": 1
   }
