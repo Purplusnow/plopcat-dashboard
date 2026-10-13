@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14 06:42 KST",
+ "updated": "2026-10-14 08:55 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261014",
@@ -279,7 +279,7 @@
   {
    "uid": "c90ebbf0",
    "t0": "02:55",
-   "mins": 9.7,
+   "mins": 324.1,
    "model": "SM-A055M",
    "country": "Brazil",
    "city": "Brasilia",
