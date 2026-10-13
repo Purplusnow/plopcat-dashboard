@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-13 17:32 KST",
+ "updated": "2026-10-13 17:51 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261013",
@@ -98,6 +98,30 @@
   }
  ],
  "users": [
+  {
+   "uid": "d9c1e681",
+   "t0": "17:32",
+   "mins": 0.0,
+   "model": "2201117TG",
+   "country": "Iran",
+   "city": "Tehran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v46)",
+   "new": true,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
   {
    "uid": "bc5b9034",
    "t0": "17:32",
@@ -377,7 +401,7 @@
    "mins": 163.1,
    "model": "SM-A256E",
    "country": "Iran",
-   "city": "Isfahan",
+   "city": "Vinhedo",
    "lang": "fa-ir",
    "ver": "1.0 (v46)",
    "new": true,
@@ -1860,18 +1884,18 @@
   }
  ],
  "kinds": {
-  "human": 67,
+  "human": 68,
   "bot": 0,
   "me": 0,
   "dbg": 0
  },
  "bots": 0,
- "humans": 67,
+ "humans": 68,
  "versions": [
   {
    "ver": "1.0 (v46)",
-   "users": 33,
-   "installs": 33
+   "users": 34,
+   "installs": 34
   },
   {
    "ver": "1.0 (v36)",
@@ -1892,7 +1916,7 @@
  "countries": [
   {
    "country": "Iran",
-   "users": 40,
+   "users": 41,
    "vpn": 6
   },
   {
