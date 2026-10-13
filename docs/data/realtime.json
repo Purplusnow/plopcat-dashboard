@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-13 15:28 KST",
+ "updated": "2026-10-13 15:33 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261013",
@@ -395,7 +395,7 @@
   {
    "uid": "9ec051c2",
    "t0": "10:23",
-   "mins": 302.6,
+   "mins": 306.4,
    "model": "SM-A235M",
    "country": "Brazil",
    "city": "Fortaleza",
@@ -1614,17 +1614,17 @@
    "users": 1
   },
   {
+   "reason": "canceled",
+   "n": 1,
+   "users": 1
+  },
+  {
    "reason": "no_details:premium_pack",
    "n": 1,
    "users": 1
   },
   {
    "reason": "no_details:starter_pack",
-   "n": 1,
-   "users": 1
-  },
-  {
-   "reason": "canceled",
    "n": 1,
    "users": 1
   }
