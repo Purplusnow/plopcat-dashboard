@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14 00:28 KST",
+ "updated": "2026-10-14 08:55 KST",
  "window_days": 45,
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
@@ -30,71 +30,71 @@
  ],
  "kpi": [
   {
-   "dau": 79,
-   "wau": 184,
-   "users": 184,
-   "new_users": 184
+   "dau": 80,
+   "wau": 185,
+   "users": 185,
+   "new_users": 185
   }
  ],
  "levels": [
   {
    "lv": 1,
-   "started": 176,
-   "cleared": 156,
-   "rate": 0.8863636363636364,
+   "started": 177,
+   "cleared": 157,
+   "rate": 0.8870056497175142,
    "attempts": 1.01,
-   "over_moves": 1.99,
+   "over_moves": 1.98,
    "secs": 18.1,
    "items": 0.03
   },
   {
    "lv": 2,
-   "started": 140,
-   "cleared": 133,
-   "rate": 0.95,
+   "started": 141,
+   "cleared": 134,
+   "rate": 0.950354609929078,
    "attempts": 1.0,
    "over_moves": 1.78,
-   "secs": 34.8,
+   "secs": 34.6,
    "items": 0.0
   },
   {
    "lv": 3,
-   "started": 130,
-   "cleared": 130,
+   "started": 131,
+   "cleared": 131,
    "rate": 1.0,
    "attempts": 1.0,
    "over_moves": 1.44,
-   "secs": 5.9,
+   "secs": 5.8,
    "items": 0.0
   },
   {
    "lv": 4,
-   "started": 126,
-   "cleared": 126,
+   "started": 127,
+   "cleared": 127,
    "rate": 1.0,
    "attempts": 1.0,
-   "over_moves": 1.28,
+   "over_moves": 1.27,
    "secs": 4.0,
    "items": 0.0
   },
   {
    "lv": 5,
-   "started": 123,
-   "cleared": 122,
-   "rate": 0.991869918699187,
+   "started": 124,
+   "cleared": 123,
+   "rate": 0.9919354838709677,
    "attempts": 1.0,
-   "over_moves": 1.42,
+   "over_moves": 1.41,
    "secs": 5.0,
    "items": 0.0
   },
   {
    "lv": 6,
-   "started": 121,
-   "cleared": 120,
-   "rate": 0.9917355371900827,
+   "started": 122,
+   "cleared": 121,
+   "rate": 0.9918032786885246,
    "attempts": 1.0,
-   "over_moves": 1.33,
-   "secs": 5.2,
+   "over_moves": 1.32,
+   "secs": 5.1,
    "items": 0.01
   },
   {
@@ -2704,7 +2704,7 @@
   {
    "fail_users": 6,
    "fails": 11,
-   "players": 176,
+   "players": 177,
    "buy_gem": 4,
    "buy_ad": 0,
    "gems_spent": 40
@@ -2712,7 +2712,7 @@
  ],
  "album": [
   {
-   "opened": 130,
+   "opened": 131,
    "finished": 44,
    "pictures": 107
   }
@@ -2784,12 +2784,12 @@
    "n": 1
   },
   {
-   "kind": "heart",
+   "kind": "tow",
    "source": "gem",
    "n": 1
   },
   {
-   "kind": "tow",
+   "kind": "heart",
    "source": "gem",
    "n": 1
   }
@@ -2799,13 +2799,19 @@
  "retention": [
   {
    "cohort": "20261014",
-   "size": 1,
+   "size": 9,
    "d": []
   },
   {
    "cohort": "20261013",
-   "size": 50,
-   "d": []
+   "size": 51,
+   "d": [
+    {
+     "n": 1,
+     "u": 1,
+     "rate": 0.02
+    }
+   ]
   },
   {
    "cohort": "20261012",
@@ -2815,6 +2821,11 @@
      "n": 1,
      "u": 18,
      "rate": 0.34
+    },
+    {
+     "n": 2,
+     "u": 4,
+     "rate": 0.075
     }
    ]
   },
@@ -2831,6 +2842,11 @@
      "n": 2,
      "u": 11,
      "rate": 0.141
+    },
+    {
+     "n": 3,
+     "u": 4,
+     "rate": 0.051
     }
    ]
   },
@@ -2848,21 +2864,21 @@
  "versions": [
   {
    "ver": "1.0 (v46)",
-   "users": 40,
-   "avg_lv_1h": 12.0,
-   "avg_clears_1h": 9.0,
-   "lv1_rate": 0.75,
-   "remove_rate": 0.4,
-   "avg_mins": 63.2
+   "users": 48,
+   "avg_lv_1h": 11.7,
+   "avg_clears_1h": 8.5,
+   "lv1_rate": 0.729,
+   "remove_rate": 0.417,
+   "avg_mins": 74.4
   },
   {
    "ver": "1.0 (v36)",
-   "users": 59,
+   "users": 60,
    "avg_lv_1h": 20.5,
-   "avg_clears_1h": 17.4,
-   "lv1_rate": 0.898,
-   "remove_rate": 0.407,
-   "avg_mins": 456.9
+   "avg_clears_1h": 17.1,
+   "lv1_rate": 0.883,
+   "remove_rate": 0.417,
+   "avg_mins": 593.9
   },
   {
    "ver": "1.0 (v35)",
@@ -2880,7 +2896,7 @@
    "avg_clears_1h": 23.1,
    "lv1_rate": 0.899,
    "remove_rate": 0.443,
-   "avg_mins": 489.3
+   "avg_mins": 522.6
   },
   {
    "ver": "1.0 (v28)",
@@ -2904,8 +2920,8 @@
  "pacing": [
   {
    "band": 1,
-   "users": 156,
-   "clears": 1225,
+   "users": 157,
+   "clears": 1231,
    "median_secs": 4.0,
    "over_moves": 1.5
   },
@@ -3089,50 +3105,50 @@
  "side_steps": [
   {
    "step": "tut_hand",
-   "users": 167
+   "users": 175
   },
   {
    "step": "gate_tut",
-   "users": 74
+   "users": 79
   },
   {
    "step": "gate_pieces",
-   "users": 59
+   "users": 64
   },
   {
    "step": "gate_final",
-   "users": 42
+   "users": 43
   },
   {
    "step": "first_restart",
-   "users": 24
+   "users": 26
   },
   {
    "step": "first_ad",
-   "users": 20
+   "users": 23
   },
   {
    "step": "first_tow",
-   "users": 15
-  },
-  {
-   "step": "first_hint",
-   "users": 13
+   "users": 17
   },
   {
    "step": "first_undo",
-   "users": 13
+   "users": 16
+  },
+  {
+   "step": "first_hint",
+   "users": 15
   },
   {
    "step": "first_fail",
-   "users": 6
+   "users": 7
   },
   {
    "step": "lang_change",
    "users": 6
   },
   {
-   "step": "first_moves",
+   "step": "nudge_later",
    "users": 2
   },
   {
@@ -3140,7 +3156,7 @@
    "users": 2
   },
   {
-   "step": "nudge_later",
+   "step": "first_moves",
    "users": 2
   },
   {
@@ -3151,17 +3167,17 @@
  "countries": [
   {
    "country": "Iran",
-   "users": 137,
-   "avg_lv": 34.8,
-   "cleared_any": 124,
+   "users": 139,
+   "avg_lv": 34.6,
+   "cleared_any": 125,
    "buys": 0,
    "vpn": 30
   },
   {
    "country": "Brazil",
-   "users": 39,
-   "avg_lv": 8.3,
-   "cleared_any": 29,
+   "users": 46,
+   "avg_lv": 8.0,
+   "cleared_any": 33,
    "buys": 0,
    "vpn": 5
   },
@@ -3182,7 +3198,15 @@
    "vpn": 0
   },
   {
-   "country": "United States",
+   "country": "Turkmenistan",
+   "users": 1,
+   "avg_lv": 17.0,
+   "cleared_any": 1,
+   "buys": 0,
+   "vpn": 1
+  },
+  {
+   "country": "Thailand",
    "users": 1,
    "avg_lv": 0.0,
    "cleared_any": 0,
@@ -3190,7 +3214,7 @@
    "vpn": 0
   },
   {
-   "country": "Thailand",
+   "country": "United States",
    "users": 1,
    "avg_lv": 0.0,
    "cleared_any": 0,
@@ -3204,14 +3228,6 @@
    "cleared_any": 0,
    "buys": 0,
    "vpn": 0
-  },
-  {
-   "country": "Turkmenistan",
-   "users": 1,
-   "avg_lv": 17.0,
-   "cleared_any": 1,
-   "buys": 0,
-   "vpn": 1
   }
  ],
  "item_source": [
@@ -3225,8 +3241,8 @@
   {
    "kind": "hint",
    "source": "free",
-   "uses": 24,
-   "users": 13,
+   "uses": 28,
+   "users": 15,
    "spent": 0
   },
   {
@@ -3246,8 +3262,8 @@
   {
    "kind": "tow",
    "source": "free",
-   "uses": 18,
-   "users": 15,
+   "uses": 21,
+   "users": 17,
    "spent": 0
   },
   {
@@ -3260,8 +3276,8 @@
   {
    "kind": "undo",
    "source": "free",
-   "uses": 25,
-   "users": 14,
+   "uses": 31,
+   "users": 17,
    "spent": 0
   },
   {
@@ -3283,9 +3299,9 @@
   },
   {
    "band": 11,
-   "users": 10,
+   "users": 11,
    "paid_uses": 0,
-   "free_uses": 16,
+   "free_uses": 20,
    "gems": 0,
    "paws": 0
   },
@@ -3307,9 +3323,9 @@
   },
   {
    "band": 41,
-   "users": 1,
+   "users": 2,
    "paid_uses": 0,
-   "free_uses": 1,
+   "free_uses": 9,
    "gems": 0,
    "paws": 0
   },
@@ -3350,6 +3366,14 @@
    "users": 1,
    "paid_uses": 0,
    "free_uses": 2,
+   "gems": 0,
+   "paws": 0
+  },
+  {
+   "band": 141,
+   "users": 1,
+   "paid_uses": 0,
+   "free_uses": 1,
    "gems": 0,
    "paws": 0
   },
@@ -3415,13 +3439,13 @@
  "shop_kinds": [
   {
    "kind": "gem",
-   "opens": 31,
-   "users": 14
+   "opens": 35,
+   "users": 16
   },
   {
    "kind": "heart",
-   "opens": 16,
-   "users": 7
+   "opens": 19,
+   "users": 9
   },
   {
    "kind": "paw",
@@ -3432,7 +3456,7 @@
  "wall_sales": [
   {
    "band": 1,
-   "players": 176,
+   "players": 185,
    "stuck": 0,
    "out_of_hearts": 0,
    "buys": 1,
@@ -3440,7 +3464,7 @@
   },
   {
    "band": 11,
-   "players": 104,
+   "players": 107,
    "stuck": 1,
    "out_of_hearts": 0,
    "buys": 0,
@@ -3472,7 +3496,7 @@
   },
   {
    "band": 51,
-   "players": 27,
+   "players": 28,
    "stuck": 0,
    "out_of_hearts": 0,
    "buys": 1,
@@ -3544,7 +3568,7 @@
   },
   {
    "band": 141,
-   "players": 6,
+   "players": 7,
    "stuck": 0,
    "out_of_hearts": 0,
    "buys": 0,
@@ -3552,7 +3576,7 @@
   },
   {
    "band": 151,
-   "players": 4,
+   "players": 5,
    "stuck": 0,
    "out_of_hearts": 0,
    "buys": 0,
