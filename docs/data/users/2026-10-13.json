@@ -344,6 +344,24 @@
    "reached": 7
   },
   {
+   "uid": "af1eedb3",
+   "model": "SM-A256E",
+   "country": "Brazil",
+   "lang": "fa-ir",
+   "ver": "1.0 (v46)",
+   "days": 1,
+   "last": "20261013",
+   "lv": 1,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 23
+  },
+  {
    "uid": "c63163e1",
    "model": "Moto E22",
    "country": "Brazil",
@@ -524,10 +542,10 @@
    "reached": 16
   },
   {
-   "uid": "af1eedb3",
-   "model": "SM-A256E",
+   "uid": "b8a36b7e",
+   "model": "Moto G17",
    "country": "Brazil",
-   "lang": "fa-ir",
+   "lang": "pt-br",
    "ver": "1.0 (v46)",
    "days": 1,
    "last": "20261013",
@@ -538,7 +556,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 0
   },
   {
