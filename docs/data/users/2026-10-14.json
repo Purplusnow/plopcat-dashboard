@@ -56,6 +56,24 @@
    "reached": 511
   },
   {
+   "uid": "19ee866d",
+   "model": "SM-A037F",
+   "country": "Iran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v46)",
+   "days": 1,
+   "last": "20261014",
+   "lv": 18,
+   "clears": 18,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 1,
+   "removed": false,
+   "reached": 255
+  },
+  {
    "uid": "7f68e6ba",
    "model": "SM-A155F",
    "country": "Iran",
@@ -436,7 +454,7 @@
   {
    "uid": "8de39d81",
    "model": "Redmi Note 9S",
-   "country": "Iran",
+   "country": "Brazil",
    "lang": "fa-ir",
    "ver": "1.0 (v46)",
    "days": 1,
@@ -508,6 +526,24 @@
   {
    "uid": "009c611f",
    "model": "Moto G17",
+   "country": "Brazil",
+   "lang": "pt-br",
+   "ver": "1.0 (v46)",
+   "days": 1,
+   "last": "20261014",
+   "lv": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": true,
+   "reached": 0
+  },
+  {
+   "uid": "00e290ae",
+   "model": "2310FPCA4G",
    "country": "Brazil",
    "lang": "pt-br",
    "ver": "1.0 (v46)",

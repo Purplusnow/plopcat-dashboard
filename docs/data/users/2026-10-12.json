@@ -110,6 +110,24 @@
    "reached": 1023
   },
   {
+   "uid": "73c26ee9",
+   "model": "23129RAA4G",
+   "country": "Iran",
+   "lang": "en-au",
+   "ver": "1.0 (v36)",
+   "days": 3,
+   "last": "20261014",
+   "lv": 88,
+   "clears": 88,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 4,
+   "removed": false,
+   "reached": 1023
+  },
+  {
    "uid": "57008f9f",
    "model": "SM-G975F",
    "country": "Indonesia",
@@ -126,24 +144,6 @@
    "pics": 0,
    "removed": false,
    "reached": 895
-  },
-  {
-   "uid": "73c26ee9",
-   "model": "23129RAA4G",
-   "country": "Iran",
-   "lang": "en-au",
-   "ver": "1.0 (v36)",
-   "days": 2,
-   "last": "20261013",
-   "lv": 85,
-   "clears": 85,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 4,
-   "removed": false,
-   "reached": 1023
   },
   {
    "uid": "b54d036c",
@@ -238,7 +238,7 @@
   {
    "uid": "2cbc96bc",
    "model": "2201117TG",
-   "country": "Brazil",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
    "days": 2,
@@ -256,7 +256,7 @@
   {
    "uid": "c773efb9",
    "model": "2201117TG",
-   "country": "Iran",
+   "country": "Chile",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
    "days": 3,
@@ -328,7 +328,7 @@
   {
    "uid": "2dfc36c1",
    "model": "SM-A528B",
-   "country": "Iran",
+   "country": "Russia",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
    "days": 2,
@@ -544,7 +544,7 @@
   {
    "uid": "bb44e232",
    "model": "220333QPG",
-   "country": "Iran",
+   "country": "Brazil",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
    "days": 2,
