@@ -92,6 +92,24 @@
    "reached": 847
   },
   {
+   "uid": "9322c3fe",
+   "model": "Redmi Note 8 Pro",
+   "country": "Iran",
+   "lang": "en-gb",
+   "ver": "1.0 (v29)",
+   "days": 3,
+   "last": "20261014",
+   "lv": 112,
+   "clears": 112,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 863
+  },
+  {
    "uid": "3d3c88ee",
    "model": "SM-A356E",
    "country": "Iran",
@@ -234,24 +252,6 @@
    "pics": 2,
    "removed": true,
    "reached": 1023
-  },
-  {
-   "uid": "9322c3fe",
-   "model": "Redmi Note 8 Pro",
-   "country": "Iran",
-   "lang": "en-gb",
-   "ver": "1.0 (v29)",
-   "days": 3,
-   "last": "20261014",
-   "lv": 50,
-   "clears": 50,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 0,
-   "removed": false,
-   "reached": 863
   },
   {
    "uid": "679ff1d8",
@@ -940,7 +940,7 @@
   {
    "uid": "04c62428",
    "model": "23106RN0DA",
-   "country": "Iran",
+   "country": "Brazil",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
    "days": 2,
