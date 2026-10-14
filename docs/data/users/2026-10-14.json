@@ -38,6 +38,24 @@
    "reached": 511
   },
   {
+   "uid": "4c0846b8",
+   "model": "SM-A155F",
+   "country": "Brazil",
+   "lang": "fa-ir",
+   "ver": "1.0 (v46)",
+   "days": 1,
+   "last": "20261014",
+   "lv": 30,
+   "clears": 30,
+   "stuck": 0,
+   "ads": 3,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 1,
+   "removed": false,
+   "reached": 511
+  },
+  {
    "uid": "7f68e6ba",
    "model": "SM-A155F",
    "country": "Iran",
@@ -290,6 +308,24 @@
    "reached": 63
   },
   {
+   "uid": "bce6a6e1",
+   "model": "ALT-LX2",
+   "country": "Iran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v46)",
+   "days": 1,
+   "last": "20261014",
+   "lv": 5,
+   "clears": 5,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 31
+  },
+  {
    "uid": "9af1d6fb",
    "model": "XT-2343-1",
    "country": "Brazil",
@@ -400,7 +436,7 @@
   {
    "uid": "8de39d81",
    "model": "Redmi Note 9S",
-   "country": "Brazil",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v46)",
    "days": 1,
@@ -630,24 +666,6 @@
    "pics": 0,
    "removed": false,
    "reached": 3
-  },
-  {
-   "uid": "bce6a6e1",
-   "model": "ALT-LX2",
-   "country": "Iran",
-   "lang": "fa-ir",
-   "ver": "1.0 (v46)",
-   "days": 1,
-   "last": "20261014",
-   "lv": 0,
-   "clears": 0,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 0,
-   "removed": false,
-   "reached": 0
   },
   {
    "uid": "d81013d3",
