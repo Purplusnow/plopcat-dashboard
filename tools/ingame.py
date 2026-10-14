@@ -144,7 +144,13 @@ LAST_DAILY = last_daily_day()
 def main() -> None:
     # ★끝을 **오늘**로 둔다. 예전엔 '어제'였다 — 일일 테이블이 늦게 닫히니 어쩔 수 없었지만,
     #   이제 intraday 를 읽으므로 오늘 일이 오늘 보인다.
-    end = date.today()
+    #
+    # ★★'오늘'은 **KST 기준**이다. date.today() 는 러너의 UTC 날짜라서, KST 00~09시에는
+    #   하루 전을 가리킨다 — 그 9시간 동안 **오늘 데이터가 창에서 통째로 빠졌다.**
+    #   실측(2026-10-15 07:35 KST): 수 제한 요약은 수 구매 6회, 아이템표(전체 기간)는
+    #   13회였다. 같은 사건을 두 숫자가 다르게 말했고, 창이 다른 게 원인이었다.
+    #   GA4 속성의 날짜 경계도 KST 이므로 여기도 KST 로 맞춘다.
+    end = datetime.now(KST).date()
     win = (end - timedelta(days=WINDOW_DAYS)).strftime("%Y%m%d")
     end_s = end.strftime("%Y%m%d")
     # ★날짜 비교에 _TABLE_SUFFIX 를 그대로 쓰면 intraday 가 통째로 빠진다
