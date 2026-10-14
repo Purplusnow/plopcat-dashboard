@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15 07:35 KST",
+ "updated": "2026-10-15 07:59 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261015",
@@ -49,32 +49,32 @@
   {
    "key": "game_open",
    "label": "게임 진입",
-   "users": 18
+   "users": 19
   },
   {
    "key": "first_move",
    "label": "첫 수",
-   "users": 18
+   "users": 19
   },
   {
    "key": "lv1_clear",
    "label": "1판 클리어",
-   "users": 18
+   "users": 19
   },
   {
    "key": "lv3_clear",
    "label": "3판",
-   "users": 12
+   "users": 13
   },
   {
    "key": "album_first",
    "label": "미술관 열기",
-   "users": 17
+   "users": 18
   },
   {
    "key": "first_piece",
    "label": "첫 조각",
-   "users": 11
+   "users": 12
   },
   {
    "key": "lv10_clear",
@@ -98,6 +98,33 @@
   }
  ],
  "users": [
+  {
+   "uid": "00db1ac2",
+   "t0": "07:44",
+   "mins": 0.7,
+   "model": "XT-2343-1",
+   "country": "Brazil",
+   "city": "Maceio",
+   "lang": "pt-br",
+   "ver": "1.0 (v46)",
+   "new": true,
+   "vpn": false,
+   "lv": 3,
+   "started": 4,
+   "clears": 3,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 63,
+   "side": [
+    "gate_tut",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
   {
    "uid": "349bef9c",
    "t0": "07:30",
@@ -906,7 +933,7 @@
   {
    "uid": "3321b4a6",
    "t0": "01:55",
-   "mins": 1.2,
+   "mins": 344.8,
    "model": "SM-A146M",
    "country": "Brazil",
    "city": "Brasilia",
@@ -921,7 +948,7 @@
    "ads": 0,
    "shops": 0,
    "buys": 0,
-   "removed": false,
+   "removed": true,
    "abuse": 0,
    "reached": 7,
    "side": [
@@ -1316,18 +1343,18 @@
   }
  ],
  "kinds": {
-  "human": 46,
+  "human": 47,
   "bot": 2,
   "me": 0,
   "dbg": 0
  },
  "bots": 2,
- "humans": 46,
+ "humans": 47,
  "versions": [
   {
    "ver": "1.0 (v46)",
-   "users": 39,
-   "installs": 22
+   "users": 40,
+   "installs": 23
   },
   {
    "ver": "1.0 (v36)",
@@ -1348,7 +1375,7 @@
   },
   {
    "country": "Brazil",
-   "users": 14,
+   "users": 15,
    "vpn": 0
   },
   {
