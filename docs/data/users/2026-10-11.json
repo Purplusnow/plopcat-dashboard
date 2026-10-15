@@ -58,7 +58,7 @@
   {
    "uid": "b1b6c9a3",
    "model": "24117RN76G",
-   "country": "Chile",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v29)",
    "days": 4,
@@ -385,17 +385,17 @@
    "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v46)",
-   "days": 3,
+   "days": 2,
    "last": "20261015",
    "lv": 32,
-   "clears": 32,
+   "clears": 30,
    "stuck": 0,
    "ads": 0,
    "buys": 0,
    "spend": 0.0,
    "pics": 2,
    "removed": false,
-   "reached": 511
+   "reached": 456
   },
   {
    "uid": "2e9d18ba",
@@ -490,7 +490,7 @@
   {
    "uid": "16b0ef96",
    "model": "23117RA68G",
-   "country": "Slovakia",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v29)",
    "days": 3,
@@ -634,7 +634,7 @@
   {
    "uid": "fb883493",
    "model": "23129RAA4G",
-   "country": "Brazil",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v29)",
    "days": 2,
@@ -652,7 +652,7 @@
   {
    "uid": "6bf661a7",
    "model": "SM-A165F",
-   "country": "Brazil",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v29)",
    "days": 2,
@@ -684,6 +684,24 @@
    "pics": 0,
    "removed": true,
    "reached": 79
+  },
+  {
+   "uid": "0a1cd718",
+   "model": "SM-A515F",
+   "country": "Iran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v36)",
+   "days": 2,
+   "last": "20261015",
+   "lv": 18,
+   "clears": 18,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 1,
+   "removed": false,
+   "reached": 255
   },
   {
    "uid": "5cbca823",
@@ -866,24 +884,6 @@
    "reached": 79
   },
   {
-   "uid": "0a1cd718",
-   "model": "SM-A515F",
-   "country": "Iran",
-   "lang": "fa-ir",
-   "ver": "1.0 (v36)",
-   "days": 1,
-   "last": "20261011",
-   "lv": 10,
-   "clears": 10,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 0,
-   "removed": false,
-   "reached": 127
-  },
-  {
    "uid": "3699af81",
    "model": "2303CRA44A",
    "country": "Iran",
@@ -976,7 +976,7 @@
   {
    "uid": "04c62428",
    "model": "23106RN0DA",
-   "country": "Brazil",
+   "country": "United States",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
    "days": 2,
@@ -1210,7 +1210,7 @@
   {
    "uid": "7ef77845",
    "model": "V0Core",
-   "country": "Iran",
+   "country": "Brazil",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
    "days": 2,
@@ -1372,7 +1372,7 @@
   {
    "uid": "b374c5e7",
    "model": "SM-A165F",
-   "country": "Chile",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v29)",
    "days": 2,
