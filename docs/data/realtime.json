@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16 07:40 KST",
+ "updated": "2026-10-16 07:55 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261016",
@@ -324,7 +324,7 @@
    "mins": 90.3,
    "model": "STK-L21",
    "country": "Israel",
-   "city": "Tehran",
+   "city": "Rosh Haayin",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
    "new": false,
