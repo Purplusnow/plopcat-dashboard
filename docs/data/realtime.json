@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15 07:59 KST",
+ "updated": "2026-10-15 10:21 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261015",
@@ -49,17 +49,17 @@
   {
    "key": "game_open",
    "label": "게임 진입",
-   "users": 19
+   "users": 20
   },
   {
    "key": "first_move",
    "label": "첫 수",
-   "users": 19
+   "users": 20
   },
   {
    "key": "lv1_clear",
    "label": "1판 클리어",
-   "users": 19
+   "users": 20
   },
   {
    "key": "lv3_clear",
@@ -69,12 +69,12 @@
   {
    "key": "album_first",
    "label": "미술관 열기",
-   "users": 18
+   "users": 19
   },
   {
    "key": "first_piece",
    "label": "첫 조각",
-   "users": 12
+   "users": 13
   },
   {
    "key": "lv10_clear",
@@ -98,6 +98,54 @@
   }
  ],
  "users": [
+  {
+   "uid": "dd60a5a5",
+   "t0": "09:31",
+   "mins": 0.1,
+   "model": "SM-A075M",
+   "country": "Brazil",
+   "city": "Medianeira",
+   "lang": "pt-br",
+   "ver": "1.0 (v46)",
+   "new": true,
+   "vpn": false,
+   "lv": 0,
+   "started": 1,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "b633a1bb",
+   "t0": "08:08",
+   "mins": 9.9,
+   "model": "SM-N920C",
+   "country": "Iran",
+   "city": "Karaj",
+   "lang": "fa-ir",
+   "ver": "1.0 (v36)",
+   "new": false,
+   "vpn": false,
+   "lv": 289,
+   "started": 290,
+   "clears": 6,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
   {
    "uid": "00db1ac2",
    "t0": "07:44",
@@ -148,6 +196,33 @@
    "reached": 55,
    "side": [
     "first_restart",
+    "gate_tut",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "f5970938",
+   "t0": "07:06",
+   "mins": 11.2,
+   "model": "25028RN03A",
+   "country": "Iran",
+   "city": "Tehran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v46)",
+   "new": false,
+   "vpn": false,
+   "lv": 2,
+   "started": 2,
+   "clears": 2,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 55,
+   "side": [
     "gate_tut",
     "tut_hand"
    ],
@@ -1343,22 +1418,22 @@
   }
  ],
  "kinds": {
-  "human": 47,
+  "human": 50,
   "bot": 2,
   "me": 0,
   "dbg": 0
  },
  "bots": 2,
- "humans": 47,
+ "humans": 50,
  "versions": [
   {
    "ver": "1.0 (v46)",
-   "users": 40,
-   "installs": 23
+   "users": 42,
+   "installs": 24
   },
   {
    "ver": "1.0 (v36)",
-   "users": 5,
+   "users": 6,
    "installs": 0
   },
   {
@@ -1370,21 +1445,21 @@
  "countries": [
   {
    "country": "Iran",
-   "users": 30,
+   "users": 32,
    "vpn": 3
   },
   {
    "country": "Brazil",
-   "users": 15,
+   "users": 16,
    "vpn": 0
   },
   {
-   "country": "Indonesia",
+   "country": "Qatar",
    "users": 1,
    "vpn": 1
   },
   {
-   "country": "Qatar",
+   "country": "Indonesia",
    "users": 1,
    "vpn": 1
   }
