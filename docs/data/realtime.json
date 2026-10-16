@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16 12:39 KST",
+ "updated": "2026-10-16 14:41 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261016",
@@ -98,6 +98,54 @@
   }
  ],
  "users": [
+  {
+   "uid": "2644251e",
+   "t0": "13:29",
+   "mins": 11.2,
+   "model": "SM-A528B",
+   "country": "Iran",
+   "city": "Tehran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v46)",
+   "new": false,
+   "vpn": false,
+   "lv": 156,
+   "started": 157,
+   "clears": 14,
+   "stuck": 0,
+   "ads": 1,
+   "shops": 1,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "2bb32057",
+   "t0": "12:43",
+   "mins": 0.0,
+   "model": "SM-A037F",
+   "country": "Iran",
+   "city": "Ahvaz",
+   "lang": "fa-ir",
+   "ver": "1.0 (v46)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
   {
    "uid": "5f310777",
    "t0": "09:27",
@@ -397,17 +445,17 @@
   {
    "uid": "00a55b43",
    "t0": "03:18",
-   "mins": 90.3,
+   "mins": 230.7,
    "model": "STK-L21",
-   "country": "Israel",
-   "city": "Tehran",
+   "country": "Iran",
+   "city": "Shiraz",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
    "new": false,
    "vpn": true,
-   "lv": 323,
-   "started": 323,
-   "clears": 24,
+   "lv": 358,
+   "started": 358,
+   "clears": 59,
    "stuck": 0,
    "ads": 1,
    "shops": 0,
@@ -725,17 +773,17 @@
   }
  ],
  "kinds": {
-  "human": 25,
+  "human": 27,
   "bot": 6,
   "me": 0,
   "dbg": 0
  },
  "bots": 6,
- "humans": 25,
+ "humans": 27,
  "versions": [
   {
    "ver": "1.0 (v46)",
-   "users": 18,
+   "users": 20,
    "installs": 2
   },
   {
@@ -752,8 +800,8 @@
  "countries": [
   {
    "country": "Iran",
-   "users": 14,
-   "vpn": 0
+   "users": 17,
+   "vpn": 1
   },
   {
    "country": "Brazil",
@@ -762,8 +810,8 @@
   },
   {
    "country": "Israel",
-   "users": 2,
-   "vpn": 1
+   "users": 1,
+   "vpn": 0
   },
   {
    "country": "Chile",
