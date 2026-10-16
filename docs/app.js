@@ -197,8 +197,12 @@ fetch("data/ingame.json?" + Date.now()).then(r => r.json()).then(d => {
   table($("shopTable"), fun, [
     ["단계", r => label[r.step] || r.step], ["인원", r => n(r.users)], ["건수", r => n(r.n)]]);
 
+  // ★버전을 같이 본다. 광고 쪽을 고쳐 내보냈을 때 옛 빌드 유저의 실패가 계속 쌓여
+  //   전체 비율이 안 움직인다 — 새 빌드가 나아졌는지는 버전을 나눠야만 보인다.
   table($("adTable"), d.ads, [
-    ["자리", r => r.placement || "–"], ["결과", r => r.result || "–"], ["건수", r => n(r.n)]]);
+    ["자리", r => r.placement || "–"], ["결과", r => r.result || "–"],
+    ["버전", r => (r.ver || "–").replace("1.0 ", "")],
+    ["건수", r => n(r.n)], ["사람", r => n(r.users)]]);
   table($("boostTable"), d.boosters, [
     ["아이템", r => r.kind || "–"], ["조달", r => r.source || "–"], ["건수", r => n(r.n)]]);
   table($("onbTable"), d.onboard, [

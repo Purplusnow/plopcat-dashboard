@@ -230,11 +230,17 @@ def ads(table: str, filt: str) -> str:
     보낸 ad_reward 는 0건). 과거 데이터를 같이 읽을 필요가 없다 — 애초에 하나도
     안 들어왔다. BigQuery 에 보이는 옛 ad_reward 는 AdMob 이 자동으로 쏜 것이다.
     """
+    ★**버전을 같이** 본다(2026-10-17 추가). 광고 쪽을 고쳐 내보냈을 때, 새 빌드에서
+    실제로 나아졌는지는 버전을 안 나누면 알 수가 없다 — 옛 빌드 유저의 실패가 계속
+    쌓여서 전체 비율이 안 움직인다. 실측: v47(보상형 재시도·미리로드)을 올린 뒤
+    no_ad 가 9→14 로 늘었는데, 그게 아직 안 고쳐진 v46 유저 때문인지 v47 이 여전히
+    실패하는 건지 구분할 수 없었다. 그 질문이 곧 릴리스의 성패였다.
+    """
     return """
-SELECT {kind} kind, {pl} placement, {rs} result,
+SELECT {kind} kind, {pl} placement, {rs} result, app_info.version ver,
   COUNT(*) n, COUNT(DISTINCT user_pseudo_id) users
 FROM {t} WHERE {f} AND event_name = 'ad_watch'
-GROUP BY kind, placement, result ORDER BY kind, n DESC LIMIT 40
+GROUP BY kind, placement, result, ver ORDER BY kind, n DESC LIMIT 60
 """.format(t=table, f=filt, pl=p_str("placement"), rs=p_str("result"),
            kind=AD_KIND.format(pl=p_str("placement")))
 
