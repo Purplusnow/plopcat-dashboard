@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17 07:14 KST",
+ "updated": "2026-10-17 07:42 KST",
  "window_days": 45,
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
@@ -603,7 +603,7 @@
    "cleared": 40,
    "rate": 1.0,
    "attempts": 1.0,
-   "over_moves": 5.03,
+   "over_moves": 5.02,
    "secs": 20.4,
    "items": 0.03
   },
@@ -1353,7 +1353,7 @@
    "cleared": 16,
    "rate": 1.0,
    "attempts": 1.19,
-   "over_moves": 5.37,
+   "over_moves": 5.38,
    "secs": 603.3,
    "items": 0.19
   },
@@ -1373,7 +1373,7 @@
    "cleared": 16,
    "rate": 1.0,
    "attempts": 1.06,
-   "over_moves": 1.87,
+   "over_moves": 1.88,
    "secs": 14.5,
    "items": 0.06
   },
@@ -3582,31 +3582,19 @@
    "hints": 0.0
   },
   {
-   "lv": 133,
-   "n": 1,
-   "attempts": 3.0,
-   "hints": 0.0
-  },
-  {
-   "lv": 11,
-   "n": 1,
-   "attempts": 1.0,
-   "hints": 2.0
-  },
-  {
    "lv": 113,
    "n": 1,
    "attempts": 3.0,
    "hints": 0.0
   },
   {
-   "lv": 52,
+   "lv": 133,
    "n": 1,
    "attempts": 3.0,
    "hints": 0.0
   },
   {
-   "lv": 69,
+   "lv": 52,
    "n": 1,
    "attempts": 3.0,
    "hints": 0.0
@@ -3622,6 +3610,18 @@
    "n": 1,
    "attempts": 3.0,
    "hints": 0.0
+  },
+  {
+   "lv": 69,
+   "n": 1,
+   "attempts": 3.0,
+   "hints": 0.0
+  },
+  {
+   "lv": 11,
+   "n": 1,
+   "attempts": 1.0,
+   "hints": 2.0
   }
  ],
  "fails": [
@@ -4317,30 +4317,30 @@
  "versions": [
   {
    "ver": "1.0 (v47)",
-   "users": 1,
-   "avg_lv_1h": 82.0,
-   "avg_clears_1h": 82.0,
+   "users": 3,
+   "avg_lv_1h": 47.3,
+   "avg_clears_1h": 47.3,
    "lv1_rate": 1.0,
-   "remove_rate": 0.0,
-   "avg_mins": 3876.7
+   "remove_rate": 0.333,
+   "avg_mins": 2298.7
   },
   {
    "ver": "1.0 (v46)",
-   "users": 150,
-   "avg_lv_1h": 12.8,
-   "avg_clears_1h": 10.7,
-   "lv1_rate": 0.847,
+   "users": 148,
+   "avg_lv_1h": 12.5,
+   "avg_clears_1h": 10.4,
+   "lv1_rate": 0.845,
    "remove_rate": 0.5,
-   "avg_mins": 456.4
+   "avg_mins": 441.5
   },
   {
    "ver": "1.0 (v36)",
-   "users": 62,
-   "avg_lv_1h": 20.1,
+   "users": 61,
+   "avg_lv_1h": 20.2,
    "avg_clears_1h": 16.9,
-   "lv1_rate": 0.903,
-   "remove_rate": 0.532,
-   "avg_mins": 1415.1
+   "lv1_rate": 0.902,
+   "remove_rate": 0.541,
+   "avg_mins": 1365.0
   },
   {
    "ver": "1.0 (v35)",
@@ -4353,12 +4353,12 @@
   },
   {
    "ver": "1.0 (v29)",
-   "users": 81,
-   "avg_lv_1h": 26.7,
-   "avg_clears_1h": 23.1,
-   "lv1_rate": 0.901,
-   "remove_rate": 0.494,
-   "avg_mins": 1165.6
+   "users": 82,
+   "avg_lv_1h": 26.6,
+   "avg_clears_1h": 23.0,
+   "lv1_rate": 0.902,
+   "remove_rate": 0.488,
+   "avg_mins": 1205.1
   },
   {
    "ver": "1.0 (v28)",
@@ -4750,20 +4750,20 @@
    "vpn": 1
   },
   {
-   "country": "Philippines",
-   "users": 1,
-   "avg_lv": 7.0,
-   "cleared_any": 1,
-   "buys": 0,
-   "vpn": 0
-  },
-  {
    "country": "Turkmenistan",
    "users": 1,
    "avg_lv": 17.0,
    "cleared_any": 1,
    "buys": 0,
    "vpn": 1
+  },
+  {
+   "country": "Philippines",
+   "users": 1,
+   "avg_lv": 7.0,
+   "cleared_any": 1,
+   "buys": 0,
+   "vpn": 0
   },
   {
    "country": "United States",
@@ -4780,6 +4780,62 @@
    "cleared_any": 0,
    "buys": 0,
    "vpn": 0
+  }
+ ],
+ "daily_active": [
+  {
+   "day": "20261008",
+   "dau": 1,
+   "new_users": 1,
+   "removed": 0
+  },
+  {
+   "day": "20261010",
+   "dau": 2,
+   "new_users": 2,
+   "removed": 1
+  },
+  {
+   "day": "20261011",
+   "dau": 78,
+   "new_users": 78,
+   "removed": 28
+  },
+  {
+   "day": "20261012",
+   "dau": 86,
+   "new_users": 54,
+   "removed": 24
+  },
+  {
+   "day": "20261013",
+   "dau": 81,
+   "new_users": 52,
+   "removed": 27
+  },
+  {
+   "day": "20261014",
+   "dau": 106,
+   "new_users": 76,
+   "removed": 37
+  },
+  {
+   "day": "20261015",
+   "dau": 70,
+   "new_users": 32,
+   "removed": 19
+  },
+  {
+   "day": "20261016",
+   "dau": 46,
+   "new_users": 5,
+   "removed": 12
+  },
+  {
+   "day": "20261017",
+   "dau": 15,
+   "new_users": 0,
+   "removed": 3
   }
  ],
  "item_source": [
