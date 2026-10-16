@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16 21:18 KST",
+ "updated": "2026-10-17 00:08 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261016",
@@ -49,47 +49,47 @@
   {
    "key": "game_open",
    "label": "게임 진입",
-   "users": 2
+   "users": 4
   },
   {
    "key": "first_move",
    "label": "첫 수",
-   "users": 2
+   "users": 4
   },
   {
    "key": "lv1_clear",
    "label": "1판 클리어",
-   "users": 2
+   "users": 4
   },
   {
    "key": "lv3_clear",
    "label": "3판",
-   "users": 6
+   "users": 8
   },
   {
    "key": "album_first",
    "label": "미술관 열기",
-   "users": 2
+   "users": 4
   },
   {
    "key": "first_piece",
    "label": "첫 조각",
-   "users": 4
+   "users": 6
   },
   {
    "key": "lv10_clear",
    "label": "10판",
-   "users": 5
+   "users": 7
   },
   {
    "key": "first_picture",
    "label": "첫 그림 완성",
-   "users": 4
+   "users": 5
   },
   {
    "key": "lv20_clear",
    "label": "20판",
-   "users": 1
+   "users": 3
   },
   {
    "key": "lv50_clear",
@@ -98,6 +98,188 @@
   }
  ],
  "users": [
+  {
+   "uid": "68172821",
+   "t0": "23:10",
+   "mins": 0.4,
+   "model": "SM-A125F",
+   "country": "Iran",
+   "city": "Tehran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v46)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "9182ed12",
+   "t0": "23:01",
+   "mins": 0.0,
+   "model": "SM-A145MB",
+   "country": "Brazil",
+   "city": "Parnaiba",
+   "lang": "pt-br",
+   "ver": "1.0 (v46)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "5c2fea6e",
+   "t0": "22:08",
+   "mins": 98.7,
+   "model": "SM-A566B",
+   "country": "Iran",
+   "city": null,
+   "lang": "fa-ir",
+   "ver": "1.0 (v46)",
+   "new": true,
+   "vpn": false,
+   "lv": 31,
+   "started": 32,
+   "clears": 31,
+   "stuck": 0,
+   "ads": 1,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 511,
+   "side": [
+    "first_ad",
+    "first_fail",
+    "first_moves",
+    "first_restart",
+    "gate_final",
+    "gate_pieces",
+    "gate_tut",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "6375893f",
+   "t0": "21:40",
+   "mins": 0.1,
+   "model": "SM-A075M",
+   "country": "Brazil",
+   "city": "Santo Andre",
+   "lang": "pt-br",
+   "ver": "1.0 (v46)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "04f984a0",
+   "t0": "21:25",
+   "mins": 0.7,
+   "model": "SM-A165F",
+   "country": "Iran",
+   "city": "Tehran",
+   "lang": "ar-ae",
+   "ver": "1.0 (v46)",
+   "new": true,
+   "vpn": false,
+   "lv": 3,
+   "started": 3,
+   "clears": 3,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 63,
+   "side": [
+    "gate_tut",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "d286bb09",
+   "t0": "21:19",
+   "mins": 8.6,
+   "model": "24117RN76G",
+   "country": "Iran",
+   "city": "Shiraz",
+   "lang": "fa-ir",
+   "ver": "1.0 (v46)",
+   "new": false,
+   "vpn": false,
+   "lv": 49,
+   "started": 50,
+   "clears": 33,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 256,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "31684dcb",
+   "t0": "21:00",
+   "mins": 1.8,
+   "model": "2303CRA44A",
+   "country": "Iran",
+   "city": "Isfahan",
+   "lang": "fa-ir",
+   "ver": "1.0 (v29)",
+   "new": false,
+   "vpn": false,
+   "lv": 15,
+   "started": 16,
+   "clears": 6,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 64,
+   "side": [],
+   "kind": "human"
+  },
   {
    "uid": "21897da2",
    "t0": "20:29",
@@ -176,7 +358,7 @@
   {
    "uid": "02591422",
    "t0": "17:57",
-   "mins": 1.4,
+   "mins": 256.2,
    "model": "2502FRA65G",
    "country": "Iran",
    "city": "Ahvaz",
@@ -184,9 +366,9 @@
    "ver": "1.0 (v36)",
    "new": false,
    "vpn": false,
-   "lv": 56,
-   "started": 57,
-   "clears": 2,
+   "lv": 57,
+   "started": 58,
+   "clears": 3,
    "stuck": 0,
    "ads": 0,
    "shops": 0,
@@ -224,7 +406,7 @@
   {
    "uid": "89609acf",
    "t0": "16:21",
-   "mins": 0.8,
+   "mins": 402.9,
    "model": "SM-A546E",
    "country": "Iran",
    "city": "Ahvaz",
@@ -232,9 +414,9 @@
    "ver": "1.0 (v29)",
    "new": false,
    "vpn": false,
-   "lv": 0,
-   "started": 57,
-   "clears": 0,
+   "lv": 58,
+   "started": 59,
+   "clears": 2,
    "stuck": 0,
    "ads": 0,
    "shops": 0,
@@ -1018,26 +1200,26 @@
   }
  ],
  "kinds": {
-  "human": 37,
-  "bot": 6,
+  "human": 44,
+  "bot": 7,
   "me": 0,
   "dbg": 0
  },
- "bots": 6,
- "humans": 37,
+ "bots": 7,
+ "humans": 44,
  "versions": [
   {
    "ver": "1.0 (v46)",
-   "users": 25,
-   "installs": 3
-  },
-  {
-   "ver": "1.0 (v36)",
-   "users": 6,
-   "installs": 0
+   "users": 31,
+   "installs": 5
   },
   {
    "ver": "1.0 (v29)",
+   "users": 7,
+   "installs": 0
+  },
+  {
+   "ver": "1.0 (v36)",
    "users": 6,
    "installs": 0
   },
@@ -1050,12 +1232,12 @@
  "countries": [
   {
    "country": "Iran",
-   "users": 26,
+   "users": 31,
    "vpn": 1
   },
   {
    "country": "Brazil",
-   "users": 9,
+   "users": 11,
    "vpn": 1
   },
   {
@@ -1071,12 +1253,12 @@
  ],
  "purchase_fail": [
   {
-   "reason": "no_details:gold_pack",
+   "reason": "canceled",
    "n": 1,
    "users": 1
   },
   {
-   "reason": "canceled",
+   "reason": "no_details:gold_pack",
    "n": 1,
    "users": 1
   }
