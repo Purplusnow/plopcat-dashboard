@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17 07:10 KST",
+ "updated": "2026-10-17 07:14 KST",
  "window_days": 45,
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
@@ -585,7 +585,7 @@
    "attempts": 1.0,
    "over_moves": 3.88,
    "secs": 17.9,
-   "items": 0.02
+   "items": 0.03
   },
   {
    "lv": 56,
@@ -593,7 +593,7 @@
    "cleared": 40,
    "rate": 1.0,
    "attempts": 1.0,
-   "over_moves": 1.92,
+   "over_moves": 1.93,
    "secs": 17.3,
    "items": 0.0
   },
@@ -605,7 +605,7 @@
    "attempts": 1.0,
    "over_moves": 5.03,
    "secs": 20.4,
-   "items": 0.02
+   "items": 0.03
   },
   {
    "lv": 58,
@@ -1353,7 +1353,7 @@
    "cleared": 16,
    "rate": 1.0,
    "attempts": 1.19,
-   "over_moves": 5.38,
+   "over_moves": 5.37,
    "secs": 603.3,
    "items": 0.19
   },
@@ -1373,7 +1373,7 @@
    "cleared": 16,
    "rate": 1.0,
    "attempts": 1.06,
-   "over_moves": 1.88,
+   "over_moves": 1.87,
    "secs": 14.5,
    "items": 0.06
   },
@@ -3582,13 +3582,19 @@
    "hints": 0.0
   },
   {
+   "lv": 133,
+   "n": 1,
+   "attempts": 3.0,
+   "hints": 0.0
+  },
+  {
    "lv": 11,
    "n": 1,
    "attempts": 1.0,
    "hints": 2.0
   },
   {
-   "lv": 16,
+   "lv": 113,
    "n": 1,
    "attempts": 3.0,
    "hints": 0.0
@@ -3600,7 +3606,7 @@
    "hints": 0.0
   },
   {
-   "lv": 133,
+   "lv": 69,
    "n": 1,
    "attempts": 3.0,
    "hints": 0.0
@@ -3612,13 +3618,7 @@
    "hints": 0.0
   },
   {
-   "lv": 69,
-   "n": 1,
-   "attempts": 3.0,
-   "hints": 0.0
-  },
-  {
-   "lv": 113,
+   "lv": 16,
    "n": 1,
    "attempts": 3.0,
    "hints": 0.0
@@ -3633,8 +3633,8 @@
    "started_lim": 32,
    "rate": 0.1839080459770115,
    "rate_lim": 0.5,
-   "moves": 22.2,
-   "lim": 22.2
+   "moves": 22.3,
+   "lim": 22.3
   },
   {
    "lv": 52,
@@ -3995,27 +3995,55 @@
    "kind": "inter",
    "placement": "inter",
    "result": "dismissed",
-   "n": 61,
-   "users": 30
+   "ver": "1.0 (v46)",
+   "n": 36,
+   "users": 21
+  },
+  {
+   "kind": "inter",
+   "placement": "inter",
+   "result": "dismissed",
+   "ver": "1.0 (v36)",
+   "n": 23,
+   "users": 9
+  },
+  {
+   "kind": "inter",
+   "placement": "inter",
+   "result": "dismissed",
+   "ver": "1.0 (v47)",
+   "n": 2,
+   "users": 1
   },
   {
    "kind": "reward",
    "placement": "moves",
    "result": "no_ad",
-   "n": 14,
+   "ver": "1.0 (v46)",
+   "n": 11,
    "users": 6
   },
   {
    "kind": "reward",
    "placement": "moves",
-   "result": "earned",
-   "n": 1,
+   "result": "no_ad",
+   "ver": "1.0 (v47)",
+   "n": 3,
    "users": 1
   },
   {
    "kind": "reward",
    "placement": "heart",
    "result": "dismissed",
+   "ver": "1.0 (v46)",
+   "n": 1,
+   "users": 1
+  },
+  {
+   "kind": "reward",
+   "placement": "moves",
+   "result": "earned",
+   "ver": "1.0 (v46)",
    "n": 1,
    "users": 1
   }
@@ -4063,19 +4091,14 @@
    "n": 3
   },
   {
-   "kind": "undo",
-   "source": "gem",
-   "n": 2
-  },
-  {
    "kind": "hint",
    "source": "gem",
    "n": 2
   },
   {
-   "kind": "heart",
+   "kind": "undo",
    "source": "gem",
-   "n": 1
+   "n": 2
   },
   {
    "kind": "moves",
@@ -4084,6 +4107,11 @@
   },
   {
    "kind": "tow",
+   "source": "gem",
+   "n": 1
+  },
+  {
+   "kind": "heart",
    "source": "gem",
    "n": 1
   }
@@ -4288,22 +4316,31 @@
  ],
  "versions": [
   {
+   "ver": "1.0 (v47)",
+   "users": 1,
+   "avg_lv_1h": 82.0,
+   "avg_clears_1h": 82.0,
+   "lv1_rate": 1.0,
+   "remove_rate": 0.0,
+   "avg_mins": 3876.7
+  },
+  {
    "ver": "1.0 (v46)",
-   "users": 152,
-   "avg_lv_1h": 13.2,
-   "avg_clears_1h": 11.1,
-   "lv1_rate": 0.849,
-   "remove_rate": 0.493,
-   "avg_mins": 510.2
+   "users": 150,
+   "avg_lv_1h": 12.8,
+   "avg_clears_1h": 10.7,
+   "lv1_rate": 0.847,
+   "remove_rate": 0.5,
+   "avg_mins": 456.4
   },
   {
    "ver": "1.0 (v36)",
-   "users": 61,
-   "avg_lv_1h": 20.2,
+   "users": 62,
+   "avg_lv_1h": 20.1,
    "avg_clears_1h": 16.9,
-   "lv1_rate": 0.902,
-   "remove_rate": 0.541,
-   "avg_mins": 1365.0
+   "lv1_rate": 0.903,
+   "remove_rate": 0.532,
+   "avg_mins": 1415.1
   },
   {
    "ver": "1.0 (v35)",
@@ -4317,11 +4354,11 @@
   {
    "ver": "1.0 (v29)",
    "users": 81,
-   "avg_lv_1h": 27.0,
-   "avg_clears_1h": 23.3,
+   "avg_lv_1h": 26.7,
+   "avg_clears_1h": 23.1,
    "lv1_rate": 0.901,
    "remove_rate": 0.494,
-   "avg_mins": 1159.1
+   "avg_mins": 1165.6
   },
   {
    "ver": "1.0 (v28)",
@@ -4655,11 +4692,11 @@
    "users": 7
   },
   {
-   "step": "first_skip",
+   "step": "first_heart",
    "users": 1
   },
   {
-   "step": "first_heart",
+   "step": "first_skip",
    "users": 1
   }
  ],
@@ -4705,14 +4742,6 @@
    "vpn": 0
   },
   {
-   "country": "Philippines",
-   "users": 1,
-   "avg_lv": 7.0,
-   "cleared_any": 1,
-   "buys": 0,
-   "vpn": 0
-  },
-  {
    "country": "Qatar",
    "users": 1,
    "avg_lv": 1.0,
@@ -4721,18 +4750,10 @@
    "vpn": 1
   },
   {
-   "country": "Czechia",
+   "country": "Philippines",
    "users": 1,
-   "avg_lv": 0.0,
-   "cleared_any": 0,
-   "buys": 0,
-   "vpn": 0
-  },
-  {
-   "country": "United States",
-   "users": 1,
-   "avg_lv": 0.0,
-   "cleared_any": 0,
+   "avg_lv": 7.0,
+   "cleared_any": 1,
    "buys": 0,
    "vpn": 0
   },
@@ -4743,6 +4764,22 @@
    "cleared_any": 1,
    "buys": 0,
    "vpn": 1
+  },
+  {
+   "country": "United States",
+   "users": 1,
+   "avg_lv": 0.0,
+   "cleared_any": 0,
+   "buys": 0,
+   "vpn": 0
+  },
+  {
+   "country": "Czechia",
+   "users": 1,
+   "avg_lv": 0.0,
+   "cleared_any": 0,
+   "buys": 0,
+   "vpn": 0
   }
  ],
  "item_source": [
