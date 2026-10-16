@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16 19:14 KST",
+ "updated": "2026-10-16 19:33 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261016",
@@ -618,7 +618,7 @@
    "mins": 750.1,
    "model": "STK-L21",
    "country": "Iran",
-   "city": "Rosh Haayin",
+   "city": "Tehran",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
    "new": false,
@@ -996,12 +996,12 @@
  ],
  "purchase_fail": [
   {
-   "reason": "canceled",
+   "reason": "no_details:gold_pack",
    "n": 1,
    "users": 1
   },
   {
-   "reason": "no_details:gold_pack",
+   "reason": "canceled",
    "n": 1,
    "users": 1
   }
