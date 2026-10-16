@@ -2,6 +2,24 @@
  "date": "2026-10-16",
  "users": [
   {
+   "uid": "5c2fea6e",
+   "model": "SM-A566B",
+   "country": "Iran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v46)",
+   "days": 1,
+   "last": "20261016",
+   "lv": 31,
+   "clears": 31,
+   "stuck": 0,
+   "ads": 1,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 1,
+   "removed": false,
+   "reached": 511
+  },
+  {
    "uid": "5f310777",
    "model": "Moto G35 5G",
    "country": "Brazil",
@@ -18,6 +36,24 @@
    "pics": 0,
    "removed": false,
    "reached": 127
+  },
+  {
+   "uid": "04f984a0",
+   "model": "SM-A165F",
+   "country": "Iran",
+   "lang": "ar-ae",
+   "ver": "1.0 (v46)",
+   "days": 1,
+   "last": "20261016",
+   "lv": 3,
+   "clears": 3,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 63
   },
   {
    "uid": "720ed783",
