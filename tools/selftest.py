@@ -207,6 +207,21 @@ def main():
     chk("L2 평균 아이템(1+2+0+1)", lv[2]["items"], 4.0)
     chk("L2 평균 초과 수", lv[2]["over_moves"], 4.0)
 
+    # ── ②-2 ★일별 DAU ──────────────────────────────────────────────
+    # 같은 사람이 하루에 여러 번 와도 **1명**이고, 날짜가 다르면 각각 1명이다.
+    da_ev = [ev("20260101", "a", "session_start"), ev("20260101", "a", "level_start"),
+             ev("20260101", "b", "first_open"),
+             ev("20260102", "a", "session_start"),
+             ev("20260102", "c", "first_open"), ev("20260102", "c", "app_remove")]
+    dd = {r["day"]: r for r in run(Q.daily_active(table(da_ev), "TRUE"))}
+    chk("1/1 DAU 2명(a 가 두 번 와도 1명)", dd["20260101"]["dau"], 2)
+    chk("1/1 신규 1명", dd["20260101"]["new_users"], 1)
+    chk("1/2 DAU 2명", dd["20260102"]["dau"], 2)
+    chk("1/2 신규 1명", dd["20260102"]["new_users"], 1)
+    chk("★같은 날 깐 사람이 지우면 삭제로도 잡힌다", dd["20260102"]["removed"], 1)
+    chk("날짜가 오름차순이다", [r["day"] for r in run(Q.daily_active(table(da_ev), "TRUE"))],
+        ["20260101", "20260102"])
+
     # ── ③ 못 깬 판 ─────────────────────────────────────────────────
     st = [ev("20260101", "a", "level_stuck", [("level", 7), ("attempts", 5), ("hints", 2)]),
           ev("20260101", "b", "level_stuck", [("level", 7), ("attempts", 3), ("hints", 0)]),

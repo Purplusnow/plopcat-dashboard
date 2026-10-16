@@ -176,6 +176,46 @@ fetch("data/ingame.json?" + Date.now()).then(r => r.json()).then(d => {
     }
   }
 
+  // ★일별 DAU — 막대는 DAU, 표에 신규·삭제를 같이 둔다.
+  //   KPI 의 dau 는 오늘 한 숫자뿐이라 "늘고 있나"를 사람이 기억해야 했다.
+  {
+    const da = d.daily_active || [];
+    const top = Math.max(1, ...da.map(r => r.dau || 0));
+    $("dauChart").innerHTML = da.map(r => {
+      const h = Math.max(2, (r.dau || 0) / top * 100);
+      return `<i style="height:${h}%" title="${r.day} · DAU ${n(r.dau)}`
+           + ` · 신규 ${n(r.new_users)} · 삭제 ${n(r.removed)}"></i>`;
+    }).join("");
+    // 날짜 축 — 전부 적으면 뭉개지므로 처음·중간·끝만
+    const md = s => s ? `${s.slice(4, 6)}-${s.slice(6, 8)}` : "";
+    $("dauAxis").innerHTML = da.length
+      ? `<span>${md(da[0].day)}</span><span>${md(da[Math.floor(da.length / 2)].day)}</span>`
+        + `<span>${md(da[da.length - 1].day)}</span>`
+      : "";
+    const el = $("dauLead");
+    if (el) {
+      if (!da.length) el.textContent = "아직 데이터가 없다";
+      else {
+        const last = da[da.length - 1], prev = da[da.length - 2];
+        // ★오늘은 **아직 하루가 안 갔다** — 어제와 그냥 비교하면 늘 '줄었다'로 보인다.
+        const dir = prev ? (last.dau >= prev.dau ? "↑" : "↓") : "";
+        el.innerHTML = `최근 ${n(last.dau)}명 ${dir}`
+          + (prev ? ` <span class="dim">(직전 ${n(prev.dau)})</span>` : "")
+          + ` · 최고 ${n(top)}명`
+          + ` <span class="dim">— 마지막 막대는 오늘이라 아직 차는 중이다</span>`;
+      }
+    }
+    table($("dauTable"), da.slice().reverse(), [
+      ["날짜", r => md(r.day)],
+      ["DAU", r => n(r.dau)],
+      ["신규", r => n(r.new_users)],
+      ["삭제", r => r.removed ? `<b class="bad-t">${n(r.removed)}</b>` : "0"],
+      ["순증", r => {
+        const v = (r.new_users || 0) - (r.removed || 0);
+        return v >= 0 ? `+${n(v)}` : `<b class="bad-t">${n(v)}</b>`;
+      }]]);
+  }
+
   table($("stuckTable"), d.stuck, [
     ["레벨", r => "L" + r.lv], ["건수", r => n(r.n)],
     ["평균 시도", r => r.attempts ?? "–"], ["평균 힌트", r => r.hints ?? "–"]]);

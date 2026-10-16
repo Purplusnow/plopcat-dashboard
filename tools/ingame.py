@@ -202,6 +202,8 @@ def main() -> None:
 
     # ── 아이템 구입(주력 BM) ──────────────────────────────────────────
     # ★기간을 안 건다. 구매는 드물어서 45일 창으로 자르면 표가 통째로 빈다.
+    # ★추세 그림은 창을 안 건다 — 짧게 자르면 늘고 있는지 줄고 있는지가 안 보인다.
+    out["daily_active"] = q(Q.daily_active(TABLE, f_all))
     out["item_source"] = q(Q.item_by_source(TABLE, f_all))
     out["item_level"] = q(Q.item_by_level(TABLE, f_all))
     out["item_first"] = q(Q.item_first_buy(TABLE, f_all))

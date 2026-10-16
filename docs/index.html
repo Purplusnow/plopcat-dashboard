@@ -34,6 +34,19 @@
     <div id="filtered" class="filtered"></div>
   </section>
 
+  <!-- ★하루 단위 추세. KPI 의 dau 는 오늘 한 숫자뿐이라 늘고 있는지가 안 보였다. -->
+  <section>
+    <h2>★ 일별 DAU <span class="note">늘고 있나, 유입으로 버티고 있나</span></h2>
+    <p class="why">
+      <b id="dauLead" class="dim">—</b><br>
+      막대 = 그날 **접속한 사람**(DAU). 선 아래 숫자는 그날 **새로 깐 사람**이다.
+      DAU 가 평평한데 신규가 그만큼 들어오고 있으면, 기존 유저가 그 수만큼 빠져나가는 중이다.
+    </p>
+    <div id="dauChart" class="chartbox"></div>
+    <div class="axis" id="dauAxis"></div>
+    <div class="scroll"><table id="dauTable"></table></div>
+  </section>
+
   <!-- ①: 이 게임에서 가장 중요한 그림. 꺾이는 레벨 = 벽 = 난이도를 손볼 자리. -->
   <section>
     <h2>① 레벨별 클리어율 <span class="note">꺾이는 곳이 벽이다</span></h2>

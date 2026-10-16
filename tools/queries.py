@@ -122,6 +122,28 @@ ORDER BY s.lv LIMIT 400
            u=p_int("undos"), w=p_int("tows"), r=p_int("restarts"))
 
 
+def daily_active(table: str, filt: str) -> str:
+    """일별 DAU·신규·삭제 — **하루 단위 추세**(형 요청 2026-10-17).
+
+    ★KPI 의 dau 는 **오늘 한 숫자**뿐이라 늘고 있는지 줄고 있는지가 안 보였다.
+      매일 갱신해도 "어제보다 많나"를 사람이 기억해야 했다.
+
+    ★DAU 와 **신규를 같이** 낸다. 둘을 나란히 놔야 "유입으로 버티는 중"인지
+      "쌓이고 있는지"가 갈린다 — DAU 가 평평한데 신규가 그만큼 들어오고 있으면
+      기존 유저가 그 수만큼 빠져나가고 있다는 뜻이다.
+      삭제(app_remove)도 같이 본다. 들어온 만큼 나가는지 한 줄에서 읽힌다.
+
+    창을 안 건다(f_all) — 추세 그림은 짧게 자르면 의미가 없다.
+    """
+    return """
+SELECT {day} day,
+  COUNT(DISTINCT user_pseudo_id) dau,
+  COUNT(DISTINCT IF(event_name='first_open', user_pseudo_id, NULL)) new_users,
+  COUNT(DISTINCT IF(event_name='app_remove', user_pseudo_id, NULL)) removed
+FROM {t} WHERE {f} GROUP BY day ORDER BY day LIMIT 120
+""".format(t=table, f=filt, day=DAY)
+
+
 def stuck(table: str, filt: str) -> str:
     """③ 못 깬 판 — 벽에 막혀 떠난 유저는 level_clear 를 영영 안 쏜다."""
     return """
