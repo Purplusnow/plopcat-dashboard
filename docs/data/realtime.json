@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16 19:33 KST",
+ "updated": "2026-10-16 21:18 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261016",
@@ -49,22 +49,22 @@
   {
    "key": "game_open",
    "label": "게임 진입",
-   "users": 1
+   "users": 2
   },
   {
    "key": "first_move",
    "label": "첫 수",
-   "users": 1
+   "users": 2
   },
   {
    "key": "lv1_clear",
    "label": "1판 클리어",
-   "users": 1
+   "users": 2
   },
   {
    "key": "lv3_clear",
    "label": "3판",
-   "users": 5
+   "users": 6
   },
   {
    "key": "album_first",
@@ -99,6 +99,81 @@
  ],
  "users": [
   {
+   "uid": "21897da2",
+   "t0": "20:29",
+   "mins": 0.0,
+   "model": "SM-A528B",
+   "country": "Iran",
+   "city": "Ahvaz",
+   "lang": "fa-ir",
+   "ver": "1.0 (v46)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "159855c7",
+   "t0": "20:01",
+   "mins": 6.2,
+   "model": "23129RAA4G",
+   "country": "Iran",
+   "city": "Tehran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v46)",
+   "new": false,
+   "vpn": false,
+   "lv": 42,
+   "started": 42,
+   "clears": 10,
+   "stuck": 0,
+   "ads": 1,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "720ed783",
+   "t0": "19:42",
+   "mins": 6.8,
+   "model": "Mi 9 Lite",
+   "country": "Iran",
+   "city": "Tehran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v46)",
+   "new": true,
+   "vpn": false,
+   "lv": 3,
+   "started": 3,
+   "clears": 3,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 15,
+   "side": [
+    "gate_tut",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
    "uid": "02591422",
    "t0": "17:57",
    "mins": 1.4,
@@ -125,7 +200,7 @@
   {
    "uid": "360284df",
    "t0": "16:50",
-   "mins": 0.8,
+   "mins": 221.3,
    "model": "SM-A235F",
    "country": "Iran",
    "city": "Ahvaz",
@@ -133,9 +208,9 @@
    "ver": "1.0 (v29)",
    "new": false,
    "vpn": false,
-   "lv": 6,
-   "started": 6,
-   "clears": 5,
+   "lv": 8,
+   "started": 8,
+   "clears": 7,
    "stuck": 0,
    "ads": 0,
    "shops": 0,
@@ -943,18 +1018,18 @@
   }
  ],
  "kinds": {
-  "human": 34,
+  "human": 37,
   "bot": 6,
   "me": 0,
   "dbg": 0
  },
  "bots": 6,
- "humans": 34,
+ "humans": 37,
  "versions": [
   {
    "ver": "1.0 (v46)",
-   "users": 22,
-   "installs": 2
+   "users": 25,
+   "installs": 3
   },
   {
    "ver": "1.0 (v36)",
@@ -975,7 +1050,7 @@
  "countries": [
   {
    "country": "Iran",
-   "users": 23,
+   "users": 26,
    "vpn": 1
   },
   {
