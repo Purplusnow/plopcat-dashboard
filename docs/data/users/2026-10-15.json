@@ -74,24 +74,6 @@
    "reached": 255
   },
   {
-   "uid": "1e75efff",
-   "model": "SM-A037F",
-   "country": "Iran",
-   "lang": "fa-ir",
-   "ver": "1.0 (v46)",
-   "days": 2,
-   "last": "20261016",
-   "lv": 16,
-   "clears": 15,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 1,
-   "removed": true,
-   "reached": 232
-  },
-  {
    "uid": "5916b70e",
    "model": "24117RN76G",
    "country": "Iran",

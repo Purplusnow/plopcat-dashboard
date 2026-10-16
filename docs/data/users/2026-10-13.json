@@ -79,17 +79,17 @@
    "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v29)",
-   "days": 3,
+   "days": 4,
    "last": "20261016",
    "lv": 59,
-   "clears": 46,
+   "clears": 58,
    "stuck": 0,
    "ads": 0,
    "buys": 0,
    "spend": 0.0,
    "pics": 3,
    "removed": false,
-   "reached": 511
+   "reached": 1023
   },
   {
    "uid": "af1eedb3",
@@ -457,8 +457,8 @@
    "country": "Brazil",
    "lang": "pt-br",
    "ver": "1.0 (v46)",
-   "days": 1,
-   "last": "20261013",
+   "days": 2,
+   "last": "20261016",
    "lv": 6,
    "clears": 6,
    "stuck": 0,
@@ -466,7 +466,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 63
   },
   {

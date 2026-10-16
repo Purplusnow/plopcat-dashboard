@@ -2,6 +2,24 @@
  "date": "2026-10-16",
  "users": [
   {
+   "uid": "5f310777",
+   "model": "Moto G35 5G",
+   "country": "Brazil",
+   "lang": "pt-br",
+   "ver": "1.0 (v46)",
+   "days": 1,
+   "last": "20261016",
+   "lv": 12,
+   "clears": 12,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 127
+  },
+  {
    "uid": "70d67d86",
    "model": "NLA-LX2",
    "country": "Iran",
