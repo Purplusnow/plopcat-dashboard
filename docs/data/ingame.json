@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16 12:40 KST",
+ "updated": "2026-10-16 16:20 KST",
  "window_days": 45,
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
@@ -30,7 +30,7 @@
  ],
  "kpi": [
   {
-   "dau": 25,
+   "dau": 30,
    "wau": 297,
    "users": 298,
    "new_users": 297
@@ -289,9 +289,9 @@
   },
   {
    "lv": 26,
-   "started": 96,
-   "cleared": 95,
-   "rate": 0.9895833333333334,
+   "started": 97,
+   "cleared": 96,
+   "rate": 0.9896907216494846,
    "attempts": 1.0,
    "over_moves": 1.18,
    "secs": 6.3,
@@ -299,9 +299,9 @@
   },
   {
    "lv": 27,
-   "started": 94,
+   "started": 95,
    "cleared": 93,
-   "rate": 0.9893617021276596,
+   "rate": 0.9789473684210527,
    "attempts": 1.0,
    "over_moves": 1.33,
    "secs": 7.2,
@@ -562,7 +562,7 @@
    "started": 40,
    "cleared": 40,
    "rate": 1.0,
-   "attempts": 1.03,
+   "attempts": 1.02,
    "over_moves": 4.6,
    "secs": 21.2,
    "items": 0.05
@@ -1373,7 +1373,7 @@
    "cleared": 16,
    "rate": 1.0,
    "attempts": 1.06,
-   "over_moves": 1.88,
+   "over_moves": 1.87,
    "secs": 14.5,
    "items": 0.06
   },
@@ -1460,148 +1460,148 @@
   {
    "lv": 143,
    "started": 11,
-   "cleared": 10,
-   "rate": 0.9090909090909091,
-   "attempts": 1.1,
-   "over_moves": 12.6,
-   "secs": 29.8,
-   "items": 0.1
+   "cleared": 11,
+   "rate": 1.0,
+   "attempts": 1.27,
+   "over_moves": 11.91,
+   "secs": 34.3,
+   "items": 0.27
   },
   {
    "lv": 144,
-   "started": 10,
-   "cleared": 10,
+   "started": 11,
+   "cleared": 11,
    "rate": 1.0,
    "attempts": 1.0,
-   "over_moves": 1.1,
+   "over_moves": 1.09,
    "secs": 12.1,
    "items": 0.0
   },
   {
    "lv": 145,
-   "started": 10,
-   "cleared": 10,
+   "started": 11,
+   "cleared": 11,
    "rate": 1.0,
-   "attempts": 1.1,
-   "over_moves": 4.1,
-   "secs": 21.3,
-   "items": 0.1
+   "attempts": 1.09,
+   "over_moves": 4.18,
+   "secs": 20.8,
+   "items": 0.09
   },
   {
    "lv": 146,
-   "started": 10,
-   "cleared": 10,
+   "started": 11,
+   "cleared": 11,
    "rate": 1.0,
-   "attempts": 1.1,
-   "over_moves": 12.2,
-   "secs": 37.5,
-   "items": 0.3
+   "attempts": 1.09,
+   "over_moves": 11.91,
+   "secs": 36.5,
+   "items": 0.27
   },
   {
    "lv": 147,
-   "started": 10,
-   "cleared": 10,
+   "started": 11,
+   "cleared": 11,
    "rate": 1.0,
    "attempts": 1.0,
-   "over_moves": 1.3,
-   "secs": 11.3,
+   "over_moves": 1.27,
+   "secs": 11.8,
    "items": 0.0
   },
   {
    "lv": 148,
-   "started": 10,
-   "cleared": 10,
+   "started": 11,
+   "cleared": 11,
    "rate": 1.0,
-   "attempts": 1.3,
-   "over_moves": 6.7,
+   "attempts": 1.27,
+   "over_moves": 6.18,
    "secs": 28.1,
-   "items": 0.3
+   "items": 0.27
   },
   {
    "lv": 149,
-   "started": 10,
-   "cleared": 10,
+   "started": 11,
+   "cleared": 11,
    "rate": 1.0,
    "attempts": 1.0,
-   "over_moves": 6.4,
-   "secs": 18.9,
+   "over_moves": 6.27,
+   "secs": 19.1,
    "items": 0.0
   },
   {
    "lv": 150,
-   "started": 10,
-   "cleared": 10,
+   "started": 11,
+   "cleared": 11,
    "rate": 1.0,
    "attempts": 1.0,
-   "over_moves": 3.9,
-   "secs": 12.9,
+   "over_moves": 3.55,
+   "secs": 12.5,
    "items": 0.0
   },
   {
    "lv": 151,
-   "started": 10,
-   "cleared": 10,
+   "started": 11,
+   "cleared": 11,
    "rate": 1.0,
    "attempts": 1.0,
-   "over_moves": 4.1,
-   "secs": 22.5,
+   "over_moves": 4.0,
+   "secs": 22.7,
    "items": 0.0
   },
   {
    "lv": 152,
-   "started": 10,
-   "cleared": 10,
+   "started": 11,
+   "cleared": 11,
    "rate": 1.0,
    "attempts": 1.0,
-   "over_moves": 7.3,
-   "secs": 487.2,
-   "items": 0.1
+   "over_moves": 6.91,
+   "secs": 444.7,
+   "items": 0.09
   },
   {
    "lv": 153,
-   "started": 10,
-   "cleared": 9,
-   "rate": 0.9,
+   "started": 11,
+   "cleared": 10,
+   "rate": 0.9090909090909091,
    "attempts": 1.0,
-   "over_moves": 4.22,
-   "secs": 19.8,
+   "over_moves": 3.8,
+   "secs": 19.1,
    "items": 0.0
   },
   {
    "lv": 154,
-   "started": 9,
-   "cleared": 9,
+   "started": 10,
+   "cleared": 10,
    "rate": 1.0,
-   "attempts": 1.11,
-   "over_moves": 2.89,
-   "secs": 32.3,
-   "items": 0.33
+   "attempts": 1.1,
+   "over_moves": 2.6,
+   "secs": 30.3,
+   "items": 0.3
   },
   {
    "lv": 155,
-   "started": 9,
-   "cleared": 8,
-   "rate": 0.8888888888888888,
-   "attempts": 1.0,
-   "over_moves": 6.0,
-   "secs": 30.9,
-   "items": 0.0
+   "started": 10,
+   "cleared": 9,
+   "rate": 0.9,
+   "attempts": 1.11,
+   "over_moves": 6.22,
+   "secs": 34.9,
+   "items": 0.11
   },
   {
    "lv": 156,
-   "started": 8,
-   "cleared": 8,
+   "started": 9,
+   "cleared": 9,
    "rate": 1.0,
-   "attempts": 1.25,
-   "over_moves": 16.38,
-   "secs": 39.1,
-   "items": 0.25
+   "attempts": 1.22,
+   "over_moves": 14.78,
+   "secs": 36.1,
+   "items": 0.22
   },
   {
    "lv": 157,
-   "started": 8,
+   "started": 9,
    "cleared": 8,
-   "rate": 1.0,
+   "rate": 0.8888888888888888,
    "attempts": 1.25,
    "over_moves": 8.38,
    "secs": 39.3,
@@ -3266,6 +3266,306 @@
    "over_moves": 4.0,
    "secs": 13.0,
    "items": 0.0
+  },
+  {
+   "lv": 324,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 2.0,
+   "secs": 22.0,
+   "items": 0.0
+  },
+  {
+   "lv": 325,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 10.0,
+   "secs": 27.0,
+   "items": 0.0
+  },
+  {
+   "lv": 326,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 10.0,
+   "secs": 56.0,
+   "items": 0.0
+  },
+  {
+   "lv": 327,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 16.0,
+   "secs": 59.0,
+   "items": 0.0
+  },
+  {
+   "lv": 328,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 3.0,
+   "secs": 25.0,
+   "items": 0.0
+  },
+  {
+   "lv": 329,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 7.0,
+   "secs": 25.0,
+   "items": 0.0
+  },
+  {
+   "lv": 330,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 20.0,
+   "secs": 54.0,
+   "items": 0.0
+  },
+  {
+   "lv": 331,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 3.0,
+   "secs": 20.0,
+   "items": 0.0
+  },
+  {
+   "lv": 332,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 2.0,
+   "secs": 16.0,
+   "items": 0.0
+  },
+  {
+   "lv": 333,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 6.0,
+   "secs": 21.0,
+   "items": 0.0
+  },
+  {
+   "lv": 334,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 5.0,
+   "secs": 19.0,
+   "items": 0.0
+  },
+  {
+   "lv": 336,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 3.0,
+   "secs": 16.0,
+   "items": 0.0
+  },
+  {
+   "lv": 337,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 10.0,
+   "secs": 31.0,
+   "items": 0.0
+  },
+  {
+   "lv": 338,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 3.0,
+   "secs": 17.0,
+   "items": 0.0
+  },
+  {
+   "lv": 339,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 3.0,
+   "secs": 16.0,
+   "items": 0.0
+  },
+  {
+   "lv": 340,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 2.0,
+   "secs": 13.0,
+   "items": 0.0
+  },
+  {
+   "lv": 343,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 6.0,
+   "secs": 22.0,
+   "items": 0.0
+  },
+  {
+   "lv": 344,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 9.0,
+   "secs": 32.0,
+   "items": 0.0
+  },
+  {
+   "lv": 345,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 5.0,
+   "secs": 29.0,
+   "items": 0.0
+  },
+  {
+   "lv": 346,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 1.0,
+   "secs": 11.0,
+   "items": 0.0
+  },
+  {
+   "lv": 347,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 9.0,
+   "secs": 31.0,
+   "items": 0.0
+  },
+  {
+   "lv": 348,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 24.0,
+   "secs": 45.0,
+   "items": 0.0
+  },
+  {
+   "lv": 351,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 5.0,
+   "secs": 26.0,
+   "items": 0.0
+  },
+  {
+   "lv": 352,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 6.0,
+   "secs": 38.0,
+   "items": 0.0
+  },
+  {
+   "lv": 353,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 6.0,
+   "secs": 48.0,
+   "items": 0.0
+  },
+  {
+   "lv": 354,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 12.0,
+   "secs": 38.0,
+   "items": 0.0
+  },
+  {
+   "lv": 355,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 8.0,
+   "secs": 43.0,
+   "items": 0.0
+  },
+  {
+   "lv": 356,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 3.0,
+   "secs": 16.0,
+   "items": 0.0
+  },
+  {
+   "lv": 357,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 3.0,
+   "secs": 13.0,
+   "items": 0.0
+  },
+  {
+   "lv": 358,
+   "started": 1,
+   "cleared": 1,
+   "rate": 1.0,
+   "attempts": 1.0,
+   "over_moves": 14.0,
+   "secs": 30.0,
+   "items": 0.0
   }
  ],
  "stuck": [
@@ -3276,25 +3576,13 @@
    "hints": 1.33
   },
   {
-   "lv": 11,
+   "lv": 135,
    "n": 1,
-   "attempts": 1.0,
-   "hints": 2.0
+   "attempts": 3.0,
+   "hints": 0.0
   },
   {
    "lv": 16,
-   "n": 1,
-   "attempts": 3.0,
-   "hints": 0.0
-  },
-  {
-   "lv": 133,
-   "n": 1,
-   "attempts": 3.0,
-   "hints": 0.0
-  },
-  {
-   "lv": 135,
    "n": 1,
    "attempts": 3.0,
    "hints": 0.0
@@ -3310,17 +3598,29 @@
    "n": 1,
    "attempts": 3.0,
    "hints": 0.0
+  },
+  {
+   "lv": 11,
+   "n": 1,
+   "attempts": 1.0,
+   "hints": 2.0
+  },
+  {
+   "lv": 133,
+   "n": 1,
+   "attempts": 3.0,
+   "hints": 0.0
   }
  ],
  "fails": [
   {
    "lv": 32,
-   "users": 13,
-   "n": 16,
+   "users": 14,
+   "n": 17,
    "started": 81,
    "started_lim": 28,
-   "rate": 0.16049382716049382,
-   "rate_lim": 0.4642857142857143,
+   "rate": 0.1728395061728395,
+   "rate_lim": 0.5,
    "moves": 22.2,
    "lim": 22.2
   },
@@ -3537,12 +3837,23 @@
    "lv": 148,
    "users": 2,
    "n": 2,
-   "started": 10,
-   "started_lim": 2,
-   "rate": 0.2,
-   "rate_lim": 1.0,
+   "started": 11,
+   "started_lim": 3,
+   "rate": 0.18181818181818182,
+   "rate_lim": 0.6666666666666666,
    "moves": 21.0,
    "lim": 21.0
+  },
+  {
+   "lv": 157,
+   "users": 2,
+   "n": 2,
+   "started": 9,
+   "started_lim": 2,
+   "rate": 0.2222222222222222,
+   "rate_lim": 1.0,
+   "moves": 25.0,
+   "lim": 25.0
   },
   {
    "lv": 10,
@@ -3631,23 +3942,12 @@
    "rate_lim": 0.14285714285714285,
    "moves": 19.0,
    "lim": 19.0
-  },
-  {
-   "lv": 73,
-   "users": 1,
-   "n": 1,
-   "started": 27,
-   "started_lim": 7,
-   "rate": 0.037037037037037035,
-   "rate_lim": 0.14285714285714285,
-   "moves": 19.0,
-   "lim": 19.0
   }
  ],
  "fail_summary": [
   {
-   "fail_users": 25,
-   "fails": 101,
+   "fail_users": 26,
+   "fails": 104,
    "players": 285,
    "buy_gem": 22,
    "buy_ad": 1,
@@ -3658,14 +3958,14 @@
   {
    "opened": 228,
    "finished": 89,
-   "pictures": 218
+   "pictures": 219
   }
  ],
  "shop_funnel": [
   {
    "step": "shop_open",
    "users": 27,
-   "n": 102
+   "n": 103
   },
   {
    "step": "purchase_start",
@@ -3690,20 +3990,20 @@
    "kind": "reward",
    "placement": "moves",
    "result": "no_ad",
-   "n": 7,
+   "n": 8,
    "users": 4
-  },
-  {
-   "kind": "reward",
-   "placement": "moves",
-   "result": "earned",
-   "n": 1,
-   "users": 1
   },
   {
    "kind": "reward",
    "placement": "heart",
    "result": "dismissed",
+   "n": 1,
+   "users": 1
+  },
+  {
+   "kind": "reward",
+   "placement": "moves",
+   "result": "earned",
    "n": 1,
    "users": 1
   }
@@ -3718,10 +4018,10 @@
   },
   {
    "kind": "reward",
-   "shows": 9,
+   "shows": 10,
    "users": 6,
-   "failed": 7,
-   "fail_rate": 0.778
+   "failed": 8,
+   "fail_rate": 0.8
   }
  ],
  "boosters": [
@@ -3751,17 +4051,17 @@
    "n": 3
   },
   {
-   "kind": "undo",
-   "source": "gem",
-   "n": 2
-  },
-  {
    "kind": "hint",
    "source": "gem",
    "n": 2
   },
   {
-   "kind": "tow",
+   "kind": "undo",
+   "source": "gem",
+   "n": 2
+  },
+  {
+   "kind": "heart",
    "source": "gem",
    "n": 1
   },
@@ -3771,7 +4071,7 @@
    "n": 1
   },
   {
-   "kind": "heart",
+   "kind": "tow",
    "source": "gem",
    "n": 1
   }
@@ -3802,6 +4102,10 @@
    "n": 7
   },
   {
+   "lv": 157,
+   "n": 6
+  },
+  {
    "lv": 69,
    "n": 6
   },
@@ -3827,8 +4131,8 @@
    "d": [
     {
      "n": 1,
-     "u": 5,
-     "rate": 0.156
+     "u": 7,
+     "rate": 0.219
     }
    ]
   },
@@ -3843,8 +4147,8 @@
     },
     {
      "n": 2,
-     "u": 11,
-     "rate": 0.145
+     "u": 13,
+     "rate": 0.171
     }
    ]
   },
@@ -3921,8 +4225,8 @@
     },
     {
      "n": 5,
-     "u": 1,
-     "rate": 0.013
+     "u": 2,
+     "rate": 0.026
     }
    ]
   },
@@ -3940,12 +4244,12 @@
  "versions": [
   {
    "ver": "1.0 (v46)",
-   "users": 148,
-   "avg_lv_1h": 13.4,
-   "avg_clears_1h": 11.1,
-   "lv1_rate": 0.845,
-   "remove_rate": 0.466,
-   "avg_mins": 321.1
+   "users": 149,
+   "avg_lv_1h": 13.3,
+   "avg_clears_1h": 11.0,
+   "lv1_rate": 0.846,
+   "remove_rate": 0.477,
+   "avg_mins": 383.2
   },
   {
    "ver": "1.0 (v36)",
@@ -3954,7 +4258,7 @@
    "avg_clears_1h": 16.9,
    "lv1_rate": 0.903,
    "remove_rate": 0.516,
-   "avg_mins": 1276.4
+   "avg_mins": 1278.8
   },
   {
    "ver": "1.0 (v35)",
@@ -3967,12 +4271,12 @@
   },
   {
    "ver": "1.0 (v29)",
-   "users": 81,
-   "avg_lv_1h": 26.7,
-   "avg_clears_1h": 23.1,
-   "lv1_rate": 0.901,
-   "remove_rate": 0.481,
-   "avg_mins": 752.1
+   "users": 80,
+   "avg_lv_1h": 27.1,
+   "avg_clears_1h": 23.4,
+   "lv1_rate": 0.9,
+   "remove_rate": 0.487,
+   "avg_mins": 699.7
   },
   {
    "ver": "1.0 (v28)",
@@ -4011,7 +4315,7 @@
   {
    "band": 21,
    "users": 104,
-   "clears": 961,
+   "clears": 962,
    "median_secs": 6.0,
    "over_moves": 1.3
   },
@@ -4095,16 +4399,16 @@
   {
    "band": 141,
    "users": 12,
-   "clears": 103,
+   "clears": 111,
    "median_secs": 19.0,
-   "over_moves": 7.9
+   "over_moves": 7.5
   },
   {
    "band": 151,
-   "users": 10,
-   "clears": 83,
+   "users": 11,
+   "clears": 89,
    "median_secs": 20.0,
-   "over_moves": 6.4
+   "over_moves": 6.1
   },
   {
    "band": 161,
@@ -4221,9 +4525,30 @@
   {
    "band": 321,
    "users": 1,
-   "clears": 3,
-   "median_secs": 13.0,
-   "over_moves": 3.7
+   "clears": 10,
+   "median_secs": 25.0,
+   "over_moves": 7.9
+  },
+  {
+   "band": 331,
+   "users": 1,
+   "clears": 10,
+   "median_secs": 16.0,
+   "over_moves": 3.9
+  },
+  {
+   "band": 341,
+   "users": 1,
+   "clears": 10,
+   "median_secs": 29.0,
+   "over_moves": 7.8
+  },
+  {
+   "band": 351,
+   "users": 1,
+   "clears": 8,
+   "median_secs": 30.0,
+   "over_moves": 7.1
   }
  ],
  "risk": [],
@@ -4258,7 +4583,7 @@
   },
   {
    "step": "first_fail",
-   "users": 25
+   "users": 26
   },
   {
    "step": "first_undo",
@@ -4273,11 +4598,11 @@
    "users": 8
   },
   {
-   "step": "nudge_shown",
+   "step": "lang_change",
    "users": 7
   },
   {
-   "step": "lang_change",
+   "step": "nudge_shown",
    "users": 7
   },
   {
@@ -4285,11 +4610,11 @@
    "users": 7
   },
   {
-   "step": "first_heart",
+   "step": "first_skip",
    "users": 1
   },
   {
-   "step": "first_skip",
+   "step": "first_heart",
    "users": 1
   }
  ],
@@ -4297,7 +4622,7 @@
   {
    "country": "Iran",
    "users": 211,
-   "avg_lv": 36.7,
+   "avg_lv": 36.9,
    "cleared_any": 196,
    "buys": 0,
    "vpn": 48
@@ -4311,14 +4636,6 @@
    "vpn": 4
   },
   {
-   "country": "South Korea",
-   "users": 2,
-   "avg_lv": 0.0,
-   "cleared_any": 0,
-   "buys": 0,
-   "vpn": 0
-  },
-  {
    "country": "Chile",
    "users": 2,
    "avg_lv": 7.5,
@@ -4327,10 +4644,10 @@
    "vpn": 2
   },
   {
-   "country": "Philippines",
-   "users": 1,
-   "avg_lv": 7.0,
-   "cleared_any": 1,
+   "country": "South Korea",
+   "users": 2,
+   "avg_lv": 0.0,
+   "cleared_any": 0,
    "buys": 0,
    "vpn": 0
   },
@@ -4343,6 +4660,14 @@
    "vpn": 0
   },
   {
+   "country": "Qatar",
+   "users": 1,
+   "avg_lv": 1.0,
+   "cleared_any": 1,
+   "buys": 0,
+   "vpn": 1
+  },
+  {
    "country": "Turkmenistan",
    "users": 1,
    "avg_lv": 17.0,
@@ -4351,12 +4676,12 @@
    "vpn": 1
   },
   {
-   "country": "Qatar",
+   "country": "Thailand",
    "users": 1,
-   "avg_lv": 1.0,
-   "cleared_any": 1,
+   "avg_lv": 0.0,
+   "cleared_any": 0,
    "buys": 0,
-   "vpn": 1
+   "vpn": 0
   },
   {
    "country": "United States",
@@ -4367,10 +4692,10 @@
    "vpn": 0
   },
   {
-   "country": "Thailand",
+   "country": "Philippines",
    "users": 1,
-   "avg_lv": 0.0,
-   "cleared_any": 0,
+   "avg_lv": 7.0,
+   "cleared_any": 1,
    "buys": 0,
    "vpn": 0
   }
@@ -4638,7 +4963,7 @@
  "shop_kinds": [
   {
    "kind": "gem",
-   "opens": 57,
+   "opens": 58,
    "users": 20
   },
   {
@@ -4775,9 +5100,9 @@
   },
   {
    "band": 151,
-   "players": 10,
+   "players": 11,
    "stuck": 0,
-   "out_of_hearts": 0,
+   "out_of_hearts": 6,
    "buys": 0,
    "gems": 0
   },
@@ -4911,6 +5236,30 @@
   },
   {
    "band": 321,
+   "players": 1,
+   "stuck": 0,
+   "out_of_hearts": 0,
+   "buys": 0,
+   "gems": 0
+  },
+  {
+   "band": 331,
+   "players": 1,
+   "stuck": 0,
+   "out_of_hearts": 0,
+   "buys": 0,
+   "gems": 0
+  },
+  {
+   "band": 341,
+   "players": 1,
+   "stuck": 0,
+   "out_of_hearts": 0,
+   "buys": 0,
+   "gems": 0
+  },
+  {
+   "band": 351,
    "players": 1,
    "stuck": 0,
    "out_of_hearts": 0,
