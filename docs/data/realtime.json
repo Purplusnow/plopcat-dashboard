@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16 07:55 KST",
+ "updated": "2026-10-16 09:59 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261016",
@@ -49,12 +49,12 @@
   {
    "key": "game_open",
    "label": "게임 진입",
-   "users": 0
+   "users": 1
   },
   {
    "key": "first_move",
    "label": "첫 수",
-   "users": 0
+   "users": 1
   },
   {
    "key": "lv1_clear",
@@ -98,6 +98,56 @@
   }
  ],
  "users": [
+  {
+   "uid": "5f310777",
+   "t0": "09:27",
+   "mins": 0.2,
+   "model": "Moto G35 5G",
+   "country": "Brazil",
+   "city": "Campinas",
+   "lang": "pt-br",
+   "ver": "1.0 (v46)",
+   "new": true,
+   "vpn": false,
+   "lv": 0,
+   "started": 1,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 3,
+   "side": [
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "857b798e",
+   "t0": "09:18",
+   "mins": 0.0,
+   "model": "Moto G75 5G",
+   "country": "Brazil",
+   "city": "Votuporanga",
+   "lang": "pt-br",
+   "ver": "1.0 (v46)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
   {
    "uid": "ebd89939",
    "t0": "07:32",
@@ -225,7 +275,7 @@
   {
    "uid": "2cd5107c",
    "t0": "05:47",
-   "mins": 0.4,
+   "mins": 143.8,
    "model": "SM-A156M",
    "country": "Brazil",
    "city": "Manaus",
@@ -238,7 +288,7 @@
    "clears": 0,
    "stuck": 0,
    "ads": 0,
-   "shops": 1,
+   "shops": 2,
    "buys": 0,
    "removed": false,
    "abuse": 0,
@@ -519,7 +569,7 @@
   {
    "uid": "bf93af8c",
    "t0": "01:08",
-   "mins": 83.8,
+   "mins": 528.0,
    "model": "Moto G06",
    "country": "Brazil",
    "city": "Manaus",
@@ -532,7 +582,7 @@
    "clears": 1,
    "stuck": 0,
    "ads": 0,
-   "shops": 0,
+   "shops": 1,
    "buys": 0,
    "removed": false,
    "abuse": 0,
@@ -622,18 +672,18 @@
   }
  ],
  "kinds": {
-  "human": 21,
+  "human": 23,
   "bot": 6,
   "me": 0,
   "dbg": 0
  },
  "bots": 6,
- "humans": 21,
+ "humans": 23,
  "versions": [
   {
    "ver": "1.0 (v46)",
-   "users": 15,
-   "installs": 1
+   "users": 17,
+   "installs": 2
   },
   {
    "ver": "1.0 (v36)",
@@ -654,7 +704,7 @@
   },
   {
    "country": "Brazil",
-   "users": 6,
+   "users": 8,
    "vpn": 1
   },
   {
@@ -668,6 +718,12 @@
    "vpn": 1
   }
  ],
- "purchase_fail": [],
+ "purchase_fail": [
+  {
+   "reason": "canceled",
+   "n": 1,
+   "users": 1
+  }
+ ],
  "abuse": []
 }
