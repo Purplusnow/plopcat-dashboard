@@ -107,7 +107,29 @@ setTimeout(() => {
         if (anyNA && !/coh-na/.test(rc))
           fails.push("리텐션에 '아직 안 온 날' 칸이 없다 — 0% 로 그리면 급락으로 보인다");
       } catch (e) { fails.push("리텐션 검사 실패: " + e.message); }
-      const want = ["kpi", "levelTable", "retChart", "verTable", "rt-reach", "rev-table"];
+      // ★DAU 선차트도 **그려진 결과**로 본다. 형 요청(2026-10-17)이 "선차트 + Y축 숫자"라,
+      //   그 둘이 실제로 출력에 들어갔는지 확인한다. 소스를 뒤지면 주석에 걸려 통과한다.
+      const dc = (store["dauChart"] || {}).innerHTML || "";
+      try {
+        const ig = JSON.parse(fs.readFileSync(path.join(DOCS, "data/ingame.json"), "utf8"));
+        const da = ig.daily_active || [];
+        if (da.length) {
+          if (!/<svg/.test(dc)) fails.push("DAU 차트가 SVG 가 아니다 — 선차트로 안 그려졌다");
+          if (!/<polyline/.test(dc)) fails.push("DAU 차트에 선(polyline)이 없다");
+          if (!/<text[^>]*font-size="11"[^>]*>\d/.test(dc))
+            fails.push("DAU 차트에 **Y축 눈금 숫자**가 없다");
+          // 꼭대기 눈금이 최댓값보다 **작으면** 선이 차트를 뚫고 나간다
+          const maxV = Math.max(...da.map(r => Math.max(r.dau || 0, r.new_users || 0)));
+          const ticks = [...dc.matchAll(/text-anchor="end"[^>]*>([\d,]+)</g)]
+            .map(m => +m[1].replace(/,/g, ""));
+          if (ticks.length < 2) fails.push("Y축 눈금이 2개 미만이다");
+          else if (Math.max(...ticks) < maxV)
+            fails.push(`Y축 꼭대기(${Math.max(...ticks)})가 최댓값(${maxV})보다 작다 — 선이 잘린다`);
+        }
+      } catch (e) { fails.push("DAU 차트 검사 실패: " + e.message); }
+
+      const want = ["kpi", "levelTable", "retChart", "verTable", "rt-reach", "rev-table",
+                    "dauChart", "dauTable"];
       for (const id of want) {
         const e = store[id];
         if (!e || (!e.innerHTML && !e.textContent))

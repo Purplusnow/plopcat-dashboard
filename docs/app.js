@@ -176,37 +176,77 @@ fetch("data/ingame.json?" + Date.now()).then(r => r.json()).then(d => {
     }
   }
 
-  // ★일별 DAU — 막대는 DAU, 표에 신규·삭제를 같이 둔다.
-  //   KPI 의 dau 는 오늘 한 숫자뿐이라 "늘고 있나"를 사람이 기억해야 했다.
+  // ★일별 DAU — **선차트**(형 요청 2026-10-17). Y축에 눈금 숫자를 적는다.
+  //   막대로는 "어느 날이 몇 명인지"를 읽을 수 없었다 — 높이만 보이고 값이 없었다.
+  //   라이브러리를 쓰지 않는다. 정적 페이지라 인라인 SVG 가 가장 가볍고 안 깨진다.
   {
     const da = d.daily_active || [];
-    const top = Math.max(1, ...da.map(r => r.dau || 0));
-    $("dauChart").innerHTML = da.map(r => {
-      const h = Math.max(2, (r.dau || 0) / top * 100);
-      return `<i style="height:${h}%" title="${r.day} · DAU ${n(r.dau)}`
-           + ` · 신규 ${n(r.new_users)} · 삭제 ${n(r.removed)}"></i>`;
-    }).join("");
-    // 날짜 축 — 전부 적으면 뭉개지므로 처음·중간·끝만
-    const md = s => s ? `${s.slice(4, 6)}-${s.slice(6, 8)}` : "";
-    $("dauAxis").innerHTML = da.length
-      ? `<span>${md(da[0].day)}</span><span>${md(da[Math.floor(da.length / 2)].day)}</span>`
-        + `<span>${md(da[da.length - 1].day)}</span>`
-      : "";
     const el = $("dauLead");
-    if (el) {
-      if (!da.length) el.textContent = "아직 데이터가 없다";
-      else {
-        const last = da[da.length - 1], prev = da[da.length - 2];
-        // ★오늘은 **아직 하루가 안 갔다** — 어제와 그냥 비교하면 늘 '줄었다'로 보인다.
+    if (!da.length) {
+      $("dauChart").innerHTML = "";
+      $("dauAxis").innerHTML = "";
+      if (el) el.textContent = "아직 데이터가 없다";
+    } else {
+      const W = 760, H = 210, PL = 44, PR = 14, PT = 14, PB = 30;
+      const maxV = Math.max(1, ...da.map(r => Math.max(r.dau || 0, r.new_users || 0)));
+      // ★눈금을 **읽기 좋은 수**로 올린다. 107 같은 꼭대기에 선을 그으면 눈금이
+      //   107/53.5/0 처럼 나와서 읽히지 않는다.
+      const STEPS = [1, 2, 5, 10, 20, 25, 50, 100, 200, 250, 500, 1000];
+      const step = STEPS.find(v => maxV / v <= 5) || 2000;
+      const top = Math.max(step, Math.ceil(maxV / step) * step);
+      const px = i => PL + (W - PL - PR) * (da.length <= 1 ? 0.5 : i / (da.length - 1));
+      const py = v => PT + (H - PT - PB) * (1 - v / top);
+      const md = t => t ? `${t.slice(4, 6)}-${t.slice(6, 8)}` : "";
+
+      let g = "";
+      for (let v = 0; v <= top; v += step) {
+        g += `<line x1="${PL}" y1="${py(v)}" x2="${W - PR}" y2="${py(v)}"`
+           + ` stroke="#302b42" stroke-width="1"/>`
+           + `<text x="${PL - 8}" y="${py(v) + 4}" text-anchor="end"`
+           + ` fill="#6b7a90" font-size="11">${n(v)}</text>`;
+      }
+      const line = (key, color, w, dash) =>
+        `<polyline fill="none" stroke="${color}" stroke-width="${w}"`
+        + (dash ? ` stroke-dasharray="${dash}"` : "")
+        + ` stroke-linejoin="round" stroke-linecap="round" points="`
+        + da.map((r, i) => `${px(i).toFixed(1)},${py(r[key] || 0).toFixed(1)}`).join(" ")
+        + `"/>`;
+      // 점 — 값이 궁금한 날은 짚어 보게 한다(title 로 그날 전부를 띄운다)
+      const dots = da.map((r, i) =>
+        `<circle cx="${px(i).toFixed(1)}" cy="${py(r.dau || 0).toFixed(1)}" r="3.5"`
+        + ` fill="#57b94a"><title>${md(r.day)} · DAU ${n(r.dau)}`
+        + ` · 신규 ${n(r.new_users)} · 삭제 ${n(r.removed)}</title></circle>`).join("");
+      // ★마지막 점은 **오늘**이라 아직 차는 중이다. 속 빈 점으로 구분해 둔다 —
+      //   안 그러면 갱신할 때마다 '꺾였다'로 읽힌다(리텐션에서 이미 겪은 함정).
+      const lastI = da.length - 1;
+      const live = `<circle cx="${px(lastI).toFixed(1)}" cy="${py(da[lastI].dau || 0).toFixed(1)}"`
+                 + ` r="5" fill="#14121c" stroke="#57b94a" stroke-width="2"/>`;
+      const xlab = da.map((r, i) =>
+        (da.length <= 8 || i === 0 || i === lastI || i % Math.ceil(da.length / 6) === 0)
+          ? `<text x="${px(i).toFixed(1)}" y="${H - 10}" text-anchor="middle"`
+            + ` fill="#6b7a90" font-size="11">${md(r.day)}</text>` : "").join("");
+
+      $("dauChart").innerHTML =
+        `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none"`
+        + ` style="width:100%;height:230px;display:block">`
+        + g + line("new_users", "#9b7ddb", 1.5, "4 3") + line("dau", "#57b94a", 2.5, "")
+        + dots + live + xlab + `</svg>`;
+      $("dauAxis").innerHTML =
+        `<i style="flex:none;color:#57b94a">━ DAU(접속)</i>`
+        + `<i style="flex:none;color:#9b7ddb">┄ 신규 설치</i>`
+        + `<i style="flex:none">○ 마지막 점 = 오늘, 아직 차는 중</i>`;
+
+      if (el) {
+        const last = da[lastI], prev = da[lastI - 1];
         const dir = prev ? (last.dau >= prev.dau ? "↑" : "↓") : "";
-        el.innerHTML = `최근 ${n(last.dau)}명 ${dir}`
+        el.innerHTML = `최근 <b>${n(last.dau)}명</b> ${dir}`
           + (prev ? ` <span class="dim">(직전 ${n(prev.dau)})</span>` : "")
-          + ` · 최고 ${n(top)}명`
-          + ` <span class="dim">— 마지막 막대는 오늘이라 아직 차는 중이다</span>`;
+          + ` · 최고 <b>${n(maxV)}명</b>`;
       }
     }
+    const md2 = t => t ? `${t.slice(4, 6)}-${t.slice(6, 8)}` : "";
     table($("dauTable"), da.slice().reverse(), [
-      ["날짜", r => md(r.day)],
+      ["날짜", r => md2(r.day)],
       ["DAU", r => n(r.dau)],
       ["신규", r => n(r.new_users)],
       ["삭제", r => r.removed ? `<b class="bad-t">${n(r.removed)}</b>` : "0"],
