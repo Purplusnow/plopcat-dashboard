@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-18 01:06 KST",
+ "updated": "2026-10-18 01:20 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261017",
@@ -937,14 +937,14 @@
    "installs": 0
   },
   {
-   "ver": "1.0 (v29)",
-   "users": 6,
-   "installs": 0
-  },
-  {
    "ver": "1.0 (v47)",
    "users": 6,
    "installs": 1
+  },
+  {
+   "ver": "1.0 (v29)",
+   "users": 6,
+   "installs": 0
   }
  ],
  "countries": [
