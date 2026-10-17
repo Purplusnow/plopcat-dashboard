@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17 09:07 KST",
+ "updated": "2026-10-17 13:47 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261017",
@@ -49,7 +49,7 @@
   {
    "key": "game_open",
    "label": "게임 진입",
-   "users": 0
+   "users": 1
   },
   {
    "key": "first_move",
@@ -98,6 +98,81 @@
   }
  ],
  "users": [
+  {
+   "uid": "00a55b43",
+   "t0": "12:53",
+   "mins": 31.9,
+   "model": "STK-L21",
+   "country": "Iran",
+   "city": "Shiraz",
+   "lang": "fa-ir",
+   "ver": "1.0 (v36)",
+   "new": false,
+   "vpn": false,
+   "lv": 411,
+   "started": 412,
+   "clears": 53,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "bf93af8c",
+   "t0": "10:43",
+   "mins": 0.6,
+   "model": "Moto G06",
+   "country": "Brazil",
+   "city": "Manaus",
+   "lang": "pt-br",
+   "ver": "1.0 (v46)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "8d239a48",
+   "t0": "09:42",
+   "mins": 0.7,
+   "model": "SM-A075M",
+   "country": "Brazil",
+   "city": "Ananindeua",
+   "lang": "pt-br",
+   "ver": "1.0 (v46)",
+   "new": true,
+   "vpn": false,
+   "lv": 0,
+   "started": 1,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 1,
+   "side": [
+    "lang_change",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
   {
    "uid": "2907f82b",
    "t0": "06:14",
@@ -319,7 +394,7 @@
   {
    "uid": "2cd5107c",
    "t0": "01:19",
-   "mins": 281.0,
+   "mins": 580.2,
    "model": "SM-A156M",
    "country": "Brazil",
    "city": "Manaus",
@@ -327,11 +402,11 @@
    "ver": "1.0 (v47)",
    "new": false,
    "vpn": false,
-   "lv": 51,
-   "started": 52,
-   "clears": 20,
+   "lv": 56,
+   "started": 57,
+   "clears": 25,
    "stuck": 1,
-   "ads": 2,
+   "ads": 3,
    "shops": 4,
    "buys": 0,
    "removed": false,
@@ -473,18 +548,18 @@
   }
  ],
  "kinds": {
-  "human": 15,
+  "human": 18,
   "bot": 0,
   "me": 0,
   "dbg": 0
  },
  "bots": 0,
- "humans": 15,
+ "humans": 18,
  "versions": [
   {
    "ver": "1.0 (v46)",
-   "users": 5,
-   "installs": 0
+   "users": 7,
+   "installs": 1
   },
   {
    "ver": "1.0 (v29)",
@@ -492,12 +567,12 @@
    "installs": 0
   },
   {
-   "ver": "1.0 (v47)",
-   "users": 3,
+   "ver": "1.0 (v36)",
+   "users": 4,
    "installs": 0
   },
   {
-   "ver": "1.0 (v36)",
+   "ver": "1.0 (v47)",
    "users": 3,
    "installs": 0
   }
@@ -505,12 +580,12 @@
  "countries": [
   {
    "country": "Iran",
-   "users": 12,
+   "users": 13,
    "vpn": 0
   },
   {
    "country": "Brazil",
-   "users": 3,
+   "users": 5,
    "vpn": 0
   }
  ],
