@@ -2,6 +2,24 @@
  "date": "2026-10-17",
  "users": [
   {
+   "uid": "6f6de109",
+   "model": "Moto G52",
+   "country": "Brazil",
+   "lang": "pt-br",
+   "ver": "1.0 (v47)",
+   "days": 1,
+   "last": "20261017",
+   "lv": 3,
+   "clears": 3,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 63
+  },
+  {
    "uid": "8d239a48",
    "model": "SM-A075M",
    "country": "Brazil",
