@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-18 06:11 KST",
+ "updated": "2026-10-18 08:17 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261018",
@@ -149,7 +149,7 @@
   {
    "uid": "bf93af8c",
    "t0": "04:24",
-   "mins": 52.0,
+   "mins": 53.3,
    "model": "Moto G06",
    "country": "Brazil",
    "city": "Manaus",
@@ -385,14 +385,14 @@
  "humans": 11,
  "versions": [
   {
-   "ver": "1.0 (v46)",
-   "users": 4,
-   "installs": 1
-  },
-  {
    "ver": "1.0 (v36)",
    "users": 4,
    "installs": 0
+  },
+  {
+   "ver": "1.0 (v46)",
+   "users": 4,
+   "installs": 1
   },
   {
    "ver": "1.0 (v47)",
