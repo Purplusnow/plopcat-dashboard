@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17 13:47 KST",
+ "updated": "2026-10-17 17:58 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261017",
@@ -99,6 +99,54 @@
  ],
  "users": [
   {
+   "uid": "ce7d53ac",
+   "t0": "17:15",
+   "mins": 0.7,
+   "model": "SM-A057F",
+   "country": "Iran",
+   "city": "Rasht",
+   "lang": "fa-ir",
+   "ver": "1.0 (v46)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "fb883493",
+   "t0": "16:40",
+   "mins": 1.6,
+   "model": "23129RAA4G",
+   "country": "Iran",
+   "city": "Zahedan",
+   "lang": "fa-ir",
+   "ver": "1.0 (v29)",
+   "new": false,
+   "vpn": false,
+   "lv": 30,
+   "started": 31,
+   "clears": 8,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
    "uid": "00a55b43",
    "t0": "12:53",
    "mins": 31.9,
@@ -195,6 +243,32 @@
    "abuse": 0,
    "reached": 0,
    "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "24cb56ed",
+   "t0": "05:20",
+   "mins": 584.2,
+   "model": "23117RA68G",
+   "country": "Iran",
+   "city": "Tehran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v46)",
+   "new": false,
+   "vpn": false,
+   "lv": 109,
+   "started": 109,
+   "clears": 44,
+   "stuck": 0,
+   "ads": 1,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [
+    "first_ad"
+   ],
    "kind": "human"
   },
   {
@@ -420,7 +494,7 @@
   {
    "uid": "7ed1c746",
    "t0": "00:50",
-   "mins": 1.8,
+   "mins": 929.6,
    "model": "23053RN02A",
    "country": "Iran",
    "city": null,
@@ -428,9 +502,9 @@
    "ver": "1.0 (v36)",
    "new": false,
    "vpn": false,
-   "lv": 31,
-   "started": 32,
-   "clears": 2,
+   "lv": 47,
+   "started": 48,
+   "clears": 18,
    "stuck": 0,
    "ads": 0,
    "shops": 0,
@@ -548,22 +622,22 @@
   }
  ],
  "kinds": {
-  "human": 18,
+  "human": 21,
   "bot": 0,
   "me": 0,
   "dbg": 0
  },
  "bots": 0,
- "humans": 18,
+ "humans": 21,
  "versions": [
   {
    "ver": "1.0 (v46)",
-   "users": 7,
+   "users": 9,
    "installs": 1
   },
   {
    "ver": "1.0 (v29)",
-   "users": 4,
+   "users": 5,
    "installs": 0
   },
   {
@@ -580,7 +654,7 @@
  "countries": [
   {
    "country": "Iran",
-   "users": 13,
+   "users": 16,
    "vpn": 0
   },
   {
