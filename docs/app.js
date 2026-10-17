@@ -227,8 +227,10 @@ fetch("data/ingame.json?" + Date.now()).then(r => r.json()).then(d => {
             + ` fill="#6b7a90" font-size="11">${md(r.day)}</text>` : "").join("");
 
       $("dauChart").innerHTML =
-        `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none"`
-        + ` style="width:100%;height:230px;display:block">`
+        // ★높이를 px 로 못 박지 않는다. viewBox 비율대로 늘어나게 두면
+        //   컨테이너 폭이 어떻든 눈금이 밖으로 새지 않는다.
+        `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet"`
+        + ` style="width:100%;height:auto;display:block">`
         + g + line("new_users", "#9b7ddb", 1.5, "4 3") + line("dau", "#57b94a", 2.5, "")
         + dots + live + xlab + `</svg>`;
       $("dauAxis").innerHTML =

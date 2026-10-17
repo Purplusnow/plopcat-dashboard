@@ -128,6 +128,19 @@ setTimeout(() => {
         }
       } catch (e) { fails.push("DAU 차트 검사 실패: " + e.message); }
 
+      // ★그릇이 맞는지. 레이아웃은 가짜 DOM 으로 못 재지만 **계약**은 볼 수 있다.
+      //   실측 사고(형 스크린샷 2026-10-17): 선차트를 .chartbox 에 넣었다.
+      //   그건 **막대용**이라 height:140px 고정 + display:flex 라서, 230px SVG 가
+      //   통째로 넘쳐 **Y축 눈금이 제목과 설명을 덮었다.** 그려지긴 해서 아무 검사도
+      //   안 걸렸고 형이 눈으로 찾았다.
+      const box = (html.match(/id="dauChart"[^>]*class="([^"]*)"/) || [])[1] || "";
+      if (/\bchartbox\b/.test(box))
+        fails.push("DAU 선차트가 .chartbox(막대용·높이고정 flex) 안에 있다 — 눈금이 넘친다");
+      if (!/\blinechart\b/.test(box))
+        fails.push("DAU 차트 그릇이 .linechart 가 아니다 — 높이를 SVG 가 정해야 한다");
+      if (/height:\s*\d+px/.test(dc))
+        fails.push("SVG 에 px 높이가 박혀 있다 — 그릇과 싸워서 넘칠 수 있다");
+
       const want = ["kpi", "levelTable", "retChart", "verTable", "rt-reach", "rev-table",
                     "dauChart", "dauTable"];
       for (const id of want) {
