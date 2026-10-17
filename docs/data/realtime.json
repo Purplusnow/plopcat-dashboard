@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17 21:48 KST",
+ "updated": "2026-10-18 01:06 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261017",
@@ -89,7 +89,7 @@
   {
    "key": "lv20_clear",
    "label": "20판",
-   "users": 2
+   "users": 4
   },
   {
    "key": "lv50_clear",
@@ -98,6 +98,126 @@
   }
  ],
  "users": [
+  {
+   "uid": "d5d92b67",
+   "t0": "23:27",
+   "mins": 0.5,
+   "model": "M2102J20SG",
+   "country": "Iran",
+   "city": "Tehran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v46)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "71a8983b",
+   "t0": "22:54",
+   "mins": 4.4,
+   "model": "2310FPCA4G",
+   "country": "Iran",
+   "city": "Tehran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v36)",
+   "new": false,
+   "vpn": false,
+   "lv": 21,
+   "started": 21,
+   "clears": 7,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 1,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 256,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "02591422",
+   "t0": "22:33",
+   "mins": 0.5,
+   "model": "2502FRA65G",
+   "country": "Iran",
+   "city": "Ahvaz",
+   "lang": "fa-ir",
+   "ver": "1.0 (v36)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 4,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "16235a11",
+   "t0": "22:26",
+   "mins": 0.3,
+   "model": "2201117TG",
+   "country": "Iran",
+   "city": "Tehran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v47)",
+   "new": false,
+   "vpn": false,
+   "lv": 19,
+   "started": 0,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "8bf33cb4",
+   "t0": "22:09",
+   "mins": 5.1,
+   "model": "JKM-LX1",
+   "country": "Iran",
+   "city": null,
+   "lang": "fa-ir",
+   "ver": "1.0 (v46)",
+   "new": false,
+   "vpn": false,
+   "lv": 20,
+   "started": 20,
+   "clears": 2,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 256,
+   "side": [],
+   "kind": "human"
+  },
   {
    "uid": "6f6de109",
    "t0": "21:47",
@@ -152,7 +272,7 @@
   {
    "uid": "0a1cd718",
    "t0": "21:02",
-   "mins": 4.5,
+   "mins": 13.0,
    "model": "SM-A515F",
    "country": "Iran",
    "city": "Isfahan",
@@ -160,9 +280,9 @@
    "ver": "1.0 (v36)",
    "new": false,
    "vpn": false,
-   "lv": 52,
-   "started": 53,
-   "clears": 8,
+   "lv": 64,
+   "started": 64,
+   "clears": 20,
    "stuck": 0,
    "ads": 0,
    "shops": 0,
@@ -170,6 +290,32 @@
    "removed": false,
    "abuse": 0,
    "reached": 512,
+   "side": [
+    "first_restart"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "d45a6be1",
+   "t0": "20:35",
+   "mins": 0.4,
+   "model": "SM-A705FN",
+   "country": "Iran",
+   "city": "Tehran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v47)",
+   "new": false,
+   "vpn": false,
+   "lv": 11,
+   "started": 0,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
    "side": [],
    "kind": "human"
   },
@@ -772,18 +918,23 @@
   }
  ],
  "kinds": {
-  "human": 27,
+  "human": 33,
   "bot": 2,
   "me": 0,
   "dbg": 0
  },
  "bots": 2,
- "humans": 27,
+ "humans": 33,
  "versions": [
   {
    "ver": "1.0 (v46)",
-   "users": 11,
+   "users": 13,
    "installs": 1
+  },
+  {
+   "ver": "1.0 (v36)",
+   "users": 8,
+   "installs": 0
   },
   {
    "ver": "1.0 (v29)",
@@ -791,20 +942,15 @@
    "installs": 0
   },
   {
-   "ver": "1.0 (v36)",
-   "users": 6,
-   "installs": 0
-  },
-  {
    "ver": "1.0 (v47)",
-   "users": 4,
+   "users": 6,
    "installs": 1
   }
  ],
  "countries": [
   {
    "country": "Iran",
-   "users": 21,
+   "users": 27,
    "vpn": 0
   },
   {
