@@ -1248,9 +1248,9 @@
    "model": "SM-A145M",
    "country": "Brazil",
    "lang": "pt-br",
-   "ver": "1.0 (v46)",
-   "days": 1,
-   "last": "20261014",
+   "ver": "1.0 (v47)",
+   "days": 2,
+   "last": "20261019",
    "lv": 0,
    "clears": 0,
    "stuck": 0,
@@ -1258,7 +1258,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 0
   },
   {
