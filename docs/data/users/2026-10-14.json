@@ -673,8 +673,8 @@
    "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v46)",
-   "days": 2,
-   "last": "20261016",
+   "days": 3,
+   "last": "20261018",
    "lv": 16,
    "clears": 16,
    "stuck": 0,
@@ -682,7 +682,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 127
   },
   {
