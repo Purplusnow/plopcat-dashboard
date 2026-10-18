@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19 02:11 KST",
+ "updated": "2026-10-19 03:14 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261019",
@@ -99,6 +99,30 @@
  ],
  "users": [
   {
+   "uid": "0a1cd718",
+   "t0": "02:47",
+   "mins": 0.0,
+   "model": "SM-A515F",
+   "country": "Iran",
+   "city": "Isfahan",
+   "lang": "fa-ir",
+   "ver": "1.0 (v36)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
    "uid": "02869309",
    "t0": "00:06",
    "mins": 0.0,
@@ -124,16 +148,21 @@
   }
  ],
  "kinds": {
-  "human": 1,
+  "human": 2,
   "bot": 0,
   "me": 0,
   "dbg": 0
  },
  "bots": 0,
- "humans": 1,
+ "humans": 2,
  "versions": [
   {
    "ver": "1.0 (v47)",
+   "users": 1,
+   "installs": 0
+  },
+  {
+   "ver": "1.0 (v36)",
    "users": 1,
    "installs": 0
   }
@@ -141,6 +170,11 @@
  "countries": [
   {
    "country": "Brazil",
+   "users": 1,
+   "vpn": 0
+  },
+  {
+   "country": "Iran",
    "users": 1,
    "vpn": 0
   }
