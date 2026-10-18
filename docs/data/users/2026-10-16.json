@@ -9,13 +9,13 @@
    "ver": "1.0 (v46)",
    "days": 1,
    "last": "20261016",
-   "lv": 31,
-   "clears": 31,
+   "lv": 32,
+   "clears": 32,
    "stuck": 0,
    "ads": 1,
    "buys": 0,
    "spend": 0.0,
-   "pics": 1,
+   "pics": 2,
    "removed": false,
    "reached": 511
   },
@@ -79,8 +79,8 @@
    "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v46)",
-   "days": 1,
-   "last": "20261016",
+   "days": 2,
+   "last": "20261018",
    "lv": 0,
    "clears": 0,
    "stuck": 0,
@@ -89,7 +89,7 @@
    "spend": 0.0,
    "pics": 0,
    "removed": false,
-   "reached": 0
+   "reached": 3
   }
  ]
 }

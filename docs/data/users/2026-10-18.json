@@ -1,0 +1,41 @@
+{
+ "date": "2026-10-18",
+ "users": [
+  {
+   "uid": "1a900843",
+   "model": "SM-A155F",
+   "country": "Iran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v46)",
+   "days": 1,
+   "last": "20261018",
+   "lv": 38,
+   "clears": 38,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 2,
+   "removed": false,
+   "reached": 511
+  },
+  {
+   "uid": "4ec6daf0",
+   "model": "2404ARN45A",
+   "country": "Iran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v36)",
+   "days": 1,
+   "last": "20261018",
+   "lv": 6,
+   "clears": 6,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 63
+  }
+ ]
+}
