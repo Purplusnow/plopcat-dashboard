@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-18 15:16 KST",
+ "updated": "2026-10-18 19:06 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261018",
@@ -99,6 +99,84 @@
  ],
  "users": [
   {
+   "uid": "b1b6c9a3",
+   "t0": "17:08",
+   "mins": 4.0,
+   "model": "24117RN76G",
+   "country": "Iran",
+   "city": "Tehran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v47)",
+   "new": false,
+   "vpn": false,
+   "lv": 159,
+   "started": 159,
+   "clears": 7,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [
+    "first_fail",
+    "first_moves",
+    "first_restart",
+    "gate_final",
+    "gate_pieces"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "a30d0941",
+   "t0": "16:47",
+   "mins": 0.0,
+   "model": "23129RAA4G",
+   "country": "Iran",
+   "city": "Isfahan",
+   "lang": "fa-ir",
+   "ver": "1.0 (v46)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "360284df",
+   "t0": "16:46",
+   "mins": 1.2,
+   "model": "SM-A235F",
+   "country": "Iran",
+   "city": "Ahvaz",
+   "lang": "fa-ir",
+   "ver": "1.0 (v29)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 10,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
    "uid": "1928ba68",
    "t0": "05:16",
    "mins": 105.3,
@@ -177,17 +255,17 @@
   {
    "uid": "00a55b43",
    "t0": "05:08",
-   "mins": 0.1,
+   "mins": 704.6,
    "model": "STK-L21",
    "country": "Iran",
-   "city": "Tehran",
+   "city": "Shiraz",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
    "new": false,
    "vpn": false,
-   "lv": 0,
-   "started": 0,
-   "clears": 0,
+   "lv": 420,
+   "started": 421,
+   "clears": 9,
    "stuck": 0,
    "ads": 0,
    "shops": 0,
@@ -331,7 +409,7 @@
   {
    "uid": "70d67d86",
    "t0": "03:07",
-   "mins": 118.0,
+   "mins": 883.8,
    "model": "NLA-LX2",
    "country": "Iran",
    "city": "Karaj",
@@ -430,13 +508,13 @@
   }
  ],
  "kinds": {
-  "human": 13,
+  "human": 16,
   "bot": 0,
   "me": 0,
   "dbg": 0
  },
  "bots": 0,
- "humans": 13,
+ "humans": 16,
  "versions": [
   {
    "ver": "1.0 (v36)",
@@ -445,24 +523,24 @@
   },
   {
    "ver": "1.0 (v46)",
-   "users": 4,
+   "users": 5,
    "installs": 1
   },
   {
    "ver": "1.0 (v47)",
-   "users": 3,
+   "users": 4,
    "installs": 0
   },
   {
    "ver": "1.0 (v29)",
-   "users": 1,
+   "users": 2,
    "installs": 0
   }
  ],
  "countries": [
   {
    "country": "Iran",
-   "users": 10,
+   "users": 13,
    "vpn": 1
   },
   {
