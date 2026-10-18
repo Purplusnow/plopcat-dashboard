@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19 03:14 KST",
+ "updated": "2026-10-19 05:56 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261019",
@@ -69,12 +69,12 @@
   {
    "key": "album_first",
    "label": "미술관 열기",
-   "users": 0
+   "users": 1
   },
   {
    "key": "first_piece",
    "label": "첫 조각",
-   "users": 0
+   "users": 1
   },
   {
    "key": "lv10_clear",
@@ -84,7 +84,7 @@
   {
    "key": "first_picture",
    "label": "첫 그림 완성",
-   "users": 0
+   "users": 1
   },
   {
    "key": "lv20_clear",
@@ -94,14 +94,93 @@
   {
    "key": "lv50_clear",
    "label": "50판",
-   "users": 0
+   "users": 1
   }
  ],
  "users": [
   {
+   "uid": "1b4d7b5d",
+   "t0": "04:59",
+   "mins": 7.5,
+   "model": "SM-A736B",
+   "country": "Russia",
+   "city": "Kazan",
+   "lang": "en-gb",
+   "ver": "1.0 (v47)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 176,
+   "side": [
+    "gate_final"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "15ebc3fa",
+   "t0": "04:06",
+   "mins": 0.2,
+   "model": "SM-A528B",
+   "country": "Iran",
+   "city": "Isfahan",
+   "lang": "fa-ir",
+   "ver": "1.0 (v46)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "159855c7",
+   "t0": "03:43",
+   "mins": 19.1,
+   "model": "23129RAA4G",
+   "country": "Iran",
+   "city": "Tehran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v46)",
+   "new": false,
+   "vpn": false,
+   "lv": 80,
+   "started": 80,
+   "clears": 38,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 512,
+   "side": [
+    "first_fail",
+    "first_hint",
+    "first_restart",
+    "first_undo"
+   ],
+   "kind": "human"
+  },
+  {
    "uid": "0a1cd718",
    "t0": "02:47",
-   "mins": 0.0,
+   "mins": 4.5,
    "model": "SM-A515F",
    "country": "Iran",
    "city": "Isfahan",
@@ -109,9 +188,9 @@
    "ver": "1.0 (v36)",
    "new": false,
    "vpn": false,
-   "lv": 0,
-   "started": 0,
-   "clears": 0,
+   "lv": 67,
+   "started": 68,
+   "clears": 3,
    "stuck": 0,
    "ads": 0,
    "shops": 0,
@@ -148,17 +227,22 @@
   }
  ],
  "kinds": {
-  "human": 2,
+  "human": 5,
   "bot": 0,
   "me": 0,
   "dbg": 0
  },
  "bots": 0,
- "humans": 2,
+ "humans": 5,
  "versions": [
   {
    "ver": "1.0 (v47)",
-   "users": 1,
+   "users": 2,
+   "installs": 0
+  },
+  {
+   "ver": "1.0 (v46)",
+   "users": 2,
    "installs": 0
   },
   {
@@ -169,12 +253,17 @@
  ],
  "countries": [
   {
+   "country": "Iran",
+   "users": 3,
+   "vpn": 0
+  },
+  {
    "country": "Brazil",
    "users": 1,
    "vpn": 0
   },
   {
-   "country": "Iran",
+   "country": "Russia",
    "users": 1,
    "vpn": 0
   }
