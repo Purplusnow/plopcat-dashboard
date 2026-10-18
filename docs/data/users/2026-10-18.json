@@ -16,8 +16,26 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 2,
-   "removed": false,
+   "removed": true,
    "reached": 511
+  },
+  {
+   "uid": "d73db725",
+   "model": "SM-A042M",
+   "country": "Brazil",
+   "lang": "pt-br",
+   "ver": "1.0 (v47)",
+   "days": 1,
+   "last": "20261018",
+   "lv": 7,
+   "clears": 7,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 63
   },
   {
    "uid": "4ec6daf0",
