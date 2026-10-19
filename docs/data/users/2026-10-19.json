@@ -1,0 +1,41 @@
+{
+ "date": "2026-10-19",
+ "users": [
+  {
+   "uid": "93066ee1",
+   "model": "SM-A125F",
+   "country": "Egypt",
+   "lang": "ar-eg",
+   "ver": "1.0 (v47)",
+   "days": 1,
+   "last": "20261019",
+   "lv": 21,
+   "clears": 21,
+   "stuck": 0,
+   "ads": 1,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 1,
+   "removed": false,
+   "reached": 383
+  },
+  {
+   "uid": "4845bb0a",
+   "model": "SM-A075M",
+   "country": "Brazil",
+   "lang": "pt-br",
+   "ver": "1.0 (v47)",
+   "days": 1,
+   "last": "20261019",
+   "lv": 5,
+   "clears": 5,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 63
+  }
+ ]
+}

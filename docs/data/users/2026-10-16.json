@@ -74,6 +74,24 @@
    "reached": 15
   },
   {
+   "uid": "b600cf11",
+   "model": "2312FPCA6G",
+   "country": "Iran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v46)",
+   "days": 1,
+   "last": "20261016",
+   "lv": 1,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 55
+  },
+  {
    "uid": "70d67d86",
    "model": "NLA-LX2",
    "country": "Iran",
