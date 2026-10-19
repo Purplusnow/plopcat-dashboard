@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19 09:43 KST",
+ "updated": "2026-10-19 11:01 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261019",
@@ -101,7 +101,7 @@
   {
    "uid": "4845bb0a",
    "t0": "09:19",
-   "mins": 2.7,
+   "mins": 30.4,
    "model": "SM-A075M",
    "country": "Brazil",
    "city": "Brasilia",
@@ -373,12 +373,12 @@
    "vpn": 0
   },
   {
-   "country": "Egypt",
+   "country": "Russia",
    "users": 1,
    "vpn": 0
   },
   {
-   "country": "Russia",
+   "country": "Egypt",
    "users": 1,
    "vpn": 0
   }
