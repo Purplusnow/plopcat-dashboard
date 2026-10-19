@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19 11:01 KST",
+ "updated": "2026-10-19 14:38 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261019",
@@ -89,7 +89,7 @@
   {
    "key": "lv20_clear",
    "label": "20판",
-   "users": 0
+   "users": 1
   },
   {
    "key": "lv50_clear",
@@ -98,6 +98,30 @@
   }
  ],
  "users": [
+  {
+   "uid": "8fe83de6",
+   "t0": "13:11",
+   "mins": 6.1,
+   "model": "2303CRA44A",
+   "country": "Iran",
+   "city": "Tabriz",
+   "lang": "fa-ir",
+   "ver": "1.0 (v46)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
   {
    "uid": "4845bb0a",
    "t0": "09:19",
@@ -128,7 +152,7 @@
   {
    "uid": "93066ee1",
    "t0": "08:50",
-   "mins": 7.2,
+   "mins": 131.6,
    "model": "SM-A125F",
    "country": "Egypt",
    "city": "Giza",
@@ -136,16 +160,16 @@
    "ver": "1.0 (v47)",
    "new": true,
    "vpn": false,
-   "lv": 18,
-   "started": 18,
-   "clears": 18,
+   "lv": 21,
+   "started": 22,
+   "clears": 21,
    "stuck": 0,
    "ads": 1,
    "shops": 0,
    "buys": 0,
    "removed": false,
    "abuse": 0,
-   "reached": 127,
+   "reached": 383,
    "side": [
     "first_ad",
     "gate_final",
@@ -261,7 +285,7 @@
   {
    "uid": "0a1cd718",
    "t0": "02:47",
-   "mins": 4.5,
+   "mins": 190.9,
    "model": "SM-A515F",
    "country": "Iran",
    "city": "Isfahan",
@@ -276,7 +300,7 @@
    "ads": 0,
    "shops": 0,
    "buys": 0,
-   "removed": false,
+   "removed": true,
    "abuse": 0,
    "reached": 0,
    "side": [],
@@ -332,13 +356,13 @@
   }
  ],
  "kinds": {
-  "human": 9,
+  "human": 10,
   "bot": 0,
   "me": 0,
   "dbg": 0
  },
  "bots": 0,
- "humans": 9,
+ "humans": 10,
  "versions": [
   {
    "ver": "1.0 (v47)",
@@ -347,7 +371,7 @@
   },
   {
    "ver": "1.0 (v46)",
-   "users": 2,
+   "users": 3,
    "installs": 0
   },
   {
@@ -364,7 +388,7 @@
  "countries": [
   {
    "country": "Iran",
-   "users": 4,
+   "users": 5,
    "vpn": 0
   },
   {
@@ -373,12 +397,12 @@
    "vpn": 0
   },
   {
-   "country": "Russia",
+   "country": "Egypt",
    "users": 1,
    "vpn": 0
   },
   {
-   "country": "Egypt",
+   "country": "Russia",
    "users": 1,
    "vpn": 0
   }
