@@ -2,6 +2,24 @@
  "date": "2026-10-19",
  "users": [
   {
+   "uid": "5306de39",
+   "model": "SM-M156S",
+   "country": "South Korea",
+   "lang": "ko-kr",
+   "ver": "1.0 (v47)",
+   "days": 1,
+   "last": "20261019",
+   "lv": 33,
+   "clears": 33,
+   "stuck": 0,
+   "ads": 3,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 2,
+   "removed": false,
+   "reached": 511
+  },
+  {
    "uid": "93066ee1",
    "model": "SM-A125F",
    "country": "Egypt",
@@ -9,14 +27,14 @@
    "ver": "1.0 (v47)",
    "days": 1,
    "last": "20261019",
-   "lv": 21,
-   "clears": 21,
+   "lv": 31,
+   "clears": 31,
    "stuck": 0,
-   "ads": 1,
+   "ads": 2,
    "buys": 0,
    "spend": 0.0,
    "pics": 1,
-   "removed": false,
+   "removed": true,
    "reached": 383
   },
   {
