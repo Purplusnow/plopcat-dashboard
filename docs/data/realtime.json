@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-20 10:29 KST",
+ "updated": "2026-10-20 14:29 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261020",
@@ -94,10 +94,34 @@
   {
    "key": "lv50_clear",
    "label": "50판",
-   "users": 1
+   "users": 2
   }
  ],
  "users": [
+  {
+   "uid": "85d080a4",
+   "t0": "10:34",
+   "mins": 1.4,
+   "model": "SM-A346E",
+   "country": "Iran",
+   "city": "Gorgan",
+   "lang": "fa-ir",
+   "ver": "1.0 (v47)",
+   "new": false,
+   "vpn": false,
+   "lv": 51,
+   "started": 51,
+   "clears": 3,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 512,
+   "side": [],
+   "kind": "human"
+  },
   {
    "uid": "1928ba68",
    "t0": "05:07",
@@ -325,18 +349,23 @@
   }
  ],
  "kinds": {
-  "human": 9,
+  "human": 10,
   "bot": 0,
   "me": 1,
   "dbg": 0
  },
  "bots": 0,
- "humans": 9,
+ "humans": 10,
  "versions": [
   {
    "ver": "1.0 (v36)",
    "users": 3,
    "installs": 0
+  },
+  {
+   "ver": "1.0 (v47)",
+   "users": 3,
+   "installs": 1
   },
   {
    "ver": "1.0 (v46)",
@@ -347,17 +376,12 @@
    "ver": "1.0 (v29)",
    "users": 2,
    "installs": 0
-  },
-  {
-   "ver": "1.0 (v47)",
-   "users": 2,
-   "installs": 1
   }
  ],
  "countries": [
   {
    "country": "Iran",
-   "users": 7,
+   "users": 8,
    "vpn": 0
   },
   {
