@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21 21:19 KST",
+ "updated": "2026-10-21 21:43 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261021",
@@ -488,11 +488,11 @@
  ],
  "kinds": {
   "human": 16,
-  "bot": 0,
+  "bot": 5,
   "me": 0,
   "dbg": 0
  },
- "bots": 0,
+ "bots": 5,
  "humans": 16,
  "versions": [
   {
