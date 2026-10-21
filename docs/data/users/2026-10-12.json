@@ -25,8 +25,8 @@
    "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
-   "days": 6,
-   "last": "20261018",
+   "days": 7,
+   "last": "20261021",
    "lv": 334,
    "clears": 334,
    "stuck": 0,
@@ -34,7 +34,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 12,
-   "removed": false,
+   "removed": true,
    "reached": 1023
   },
   {
@@ -76,7 +76,7 @@
   {
    "uid": "362cb56f",
    "model": "SM-A137F",
-   "country": "Brazil",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
    "days": 5,
