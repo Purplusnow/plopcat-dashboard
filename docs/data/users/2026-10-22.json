@@ -1,0 +1,59 @@
+{
+ "date": "2026-10-22",
+ "users": [
+  {
+   "uid": "cfc06c07",
+   "model": "Pixel 8a",
+   "country": "Japan",
+   "lang": "ja-jp",
+   "ver": "1.0 (v48)",
+   "days": 1,
+   "last": "20261022",
+   "lv": 16,
+   "clears": 16,
+   "stuck": 0,
+   "ads": 1,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 1,
+   "removed": true,
+   "reached": 255
+  },
+  {
+   "uid": "5c26295a",
+   "model": "2409BRN2CY",
+   "country": "Brazil",
+   "lang": "pt-br",
+   "ver": "1.0 (v47)",
+   "days": 1,
+   "last": "20261022",
+   "lv": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 0
+  },
+  {
+   "uid": "de26ab97",
+   "model": "Moto G05",
+   "country": "Brazil",
+   "lang": "pt-br",
+   "ver": "1.0 (v47)",
+   "days": 1,
+   "last": "20261022",
+   "lv": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 0
+  }
+ ]
+}

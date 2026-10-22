@@ -398,6 +398,24 @@
    "reached": 127
   },
   {
+   "uid": "65e9b14c",
+   "model": "SM-A075M",
+   "country": "Brazil",
+   "lang": "pt-br",
+   "ver": "1.0 (v47)",
+   "days": 2,
+   "last": "20261022",
+   "lv": 8,
+   "clears": 8,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": true,
+   "reached": 63
+  },
+  {
    "uid": "b5f22888",
    "model": "SM-G610M",
    "country": "Brazil",
@@ -431,24 +449,6 @@
    "spend": 0.0,
    "pics": 0,
    "removed": true,
-   "reached": 63
-  },
-  {
-   "uid": "65e9b14c",
-   "model": "SM-A075M",
-   "country": "Brazil",
-   "lang": "pt-br",
-   "ver": "1.0 (v46)",
-   "days": 1,
-   "last": "20261013",
-   "lv": 6,
-   "clears": 6,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 0,
-   "removed": false,
    "reached": 63
   },
   {
@@ -529,8 +529,8 @@
    "country": "Brazil",
    "lang": "pt-br",
    "ver": "1.0 (v46)",
-   "days": 2,
-   "last": "20261015",
+   "days": 3,
+   "last": "20261022",
    "lv": 3,
    "clears": 3,
    "stuck": 0,
@@ -538,7 +538,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 15
   },
   {
