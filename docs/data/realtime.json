@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-22 06:09 KST",
+ "updated": "2026-10-22 09:05 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261022",
@@ -99,9 +99,57 @@
  ],
  "users": [
   {
+   "uid": "82417f4a",
+   "t0": "08:10",
+   "mins": 0.0,
+   "model": "SM-A155M",
+   "country": "Brazil",
+   "city": "Florianopolis",
+   "lang": "pt-br",
+   "ver": "1.0 (v46)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "16b0ef96",
+   "t0": "06:12",
+   "mins": 0.0,
+   "model": "23117RA68G",
+   "country": "United Kingdom",
+   "city": null,
+   "lang": "fa-ir",
+   "ver": "1.0 (v29)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
    "uid": "5c26295a",
    "t0": "05:11",
-   "mins": 44.4,
+   "mins": 155.9,
    "model": "2409BRN2CY",
    "country": "Brazil",
    "city": "Novo Gama",
@@ -220,34 +268,44 @@
   }
  ],
  "kinds": {
-  "human": 5,
+  "human": 7,
   "bot": 0,
   "me": 0,
   "dbg": 0
  },
  "bots": 0,
- "humans": 5,
+ "humans": 7,
  "versions": [
+  {
+   "ver": "1.0 (v46)",
+   "users": 3,
+   "installs": 0
+  },
   {
    "ver": "1.0 (v47)",
    "users": 3,
    "installs": 1
   },
   {
-   "ver": "1.0 (v46)",
-   "users": 2,
+   "ver": "1.0 (v29)",
+   "users": 1,
    "installs": 0
   }
  ],
  "countries": [
+  {
+   "country": "Brazil",
+   "users": 3,
+   "vpn": 0
+  },
   {
    "country": "Iran",
    "users": 3,
    "vpn": 0
   },
   {
-   "country": "Brazil",
-   "users": 2,
+   "country": "United Kingdom",
+   "users": 1,
    "vpn": 0
   }
  ],
