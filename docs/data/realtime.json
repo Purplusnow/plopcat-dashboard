@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-22 09:05 KST",
+ "updated": "2026-10-22 14:09 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261022",
@@ -99,6 +99,32 @@
  ],
  "users": [
   {
+   "uid": "de26ab97",
+   "t0": "11:01",
+   "mins": 75.1,
+   "model": "Moto G05",
+   "country": "Brazil",
+   "city": "Rio de Janeiro",
+   "lang": "pt-br",
+   "ver": "1.0 (v47)",
+   "new": true,
+   "vpn": false,
+   "lv": 0,
+   "started": 1,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
    "uid": "82417f4a",
    "t0": "08:10",
    "mins": 0.0,
@@ -173,7 +199,7 @@
   {
    "uid": "2644251e",
    "t0": "03:23",
-   "mins": 11.5,
+   "mins": 456.9,
    "model": "SM-A528B",
    "country": "Iran",
    "city": "Tehran",
@@ -181,12 +207,12 @@
    "ver": "1.0 (v47)",
    "new": false,
    "vpn": false,
-   "lv": 272,
-   "started": 273,
-   "clears": 16,
-   "stuck": 0,
-   "ads": 0,
-   "shops": 0,
+   "lv": 283,
+   "started": 284,
+   "clears": 27,
+   "stuck": 1,
+   "ads": 2,
+   "shops": 10,
    "buys": 0,
    "removed": false,
    "abuse": 0,
@@ -268,23 +294,23 @@
   }
  ],
  "kinds": {
-  "human": 7,
+  "human": 8,
   "bot": 0,
   "me": 0,
   "dbg": 0
  },
  "bots": 0,
- "humans": 7,
+ "humans": 8,
  "versions": [
+  {
+   "ver": "1.0 (v47)",
+   "users": 4,
+   "installs": 2
+  },
   {
    "ver": "1.0 (v46)",
    "users": 3,
    "installs": 0
-  },
-  {
-   "ver": "1.0 (v47)",
-   "users": 3,
-   "installs": 1
   },
   {
    "ver": "1.0 (v29)",
@@ -295,7 +321,7 @@
  "countries": [
   {
    "country": "Brazil",
-   "users": 3,
+   "users": 4,
    "vpn": 0
   },
   {
@@ -309,6 +335,17 @@
    "vpn": 0
   }
  ],
- "purchase_fail": [],
+ "purchase_fail": [
+  {
+   "reason": "no_details:gold_pack",
+   "n": 6,
+   "users": 1
+  },
+  {
+   "reason": "no_details:premium_pack",
+   "n": 3,
+   "users": 1
+  }
+ ],
  "abuse": []
 }
