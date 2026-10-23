@@ -284,6 +284,10 @@ fetch("data/ingame.json?" + Date.now()).then(r => r.json()).then(d => {
   table($("adTable"), d.ads, [
     ["자리", r => r.placement || "–"], ["결과", r => r.result || "–"],
     ["버전", r => (r.ver || "–").replace("1.0 ", "")],
+    // ★왜 그랬는지. no_ad 가 '재고 없음'인지 '우리 쪽 문제'인지 가르는 유일한 칸이다.
+    //   plug=y 면 플러그인엔 광고가 있는데 우리가 못 쓴 것 = 우리 버그.
+    //   plug=n 이면 네이티브에도 없는 것 = 재고·설정 문제.
+    ["사유", r => r.detail ? `<code>${r.detail}</code>` : ""],
     ["건수", r => n(r.n)], ["사람", r => n(r.users)]]);
   table($("boostTable"), d.boosters, [
     ["아이템", r => r.kind || "–"], ["조달", r => r.source || "–"], ["건수", r => n(r.n)]]);

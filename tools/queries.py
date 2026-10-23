@@ -260,11 +260,11 @@ def ads(table: str, filt: str) -> str:
     """
     return """
 SELECT {kind} kind, {pl} placement, {rs} result, app_info.version ver,
-  COUNT(*) n, COUNT(DISTINCT user_pseudo_id) users
+  {dt} detail, COUNT(*) n, COUNT(DISTINCT user_pseudo_id) users
 FROM {t} WHERE {f} AND event_name = 'ad_watch'
-GROUP BY kind, placement, result, ver ORDER BY kind, n DESC LIMIT 60
+GROUP BY kind, placement, result, ver, detail ORDER BY kind, n DESC LIMIT 80
 """.format(t=table, f=filt, pl=p_str("placement"), rs=p_str("result"),
-           kind=AD_KIND.format(pl=p_str("placement")))
+           dt=p_str("detail"), kind=AD_KIND.format(pl=p_str("placement")))
 
 
 def ad_summary(table: str, filt: str) -> str:
