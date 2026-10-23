@@ -56,6 +56,24 @@
    "reached": 1023
   },
   {
+   "uid": "035f7176",
+   "model": "24117RN76G",
+   "country": "Iran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v48)",
+   "days": 2,
+   "last": "20261023",
+   "lv": 35,
+   "clears": 35,
+   "stuck": 0,
+   "ads": 1,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 2,
+   "removed": false,
+   "reached": 511
+  },
+  {
    "uid": "18168edd",
    "model": "IT-801B",
    "country": "South Korea",
@@ -110,6 +128,24 @@
    "reached": 255
   },
   {
+   "uid": "609f28e4",
+   "model": "2209116AG",
+   "country": "Iran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v48)",
+   "days": 2,
+   "last": "20261023",
+   "lv": 17,
+   "clears": 17,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 1,
+   "removed": false,
+   "reached": 255
+  },
+  {
    "uid": "784803d3",
    "model": "23117RA68G",
    "country": "Iran",
@@ -128,8 +164,8 @@
    "reached": 255
   },
   {
-   "uid": "035f7176",
-   "model": "24117RN76G",
+   "uid": "91a72777",
+   "model": "22101316UG",
    "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v48)",
@@ -141,9 +177,9 @@
    "ads": 0,
    "buys": 0,
    "spend": 0.0,
-   "pics": 1,
+   "pics": 0,
    "removed": false,
-   "reached": 255
+   "reached": 127
   },
   {
    "uid": "cfc06c07",
@@ -164,24 +200,6 @@
    "reached": 255
   },
   {
-   "uid": "609f28e4",
-   "model": "2209116AG",
-   "country": "Iran",
-   "lang": "fa-ir",
-   "ver": "1.0 (v48)",
-   "days": 1,
-   "last": "20261022",
-   "lv": 6,
-   "clears": 6,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 0,
-   "removed": false,
-   "reached": 31
-  },
-  {
    "uid": "308185d6",
    "model": "F-52E",
    "country": "Japan",
@@ -198,24 +216,6 @@
    "pics": 0,
    "removed": false,
    "reached": 63
-  },
-  {
-   "uid": "91a72777",
-   "model": "22101316UG",
-   "country": "Iran",
-   "lang": "fa-ir",
-   "ver": "1.0 (v48)",
-   "days": 2,
-   "last": "20261023",
-   "lv": 2,
-   "clears": 2,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 0,
-   "removed": false,
-   "reached": 55
   },
   {
    "uid": "52164e3c",
