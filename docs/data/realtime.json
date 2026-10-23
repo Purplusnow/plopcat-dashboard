@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23 20:14 KST",
+ "updated": "2026-10-23 20:54 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261023",
@@ -49,59 +49,83 @@
   {
    "key": "game_open",
    "label": "게임 진입",
-   "users": 37
+   "users": 38
   },
   {
    "key": "first_move",
    "label": "첫 수",
-   "users": 37
+   "users": 38
   },
   {
    "key": "lv1_clear",
    "label": "1판 클리어",
-   "users": 36
+   "users": 37
   },
   {
    "key": "lv3_clear",
    "label": "3판",
-   "users": 24
+   "users": 25
   },
   {
    "key": "album_first",
    "label": "미술관 열기",
-   "users": 31
+   "users": 32
   },
   {
    "key": "first_piece",
    "label": "첫 조각",
-   "users": 28
+   "users": 29
   },
   {
    "key": "lv10_clear",
    "label": "10판",
-   "users": 22
+   "users": 23
   },
   {
    "key": "first_picture",
    "label": "첫 그림 완성",
-   "users": 21
+   "users": 22
   },
   {
    "key": "lv20_clear",
    "label": "20판",
-   "users": 19
+   "users": 20
   },
   {
    "key": "lv50_clear",
    "label": "50판",
-   "users": 9
+   "users": 10
   }
  ],
  "users": [
   {
+   "uid": "b374c5e7",
+   "t0": "20:45",
+   "mins": 2.8,
+   "model": "SM-A165F",
+   "country": "Iran",
+   "city": "Tehran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v29)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
    "uid": "5db56934",
    "t0": "20:01",
-   "mins": 6.4,
+   "mins": 18.5,
    "model": "SOG07",
    "country": "Japan",
    "city": "Kaminokawa",
@@ -109,22 +133,51 @@
    "ver": "1.0 (v48)",
    "new": true,
    "vpn": false,
-   "lv": 18,
-   "started": 19,
-   "clears": 18,
+   "lv": 57,
+   "started": 57,
+   "clears": 57,
    "stuck": 0,
-   "ads": 2,
+   "ads": 7,
    "shops": 0,
    "buys": 0,
    "removed": false,
    "abuse": 0,
-   "reached": 255,
+   "reached": 1023,
    "side": [
     "first_ad",
     "gate_final",
     "gate_pieces",
     "gate_tut",
     "lang_change",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "7ae7c912",
+   "t0": "20:00",
+   "mins": 38.7,
+   "model": "23021RAAEG",
+   "country": "Iran",
+   "city": "Tabriz",
+   "lang": "fa-ir",
+   "ver": "1.0 (v48)",
+   "new": true,
+   "vpn": false,
+   "lv": 16,
+   "started": 16,
+   "clears": 16,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 255,
+   "side": [
+    "gate_final",
+    "gate_pieces",
+    "gate_tut",
     "tut_hand"
    ],
    "kind": "human"
@@ -1013,14 +1066,14 @@
   {
    "uid": "ebd89939",
    "t0": "07:02",
-   "mins": 2.1,
+   "mins": 811.6,
    "model": "23021RAAEG",
    "country": "Iran",
    "city": "Tehran",
    "lang": "fa-ir",
    "ver": "1.0 (v47)",
    "new": false,
-   "vpn": false,
+   "vpn": true,
    "lv": 157,
    "started": 157,
    "clears": 2,
@@ -1115,7 +1168,7 @@
   {
    "uid": "035f7176",
    "t0": "05:48",
-   "mins": 823.1,
+   "mins": 889.2,
    "model": "24117RN76G",
    "country": "Iran",
    "city": "Zahedan",
@@ -1313,7 +1366,7 @@
    "mins": 771.8,
    "model": "SM-A032F",
    "country": "Iran",
-   "city": "Karaj",
+   "city": "Tehran",
    "lang": "fa-ir",
    "ver": "1.0 (v48)",
    "new": false,
@@ -1771,22 +1824,22 @@
   }
  ],
  "kinds": {
-  "human": 61,
+  "human": 63,
   "bot": 0,
   "me": 0,
   "dbg": 0
  },
  "bots": 0,
- "humans": 61,
+ "humans": 63,
  "versions": [
   {
    "ver": "1.0 (v48)",
-   "users": 51,
-   "installs": 40
+   "users": 52,
+   "installs": 41
   },
   {
    "ver": "1.0 (v29)",
-   "users": 4,
+   "users": 5,
    "installs": 1
   },
   {
@@ -1803,16 +1856,16 @@
  "countries": [
   {
    "country": "Iran",
-   "users": 36,
-   "vpn": 6
+   "users": 38,
+   "vpn": 7
   },
   {
-   "country": "Japan",
+   "country": "Indonesia",
    "users": 6,
    "vpn": 0
   },
   {
-   "country": "Indonesia",
+   "country": "Japan",
    "users": 6,
    "vpn": 0
   },
@@ -1827,7 +1880,7 @@
    "vpn": 0
   },
   {
-   "country": "Germany",
+   "country": "Taiwan",
    "users": 1,
    "vpn": 0
   },
@@ -1835,11 +1888,6 @@
    "country": "Netherlands",
    "users": 1,
    "vpn": 0
-  },
-  {
-   "country": "Chile",
-   "users": 1,
-   "vpn": 1
   },
   {
    "country": "Malaysia",
@@ -1852,12 +1900,17 @@
    "vpn": 0
   },
   {
+   "country": "Chile",
+   "users": 1,
+   "vpn": 1
+  },
+  {
    "country": "Argentina",
    "users": 1,
    "vpn": 0
   },
   {
-   "country": "Taiwan",
+   "country": "Germany",
    "users": 1,
    "vpn": 0
   }
