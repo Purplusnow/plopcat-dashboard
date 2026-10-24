@@ -132,9 +132,9 @@
    "model": "SM-A155M",
    "country": "Brazil",
    "lang": "pt-br",
-   "ver": "1.0 (v46)",
-   "days": 1,
-   "last": "20261015",
+   "ver": "1.0 (v48)",
+   "days": 2,
+   "last": "20261024",
    "lv": 16,
    "clears": 16,
    "stuck": 0,
@@ -142,7 +142,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 1,
-   "removed": false,
+   "removed": true,
    "reached": 255
   },
   {

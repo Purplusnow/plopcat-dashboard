@@ -61,8 +61,8 @@
    "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v46)",
-   "days": 7,
-   "last": "20261023",
+   "days": 8,
+   "last": "20261024",
    "lv": 140,
    "clears": 140,
    "stuck": 1,
@@ -1357,8 +1357,8 @@
    "country": "Brazil",
    "lang": "pt-br",
    "ver": "1.0 (v46)",
-   "days": 1,
-   "last": "20261014",
+   "days": 2,
+   "last": "20261025",
    "lv": 0,
    "clears": 0,
    "stuck": 0,
@@ -1366,7 +1366,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 0
   }
  ]
