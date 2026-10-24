@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24 08:18 KST",
+ "updated": "2026-10-24 10:02 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261024",
@@ -49,47 +49,47 @@
   {
    "key": "game_open",
    "label": "게임 진입",
-   "users": 14
+   "users": 22
   },
   {
    "key": "first_move",
    "label": "첫 수",
-   "users": 14
+   "users": 21
   },
   {
    "key": "lv1_clear",
    "label": "1판 클리어",
-   "users": 14
+   "users": 21
   },
   {
    "key": "lv3_clear",
    "label": "3판",
-   "users": 12
+   "users": 16
   },
   {
    "key": "album_first",
    "label": "미술관 열기",
-   "users": 14
+   "users": 19
   },
   {
    "key": "first_piece",
    "label": "첫 조각",
-   "users": 12
+   "users": 16
   },
   {
    "key": "lv10_clear",
    "label": "10판",
-   "users": 6
+   "users": 10
   },
   {
    "key": "first_picture",
    "label": "첫 그림 완성",
-   "users": 4
+   "users": 6
   },
   {
    "key": "lv20_clear",
    "label": "20판",
-   "users": 4
+   "users": 5
   },
   {
    "key": "lv50_clear",
@@ -98,6 +98,402 @@
   }
  ],
  "users": [
+  {
+   "uid": "5c4490f7",
+   "t0": "09:59",
+   "mins": 0.6,
+   "model": "SM-A225M",
+   "country": "Brazil",
+   "city": "Sao Paulo",
+   "lang": "pt-br",
+   "ver": "1.0 (v49)",
+   "new": true,
+   "vpn": false,
+   "lv": 1,
+   "started": 1,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 7,
+   "side": [
+    "gate_tut",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "e2948011",
+   "t0": "09:49",
+   "mins": 0.0,
+   "model": "SM-A175F",
+   "country": "Spain",
+   "city": "Barcelona",
+   "lang": "es-es",
+   "ver": "1.0 (v49)",
+   "new": true,
+   "vpn": false,
+   "lv": 0,
+   "started": 1,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "848b0fcb",
+   "t0": "09:48",
+   "mins": 2.9,
+   "model": "MI 8 Lite",
+   "country": "Brazil",
+   "city": "Rio de Janeiro",
+   "lang": "pt-br",
+   "ver": "1.0 (v49)",
+   "new": true,
+   "vpn": false,
+   "lv": 12,
+   "started": 13,
+   "clears": 12,
+   "stuck": 0,
+   "ads": 1,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 127,
+   "side": [
+    "first_ad",
+    "gate_pieces",
+    "gate_tut",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "9764c282",
+   "t0": "09:48",
+   "mins": 0.0,
+   "model": "SM-F966N",
+   "country": "South Korea",
+   "city": "Uiseong-gun",
+   "lang": "ko-kr",
+   "ver": "1.0 (v49)",
+   "new": true,
+   "vpn": false,
+   "lv": 0,
+   "started": 1,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "2a0c0792",
+   "t0": "09:23",
+   "mins": 0.8,
+   "model": "220733SG",
+   "country": "Thailand",
+   "city": "Bangkok",
+   "lang": "th-th",
+   "ver": "1.0 (v49)",
+   "new": true,
+   "vpn": false,
+   "lv": 1,
+   "started": 1,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 7,
+   "side": [
+    "first_undo",
+    "gate_tut",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "1d6542ea",
+   "t0": "09:22",
+   "mins": 6.4,
+   "model": "SM-A235M",
+   "country": "Brazil",
+   "city": "Maceio",
+   "lang": "pt-br",
+   "ver": "1.0 (v49)",
+   "new": true,
+   "vpn": false,
+   "lv": 17,
+   "started": 17,
+   "clears": 17,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 255,
+   "side": [
+    "first_restart",
+    "gate_tut",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "d30965ff",
+   "t0": "09:20",
+   "mins": 0.1,
+   "model": "moto g04s",
+   "country": "Brazil",
+   "city": "Franca",
+   "lang": "pt-br",
+   "ver": "1.0 (v49)",
+   "new": true,
+   "vpn": false,
+   "lv": 0,
+   "started": 1,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "a5c0c85e",
+   "t0": "09:18",
+   "mins": 0.2,
+   "model": "SM-A022M",
+   "country": "Argentina",
+   "city": "General Rodriguez",
+   "lang": "es-us",
+   "ver": "1.0 (v49)",
+   "new": true,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "b00d3509",
+   "t0": "09:18",
+   "mins": 0.8,
+   "model": "SM-A145M",
+   "country": "Mexico",
+   "city": "Puebla",
+   "lang": "es-us",
+   "ver": "1.0 (v49)",
+   "new": true,
+   "vpn": false,
+   "lv": 0,
+   "started": 1,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 1,
+   "side": [
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "42c8f3c8",
+   "t0": "09:07",
+   "mins": 13.6,
+   "model": "2201117TG",
+   "country": "Vietnam",
+   "city": null,
+   "lang": "vi-vn",
+   "ver": "1.0 (v49)",
+   "new": true,
+   "vpn": false,
+   "lv": 32,
+   "started": 33,
+   "clears": 32,
+   "stuck": 0,
+   "ads": 4,
+   "shops": 4,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 511,
+   "side": [
+    "first_ad",
+    "first_fail",
+    "first_hint",
+    "first_moves",
+    "first_restart",
+    "first_tow",
+    "first_undo",
+    "gate_final",
+    "gate_tut",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "6635d8c7",
+   "t0": "09:06",
+   "mins": 3.7,
+   "model": "2412DPC0AG",
+   "country": "Spain",
+   "city": "Vilanova i la Geltru",
+   "lang": "es-es",
+   "ver": "1.0 (v49)",
+   "new": true,
+   "vpn": false,
+   "lv": 1,
+   "started": 1,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 23,
+   "side": [
+    "gate_tut",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "d707d13a",
+   "t0": "09:02",
+   "mins": 2.3,
+   "model": "Moto G05",
+   "country": "Brazil",
+   "city": "Cachoeira do Sul",
+   "lang": "pt-br",
+   "ver": "1.0 (v49)",
+   "new": true,
+   "vpn": false,
+   "lv": 11,
+   "started": 12,
+   "clears": 11,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 127,
+   "side": [
+    "gate_pieces",
+    "gate_tut",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "fc523a3e",
+   "t0": "08:58",
+   "mins": 0.0,
+   "model": "SM-A207M",
+   "country": "Peru",
+   "city": null,
+   "lang": "es-us",
+   "ver": "1.0 (v49)",
+   "new": true,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "251214b0",
+   "t0": "08:58",
+   "mins": 0.2,
+   "model": "SM-A510F",
+   "country": "Indonesia",
+   "city": "Madiun",
+   "lang": "in-id",
+   "ver": "1.0 (v49)",
+   "new": true,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "773d493c",
+   "t0": "08:52",
+   "mins": 0.0,
+   "model": "SM-A042M",
+   "country": "Brazil",
+   "city": "Guarulhos",
+   "lang": "pt-br",
+   "ver": "1.0 (v48)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
   {
    "uid": "df93d74b",
    "t0": "07:55",
@@ -412,7 +808,7 @@
   {
    "uid": "5db56934",
    "t0": "03:55",
-   "mins": 261.3,
+   "mins": 268.9,
    "model": "SOG07",
    "country": "Japan",
    "city": "Kaminokawa",
@@ -420,11 +816,11 @@
    "ver": "1.0 (v48)",
    "new": false,
    "vpn": false,
-   "lv": 84,
-   "started": 84,
-   "clears": 27,
+   "lv": 99,
+   "started": 99,
+   "clears": 42,
    "stuck": 0,
-   "ads": 5,
+   "ads": 9,
    "shops": 0,
    "buys": 0,
    "removed": false,
@@ -1104,23 +1500,23 @@
   }
  ],
  "kinds": {
-  "human": 39,
+  "human": 54,
   "bot": 1,
   "me": 0,
   "dbg": 0
  },
  "bots": 1,
- "humans": 39,
+ "humans": 54,
  "versions": [
   {
-   "ver": "1.0 (v48)",
-   "users": 22,
-   "installs": 5
+   "ver": "1.0 (v49)",
+   "users": 27,
+   "installs": 25
   },
   {
-   "ver": "1.0 (v49)",
-   "users": 13,
-   "installs": 11
+   "ver": "1.0 (v48)",
+   "users": 23,
+   "installs": 5
   },
   {
    "ver": "1.0 (v29)",
@@ -1145,7 +1541,52 @@
    "vpn": 3
   },
   {
+   "country": "Brazil",
+   "users": 7,
+   "vpn": 0
+  },
+  {
+   "country": "Spain",
+   "users": 3,
+   "vpn": 0
+  },
+  {
+   "country": "South Korea",
+   "users": 2,
+   "vpn": 0
+  },
+  {
+   "country": "Peru",
+   "users": 2,
+   "vpn": 0
+  },
+  {
+   "country": "Vietnam",
+   "users": 2,
+   "vpn": 0
+  },
+  {
    "country": "Indonesia",
+   "users": 2,
+   "vpn": 0
+  },
+  {
+   "country": "United States",
+   "users": 1,
+   "vpn": 1
+  },
+  {
+   "country": "Argentina",
+   "users": 1,
+   "vpn": 0
+  },
+  {
+   "country": "Thailand",
+   "users": 1,
+   "vpn": 0
+  },
+  {
+   "country": "Israel",
    "users": 1,
    "vpn": 0
   },
@@ -1165,42 +1606,12 @@
    "vpn": 0
   },
   {
-   "country": "United States",
-   "users": 1,
-   "vpn": 1
-  },
-  {
-   "country": "Israel",
-   "users": 1,
-   "vpn": 0
-  },
-  {
-   "country": "Peru",
-   "users": 1,
-   "vpn": 0
-  },
-  {
-   "country": "Brazil",
-   "users": 1,
-   "vpn": 0
-  },
-  {
    "country": "Hong Kong",
    "users": 1,
    "vpn": 0
   },
   {
-   "country": "South Korea",
-   "users": 1,
-   "vpn": 0
-  },
-  {
-   "country": "Spain",
-   "users": 1,
-   "vpn": 0
-  },
-  {
-   "country": "Vietnam",
+   "country": "Mexico",
    "users": 1,
    "vpn": 0
   }
@@ -1208,6 +1619,11 @@
  "purchase_fail": [
   {
    "reason": "no_details:vip_pack",
+   "n": 3,
+   "users": 1
+  },
+  {
+   "reason": "canceled",
    "n": 3,
    "users": 1
   },
