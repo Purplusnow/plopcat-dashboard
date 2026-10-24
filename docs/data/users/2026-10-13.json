@@ -110,6 +110,24 @@
    "reached": 1023
   },
   {
+   "uid": "d8d371f7",
+   "model": "SM-A505F",
+   "country": "Iran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v29)",
+   "days": 2,
+   "last": "20261024",
+   "lv": 51,
+   "clears": 51,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 847
+  },
+  {
    "uid": "aa90761a",
    "model": "Moto G05",
    "country": "Brazil",
@@ -126,24 +144,6 @@
    "pics": 2,
    "removed": false,
    "reached": 511
-  },
-  {
-   "uid": "d8d371f7",
-   "model": "SM-A505F",
-   "country": "Iran",
-   "lang": "fa-ir",
-   "ver": "1.0 (v29)",
-   "days": 1,
-   "last": "20261013",
-   "lv": 48,
-   "clears": 48,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 0,
-   "removed": false,
-   "reached": 335
   },
   {
    "uid": "2228f690",
