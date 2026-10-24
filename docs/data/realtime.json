@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25 08:30 KST",
+ "updated": "2026-10-25 08:42 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261025",
@@ -49,32 +49,32 @@
   {
    "key": "game_open",
    "label": "게임 진입",
-   "users": 106
+   "users": 107
   },
   {
    "key": "first_move",
    "label": "첫 수",
-   "users": 98
+   "users": 99
   },
   {
    "key": "lv1_clear",
    "label": "1판 클리어",
-   "users": 93
+   "users": 94
   },
   {
    "key": "lv3_clear",
    "label": "3판",
-   "users": 58
+   "users": 59
   },
   {
    "key": "album_first",
    "label": "미술관 열기",
-   "users": 79
+   "users": 80
   },
   {
    "key": "first_piece",
    "label": "첫 조각",
-   "users": 68
+   "users": 69
   },
   {
    "key": "lv10_clear",
@@ -98,6 +98,57 @@
   }
  ],
  "users": [
+  {
+   "uid": "acfc636b",
+   "t0": "08:38",
+   "mins": 1.5,
+   "model": "23053RN02L",
+   "country": "Colombia",
+   "city": "Santander de Quilichao",
+   "lang": "es-us",
+   "ver": "1.0 (v49)",
+   "new": true,
+   "vpn": false,
+   "lv": 5,
+   "started": 5,
+   "clears": 5,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 63,
+   "side": [
+    "gate_tut",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "179cf4ee",
+   "t0": "08:37",
+   "mins": 0.0,
+   "model": "SM-A055M",
+   "country": "Brazil",
+   "city": "Salvador",
+   "lang": "pt-br",
+   "ver": "1.0 (v49)",
+   "new": true,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
   {
    "uid": "220934fc",
    "t0": "08:25",
@@ -568,7 +619,7 @@
   {
    "uid": "16841fa1",
    "t0": "07:01",
-   "mins": 70.9,
+   "mins": 71.5,
    "model": "IT-801B",
    "country": "South Korea",
    "city": "Gwangju",
@@ -4061,18 +4112,18 @@
   }
  ],
  "kinds": {
-  "human": 146,
+  "human": 148,
   "bot": 1,
   "me": 0,
   "dbg": 0
  },
  "bots": 1,
- "humans": 146,
+ "humans": 148,
  "versions": [
   {
    "ver": "1.0 (v49)",
-   "users": 139,
-   "installs": 115
+   "users": 141,
+   "installs": 117
   },
   {
    "ver": "1.0 (v48)",
@@ -4103,7 +4154,7 @@
   },
   {
    "country": "Brazil",
-   "users": 17,
+   "users": 18,
    "vpn": 0
   },
   {
@@ -4128,7 +4179,7 @@
   },
   {
    "country": "Colombia",
-   "users": 7,
+   "users": 8,
    "vpn": 0
   },
   {
@@ -4137,14 +4188,14 @@
    "vpn": 0
   },
   {
-   "country": "Taiwan",
-   "users": 4,
-   "vpn": 2
-  },
-  {
    "country": "Chile",
    "users": 4,
    "vpn": 1
+  },
+  {
+   "country": "Taiwan",
+   "users": 4,
+   "vpn": 2
   },
   {
    "country": "Indonesia",
@@ -4154,6 +4205,21 @@
   {
    "country": "France",
    "users": 3,
+   "vpn": 0
+  },
+  {
+   "country": "Thailand",
+   "users": 2,
+   "vpn": 0
+  },
+  {
+   "country": "Belgium",
+   "users": 2,
+   "vpn": 0
+  },
+  {
+   "country": "Vietnam",
+   "users": 2,
    "vpn": 0
   },
   {
@@ -4167,34 +4233,19 @@
    "vpn": 0
   },
   {
-   "country": "Belgium",
-   "users": 2,
-   "vpn": 0
-  },
-  {
    "country": "Canada",
    "users": 2,
    "vpn": 0
   },
   {
-   "country": "Vietnam",
-   "users": 2,
-   "vpn": 0
-  },
-  {
-   "country": "Thailand",
-   "users": 2,
-   "vpn": 0
-  },
-  {
-   "country": "Germany",
+   "country": "Malaysia",
    "users": 1,
    "vpn": 0
   },
   {
-   "country": "Hong Kong",
+   "country": "Netherlands",
    "users": 1,
-   "vpn": 0
+   "vpn": 1
   }
  ],
  "purchase_fail": [
