@@ -762,9 +762,9 @@
    "model": "SM-A042M",
    "country": "Brazil",
    "lang": "pt-br",
-   "ver": "1.0 (v36)",
-   "days": 1,
-   "last": "20261013",
+   "ver": "1.0 (v48)",
+   "days": 2,
+   "last": "20261024",
    "lv": 0,
    "clears": 0,
    "stuck": 0,
@@ -772,7 +772,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 1
   },
   {
