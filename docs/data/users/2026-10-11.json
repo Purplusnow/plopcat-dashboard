@@ -544,7 +544,7 @@
   {
    "uid": "fb883493",
    "model": "23129RAA4G",
-   "country": "Israel",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v29)",
    "days": 4,
@@ -979,8 +979,8 @@
    "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v29)",
-   "days": 5,
-   "last": "20261018",
+   "days": 6,
+   "last": "20261025",
    "lv": 9,
    "clears": 9,
    "stuck": 0,
@@ -988,7 +988,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 15
   },
   {
@@ -1228,7 +1228,7 @@
   {
    "uid": "b49c6633",
    "model": "SM-A127F",
-   "country": "Iran",
+   "country": "Indonesia",
    "lang": "fa-ir",
    "ver": "1.0 (v29)",
    "days": 3,
