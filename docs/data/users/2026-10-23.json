@@ -16,6 +16,24 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 6,
+   "removed": true,
+   "reached": 1023
+  },
+  {
+   "uid": "7ff2f08d",
+   "model": "moto g(60)s",
+   "country": "Iran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v49)",
+   "days": 4,
+   "last": "20261027",
+   "lv": 125,
+   "clears": 125,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 5,
    "removed": false,
    "reached": 1023
   },
@@ -38,27 +56,9 @@
    "reached": 1023
   },
   {
-   "uid": "7ff2f08d",
-   "model": "moto g(60)s",
-   "country": "Iran",
-   "lang": "fa-ir",
-   "ver": "1.0 (v49)",
-   "days": 3,
-   "last": "20261025",
-   "lv": 107,
-   "clears": 107,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 5,
-   "removed": false,
-   "reached": 1023
-  },
-  {
    "uid": "c25bd503",
    "model": "24117RN76G",
-   "country": "Iran",
+   "country": "France",
    "lang": "fa-ir",
    "ver": "1.0 (v48)",
    "days": 3,
@@ -364,7 +364,7 @@
   {
    "uid": "ec1608a2",
    "model": "25028RN03A",
-   "country": "Iran",
+   "country": "Chile",
    "lang": "fa-ir",
    "ver": "1.0 (v48)",
    "days": 3,
@@ -376,7 +376,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 2,
-   "removed": false,
+   "removed": true,
    "reached": 1023
   },
   {
@@ -670,7 +670,7 @@
   {
    "uid": "523bab43",
    "model": "SM-A546E",
-   "country": "Iran",
+   "country": "Taiwan",
    "lang": "fa-ir",
    "ver": "1.0 (v48)",
    "days": 2,
