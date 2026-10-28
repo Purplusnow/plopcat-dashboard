@@ -184,7 +184,7 @@
   {
    "uid": "85d080a4",
    "model": "SM-A346E",
-   "country": "Iran",
+   "country": "Brazil",
    "lang": "fa-ir",
    "ver": "1.0 (v47)",
    "days": 3,
@@ -328,7 +328,7 @@
   {
    "uid": "4858e7bf",
    "model": "23090RA98G",
-   "country": "Iran",
+   "country": "Brazil",
    "lang": "fa-ir",
    "ver": "1.0 (v46)",
    "days": 4,
@@ -1321,8 +1321,8 @@
    "country": "Brazil",
    "lang": "pt-br",
    "ver": "1.0 (v48)",
-   "days": 2,
-   "last": "20261024",
+   "days": 3,
+   "last": "20261028",
    "lv": 0,
    "clears": 0,
    "stuck": 0,
@@ -1330,7 +1330,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 0
   },
   {
