@@ -184,7 +184,7 @@
   {
    "uid": "85d080a4",
    "model": "SM-A346E",
-   "country": "Brazil",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v47)",
    "days": 3,
@@ -328,7 +328,7 @@
   {
    "uid": "4858e7bf",
    "model": "23090RA98G",
-   "country": "Brazil",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v46)",
    "days": 4,
@@ -490,7 +490,7 @@
   {
    "uid": "d99f6f54",
    "model": "2311DRK48G",
-   "country": "Brazil",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v47)",
    "days": 2,
@@ -616,7 +616,7 @@
   {
    "uid": "3eb3141f",
    "model": "2201117TY",
-   "country": "Iran",
+   "country": "Brazil",
    "lang": "fa-ir",
    "ver": "1.0 (v46)",
    "days": 3,
@@ -1014,9 +1014,9 @@
    "model": "Moto G17",
    "country": "Brazil",
    "lang": "pt-br",
-   "ver": "1.0 (v46)",
-   "days": 1,
-   "last": "20261014",
+   "ver": "1.0 (v47)",
+   "days": 2,
+   "last": "20261028",
    "lv": 5,
    "clears": 5,
    "stuck": 0,
@@ -1024,7 +1024,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 63
   },
   {

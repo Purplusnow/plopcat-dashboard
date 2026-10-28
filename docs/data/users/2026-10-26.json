@@ -205,8 +205,8 @@
    "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v49)",
-   "days": 2,
-   "last": "20261027",
+   "days": 3,
+   "last": "20261028",
    "lv": 64,
    "clears": 64,
    "stuck": 0,
@@ -1141,8 +1141,8 @@
    "country": "Colombia",
    "lang": "es-co",
    "ver": "1.0 (v49)",
-   "days": 1,
-   "last": "20261026",
+   "days": 2,
+   "last": "20261028",
    "lv": 12,
    "clears": 12,
    "stuck": 0,
@@ -1150,7 +1150,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 127
   },
   {
@@ -1627,8 +1627,8 @@
    "country": "Indonesia",
    "lang": "in-id",
    "ver": "1.0 (v49)",
-   "days": 2,
-   "last": "20261027",
+   "days": 3,
+   "last": "20261028",
    "lv": 6,
    "clears": 6,
    "stuck": 0,
@@ -1636,7 +1636,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 15
   },
   {
@@ -2072,6 +2072,24 @@
    "reached": 31
   },
   {
+   "uid": "e2747306",
+   "model": "X6852",
+   "country": "Argentina",
+   "lang": "es-us",
+   "ver": "1.0 (v49)",
+   "days": 2,
+   "last": "20261028",
+   "lv": 4,
+   "clears": 4,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 63
+  },
+  {
    "uid": "e4997a00",
    "model": "SM-A105M",
    "country": "Colombia",
@@ -2131,8 +2149,8 @@
    "country": "Peru",
    "lang": "es-pe",
    "ver": "1.0 (v49)",
-   "days": 1,
-   "last": "20261026",
+   "days": 2,
+   "last": "20261028",
    "lv": 3,
    "clears": 3,
    "stuck": 0,
@@ -3206,6 +3224,24 @@
    "reached": 55
   },
   {
+   "uid": "64198891",
+   "model": "TB351FU",
+   "country": "Colombia",
+   "lang": "es-us",
+   "ver": "1.0 (v49)",
+   "days": 2,
+   "last": "20261028",
+   "lv": 1,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 55
+  },
+  {
    "uid": "65b8f6e4",
    "model": "23106RN0DA",
    "country": "Brazil",
@@ -3373,8 +3409,8 @@
    "country": "Philippines",
    "lang": "en-ph",
    "ver": "1.0 (v49)",
-   "days": 1,
-   "last": "20261026",
+   "days": 2,
+   "last": "20261028",
    "lv": 1,
    "clears": 1,
    "stuck": 0,
@@ -3382,7 +3418,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 7
   },
   {
@@ -4556,10 +4592,10 @@
    "reached": 0
   },
   {
-   "uid": "64198891",
-   "model": "TB351FU",
-   "country": "Colombia",
-   "lang": "es-us",
+   "uid": "67e2864f",
+   "model": "SM-A066",
+   "country": "Thailand",
+   "lang": "th-th",
    "ver": "1.0 (v49)",
    "days": 2,
    "last": "20261028",
@@ -4571,25 +4607,7 @@
    "spend": 0.0,
    "pics": 0,
    "removed": false,
-   "reached": 3
-  },
-  {
-   "uid": "67e2864f",
-   "model": "SM-A066",
-   "country": "Thailand",
-   "lang": "th-th",
-   "ver": "1.0 (v49)",
-   "days": 1,
-   "last": "20261026",
-   "lv": 0,
-   "clears": 0,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 0,
-   "removed": false,
-   "reached": 17
+   "reached": 19
   },
   {
    "uid": "67ee7c39",
@@ -4849,8 +4867,8 @@
    "country": "Mexico",
    "lang": "es-us",
    "ver": "1.0 (v49)",
-   "days": 1,
-   "last": "20261026",
+   "days": 2,
+   "last": "20261028",
    "lv": 0,
    "clears": 0,
    "stuck": 0,
@@ -4858,7 +4876,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 3
   },
   {
@@ -5222,24 +5240,6 @@
    "reached": 0
   },
   {
-   "uid": "e2747306",
-   "model": "X6852",
-   "country": "Argentina",
-   "lang": "es-us",
-   "ver": "1.0 (v49)",
-   "days": 1,
-   "last": "20261026",
-   "lv": 0,
-   "clears": 0,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 0,
-   "removed": false,
-   "reached": 3
-  },
-  {
    "uid": "ebbf3e3b",
    "model": "2406ERN9CI",
    "country": "India",
@@ -5299,8 +5299,8 @@
    "country": "Argentina",
    "lang": "es-us",
    "ver": "1.0 (v49)",
-   "days": 1,
-   "last": "20261026",
+   "days": 2,
+   "last": "20261028",
    "lv": 0,
    "clears": 0,
    "stuck": 0,
@@ -5308,7 +5308,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 19
   }
  ]
