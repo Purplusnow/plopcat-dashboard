@@ -40,7 +40,7 @@
   {
    "uid": "15ebc3fa",
    "model": "SM-A528B",
-   "country": "Iran",
+   "country": "Brazil",
    "lang": "fa-ir",
    "ver": "1.0 (v46)",
    "days": 3,
@@ -115,8 +115,8 @@
    "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v29)",
-   "days": 2,
-   "last": "20261024",
+   "days": 3,
+   "last": "20261029",
    "lv": 51,
    "clears": 51,
    "stuck": 0,
@@ -124,7 +124,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 847
   },
   {
