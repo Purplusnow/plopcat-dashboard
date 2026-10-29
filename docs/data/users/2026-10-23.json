@@ -151,8 +151,8 @@
    "country": "Iran",
    "lang": "en-us",
    "ver": "1.0 (v48)",
-   "days": 3,
-   "last": "20261025",
+   "days": 4,
+   "last": "20261028",
    "lv": 66,
    "clears": 66,
    "stuck": 0,
@@ -160,7 +160,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 3,
-   "removed": false,
+   "removed": true,
    "reached": 1023
   },
   {
@@ -331,8 +331,8 @@
    "country": "Taiwan",
    "lang": "fa-ir",
    "ver": "1.0 (v48)",
-   "days": 2,
-   "last": "20261024",
+   "days": 3,
+   "last": "20261028",
    "lv": 54,
    "clears": 54,
    "stuck": 0,
@@ -340,7 +340,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 2,
-   "removed": false,
+   "removed": true,
    "reached": 1023
   },
   {
@@ -907,8 +907,8 @@
    "country": "Indonesia",
    "lang": "id-id",
    "ver": "1.0 (v48)",
-   "days": 1,
-   "last": "20261023",
+   "days": 2,
+   "last": "20261028",
    "lv": 0,
    "clears": 0,
    "stuck": 0,
@@ -916,7 +916,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 0
   },
   {
