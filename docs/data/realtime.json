@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29 09:11 KST",
+ "updated": "2026-10-29 09:20 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261029",
@@ -54,7 +54,7 @@
   {
    "key": "first_move",
    "label": "첫 수",
-   "users": 43
+   "users": 44
   },
   {
    "key": "lv1_clear",
@@ -69,7 +69,7 @@
   {
    "key": "album_first",
    "label": "미술관 열기",
-   "users": 36
+   "users": 37
   },
   {
    "key": "first_piece",
@@ -127,7 +127,7 @@
   {
    "uid": "1adaff90",
    "t0": "09:05",
-   "mins": 0.0,
+   "mins": 1.6,
    "model": "220733SPI",
    "country": "India",
    "city": null,
@@ -144,8 +144,12 @@
    "buys": 0,
    "removed": false,
    "abuse": 0,
-   "reached": 0,
-   "side": [],
+   "reached": 18,
+   "side": [
+    "first_hint",
+    "first_tow",
+    "first_undo"
+   ],
    "kind": "human"
   },
   {
