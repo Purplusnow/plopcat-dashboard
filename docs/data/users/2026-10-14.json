@@ -295,8 +295,8 @@
    "country": "Brazil",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
-   "days": 1,
-   "last": "20261014",
+   "days": 2,
+   "last": "20261029",
    "lv": 33,
    "clears": 33,
    "stuck": 0,
@@ -490,7 +490,7 @@
   {
    "uid": "d99f6f54",
    "model": "2311DRK48G",
-   "country": "Iran",
+   "country": "Brazil",
    "lang": "fa-ir",
    "ver": "1.0 (v47)",
    "days": 2,
@@ -616,7 +616,7 @@
   {
    "uid": "3eb3141f",
    "model": "2201117TY",
-   "country": "Brazil",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v46)",
    "days": 3,

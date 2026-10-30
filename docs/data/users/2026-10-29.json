@@ -2,6 +2,24 @@
  "date": "2026-10-29",
  "users": [
   {
+   "uid": "574a4484",
+   "model": "CPH2325",
+   "country": "India",
+   "lang": "en-in",
+   "ver": "1.0 (v49)",
+   "days": 1,
+   "last": "20261029",
+   "lv": 29,
+   "clears": 29,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 1,
+   "removed": false,
+   "reached": 511
+  },
+  {
    "uid": "aa10123b",
    "model": "V2070",
    "country": "India",
@@ -13,6 +31,42 @@
    "clears": 23,
    "stuck": 0,
    "ads": 5,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 1,
+   "removed": false,
+   "reached": 511
+  },
+  {
+   "uid": "d0592b60",
+   "model": "23129RAA4G",
+   "country": "Iran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v49)",
+   "days": 2,
+   "last": "20261030",
+   "lv": 22,
+   "clears": 22,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 1,
+   "removed": false,
+   "reached": 511
+  },
+  {
+   "uid": "5fd4e18c",
+   "model": "RMX3762",
+   "country": "India",
+   "lang": "en-us",
+   "ver": "1.0 (v49)",
+   "days": 2,
+   "last": "20261030",
+   "lv": 21,
+   "clears": 21,
+   "stuck": 0,
+   "ads": 0,
    "buys": 0,
    "spend": 0.0,
    "pics": 1,
@@ -35,6 +89,42 @@
    "spend": 0.0,
    "pics": 1,
    "removed": true,
+   "reached": 255
+  },
+  {
+   "uid": "bdfdbf23",
+   "model": "C21 Pro",
+   "country": "Türkiye",
+   "lang": "tr-tr",
+   "ver": "1.0 (v49)",
+   "days": 1,
+   "last": "20261029",
+   "lv": 18,
+   "clears": 18,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 1,
+   "removed": false,
+   "reached": 255
+  },
+  {
+   "uid": "9ab6de00",
+   "model": "CPH1901",
+   "country": "India",
+   "lang": "en-gb",
+   "ver": "1.0 (v49)",
+   "days": 2,
+   "last": "20261030",
+   "lv": 17,
+   "clears": 17,
+   "stuck": 0,
+   "ads": 4,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 1,
+   "removed": false,
    "reached": 255
   },
   {
@@ -61,8 +151,8 @@
    "country": "Türkiye",
    "lang": "tr-tr",
    "ver": "1.0 (v49)",
-   "days": 1,
-   "last": "20261029",
+   "days": 2,
+   "last": "20261030",
    "lv": 15,
    "clears": 15,
    "stuck": 0,
@@ -72,6 +162,24 @@
    "pics": 0,
    "removed": false,
    "reached": 127
+  },
+  {
+   "uid": "9164978b",
+   "model": "Blade A34",
+   "country": "Colombia",
+   "lang": "es-us",
+   "ver": "1.0 (v49)",
+   "days": 2,
+   "last": "20261030",
+   "lv": 15,
+   "clears": 15,
+   "stuck": 1,
+   "ads": 2,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 79
   },
   {
    "uid": "ae2d1d69",
@@ -110,6 +218,24 @@
    "reached": 127
   },
   {
+   "uid": "e60e4beb",
+   "model": "V2350",
+   "country": "India",
+   "lang": "en-us",
+   "ver": "1.0 (v49)",
+   "days": 2,
+   "last": "20261030",
+   "lv": 15,
+   "clears": 15,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 95
+  },
+  {
    "uid": "a674c442",
    "model": "CPH2179",
    "country": "India",
@@ -124,8 +250,44 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 127
+  },
+  {
+   "uid": "9deb101f",
+   "model": "Moto G35 5G",
+   "country": "India",
+   "lang": "en-in",
+   "ver": "1.0 (v49)",
+   "days": 1,
+   "last": "20261029",
+   "lv": 11,
+   "clears": 11,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 95
+  },
+  {
+   "uid": "6f8a906e",
+   "model": "CPH2127",
+   "country": "India",
+   "lang": "en-au",
+   "ver": "1.0 (v49)",
+   "days": 1,
+   "last": "20261029",
+   "lv": 9,
+   "clears": 9,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 63
   },
   {
    "uid": "1722b24a",
@@ -146,22 +308,22 @@
    "reached": 63
   },
   {
-   "uid": "9deb101f",
-   "model": "Moto G35 5G",
-   "country": "India",
-   "lang": "en-in",
+   "uid": "3ae140d2",
+   "model": "V2430",
+   "country": "Türkiye",
+   "lang": "tr-tr",
    "ver": "1.0 (v49)",
    "days": 1,
    "last": "20261029",
-   "lv": 8,
-   "clears": 8,
+   "lv": 7,
+   "clears": 7,
    "stuck": 0,
    "ads": 0,
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
    "removed": false,
-   "reached": 31
+   "reached": 15
   },
   {
    "uid": "7c91594b",
@@ -182,17 +344,17 @@
    "reached": 15
   },
   {
-   "uid": "9ab6de00",
-   "model": "CPH1901",
+   "uid": "25832381",
+   "model": "X675",
    "country": "India",
-   "lang": "en-gb",
+   "lang": "en-us",
    "ver": "1.0 (v49)",
    "days": 1,
    "last": "20261029",
-   "lv": 7,
-   "clears": 7,
+   "lv": 5,
+   "clears": 5,
    "stuck": 0,
-   "ads": 2,
+   "ads": 0,
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
@@ -200,22 +362,22 @@
    "reached": 63
   },
   {
-   "uid": "9164978b",
-   "model": "Blade A34",
-   "country": "Colombia",
-   "lang": "es-us",
+   "uid": "27c5d739",
+   "model": "CPH2625",
+   "country": "India",
+   "lang": "en-gb",
    "ver": "1.0 (v49)",
-   "days": 1,
-   "last": "20261029",
-   "lv": 6,
-   "clears": 6,
-   "stuck": 1,
+   "days": 2,
+   "last": "20261030",
+   "lv": 5,
+   "clears": 5,
+   "stuck": 0,
    "ads": 0,
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
    "removed": false,
-   "reached": 15
+   "reached": 63
   },
   {
    "uid": "330887a5",
@@ -286,7 +448,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 63
   },
   {
@@ -344,6 +506,24 @@
    "reached": 31
   },
   {
+   "uid": "4996cdbe",
+   "model": "23129RN51X",
+   "country": "India",
+   "lang": "en-us",
+   "ver": "1.0 (v49)",
+   "days": 2,
+   "last": "20261030",
+   "lv": 3,
+   "clears": 3,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 15
+  },
+  {
    "uid": "6936ba00",
    "model": "RMX3241",
    "country": "India",
@@ -358,7 +538,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 63
   },
   {
@@ -376,7 +556,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 63
   },
   {
@@ -412,7 +592,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 63
   },
   {
@@ -434,13 +614,13 @@
    "reached": 55
   },
   {
-   "uid": "574a4484",
-   "model": "CPH2325",
+   "uid": "3a51c44b",
+   "model": "24116RNC1I",
    "country": "India",
    "lang": "en-in",
    "ver": "1.0 (v49)",
-   "days": 1,
-   "last": "20261029",
+   "days": 2,
+   "last": "20261030",
    "lv": 2,
    "clears": 2,
    "stuck": 0,
@@ -502,14 +682,14 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 55
   },
   {
-   "uid": "e60e4beb",
-   "model": "V2350",
+   "uid": "a1199026",
+   "model": "V2022",
    "country": "India",
-   "lang": "en-us",
+   "lang": "en-in",
    "ver": "1.0 (v49)",
    "days": 1,
    "last": "20261029",
@@ -520,8 +700,26 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
+   "removed": true,
+   "reached": 55
+  },
+  {
+   "uid": "d6479309",
+   "model": "1803",
+   "country": "India",
+   "lang": "en-us",
+   "ver": "1.0 (v49)",
+   "days": 2,
+   "last": "20261030",
+   "lv": 2,
+   "clears": 2,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
    "removed": false,
-   "reached": 23
+   "reached": 7
   },
   {
    "uid": "0c251b6c",
@@ -556,7 +754,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 23
   },
   {
@@ -565,8 +763,8 @@
    "country": "India",
    "lang": "en-us",
    "ver": "1.0 (v49)",
-   "days": 1,
-   "last": "20261029",
+   "days": 2,
+   "last": "20261030",
    "lv": 1,
    "clears": 1,
    "stuck": 0,
@@ -575,7 +773,7 @@
    "spend": 0.0,
    "pics": 0,
    "removed": false,
-   "reached": 23
+   "reached": 55
   },
   {
    "uid": "180d8a5c",
@@ -596,6 +794,24 @@
    "reached": 23
   },
   {
+   "uid": "1bbe9aa8",
+   "model": "CPH2613",
+   "country": "India",
+   "lang": "en-gb",
+   "ver": "1.0 (v49)",
+   "days": 1,
+   "last": "20261029",
+   "lv": 1,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": true,
+   "reached": 7
+  },
+  {
    "uid": "1f69ae3b",
    "model": "CPH2471",
    "country": "India",
@@ -610,7 +826,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 23
   },
   {
@@ -630,24 +846,6 @@
    "pics": 0,
    "removed": false,
    "reached": 7
-  },
-  {
-   "uid": "27c5d739",
-   "model": "CPH2625",
-   "country": "India",
-   "lang": "en-gb",
-   "ver": "1.0 (v49)",
-   "days": 1,
-   "last": "20261029",
-   "lv": 1,
-   "clears": 1,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 0,
-   "removed": false,
-   "reached": 55
   },
   {
    "uid": "292206ce",
@@ -700,7 +898,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 23
   },
   {
@@ -738,24 +936,6 @@
    "pics": 0,
    "removed": false,
    "reached": 55
-  },
-  {
-   "uid": "3ae140d2",
-   "model": "V2430",
-   "country": "Türkiye",
-   "lang": "tr-tr",
-   "ver": "1.0 (v49)",
-   "days": 1,
-   "last": "20261029",
-   "lv": 1,
-   "clears": 1,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 0,
-   "removed": false,
-   "reached": 7
   },
   {
    "uid": "3fa9c324",
@@ -1010,6 +1190,24 @@
    "reached": 23
   },
   {
+   "uid": "96dfc435",
+   "model": "V2407",
+   "country": "India",
+   "lang": "en-us",
+   "ver": "1.0 (v49)",
+   "days": 2,
+   "last": "20261030",
+   "lv": 1,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 23
+  },
+  {
    "uid": "97747502",
    "model": "IV2201",
    "country": "India",
@@ -1051,8 +1249,8 @@
    "country": "Türkiye",
    "lang": "tr-tr",
    "ver": "1.0 (v49)",
-   "days": 1,
-   "last": "20261029",
+   "days": 2,
+   "last": "20261030",
    "lv": 1,
    "clears": 1,
    "stuck": 0,
@@ -1060,7 +1258,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 7
   },
   {
@@ -1100,6 +1298,24 @@
    "reached": 23
   },
   {
+   "uid": "ba6b2d8a",
+   "model": "E6523",
+   "country": "India",
+   "lang": "en-in",
+   "ver": "1.0 (v49)",
+   "days": 2,
+   "last": "20261030",
+   "lv": 1,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": true,
+   "reached": 55
+  },
+  {
    "uid": "cbc8cbf1",
    "model": "2508CRN2BE",
    "country": "India",
@@ -1136,24 +1352,6 @@
    "reached": 23
   },
   {
-   "uid": "d6479309",
-   "model": "1803",
-   "country": "India",
-   "lang": "en-us",
-   "ver": "1.0 (v49)",
-   "days": 1,
-   "last": "20261029",
-   "lv": 1,
-   "clears": 1,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 0,
-   "removed": false,
-   "reached": 7
-  },
-  {
    "uid": "f0db1a37",
    "model": "SM-E166P",
    "country": "India",
@@ -1177,8 +1375,8 @@
    "country": "India",
    "lang": "en-in",
    "ver": "1.0 (v49)",
-   "days": 1,
-   "last": "20261029",
+   "days": 2,
+   "last": "20261030",
    "lv": 0,
    "clears": 0,
    "stuck": 0,
@@ -1186,7 +1384,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 1
   },
   {
@@ -1226,6 +1424,24 @@
    "reached": 19
   },
   {
+   "uid": "1af2d3a9",
+   "model": "24094RAD4G",
+   "country": "Colombia",
+   "lang": "es-us",
+   "ver": "1.0 (v49)",
+   "days": 1,
+   "last": "20261029",
+   "lv": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": true,
+   "reached": 0
+  },
+  {
    "uid": "1dd65002",
    "model": "CPH2637",
    "country": "India",
@@ -1240,7 +1456,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 3
   },
   {
@@ -1267,8 +1483,8 @@
    "country": "Türkiye",
    "lang": "tr-tr",
    "ver": "1.0 (v49)",
-   "days": 1,
-   "last": "20261029",
+   "days": 2,
+   "last": "20261030",
    "lv": 0,
    "clears": 0,
    "stuck": 0,
@@ -1276,7 +1492,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 3
   },
   {
@@ -1321,8 +1537,8 @@
    "country": "India",
    "lang": "en-in",
    "ver": "1.0 (v49)",
-   "days": 1,
-   "last": "20261029",
+   "days": 2,
+   "last": "20261030",
    "lv": 0,
    "clears": 0,
    "stuck": 0,
@@ -1330,7 +1546,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 1
   },
   {
@@ -1442,24 +1658,6 @@
    "reached": 16
   },
   {
-   "uid": "4996cdbe",
-   "model": "23129RN51X",
-   "country": "India",
-   "lang": "en-us",
-   "ver": "1.0 (v49)",
-   "days": 1,
-   "last": "20261029",
-   "lv": 0,
-   "clears": 0,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 0,
-   "removed": false,
-   "reached": 0
-  },
-  {
    "uid": "52a1dac0",
    "model": "23129RN51X",
    "country": "India",
@@ -1510,7 +1708,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 17
   },
   {
@@ -1548,6 +1746,24 @@
    "pics": 0,
    "removed": false,
    "reached": 0
+  },
+  {
+   "uid": "5e804585",
+   "model": "23053RN02A",
+   "country": "Türkiye",
+   "lang": "tr-tr",
+   "ver": "1.0 (v49)",
+   "days": 1,
+   "last": "20261029",
+   "lv": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 3
   },
   {
    "uid": "5f7308f3",
@@ -1622,6 +1838,42 @@
    "reached": 19
   },
   {
+   "uid": "6585e674",
+   "model": "V2253",
+   "country": "India",
+   "lang": "en-us",
+   "ver": "1.0 (v49)",
+   "days": 1,
+   "last": "20261029",
+   "lv": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": true,
+   "reached": 1
+  },
+  {
+   "uid": "68fba391",
+   "model": "CPH2477",
+   "country": "India",
+   "lang": "en-in",
+   "ver": "1.0 (v49)",
+   "days": 1,
+   "last": "20261029",
+   "lv": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 16
+  },
+  {
    "uid": "6f371e38",
    "model": "CPH2185",
    "country": "India",
@@ -1645,8 +1897,8 @@
    "country": "India",
    "lang": "en-in",
    "ver": "1.0 (v49)",
-   "days": 1,
-   "last": "20261029",
+   "days": 2,
+   "last": "20261030",
    "lv": 0,
    "clears": 0,
    "stuck": 0,
@@ -1654,7 +1906,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 1
   },
   {
@@ -1802,6 +2054,24 @@
    "reached": 19
   },
   {
+   "uid": "a1561dd3",
+   "model": "Pulse 1",
+   "country": "India",
+   "lang": "en-in",
+   "ver": "1.0 (v49)",
+   "days": 1,
+   "last": "20261029",
+   "lv": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 19
+  },
+  {
    "uid": "b0238426",
    "model": "V2143",
    "country": "India",
@@ -1906,7 +2176,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 0
   },
   {
@@ -1951,8 +2221,8 @@
    "country": "Türkiye",
    "lang": "tr-tr",
    "ver": "1.0 (v49)",
-   "days": 1,
-   "last": "20261029",
+   "days": 2,
+   "last": "20261030",
    "lv": 0,
    "clears": 0,
    "stuck": 0,
@@ -1978,7 +2248,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 0
   },
   {
@@ -1996,8 +2266,26 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 0
+  },
+  {
+   "uid": "ef6a15a7",
+   "model": "CPH2579",
+   "country": "India",
+   "lang": "en-gb",
+   "ver": "1.0 (v49)",
+   "days": 1,
+   "last": "20261029",
+   "lv": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 3
   },
   {
    "uid": "f01506e0",
@@ -2050,7 +2338,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 19
   },
   {
