@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01 05:55 KST",
+ "updated": "2026-11-01 08:55 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261101",
@@ -49,7 +49,7 @@
   {
    "key": "game_open",
    "label": "게임 진입",
-   "users": 1
+   "users": 2
   },
   {
    "key": "first_move",
@@ -98,6 +98,128 @@
   }
  ],
  "users": [
+  {
+   "uid": "568f36da",
+   "t0": "08:04",
+   "mins": 0.9,
+   "model": "CPH2557",
+   "country": "Spain",
+   "city": "Madrid",
+   "lang": "es-es",
+   "ver": "1.0 (v49)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "0650aff4",
+   "t0": "07:52",
+   "mins": 0.0,
+   "model": "SM-A065M",
+   "country": "Brazil",
+   "city": "Itatiba",
+   "lang": "pt-br",
+   "ver": "1.0 (v49)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "438c6da1",
+   "t0": "07:28",
+   "mins": 0.9,
+   "model": "Pixel 6",
+   "country": "United States",
+   "city": "Reston",
+   "lang": "en-us",
+   "ver": "1.0 (v49)",
+   "new": true,
+   "vpn": false,
+   "lv": 0,
+   "started": 1,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "8d7dc93d",
+   "t0": "07:21",
+   "mins": 2.1,
+   "model": "25028PC03G",
+   "country": "Iran",
+   "city": "Ahvaz",
+   "lang": "fa-ir",
+   "ver": "1.0 (v47)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "ed204c5b",
+   "t0": "05:29",
+   "mins": 17.3,
+   "model": "SM-A065F",
+   "country": "Türkiye",
+   "city": "Ankara",
+   "lang": "tr-tr",
+   "ver": "1.0 (v49)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
   {
    "uid": "3a9e25c7",
    "t0": "04:16",
@@ -312,6 +434,32 @@
    "abuse": 0,
    "reached": 0,
    "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "27b6b357",
+   "t0": "01:39",
+   "mins": 0.6,
+   "model": "M2006C3LG",
+   "country": "Colombia",
+   "city": "Arjona",
+   "lang": "es-us",
+   "ver": "1.0 (v49)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 1,
+   "side": [
+    "tut_hand"
+   ],
    "kind": "human"
   },
   {
@@ -610,18 +758,23 @@
   }
  ],
  "kinds": {
-  "human": 21,
+  "human": 27,
   "bot": 0,
   "me": 0,
   "dbg": 0
  },
  "bots": 0,
- "humans": 21,
+ "humans": 27,
  "versions": [
   {
    "ver": "1.0 (v49)",
-   "users": 21,
-   "installs": 1
+   "users": 26,
+   "installs": 2
+  },
+  {
+   "ver": "1.0 (v47)",
+   "users": 1,
+   "installs": 0
   }
  ],
  "countries": [
@@ -632,22 +785,17 @@
   },
   {
    "country": "Iran",
-   "users": 4,
+   "users": 5,
    "vpn": 0
   },
   {
    "country": "Spain",
-   "users": 3,
+   "users": 4,
    "vpn": 0
   },
   {
    "country": "Türkiye",
-   "users": 2,
-   "vpn": 0
-  },
-  {
-   "country": "Germany",
-   "users": 1,
+   "users": 3,
    "vpn": 0
   },
   {
@@ -661,7 +809,27 @@
    "vpn": 0
   },
   {
+   "country": "Colombia",
+   "users": 1,
+   "vpn": 0
+  },
+  {
    "country": "Panama",
+   "users": 1,
+   "vpn": 0
+  },
+  {
+   "country": "Germany",
+   "users": 1,
+   "vpn": 0
+  },
+  {
+   "country": "United States",
+   "users": 1,
+   "vpn": 0
+  },
+  {
+   "country": "Brazil",
    "users": 1,
    "vpn": 0
   },
