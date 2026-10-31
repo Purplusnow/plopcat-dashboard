@@ -40,7 +40,7 @@
   {
    "uid": "692cc35b",
    "model": "23129RAA4G",
-   "country": "Iran",
+   "country": "Taiwan",
    "lang": "fa-ir",
    "ver": "1.0 (v49)",
    "days": 7,
@@ -796,7 +796,7 @@
   {
    "uid": "f183fecb",
    "model": "M2101K9AG",
-   "country": "Taiwan",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v49)",
    "days": 3,
@@ -835,8 +835,8 @@
    "country": "Indonesia",
    "lang": "in-id",
    "ver": "1.0 (v49)",
-   "days": 2,
-   "last": "20261028",
+   "days": 3,
+   "last": "20261031",
    "lv": 31,
    "clears": 31,
    "stuck": 0,
@@ -3082,7 +3082,7 @@
   {
    "uid": "746000b8",
    "model": "24116RACCG",
-   "country": "Taiwan",
+   "country": "Iran",
    "lang": "en-us",
    "ver": "1.0 (v49)",
    "days": 2,

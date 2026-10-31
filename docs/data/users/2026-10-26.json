@@ -4471,8 +4471,8 @@
    "country": "Peru",
    "lang": "es-us",
    "ver": "1.0 (v49)",
-   "days": 2,
-   "last": "20261027",
+   "days": 3,
+   "last": "20261031",
    "lv": 0,
    "clears": 0,
    "stuck": 0,
@@ -4480,7 +4480,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 0
   },
   {
@@ -4595,7 +4595,7 @@
    "uid": "27bcbc01",
    "model": "RMX3933",
    "country": "India",
-   "lang": "en-us",
+   "lang": "en-in",
    "ver": "1.0 (v49)",
    "days": 2,
    "last": "20261027",
