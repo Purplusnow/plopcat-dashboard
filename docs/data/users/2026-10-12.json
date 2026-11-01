@@ -76,7 +76,7 @@
   {
    "uid": "362cb56f",
    "model": "SM-A137F",
-   "country": "Iran",
+   "country": "Brazil",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
    "days": 5,
@@ -923,10 +923,10 @@
    "uid": "8d7dc93d",
    "model": "25028PC03G",
    "country": "Iran",
-   "lang": "ar-iq",
+   "lang": "fa-ir",
    "ver": "1.0 (v47)",
-   "days": 2,
-   "last": "20261025",
+   "days": 3,
+   "last": "20261101",
    "lv": 0,
    "clears": 0,
    "stuck": 0,
@@ -934,7 +934,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 3
   },
   {
