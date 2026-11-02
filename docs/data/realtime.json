@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02 06:19 KST",
+ "updated": "2026-11-02 09:57 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261102",
@@ -49,17 +49,17 @@
   {
    "key": "game_open",
    "label": "게임 진입",
-   "users": 2
+   "users": 3
   },
   {
    "key": "first_move",
    "label": "첫 수",
-   "users": 2
+   "users": 3
   },
   {
    "key": "lv1_clear",
    "label": "1판 클리어",
-   "users": 2
+   "users": 3
   },
   {
    "key": "lv3_clear",
@@ -69,12 +69,12 @@
   {
    "key": "album_first",
    "label": "미술관 열기",
-   "users": 1
+   "users": 2
   },
   {
    "key": "first_piece",
    "label": "첫 조각",
-   "users": 1
+   "users": 2
   },
   {
    "key": "lv10_clear",
@@ -98,6 +98,106 @@
   }
  ],
  "users": [
+  {
+   "uid": "961dccb6",
+   "t0": "09:24",
+   "mins": 0.0,
+   "model": "SM-A356E",
+   "country": "Iran",
+   "city": "Karaj",
+   "lang": "en-gb",
+   "ver": "1.0 (v49)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "4672952e",
+   "t0": "08:02",
+   "mins": 0.0,
+   "model": "moto e20",
+   "country": "Mexico",
+   "city": "Santiago de Queretaro",
+   "lang": "es-mx",
+   "ver": "1.0 (v49)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "013ef6d2",
+   "t0": "07:58",
+   "mins": 0.0,
+   "model": "23108RN04Y",
+   "country": "Iran",
+   "city": "Isfahan",
+   "lang": "fa-ir",
+   "ver": "1.0 (v29)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "edbbc3d8",
+   "t0": "05:56",
+   "mins": 1.1,
+   "model": "Moto E13",
+   "country": "Argentina",
+   "city": "Puerto Rico",
+   "lang": "es-us",
+   "ver": "1.0 (v49)",
+   "new": true,
+   "vpn": false,
+   "lv": 1,
+   "started": 1,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 55,
+   "side": [
+    "gate_tut",
+    "lang_change",
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
   {
    "uid": "26832720",
    "t0": "05:46",
@@ -740,18 +840,18 @@
   }
  ],
  "kinds": {
-  "human": 26,
+  "human": 30,
   "bot": 0,
   "me": 0,
   "dbg": 0
  },
  "bots": 0,
- "humans": 26,
+ "humans": 30,
  "versions": [
   {
    "ver": "1.0 (v49)",
-   "users": 23,
-   "installs": 3
+   "users": 26,
+   "installs": 4
   },
   {
    "ver": "1.0 (v48)",
@@ -762,12 +862,17 @@
    "ver": "1.0 (v46)",
    "users": 1,
    "installs": 0
+  },
+  {
+   "ver": "1.0 (v29)",
+   "users": 1,
+   "installs": 0
   }
  ],
  "countries": [
   {
    "country": "Iran",
-   "users": 11,
+   "users": 13,
    "vpn": 0
   },
   {
@@ -788,6 +893,16 @@
   {
    "country": "Finland",
    "users": 2,
+   "vpn": 0
+  },
+  {
+   "country": "Mexico",
+   "users": 1,
+   "vpn": 0
+  },
+  {
+   "country": "Argentina",
+   "users": 1,
    "vpn": 0
   },
   {
