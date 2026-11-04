@@ -146,6 +146,24 @@
    "reached": 63
   },
   {
+   "uid": "c7a2b69d",
+   "model": "SM-A235F",
+   "country": "India",
+   "lang": "en-in",
+   "ver": "1.0 (v49)",
+   "days": 2,
+   "last": "20261103",
+   "lv": 4,
+   "clears": 4,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 63
+  },
+  {
    "uid": "c301ad20",
    "model": "X3",
    "country": "Türkiye",
@@ -205,8 +223,8 @@
    "country": "India",
    "lang": "en-in",
    "ver": "1.0 (v49)",
-   "days": 1,
-   "last": "20261030",
+   "days": 2,
+   "last": "20261103",
    "lv": 1,
    "clears": 1,
    "stuck": 0,
@@ -215,7 +233,7 @@
    "spend": 0.0,
    "pics": 0,
    "removed": false,
-   "reached": 7
+   "reached": 23
   },
   {
    "uid": "bccb8b3b",
@@ -234,24 +252,6 @@
    "pics": 0,
    "removed": false,
    "reached": 7
-  },
-  {
-   "uid": "c7a2b69d",
-   "model": "SM-A235F",
-   "country": "India",
-   "lang": "en-in",
-   "ver": "1.0 (v49)",
-   "days": 1,
-   "last": "20261030",
-   "lv": 1,
-   "clears": 1,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 0,
-   "removed": false,
-   "reached": 55
   },
   {
    "uid": "d182ba0e",

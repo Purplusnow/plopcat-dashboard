@@ -7,16 +7,16 @@
    "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
-   "days": 16,
-   "last": "20261102",
-   "lv": 573,
-   "clears": 573,
+   "days": 17,
+   "last": "20261104",
+   "lv": 586,
+   "clears": 586,
    "stuck": 0,
    "ads": 8,
    "buys": 0,
    "spend": 0.0,
    "pics": 19,
-   "removed": false,
+   "removed": true,
    "reached": 1023
   },
   {
@@ -76,7 +76,7 @@
   {
    "uid": "362cb56f",
    "model": "SM-A137F",
-   "country": "Iran",
+   "country": "Brazil",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
    "days": 5,
@@ -115,8 +115,8 @@
    "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v29)",
-   "days": 1,
-   "last": "20261012",
+   "days": 2,
+   "last": "20261103",
    "lv": 130,
    "clears": 130,
    "stuck": 0,
@@ -124,7 +124,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 895
   },
   {
@@ -274,7 +274,7 @@
   {
    "uid": "2cbc96bc",
    "model": "2201117TG",
-   "country": "Israel",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
    "days": 4,
@@ -292,7 +292,7 @@
   {
    "uid": "c773efb9",
    "model": "2201117TG",
-   "country": "Iran",
+   "country": "Chile",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
    "days": 3,
@@ -344,6 +344,24 @@
    "reached": 511
   },
   {
+   "uid": "c3de0be2",
+   "model": "SM-A047F",
+   "country": "Iran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v36)",
+   "days": 3,
+   "last": "20261104",
+   "lv": 35,
+   "clears": 35,
+   "stuck": 0,
+   "ads": 4,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 2,
+   "removed": false,
+   "reached": 511
+  },
+  {
    "uid": "01ea87f7",
    "model": "SM-A156B",
    "country": "Brazil",
@@ -364,7 +382,7 @@
   {
    "uid": "2dfc36c1",
    "model": "SM-A528B",
-   "country": "Iran",
+   "country": "Russia",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
    "days": 2,
@@ -377,24 +395,6 @@
    "spend": 0.0,
    "pics": 2,
    "removed": true,
-   "reached": 511
-  },
-  {
-   "uid": "c3de0be2",
-   "model": "SM-A047F",
-   "country": "Iran",
-   "lang": "fa-ir",
-   "ver": "1.0 (v36)",
-   "days": 2,
-   "last": "20261102",
-   "lv": 30,
-   "clears": 30,
-   "stuck": 0,
-   "ads": 2,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 1,
-   "removed": false,
    "reached": 511
   },
   {
@@ -598,7 +598,7 @@
   {
    "uid": "bb44e232",
    "model": "220333QPG",
-   "country": "Iran",
+   "country": "Brazil",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
    "days": 4,

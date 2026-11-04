@@ -2,6 +2,24 @@
  "date": "2026-10-31",
  "users": [
   {
+   "uid": "a49da91f",
+   "model": "2312DRA50G",
+   "country": "Brazil",
+   "lang": "fa-ir",
+   "ver": "1.0 (v48)",
+   "days": 2,
+   "last": "20261103",
+   "lv": 31,
+   "clears": 31,
+   "stuck": 0,
+   "ads": 1,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 1,
+   "removed": false,
+   "reached": 511
+  },
+  {
    "uid": "9e92dc66",
    "model": "23053RN02A",
    "country": "Iran",
@@ -180,24 +198,6 @@
    "pics": 0,
    "removed": false,
    "reached": 1
-  },
-  {
-   "uid": "a49da91f",
-   "model": "2312DRA50G",
-   "country": "Iran",
-   "lang": "fa-ir",
-   "ver": "1.0 (v48)",
-   "days": 1,
-   "last": "20261031",
-   "lv": 0,
-   "clears": 0,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 0,
-   "removed": false,
-   "reached": 0
   },
   {
    "uid": "ac1e5e65",

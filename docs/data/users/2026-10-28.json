@@ -74,6 +74,24 @@
    "reached": 255
   },
   {
+   "uid": "1a2b4995",
+   "model": "2409BRN2CL",
+   "country": "Peru",
+   "lang": "es-us",
+   "ver": "1.0 (v49)",
+   "days": 3,
+   "last": "20261104",
+   "lv": 18,
+   "clears": 18,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 1,
+   "removed": false,
+   "reached": 255
+  },
+  {
    "uid": "907df97f",
    "model": "2409BRN2CA",
    "country": "Türkiye",
@@ -1457,24 +1475,6 @@
    "spend": 0.0,
    "pics": 0,
    "removed": true,
-   "reached": 0
-  },
-  {
-   "uid": "1a2b4995",
-   "model": "2409BRN2CL",
-   "country": "Peru",
-   "lang": "es-us",
-   "ver": "1.0 (v49)",
-   "days": 2,
-   "last": "20261101",
-   "lv": 0,
-   "clears": 0,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 0,
-   "removed": false,
    "reached": 0
   },
   {

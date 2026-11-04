@@ -1,0 +1,41 @@
+{
+ "date": "2026-11-04",
+ "users": [
+  {
+   "uid": "ea5c5c33",
+   "model": "SM-X230",
+   "country": "Türkiye",
+   "lang": "tr-tr",
+   "ver": "1.0 (v49)",
+   "days": 1,
+   "last": "20261104",
+   "lv": 1,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 23
+  },
+  {
+   "uid": "bf25a627",
+   "model": "Nova 1 5G",
+   "country": "India",
+   "lang": "en-in",
+   "ver": "1.0 (v49)",
+   "days": 1,
+   "last": "20261104",
+   "lv": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 0
+  }
+ ]
+}
