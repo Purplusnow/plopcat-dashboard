@@ -74,6 +74,24 @@
    "reached": 0
   },
   {
+   "uid": "bea01c1e",
+   "model": "23100RN82L",
+   "country": "Colombia",
+   "lang": "es-us",
+   "ver": "1.0 (v49)",
+   "days": 1,
+   "last": "20261103",
+   "lv": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": true,
+   "reached": 0
+  },
+  {
    "uid": "e1737723",
    "model": "CPH1803",
    "country": "Thailand",

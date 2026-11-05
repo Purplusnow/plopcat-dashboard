@@ -20,6 +20,24 @@
    "reached": 63
   },
   {
+   "uid": "a7c1df8d",
+   "model": "Z2353",
+   "country": "Philippines",
+   "lang": "en-us",
+   "ver": "1.0 (v49)",
+   "days": 2,
+   "last": "20261103",
+   "lv": 2,
+   "clears": 2,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 55
+  },
+  {
    "uid": "780dcc40",
    "model": "V2509",
    "country": "India",
@@ -54,24 +72,6 @@
    "pics": 0,
    "removed": false,
    "reached": 23
-  },
-  {
-   "uid": "a7c1df8d",
-   "model": "Z2353",
-   "country": "Philippines",
-   "lang": "en-us",
-   "ver": "1.0 (v49)",
-   "days": 1,
-   "last": "20261101",
-   "lv": 1,
-   "clears": 1,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 0,
-   "removed": false,
-   "reached": 7
   },
   {
    "uid": "be9f0eef",

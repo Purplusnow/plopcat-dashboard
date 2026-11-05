@@ -20,6 +20,24 @@
    "reached": 511
   },
   {
+   "uid": "2e9b5f7c",
+   "model": "P662L",
+   "country": "India",
+   "lang": "en-us",
+   "ver": "1.0 (v49)",
+   "days": 2,
+   "last": "20261103",
+   "lv": 16,
+   "clears": 16,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 95
+  },
+  {
    "uid": "4044e9ea",
    "model": "P13 Blue MaxL 2022",
    "country": "Türkiye",
@@ -108,24 +126,6 @@
    "pics": 0,
    "removed": false,
    "reached": 0
-  },
-  {
-   "uid": "2e9b5f7c",
-   "model": "P662L",
-   "country": "India",
-   "lang": "en-us",
-   "ver": "1.0 (v49)",
-   "days": 1,
-   "last": "20261102",
-   "lv": 0,
-   "clears": 0,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 0,
-   "removed": false,
-   "reached": 19
   },
   {
    "uid": "4477a77b",
