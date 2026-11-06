@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06 08:10 KST",
+ "updated": "2026-11-06 12:30 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261106",
@@ -98,6 +98,102 @@
   }
  ],
  "users": [
+  {
+   "uid": "1965730f",
+   "t0": "11:23",
+   "mins": 0.0,
+   "model": "ABR-NX3",
+   "country": "Peru",
+   "city": null,
+   "lang": "es-pe",
+   "ver": "1.0 (v49)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "f614216d",
+   "t0": "10:34",
+   "mins": 0.0,
+   "model": "Z2474",
+   "country": "Peru",
+   "city": null,
+   "lang": "es-pe",
+   "ver": "1.0 (v49)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "0e808279",
+   "t0": "10:30",
+   "mins": 1.1,
+   "model": "Blade A52",
+   "country": "Colombia",
+   "city": "Cucuta",
+   "lang": "es-us",
+   "ver": "1.0 (v49)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "7c1fba1a",
+   "t0": "09:29",
+   "mins": 0.0,
+   "model": "2409BRN2CA",
+   "country": "Thailand",
+   "city": null,
+   "lang": "th-th",
+   "ver": "1.0 (v49)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
   {
    "uid": "7afa7241",
    "t0": "07:34",
@@ -411,6 +507,30 @@
    "kind": "human"
   },
   {
+   "uid": "4996cdbe",
+   "t0": "01:15",
+   "mins": 1.2,
+   "model": "23129RN51X",
+   "country": "India",
+   "city": "Agra",
+   "lang": "en-us",
+   "ver": "1.0 (v49)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
    "uid": "cbb24d50",
    "t0": "01:09",
    "mins": 0.0,
@@ -486,17 +606,17 @@
   }
  ],
  "kinds": {
-  "human": 16,
+  "human": 21,
   "bot": 0,
   "me": 0,
   "dbg": 0
  },
  "bots": 0,
- "humans": 16,
+ "humans": 21,
  "versions": [
   {
    "ver": "1.0 (v49)",
-   "users": 14,
+   "users": 19,
    "installs": 0
   },
   {
@@ -518,21 +638,31 @@
   },
   {
    "country": "India",
-   "users": 2,
-   "vpn": 0
-  },
-  {
-   "country": "Vietnam",
-   "users": 1,
+   "users": 3,
    "vpn": 0
   },
   {
    "country": "Peru",
+   "users": 3,
+   "vpn": 0
+  },
+  {
+   "country": "Colombia",
+   "users": 1,
+   "vpn": 0
+  },
+  {
+   "country": "Thailand",
    "users": 1,
    "vpn": 0
   },
   {
    "country": "Brazil",
+   "users": 1,
+   "vpn": 0
+  },
+  {
+   "country": "Vietnam",
    "users": 1,
    "vpn": 0
   }
