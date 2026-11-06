@@ -2,6 +2,24 @@
  "date": "2026-11-05",
  "users": [
   {
+   "uid": "bb36301f",
+   "model": "W7002",
+   "country": "Vietnam",
+   "lang": "vi-vn",
+   "ver": "1.0 (v49)",
+   "days": 1,
+   "last": "20261105",
+   "lv": 15,
+   "clears": 15,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 127
+  },
+  {
    "uid": "62f4bfc7",
    "model": "24117RN76G",
    "country": "Iran",
@@ -36,6 +54,24 @@
    "pics": 0,
    "removed": false,
    "reached": 7
+  },
+  {
+   "uid": "1d8c3135",
+   "model": "moto g15",
+   "country": "Peru",
+   "lang": "es-us",
+   "ver": "1.0 (v49)",
+   "days": 1,
+   "last": "20261105",
+   "lv": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 0
   },
   {
    "uid": "71912413",
