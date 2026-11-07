@@ -491,10 +491,10 @@
    "uid": "baa6a4d9",
    "model": "CPH2127",
    "country": "India",
-   "lang": "en-in",
+   "lang": "hi-in",
    "ver": "1.0 (v49)",
-   "days": 3,
-   "last": "20261101",
+   "days": 4,
+   "last": "20261104",
    "lv": 5,
    "clears": 5,
    "stuck": 0,
@@ -503,7 +503,7 @@
    "spend": 0.0,
    "pics": 0,
    "removed": false,
-   "reached": 31
+   "reached": 63
   },
   {
    "uid": "d8608dab",
@@ -2023,8 +2023,8 @@
    "country": "Türkiye",
    "lang": "tr-tr",
    "ver": "1.0 (v49)",
-   "days": 1,
-   "last": "20261028",
+   "days": 2,
+   "last": "20261107",
    "lv": 0,
    "clears": 0,
    "stuck": 0,

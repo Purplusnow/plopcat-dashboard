@@ -2,6 +2,24 @@
  "date": "2026-11-06",
  "users": [
   {
+   "uid": "4d037fb0",
+   "model": "SM-S711B",
+   "country": "Iran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v49)",
+   "days": 1,
+   "last": "20261106",
+   "lv": 26,
+   "clears": 26,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 1,
+   "removed": false,
+   "reached": 511
+  },
+  {
    "uid": "6c6723cb",
    "model": "Pixel 6",
    "country": "United States",

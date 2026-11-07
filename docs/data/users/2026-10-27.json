@@ -758,6 +758,24 @@
    "reached": 63
   },
   {
+   "uid": "ca731d3d",
+   "model": "V2111",
+   "country": "India",
+   "lang": "en-us",
+   "ver": "1.0 (v49)",
+   "days": 2,
+   "last": "20261106",
+   "lv": 6,
+   "clears": 6,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 63
+  },
+  {
    "uid": "3f9c31b6",
    "model": "2410CRP4CG",
    "country": "Türkiye",
@@ -902,31 +920,13 @@
    "reached": 15
   },
   {
-   "uid": "ca731d3d",
-   "model": "V2111",
-   "country": "India",
-   "lang": "en-us",
-   "ver": "1.0 (v49)",
-   "days": 2,
-   "last": "20261106",
-   "lv": 4,
-   "clears": 4,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 0,
-   "removed": false,
-   "reached": 63
-  },
-  {
    "uid": "3ed505a1",
    "model": "211033MI",
    "country": "India",
    "lang": "en-in",
    "ver": "1.0 (v49)",
-   "days": 3,
-   "last": "20261103",
+   "days": 4,
+   "last": "20261106",
    "lv": 3,
    "clears": 3,
    "stuck": 0,
@@ -2023,8 +2023,8 @@
    "country": "India",
    "lang": "en-gb",
    "ver": "1.0 (v49)",
-   "days": 1,
-   "last": "20261027",
+   "days": 2,
+   "last": "20261106",
    "lv": 0,
    "clears": 0,
    "stuck": 0,
@@ -2033,7 +2033,7 @@
    "spend": 0.0,
    "pics": 0,
    "removed": false,
-   "reached": 1
+   "reached": 3
   },
   {
    "uid": "5ae488e4",

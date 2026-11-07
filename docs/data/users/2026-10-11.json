@@ -22,7 +22,7 @@
   {
    "uid": "1b4d7b5d",
    "model": "SM-A736B",
-   "country": "Russia",
+   "country": "Iran",
    "lang": "en-gb",
    "ver": "1.0 (v49)",
    "days": 5,
@@ -96,9 +96,9 @@
    "model": "Redmi Note 8 Pro",
    "country": "Iran",
    "lang": "en-gb",
-   "ver": "1.0 (v46)",
-   "days": 4,
-   "last": "20261015",
+   "ver": "1.0 (v49)",
+   "days": 5,
+   "last": "20261106",
    "lv": 121,
    "clears": 121,
    "stuck": 0,
@@ -326,6 +326,24 @@
    "reached": 383
   },
   {
+   "uid": "f205d1b4",
+   "model": "SM-A057F",
+   "country": "Iran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v49)",
+   "days": 2,
+   "last": "20261107",
+   "lv": 41,
+   "clears": 41,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 2,
+   "removed": false,
+   "reached": 511
+  },
+  {
    "uid": "013ef6d2",
    "model": "23108RN04Y",
    "country": "Iran",
@@ -346,7 +364,7 @@
   {
    "uid": "16b0ef96",
    "model": "23117RA68G",
-   "country": "United Kingdom",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v29)",
    "days": 5,
@@ -416,24 +434,6 @@
    "reached": 383
   },
   {
-   "uid": "f205d1b4",
-   "model": "SM-A057F",
-   "country": "Iran",
-   "lang": "fa-ir",
-   "ver": "1.0 (v36)",
-   "days": 1,
-   "last": "20261011",
-   "lv": 36,
-   "clears": 36,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 2,
-   "removed": false,
-   "reached": 511
-  },
-  {
    "uid": "060f9ff9",
    "model": "23106RN0DA",
    "country": "Iran",
@@ -454,7 +454,7 @@
   {
    "uid": "fb883493",
    "model": "23129RAA4G",
-   "country": "Israel",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v49)",
    "days": 8,
@@ -706,7 +706,7 @@
   {
    "uid": "6bf661a7",
    "model": "SM-A165F",
-   "country": "Iran",
+   "country": "Brazil",
    "lang": "fa-ir",
    "ver": "1.0 (v29)",
    "days": 2,
@@ -1210,7 +1210,7 @@
   {
    "uid": "7ef77845",
    "model": "V0Core",
-   "country": "Brazil",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
    "days": 2,
