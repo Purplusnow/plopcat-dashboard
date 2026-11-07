@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08 01:56 KST",
+ "updated": "2026-11-08 05:39 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261108",
@@ -98,6 +98,56 @@
   }
  ],
  "users": [
+  {
+   "uid": "246aa9c6",
+   "t0": "02:44",
+   "mins": 0.0,
+   "model": "21061119BI",
+   "country": "India",
+   "city": "Jabalpur",
+   "lang": "en-in",
+   "ver": "1.0 (v50)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "e987516b",
+   "t0": "02:14",
+   "mins": 0.1,
+   "model": "RMX1971",
+   "country": "India",
+   "city": "Vijayawada",
+   "lang": "en-us",
+   "ver": "1.0 (v50)",
+   "new": true,
+   "vpn": false,
+   "lv": 0,
+   "started": 1,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
   {
    "uid": "ce72d407",
    "t0": "01:23",
@@ -301,13 +351,13 @@
   }
  ],
  "kinds": {
-  "human": 8,
+  "human": 10,
   "bot": 0,
   "me": 0,
   "dbg": 0
  },
  "bots": 0,
- "humans": 8,
+ "humans": 10,
  "versions": [
   {
    "ver": "1.0 (v49)",
@@ -316,23 +366,18 @@
   },
   {
    "ver": "1.0 (v50)",
-   "users": 2,
-   "installs": 1
+   "users": 4,
+   "installs": 2
   }
  ],
  "countries": [
   {
    "country": "India",
-   "users": 4,
+   "users": 6,
    "vpn": 0
   },
   {
-   "country": "Türkiye",
-   "users": 1,
-   "vpn": 0
-  },
-  {
-   "country": "Spain",
+   "country": "Iran",
    "users": 1,
    "vpn": 0
   },
@@ -342,7 +387,12 @@
    "vpn": 0
   },
   {
-   "country": "Iran",
+   "country": "Spain",
+   "users": 1,
+   "vpn": 0
+  },
+  {
+   "country": "Türkiye",
    "users": 1,
    "vpn": 0
   }
