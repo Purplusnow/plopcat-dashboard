@@ -7,8 +7,8 @@
    "country": "Argentina",
    "lang": "es-us",
    "ver": "1.0 (v49)",
-   "days": 1,
-   "last": "20261101",
+   "days": 2,
+   "last": "20261110",
    "lv": 3,
    "clears": 3,
    "stuck": 0,
@@ -16,7 +16,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 63
   },
   {
