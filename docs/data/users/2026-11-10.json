@@ -25,8 +25,8 @@
    "country": "India",
    "lang": "en-in",
    "ver": "1.0 (v51)",
-   "days": 1,
-   "last": "20261110",
+   "days": 2,
+   "last": "20261111",
    "lv": 6,
    "clears": 6,
    "stuck": 0,
@@ -34,8 +34,26 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 31
+  },
+  {
+   "uid": "9ea99d3b",
+   "model": "CM5",
+   "country": "Türkiye",
+   "lang": "tr-tr",
+   "ver": "1.0 (v49)",
+   "days": 1,
+   "last": "20261110",
+   "lv": 1,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 7
   },
   {
    "uid": "cfe5a583",
@@ -110,6 +128,24 @@
    "reached": 1
   },
   {
+   "uid": "cb187909",
+   "model": "Moto G45 5G",
+   "country": "India",
+   "lang": "en-in",
+   "ver": "1.0 (v51)",
+   "days": 2,
+   "last": "20261111",
+   "lv": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 3
+  },
+  {
    "uid": "f85b0e88",
    "model": "Moto G06 Power",
    "country": "India",
@@ -124,7 +160,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 3
   }
  ]

@@ -38,6 +38,24 @@
    "reached": 1023
   },
   {
+   "uid": "af57d3f1",
+   "model": "CPH2325",
+   "country": "India",
+   "lang": "en-in",
+   "ver": "1.0 (v49)",
+   "days": 2,
+   "last": "20261111",
+   "lv": 32,
+   "clears": 7,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 1,
+   "removed": false,
+   "reached": 19
+  },
+  {
    "uid": "ee626a96",
    "model": "24094RAD4G",
    "country": "Türkiye",
@@ -1800,24 +1818,6 @@
    "pics": 0,
    "removed": true,
    "reached": 17
-  },
-  {
-   "uid": "af57d3f1",
-   "model": "CPH2325",
-   "country": "India",
-   "lang": "en-in",
-   "ver": "1.0 (v49)",
-   "days": 1,
-   "last": "20261028",
-   "lv": 0,
-   "clears": 0,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 0,
-   "removed": false,
-   "reached": 19
   },
   {
    "uid": "b7250259",

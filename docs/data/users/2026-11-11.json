@@ -1,0 +1,59 @@
+{
+ "date": "2026-11-11",
+ "users": [
+  {
+   "uid": "13ec5cf3",
+   "model": "SM-A205F",
+   "country": "India",
+   "lang": "en-gb",
+   "ver": "1.0 (v51)",
+   "days": 1,
+   "last": "20261111",
+   "lv": 5,
+   "clears": 5,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": true,
+   "reached": 63
+  },
+  {
+   "uid": "b8244612",
+   "model": "CPH2565",
+   "country": "India",
+   "lang": "en-gb",
+   "ver": "1.0 (v51)",
+   "days": 1,
+   "last": "20261111",
+   "lv": 1,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 55
+  },
+  {
+   "uid": "cd300129",
+   "model": "RMX3511",
+   "country": "India",
+   "lang": "en-in",
+   "ver": "1.0 (v50)",
+   "days": 1,
+   "last": "20261111",
+   "lv": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": true,
+   "reached": 0
+  }
+ ]
+}
