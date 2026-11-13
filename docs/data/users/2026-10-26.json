@@ -4,7 +4,7 @@
   {
    "uid": "2f82bce6",
    "model": "SM-A127F",
-   "country": "Chile",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v49)",
    "days": 11,
@@ -58,7 +58,7 @@
   {
    "uid": "064c1770",
    "model": "SM-A125F",
-   "country": "Iran",
+   "country": "Brazil",
    "lang": "fa-ir",
    "ver": "1.0 (v49)",
    "days": 5,
@@ -724,7 +724,7 @@
   {
    "uid": "4b405e19",
    "model": "SM-A127F",
-   "country": "Iran",
+   "country": "Canada",
    "lang": "fa-ir",
    "ver": "1.0 (v49)",
    "days": 3,
@@ -745,8 +745,8 @@
    "country": "Türkiye",
    "lang": "tr-tr",
    "ver": "1.0 (v49)",
-   "days": 2,
-   "last": "20261103",
+   "days": 3,
+   "last": "20261113",
    "lv": 28,
    "clears": 28,
    "stuck": 0,
@@ -754,7 +754,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 1,
-   "removed": false,
+   "removed": true,
    "reached": 511
   },
   {

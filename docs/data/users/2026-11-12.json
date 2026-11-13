@@ -38,6 +38,24 @@
    "reached": 55
   },
   {
+   "uid": "8b37b85f",
+   "model": "V2205",
+   "country": "Türkiye",
+   "lang": "tr-tr",
+   "ver": "1.0 (v51)",
+   "days": 1,
+   "last": "20261112",
+   "lv": 1,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 7
+  },
+  {
    "uid": "93decdd4",
    "model": "V2143",
    "country": "India",
@@ -72,6 +90,24 @@
    "pics": 0,
    "removed": false,
    "reached": 7
+  },
+  {
+   "uid": "064f63d3",
+   "model": "CPH2591",
+   "country": "India",
+   "lang": "en-gb",
+   "ver": "1.0 (v51)",
+   "days": 1,
+   "last": "20261112",
+   "lv": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 0
   },
   {
    "uid": "50ddb34a",

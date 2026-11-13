@@ -22,7 +22,7 @@
   {
    "uid": "dc72467c",
    "model": "SM-A135F",
-   "country": "Iran",
+   "country": "Finland",
    "lang": "fa-ir",
    "ver": "1.0 (v49)",
    "days": 10,
@@ -112,7 +112,7 @@
   {
    "uid": "4ee49f6c",
    "model": "SM-A536E",
-   "country": "Iran",
+   "country": "Azerbaijan",
    "lang": "en-us",
    "ver": "1.0 (v51)",
    "days": 5,
@@ -997,8 +997,8 @@
    "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v49)",
-   "days": 2,
-   "last": "20261026",
+   "days": 3,
+   "last": "20261112",
    "lv": 32,
    "clears": 32,
    "stuck": 0,
@@ -1006,7 +1006,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 1,
-   "removed": false,
+   "removed": true,
    "reached": 511
   },
   {
@@ -1552,7 +1552,7 @@
   {
    "uid": "6947f893",
    "model": "23021RAAEG",
-   "country": "United States",
+   "country": "Finland",
    "lang": "fa-ir",
    "ver": "1.0 (v49)",
    "days": 6,
