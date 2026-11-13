@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13 08:07 KST",
+ "updated": "2026-11-13 12:29 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261113",
@@ -49,12 +49,12 @@
   {
    "key": "game_open",
    "label": "게임 진입",
-   "users": 0
+   "users": 1
   },
   {
    "key": "first_move",
    "label": "첫 수",
-   "users": 0
+   "users": 1
   },
   {
    "key": "lv1_clear",
@@ -98,6 +98,80 @@
   }
  ],
  "users": [
+  {
+   "uid": "a236c603",
+   "t0": "12:28",
+   "mins": 0.0,
+   "model": "23028RN4DH",
+   "country": "India",
+   "city": "Jaipur",
+   "lang": "en-in",
+   "ver": "1.0 (v51)",
+   "new": true,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "279ec20c",
+   "t0": "10:45",
+   "mins": 0.2,
+   "model": "CPH2477",
+   "country": "India",
+   "city": "Udaipur",
+   "lang": "hi-in",
+   "ver": "1.0 (v49)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 1,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 3,
+   "side": [
+    "tut_hand"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "17ae9d13",
+   "t0": "09:35",
+   "mins": 0.0,
+   "model": "V2332",
+   "country": "Mexico",
+   "city": "Mexico City",
+   "lang": "es-mx",
+   "ver": "1.0 (v49)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
   {
    "uid": "99e6243f",
    "t0": "07:45",
@@ -268,23 +342,23 @@
   }
  ],
  "kinds": {
-  "human": 7,
+  "human": 10,
   "bot": 0,
   "me": 0,
   "dbg": 0
  },
  "bots": 0,
- "humans": 7,
+ "humans": 10,
  "versions": [
   {
    "ver": "1.0 (v49)",
-   "users": 6,
+   "users": 8,
    "installs": 0
   },
   {
    "ver": "1.0 (v51)",
-   "users": 1,
-   "installs": 0
+   "users": 2,
+   "installs": 1
   }
  ],
  "countries": [
@@ -294,7 +368,27 @@
    "vpn": 0
   },
   {
+   "country": "India",
+   "users": 2,
+   "vpn": 0
+  },
+  {
    "country": "Puerto Rico",
+   "users": 1,
+   "vpn": 0
+  },
+  {
+   "country": "Argentina",
+   "users": 1,
+   "vpn": 0
+  },
+  {
+   "country": "Mexico",
+   "users": 1,
+   "vpn": 0
+  },
+  {
+   "country": "Türkiye",
    "users": 1,
    "vpn": 0
   },
@@ -305,16 +399,6 @@
   },
   {
    "country": "Brazil",
-   "users": 1,
-   "vpn": 0
-  },
-  {
-   "country": "Türkiye",
-   "users": 1,
-   "vpn": 0
-  },
-  {
-   "country": "Argentina",
    "users": 1,
    "vpn": 0
   }
