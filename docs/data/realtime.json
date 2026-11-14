@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15 03:55 KST",
+ "updated": "2026-11-15 07:51 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261115",
@@ -79,7 +79,7 @@
   {
    "key": "lv10_clear",
    "label": "10판",
-   "users": 0
+   "users": 1
   },
   {
    "key": "first_picture",
@@ -98,6 +98,131 @@
   }
  ],
  "users": [
+  {
+   "uid": "9164978b",
+   "t0": "07:40",
+   "mins": 0.0,
+   "model": "Blade A34",
+   "country": "Colombia",
+   "city": "",
+   "lang": "es-us",
+   "ver": "1.0 (v49)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "b036b9d7",
+   "t0": "05:43",
+   "mins": 26.4,
+   "model": "SM-A566B",
+   "country": "Italy",
+   "city": "Terni",
+   "lang": "it-it",
+   "ver": "1.0 (v51)",
+   "new": false,
+   "vpn": false,
+   "lv": 10,
+   "started": 11,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 2,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 64,
+   "side": [
+    "first_ad",
+    "first_fail"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "72033174",
+   "t0": "04:51",
+   "mins": 1.6,
+   "model": "SM-A556E",
+   "country": "Azerbaijan",
+   "city": "",
+   "lang": "fa-ir",
+   "ver": "1.0 (v51)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [
+    "first_hint"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "7a898cdd",
+   "t0": "04:27",
+   "mins": 5.6,
+   "model": "Redmi Note 9 Pro",
+   "country": "Azerbaijan",
+   "city": "",
+   "lang": "fa-ir",
+   "ver": "1.0 (v49)",
+   "new": false,
+   "vpn": false,
+   "lv": 554,
+   "started": 555,
+   "clears": 11,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "99f1e995",
+   "t0": "03:22",
+   "mins": 3.0,
+   "model": "2303CRA44A",
+   "country": "Iran",
+   "city": "Tabriz",
+   "lang": "fa-ir",
+   "ver": "1.0 (v49)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
   {
    "uid": "7e116b86",
    "t0": "02:56",
@@ -197,17 +322,41 @@
   {
    "uid": "db5dcd97",
    "t0": "01:50",
-   "mins": 0.0,
+   "mins": 6.9,
    "model": "23117RA68G",
-   "country": "Azerbaijan",
+   "country": "Iran",
    "city": "",
    "lang": "fa-ir",
    "ver": "1.0 (v49)",
    "new": false,
+   "vpn": true,
+   "lv": 148,
+   "started": 149,
+   "clears": 12,
+   "stuck": 0,
+   "ads": 1,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "929cce9c",
+   "t0": "01:04",
+   "mins": 4.1,
+   "model": "SM-A566B",
+   "country": "Vietnam",
+   "city": "",
+   "lang": "vi-vn",
+   "ver": "1.0 (v49)",
+   "new": false,
    "vpn": false,
-   "lv": 0,
-   "started": 0,
-   "clears": 0,
+   "lv": 38,
+   "started": 39,
+   "clears": 12,
    "stuck": 0,
    "ads": 0,
    "shops": 0,
@@ -215,7 +364,10 @@
    "removed": false,
    "abuse": 0,
    "reached": 0,
-   "side": [],
+   "side": [
+    "first_fail",
+    "first_restart"
+   ],
    "kind": "human"
   },
   {
@@ -273,22 +425,22 @@
   }
  ],
  "kinds": {
-  "human": 7,
+  "human": 13,
   "bot": 0,
   "me": 0,
   "dbg": 0
  },
  "bots": 0,
- "humans": 7,
+ "humans": 13,
  "versions": [
   {
    "ver": "1.0 (v49)",
-   "users": 3,
+   "users": 7,
    "installs": 0
   },
   {
    "ver": "1.0 (v51)",
-   "users": 3,
+   "users": 5,
    "installs": 1
   },
   {
@@ -300,8 +452,13 @@
  "countries": [
   {
    "country": "Azerbaijan",
-   "users": 3,
+   "users": 4,
    "vpn": 0
+  },
+  {
+   "country": "Iran",
+   "users": 3,
+   "vpn": 2
   },
   {
    "country": "India",
@@ -309,12 +466,22 @@
    "vpn": 0
   },
   {
-   "country": "Iran",
+   "country": "Peru",
    "users": 1,
-   "vpn": 1
+   "vpn": 0
   },
   {
-   "country": "Peru",
+   "country": "Italy",
+   "users": 1,
+   "vpn": 0
+  },
+  {
+   "country": "Colombia",
+   "users": 1,
+   "vpn": 0
+  },
+  {
+   "country": "Vietnam",
    "users": 1,
    "vpn": 0
   }
