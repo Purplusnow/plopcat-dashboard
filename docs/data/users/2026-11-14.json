@@ -1,0 +1,59 @@
+{
+ "date": "2026-11-14",
+ "users": [
+  {
+   "uid": "e6e7e26f",
+   "model": "M2101K6G",
+   "country": "Italy",
+   "lang": "it-it",
+   "ver": "1.0 (v51)",
+   "days": 1,
+   "last": "20261114",
+   "lv": 1,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": true,
+   "reached": 7
+  },
+  {
+   "uid": "041a90ad",
+   "model": "CPH2127",
+   "country": "Vietnam",
+   "lang": "vi-vn",
+   "ver": "1.0 (v51)",
+   "days": 1,
+   "last": "20261114",
+   "lv": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 0
+  },
+  {
+   "uid": "72f557d9",
+   "model": "2510DRA23E",
+   "country": "Italy",
+   "lang": "it-it",
+   "ver": "1.0 (v51)",
+   "days": 1,
+   "last": "20261114",
+   "lv": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 0
+  }
+ ]
+}

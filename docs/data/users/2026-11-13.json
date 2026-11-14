@@ -20,6 +20,24 @@
    "reached": 127
   },
   {
+   "uid": "84751803",
+   "model": "2201116PG",
+   "country": "Azerbaijan",
+   "lang": "fa-ir",
+   "ver": "1.0 (v51)",
+   "days": 1,
+   "last": "20261113",
+   "lv": 1,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 7
+  },
+  {
    "uid": "7a4d2234",
    "model": "V2541",
    "country": "India",

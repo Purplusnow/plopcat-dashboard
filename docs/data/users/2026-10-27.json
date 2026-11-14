@@ -4,7 +4,7 @@
   {
    "uid": "3daf2527",
    "model": "25028RN03A",
-   "country": "Azerbaijan",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v51)",
    "days": 11,
@@ -133,8 +133,8 @@
    "country": "India",
    "lang": "en-us",
    "ver": "1.0 (v49)",
-   "days": 4,
-   "last": "20261106",
+   "days": 5,
+   "last": "20261114",
    "lv": 31,
    "clears": 31,
    "stuck": 0,
@@ -142,7 +142,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 1,
-   "removed": false,
+   "removed": true,
    "reached": 511
   },
   {
