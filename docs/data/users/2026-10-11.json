@@ -22,7 +22,7 @@
   {
    "uid": "1b4d7b5d",
    "model": "SM-A736B",
-   "country": "Iran",
+   "country": "Russia",
    "lang": "en-gb",
    "ver": "1.0 (v49)",
    "days": 5,
@@ -166,7 +166,7 @@
   {
    "uid": "7850febd",
    "model": "SM-A055F",
-   "country": "Azerbaijan",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v49)",
    "days": 5,
@@ -508,7 +508,7 @@
   {
    "uid": "62fb1d1c",
    "model": "SM-A325F",
-   "country": "Azerbaijan",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v29)",
    "days": 5,
@@ -706,7 +706,7 @@
   {
    "uid": "6bf661a7",
    "model": "SM-A165F",
-   "country": "Iran",
+   "country": "Brazil",
    "lang": "fa-ir",
    "ver": "1.0 (v29)",
    "days": 2,
@@ -1210,7 +1210,7 @@
   {
    "uid": "7ef77845",
    "model": "V0Core",
-   "country": "Brazil",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v36)",
    "days": 2,
@@ -1228,7 +1228,7 @@
   {
    "uid": "b49c6633",
    "model": "SM-A127F",
-   "country": "Indonesia",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v29)",
    "days": 3,
@@ -1284,9 +1284,9 @@
    "model": "SM-A715F",
    "country": "Iran",
    "lang": "fa-ir",
-   "ver": "1.0 (v49)",
-   "days": 4,
-   "last": "20261029",
+   "ver": "1.0 (v51)",
+   "days": 5,
+   "last": "20261115",
    "lv": 1,
    "clears": 1,
    "stuck": 0,

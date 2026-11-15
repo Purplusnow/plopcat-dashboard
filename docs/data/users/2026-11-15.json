@@ -1,0 +1,23 @@
+{
+ "date": "2026-11-15",
+ "users": [
+  {
+   "uid": "7e116b86",
+   "model": "NIC-LX3",
+   "country": "Peru",
+   "lang": "es-pe",
+   "ver": "1.0 (v51)",
+   "days": 1,
+   "last": "20261115",
+   "lv": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 0
+  }
+ ]
+}

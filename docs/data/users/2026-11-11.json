@@ -8,16 +8,16 @@
    "lang": "en-in",
    "ver": "1.0 (v51)",
    "days": 3,
-   "last": "20261113",
-   "lv": 15,
-   "clears": 15,
-   "stuck": 0,
+   "last": "20261115",
+   "lv": 51,
+   "clears": 45,
+   "stuck": 1,
    "ads": 0,
    "buys": 0,
    "spend": 0.0,
-   "pics": 0,
+   "pics": 2,
    "removed": false,
-   "reached": 127
+   "reached": 959
   },
   {
    "uid": "13ec5cf3",
@@ -36,6 +36,24 @@
    "pics": 0,
    "removed": true,
    "reached": 63
+  },
+  {
+   "uid": "52d67ba9",
+   "model": "LZG409",
+   "country": "India",
+   "lang": "en-in",
+   "ver": "1.0 (v51)",
+   "days": 1,
+   "last": "20261111",
+   "lv": 1,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 7
   },
   {
    "uid": "a54ac2f3",
@@ -61,8 +79,8 @@
    "country": "India",
    "lang": "en-gb",
    "ver": "1.0 (v51)",
-   "days": 1,
-   "last": "20261111",
+   "days": 2,
+   "last": "20261114",
    "lv": 1,
    "clears": 1,
    "stuck": 0,
@@ -70,7 +88,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 55
   },
   {
