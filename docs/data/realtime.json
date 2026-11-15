@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15 07:51 KST",
+ "updated": "2026-11-15 11:20 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261115",
@@ -99,6 +99,102 @@
  ],
  "users": [
   {
+   "uid": "fc50cfd8",
+   "t0": "10:33",
+   "mins": 0.0,
+   "model": "Moto E13",
+   "country": "Brazil",
+   "city": "Fortaleza",
+   "lang": "pt-br",
+   "ver": "1.0 (v49)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "917071aa",
+   "t0": "09:38",
+   "mins": 0.0,
+   "model": "SM-A037M",
+   "country": "Argentina",
+   "city": "Villa Krause",
+   "lang": "es-us",
+   "ver": "1.0 (v49)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "216745f2",
+   "t0": "08:43",
+   "mins": 0.0,
+   "model": "LZG409",
+   "country": "India",
+   "city": "Patna",
+   "lang": "hi-in",
+   "ver": "1.0 (v49)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "2cd5107c",
+   "t0": "08:39",
+   "mins": 5.3,
+   "model": "SM-A156M",
+   "country": "Brazil",
+   "city": "Manaus",
+   "lang": "pt-br",
+   "ver": "1.0 (v50)",
+   "new": false,
+   "vpn": false,
+   "lv": 60,
+   "started": 61,
+   "clears": 3,
+   "stuck": 0,
+   "ads": 2,
+   "shops": 2,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
    "uid": "9164978b",
    "t0": "07:40",
    "mins": 0.0,
@@ -152,7 +248,7 @@
   {
    "uid": "72033174",
    "t0": "04:51",
-   "mins": 1.6,
+   "mins": 259.8,
    "model": "SM-A556E",
    "country": "Azerbaijan",
    "city": "",
@@ -178,7 +274,7 @@
   {
    "uid": "7a898cdd",
    "t0": "04:27",
-   "mins": 5.6,
+   "mins": 224.7,
    "model": "Redmi Note 9 Pro",
    "country": "Azerbaijan",
    "city": "",
@@ -186,9 +282,9 @@
    "ver": "1.0 (v49)",
    "new": false,
    "vpn": false,
-   "lv": 554,
-   "started": 555,
-   "clears": 11,
+   "lv": 557,
+   "started": 558,
+   "clears": 14,
    "stuck": 0,
    "ads": 0,
    "shops": 0,
@@ -274,7 +370,7 @@
   {
    "uid": "3374ba9a",
    "t0": "02:29",
-   "mins": 0.0,
+   "mins": 0.3,
    "model": "RMX3231",
    "country": "India",
    "city": "Bengaluru",
@@ -425,23 +521,28 @@
   }
  ],
  "kinds": {
-  "human": 13,
-  "bot": 0,
+  "human": 17,
+  "bot": 1,
   "me": 0,
   "dbg": 0
  },
- "bots": 0,
- "humans": 13,
+ "bots": 1,
+ "humans": 17,
  "versions": [
   {
    "ver": "1.0 (v49)",
-   "users": 7,
+   "users": 10,
    "installs": 0
   },
   {
    "ver": "1.0 (v51)",
    "users": 5,
    "installs": 1
+  },
+  {
+   "ver": "1.0 (v50)",
+   "users": 1,
+   "installs": 0
   },
   {
    "ver": "1.0 (v46)",
@@ -462,11 +563,21 @@
   },
   {
    "country": "India",
+   "users": 3,
+   "vpn": 0
+  },
+  {
+   "country": "Brazil",
    "users": 2,
    "vpn": 0
   },
   {
-   "country": "Peru",
+   "country": "Argentina",
+   "users": 1,
+   "vpn": 0
+  },
+  {
+   "country": "Vietnam",
    "users": 1,
    "vpn": 0
   },
@@ -476,16 +587,22 @@
    "vpn": 0
   },
   {
-   "country": "Colombia",
+   "country": "Peru",
    "users": 1,
    "vpn": 0
   },
   {
-   "country": "Vietnam",
+   "country": "Colombia",
    "users": 1,
    "vpn": 0
   }
  ],
- "purchase_fail": [],
+ "purchase_fail": [
+  {
+   "reason": "canceled",
+   "n": 2,
+   "users": 1
+  }
+ ],
  "abuse": []
 }
