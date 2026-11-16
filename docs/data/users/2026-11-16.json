@@ -1,0 +1,41 @@
+{
+ "date": "2026-11-16",
+ "users": [
+  {
+   "uid": "f4295aa4",
+   "model": "RMX3933",
+   "country": "Thailand",
+   "lang": "th-th",
+   "ver": "1.0 (v51)",
+   "days": 1,
+   "last": "20261116",
+   "lv": 33,
+   "clears": 33,
+   "stuck": 0,
+   "ads": 2,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 2,
+   "removed": false,
+   "reached": 511
+  },
+  {
+   "uid": "ccb08561",
+   "model": "SM-A336B",
+   "country": "Austria",
+   "lang": "de-at",
+   "ver": "1.0 (v51)",
+   "days": 1,
+   "last": "20261116",
+   "lv": 1,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 7
+  }
+ ]
+}

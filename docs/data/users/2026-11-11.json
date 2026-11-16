@@ -7,17 +7,17 @@
    "country": "India",
    "lang": "en-in",
    "ver": "1.0 (v51)",
-   "days": 3,
+   "days": 4,
    "last": "20261115",
    "lv": 51,
-   "clears": 45,
+   "clears": 51,
    "stuck": 1,
-   "ads": 0,
+   "ads": 2,
    "buys": 0,
    "spend": 0.0,
    "pics": 2,
    "removed": false,
-   "reached": 959
+   "reached": 1023
   },
   {
    "uid": "13ec5cf3",

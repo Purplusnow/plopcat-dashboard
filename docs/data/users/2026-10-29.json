@@ -546,9 +546,9 @@
    "model": "SM-A366E",
    "country": "India",
    "lang": "en-in",
-   "ver": "1.0 (v49)",
-   "days": 2,
-   "last": "20261031",
+   "ver": "1.0 (v51)",
+   "days": 3,
+   "last": "20261113",
    "lv": 5,
    "clears": 5,
    "stuck": 0,
@@ -557,7 +557,7 @@
    "spend": 0.0,
    "pics": 0,
    "removed": false,
-   "reached": 31
+   "reached": 63
   },
   {
    "uid": "a7812882",

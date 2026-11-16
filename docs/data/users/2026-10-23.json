@@ -112,7 +112,7 @@
   {
    "uid": "c25bd503",
    "model": "24117RN76G",
-   "country": "Germany",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v51)",
    "days": 7,
@@ -256,7 +256,7 @@
   {
    "uid": "ac735df4",
    "model": "2404ARN45A",
-   "country": "Germany",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v48)",
    "days": 5,
@@ -886,11 +886,11 @@
   {
    "uid": "38cb6fe3",
    "model": "SM-A256E",
-   "country": "Chile",
+   "country": "United States",
    "lang": "fa-ir",
    "ver": "1.0 (v29)",
-   "days": 1,
-   "last": "20261023",
+   "days": 2,
+   "last": "20261115",
    "lv": 0,
    "clears": 0,
    "stuck": 0,
@@ -898,7 +898,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 0,
-   "removed": false,
+   "removed": true,
    "reached": 0
   },
   {
