@@ -7,8 +7,8 @@
    "country": "India",
    "lang": "en-gb",
    "ver": "1.0 (v50)",
-   "days": 2,
-   "last": "20261110",
+   "days": 3,
+   "last": "20261117",
    "lv": 51,
    "clears": 51,
    "stuck": 0,
@@ -16,7 +16,7 @@
    "buys": 0,
    "spend": 0.0,
    "pics": 2,
-   "removed": false,
+   "removed": true,
    "reached": 1023
   },
   {
