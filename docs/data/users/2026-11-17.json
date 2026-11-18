@@ -1,0 +1,23 @@
+{
+ "date": "2026-11-17",
+ "users": [
+  {
+   "uid": "a43f9633",
+   "model": "25062RN2DA",
+   "country": "Iran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v51)",
+   "days": 1,
+   "last": "20261117",
+   "lv": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 17
+  }
+ ]
+}

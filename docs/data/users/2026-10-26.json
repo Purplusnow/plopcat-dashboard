@@ -4,7 +4,7 @@
   {
    "uid": "2f82bce6",
    "model": "SM-A127F",
-   "country": "Chile",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v49)",
    "days": 11,
@@ -40,7 +40,7 @@
   {
    "uid": "064c1770",
    "model": "SM-A125F",
-   "country": "Iran",
+   "country": "Azerbaijan",
    "lang": "fa-ir",
    "ver": "1.0 (v49)",
    "days": 6,
@@ -184,7 +184,7 @@
   {
    "uid": "c517d6a8",
    "model": "SM-S938B",
-   "country": "Azerbaijan",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v49)",
    "days": 6,
@@ -1966,7 +1966,7 @@
   {
    "uid": "1eed3926",
    "model": "SM-J415F",
-   "country": "Iran",
+   "country": "Taiwan",
    "lang": "fa-ir",
    "ver": "1.0 (v49)",
    "days": 4,
@@ -4613,7 +4613,7 @@
    "uid": "27bcbc01",
    "model": "RMX3933",
    "country": "India",
-   "lang": "en-us",
+   "lang": "en-in",
    "ver": "1.0 (v49)",
    "days": 2,
    "last": "20261027",
