@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18 11:00 KST",
+ "updated": "2026-11-18 19:28 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261118",
@@ -98,6 +98,54 @@
   }
  ],
  "users": [
+  {
+   "uid": "e0e80006",
+   "t0": "19:07",
+   "mins": 0.0,
+   "model": "DNY-NX9",
+   "country": "Hong Kong",
+   "city": "Hong Kong",
+   "lang": "zh-hk",
+   "ver": "1.0 (v51)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "d35bd404",
+   "t0": "17:16",
+   "mins": 0.0,
+   "model": "CPH1729",
+   "country": "India",
+   "city": "Jodhpur",
+   "lang": "en-us",
+   "ver": "1.0 (v49)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
   {
    "uid": "ab6d7bba",
    "t0": "09:00",
@@ -247,22 +295,22 @@
   }
  ],
  "kinds": {
-  "human": 6,
+  "human": 8,
   "bot": 0,
   "me": 0,
   "dbg": 0
  },
  "bots": 0,
- "humans": 6,
+ "humans": 8,
  "versions": [
   {
    "ver": "1.0 (v51)",
-   "users": 5,
+   "users": 6,
    "installs": 0
   },
   {
    "ver": "1.0 (v49)",
-   "users": 1,
+   "users": 2,
    "installs": 0
   }
  ],
@@ -278,7 +326,12 @@
    "vpn": 0
   },
   {
-   "country": "Indonesia",
+   "country": "Italy",
+   "users": 1,
+   "vpn": 0
+  },
+  {
+   "country": "India",
    "users": 1,
    "vpn": 0
   },
@@ -288,7 +341,12 @@
    "vpn": 0
   },
   {
-   "country": "Italy",
+   "country": "Hong Kong",
+   "users": 1,
+   "vpn": 0
+  },
+  {
+   "country": "Indonesia",
    "users": 1,
    "vpn": 0
   }
