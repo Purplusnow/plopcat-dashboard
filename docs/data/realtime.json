@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18 04:36 KST",
+ "updated": "2026-11-18 11:00 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261118",
@@ -99,9 +99,33 @@
  ],
  "users": [
   {
+   "uid": "ab6d7bba",
+   "t0": "09:00",
+   "mins": 0.0,
+   "model": "25040RP0AG",
+   "country": "Indonesia",
+   "city": "Bekasi Regency",
+   "lang": "id-id",
+   "ver": "1.0 (v51)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
    "uid": "b036b9d7",
    "t0": "03:46",
-   "mins": 0.0,
+   "mins": 0.8,
    "model": "SM-A566B",
    "country": "Italy",
    "city": "Terni",
@@ -109,9 +133,9 @@
    "ver": "1.0 (v51)",
    "new": false,
    "vpn": false,
-   "lv": 0,
-   "started": 0,
-   "clears": 0,
+   "lv": 12,
+   "started": 12,
+   "clears": 1,
    "stuck": 0,
    "ads": 0,
    "shops": 0,
@@ -150,12 +174,36 @@
    "kind": "human"
   },
   {
+   "uid": "7a898cdd",
+   "t0": "02:02",
+   "mins": 5.0,
+   "model": "Redmi Note 9 Pro",
+   "country": "Israel",
+   "city": "Tel Aviv-Yafo",
+   "lang": "fa-ir",
+   "ver": "1.0 (v49)",
+   "new": false,
+   "vpn": false,
+   "lv": 614,
+   "started": 615,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 1,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
    "uid": "5a76a1ef",
    "t0": "00:58",
    "mins": 1.6,
    "model": "M2101K7BNY",
    "country": "Iran",
-   "city": "Tehran",
+   "city": "Isfahan",
    "lang": "en-us",
    "ver": "1.0 (v51)",
    "new": false,
@@ -199,17 +247,22 @@
   }
  ],
  "kinds": {
-  "human": 4,
+  "human": 6,
   "bot": 0,
   "me": 0,
   "dbg": 0
  },
  "bots": 0,
- "humans": 4,
+ "humans": 6,
  "versions": [
   {
    "ver": "1.0 (v51)",
-   "users": 4,
+   "users": 5,
+   "installs": 0
+  },
+  {
+   "ver": "1.0 (v49)",
+   "users": 1,
    "installs": 0
   }
  ],
@@ -217,6 +270,16 @@
   {
    "country": "Iran",
    "users": 2,
+   "vpn": 0
+  },
+  {
+   "country": "Israel",
+   "users": 1,
+   "vpn": 0
+  },
+  {
+   "country": "Indonesia",
+   "users": 1,
    "vpn": 0
   },
   {
