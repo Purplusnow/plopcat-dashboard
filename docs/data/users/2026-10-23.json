@@ -94,7 +94,7 @@
   {
    "uid": "7ee03e70",
    "model": "SM-A065F",
-   "country": "Iran",
+   "country": "Azerbaijan",
    "lang": "fa-ir",
    "ver": "1.0 (v49)",
    "days": 5,
@@ -184,7 +184,7 @@
   {
    "uid": "7ae7c912",
    "model": "23021RAAEG",
-   "country": "Japan",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v48)",
    "days": 7,
@@ -346,7 +346,7 @@
   {
    "uid": "36a72cac",
    "model": "2201117TG",
-   "country": "Taiwan",
+   "country": "Iran",
    "lang": "fa-ir",
    "ver": "1.0 (v48)",
    "days": 3,
@@ -416,6 +416,24 @@
    "reached": 511
   },
   {
+   "uid": "f91ed83d",
+   "model": "M2104K10AC",
+   "country": "Iran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v51)",
+   "days": 3,
+   "last": "20261119",
+   "lv": 42,
+   "clears": 42,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 2,
+   "removed": false,
+   "reached": 511
+  },
+  {
    "uid": "50ec17d2",
    "model": "Moto E22",
    "country": "Argentina",
@@ -467,24 +485,6 @@
    "spend": 0.0,
    "pics": 2,
    "removed": true,
-   "reached": 511
-  },
-  {
-   "uid": "f91ed83d",
-   "model": "M2104K10AC",
-   "country": "Iran",
-   "lang": "fa-ir",
-   "ver": "1.0 (v49)",
-   "days": 2,
-   "last": "20261025",
-   "lv": 32,
-   "clears": 32,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 2,
-   "removed": false,
    "reached": 511
   },
   {
