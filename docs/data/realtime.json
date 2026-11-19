@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19 10:00 KST",
+ "updated": "2026-11-19 18:04 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261119",
@@ -98,6 +98,58 @@
   }
  ],
  "users": [
+  {
+   "uid": "a384e30e",
+   "t0": "12:18",
+   "mins": 0.0,
+   "model": "V2315",
+   "country": "India",
+   "city": "Kochi",
+   "lang": "en-us",
+   "ver": "1.0 (v51)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "bdb98935",
+   "t0": "10:11",
+   "mins": 5.2,
+   "model": "moto g(30)",
+   "country": "Brazil",
+   "city": "Cachoeiro de Itapemirim",
+   "lang": "pt-br",
+   "ver": "1.0 (v51)",
+   "new": false,
+   "vpn": false,
+   "lv": 8,
+   "started": 9,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 1,
+   "shops": 2,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [
+    "first_ad",
+    "first_fail",
+    "first_moves"
+   ],
+   "kind": "human"
+  },
   {
    "uid": "1a2b4995",
    "t0": "05:35",
@@ -245,7 +297,7 @@
   {
    "uid": "35a6395a",
    "t0": "02:30",
-   "mins": 0.0,
+   "mins": 930.0,
    "model": "25057RN09I",
    "country": "India",
    "city": "Madurai",
@@ -393,7 +445,7 @@
   {
    "uid": "db5dcd97",
    "t0": "00:23",
-   "mins": 10.0,
+   "mins": 980.7,
    "model": "23117RA68G",
    "country": "Iran",
    "city": "Zanjan",
@@ -440,17 +492,17 @@
   }
  ],
  "kinds": {
-  "human": 14,
+  "human": 16,
   "bot": 0,
   "me": 0,
   "dbg": 0
  },
  "bots": 0,
- "humans": 14,
+ "humans": 16,
  "versions": [
   {
    "ver": "1.0 (v51)",
-   "users": 12,
+   "users": 14,
    "installs": 0
   },
   {
@@ -467,7 +519,7 @@
   },
   {
    "country": "India",
-   "users": 2,
+   "users": 3,
    "vpn": 0
   },
   {
@@ -479,11 +531,21 @@
    "country": "Spain",
    "users": 2,
    "vpn": 0
+  },
+  {
+   "country": "Brazil",
+   "users": 1,
+   "vpn": 0
   }
  ],
  "purchase_fail": [
   {
    "reason": "no_details:vip_pack",
+   "n": 1,
+   "users": 1
+  },
+  {
+   "reason": "canceled",
    "n": 1,
    "users": 1
   }
