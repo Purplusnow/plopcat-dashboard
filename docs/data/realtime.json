@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19 03:58 KST",
+ "updated": "2026-11-19 10:00 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261119",
@@ -99,6 +99,78 @@
  ],
  "users": [
   {
+   "uid": "1a2b4995",
+   "t0": "05:35",
+   "mins": 0.0,
+   "model": "2409BRN2CL",
+   "country": "Peru",
+   "city": "Lambayeque",
+   "lang": "es-us",
+   "ver": "1.0 (v51)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "612bf3e6",
+   "t0": "05:21",
+   "mins": 1.9,
+   "model": "SM-A528B",
+   "country": "Iran",
+   "city": "Kermanshah",
+   "lang": "fa-ir",
+   "ver": "1.0 (v51)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "fed0863e",
+   "t0": "04:49",
+   "mins": 0.0,
+   "model": "23129RAA4G",
+   "country": "Iran",
+   "city": "Tehran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v51)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
    "uid": "6635d8c7",
    "t0": "03:54",
    "mins": 1.1,
@@ -123,9 +195,33 @@
    "kind": "human"
   },
   {
+   "uid": "f50e7ccb",
+   "t0": "03:06",
+   "mins": 0.1,
+   "model": "SM-A326B",
+   "country": "Iran",
+   "city": "Isfahan",
+   "lang": "fa-ir",
+   "ver": "1.0 (v51)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
    "uid": "e5e791c9",
    "t0": "03:03",
-   "mins": 0.6,
+   "mins": 7.3,
    "model": "V2352",
    "country": "Spain",
    "city": "Madrid",
@@ -216,6 +312,32 @@
    "abuse": 0,
    "reached": 0,
    "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "844c52ef",
+   "t0": "01:36",
+   "mins": 0.4,
+   "model": "SM-A137F",
+   "country": "Iran",
+   "city": "Ahvaz",
+   "lang": "fa-ir",
+   "ver": "1.0 (v51)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 1,
+   "shops": 1,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [
+    "first_ad"
+   ],
    "kind": "human"
   },
   {
@@ -318,17 +440,17 @@
   }
  ],
  "kinds": {
-  "human": 9,
+  "human": 14,
   "bot": 0,
   "me": 0,
   "dbg": 0
  },
  "bots": 0,
- "humans": 9,
+ "humans": 14,
  "versions": [
   {
    "ver": "1.0 (v51)",
-   "users": 7,
+   "users": 12,
    "installs": 0
   },
   {
@@ -340,7 +462,7 @@
  "countries": [
   {
    "country": "Iran",
-   "users": 4,
+   "users": 8,
    "vpn": 0
   },
   {
@@ -349,16 +471,22 @@
    "vpn": 0
   },
   {
-   "country": "Spain",
+   "country": "Peru",
    "users": 2,
    "vpn": 0
   },
   {
-   "country": "Peru",
-   "users": 1,
+   "country": "Spain",
+   "users": 2,
    "vpn": 0
   }
  ],
- "purchase_fail": [],
+ "purchase_fail": [
+  {
+   "reason": "no_details:vip_pack",
+   "n": 1,
+   "users": 1
+  }
+ ],
  "abuse": []
 }
