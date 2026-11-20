@@ -2,6 +2,24 @@
  "date": "2026-11-13",
  "users": [
   {
+   "uid": "7a4d2234",
+   "model": "V2541",
+   "country": "India",
+   "lang": "en-us",
+   "ver": "1.0 (v51)",
+   "days": 2,
+   "last": "20261120",
+   "lv": 16,
+   "clears": 16,
+   "stuck": 0,
+   "ads": 2,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 1,
+   "removed": false,
+   "reached": 255
+  },
+  {
    "uid": "a236c603",
    "model": "23028RN4DH",
    "country": "India",
@@ -36,24 +54,6 @@
    "pics": 0,
    "removed": false,
    "reached": 7
-  },
-  {
-   "uid": "7a4d2234",
-   "model": "V2541",
-   "country": "India",
-   "lang": "en-us",
-   "ver": "1.0 (v51)",
-   "days": 1,
-   "last": "20261113",
-   "lv": 0,
-   "clears": 0,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 0,
-   "removed": false,
-   "reached": 0
   }
  ]
 }

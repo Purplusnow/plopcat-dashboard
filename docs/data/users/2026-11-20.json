@@ -1,0 +1,23 @@
+{
+ "date": "2026-11-20",
+ "users": [
+  {
+   "uid": "f852ef38",
+   "model": "SM-A165F",
+   "country": "Iran",
+   "lang": "fa-ir",
+   "ver": "1.0 (v49)",
+   "days": 1,
+   "last": "20261120",
+   "lv": 1,
+   "clears": 1,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": false,
+   "reached": 55
+  }
+ ]
+}
