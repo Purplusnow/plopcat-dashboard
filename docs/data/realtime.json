@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20 09:47 KST",
+ "updated": "2026-11-20 16:59 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261120",
@@ -64,7 +64,7 @@
   {
    "key": "lv3_clear",
    "label": "3판",
-   "users": 0
+   "users": 2
   },
   {
    "key": "album_first",
@@ -74,22 +74,22 @@
   {
    "key": "first_piece",
    "label": "첫 조각",
-   "users": 2
+   "users": 3
   },
   {
    "key": "lv10_clear",
    "label": "10판",
-   "users": 0
+   "users": 2
   },
   {
    "key": "first_picture",
    "label": "첫 그림 완성",
-   "users": 0
+   "users": 2
   },
   {
    "key": "lv20_clear",
    "label": "20판",
-   "users": 0
+   "users": 1
   },
   {
    "key": "lv50_clear",
@@ -98,6 +98,108 @@
   }
  ],
  "users": [
+  {
+   "uid": "16b758af",
+   "t0": "14:17",
+   "mins": 11.6,
+   "model": "SM-A075M",
+   "country": "Brazil",
+   "city": "Guanambi",
+   "lang": "pt-br",
+   "ver": "1.0 (v51)",
+   "new": false,
+   "vpn": false,
+   "lv": 22,
+   "started": 22,
+   "clears": 21,
+   "stuck": 0,
+   "ads": 4,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 488,
+   "side": [
+    "first_ad",
+    "first_fail",
+    "first_moves",
+    "gate_final",
+    "gate_pieces"
+   ],
+   "kind": "human"
+  },
+  {
+   "uid": "af1f889f",
+   "t0": "12:05",
+   "mins": 0.0,
+   "model": "25078RA3EL",
+   "country": "Colombia",
+   "city": "Cucuta",
+   "lang": "es-us",
+   "ver": "1.0 (v49)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "233dc9a1",
+   "t0": "10:49",
+   "mins": 0.0,
+   "model": "V2520",
+   "country": "Indonesia",
+   "city": "Bandar Lampung",
+   "lang": "id-id",
+   "ver": "1.0 (v51)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "ec160864",
+   "t0": "06:54",
+   "mins": 0.9,
+   "model": "SM-A556E",
+   "country": "Iran",
+   "city": "Tehran",
+   "lang": "en-us",
+   "ver": "1.0 (v49)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
   {
    "uid": "8eb0d56f",
    "t0": "06:38",
@@ -245,7 +347,7 @@
   {
    "uid": "7a4d2234",
    "t0": "01:19",
-   "mins": 1.8,
+   "mins": 907.5,
    "model": "V2541",
    "country": "India",
    "city": "Pune",
@@ -253,17 +355,18 @@
    "ver": "1.0 (v51)",
    "new": false,
    "vpn": false,
-   "lv": 2,
-   "started": 3,
-   "clears": 2,
+   "lv": 16,
+   "started": 16,
+   "clears": 16,
    "stuck": 0,
-   "ads": 0,
-   "shops": 0,
+   "ads": 2,
+   "shops": 4,
    "buys": 0,
    "removed": false,
    "abuse": 0,
-   "reached": 55,
+   "reached": 255,
    "side": [
+    "first_ad",
     "gate_tut",
     "tut_hand"
    ],
@@ -346,22 +449,22 @@
   }
  ],
  "kinds": {
-  "human": 10,
-  "bot": 0,
+  "human": 14,
+  "bot": 1,
   "me": 0,
   "dbg": 0
  },
- "bots": 0,
- "humans": 10,
+ "bots": 1,
+ "humans": 14,
  "versions": [
   {
    "ver": "1.0 (v49)",
-   "users": 5,
+   "users": 7,
    "installs": 1
   },
   {
    "ver": "1.0 (v51)",
-   "users": 4,
+   "users": 6,
    "installs": 0
   },
   {
@@ -373,7 +476,7 @@
  "countries": [
   {
    "country": "Iran",
-   "users": 6,
+   "users": 7,
    "vpn": 0
   },
   {
@@ -382,12 +485,27 @@
    "vpn": 0
   },
   {
-   "country": "Italy",
+   "country": "Colombia",
    "users": 1,
    "vpn": 0
   },
   {
    "country": "Mexico",
+   "users": 1,
+   "vpn": 0
+  },
+  {
+   "country": "Brazil",
+   "users": 1,
+   "vpn": 0
+  },
+  {
+   "country": "Italy",
+   "users": 1,
+   "vpn": 0
+  },
+  {
+   "country": "Indonesia",
    "users": 1,
    "vpn": 0
   }
