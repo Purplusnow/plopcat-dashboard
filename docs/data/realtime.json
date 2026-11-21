@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21 07:56 KST",
+ "updated": "2026-11-21 12:45 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261121",
@@ -99,6 +99,54 @@
  ],
  "users": [
   {
+   "uid": "27c5d739",
+   "t0": "12:08",
+   "mins": 1.1,
+   "model": "CPH2625",
+   "country": "India",
+   "city": "Jammu",
+   "lang": "en-gb",
+   "ver": "1.0 (v51)",
+   "new": false,
+   "vpn": false,
+   "lv": 14,
+   "started": 15,
+   "clears": 3,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "31de4c2a",
+   "t0": "11:39",
+   "mins": 0.0,
+   "model": "2312DRA50G",
+   "country": "Türkiye",
+   "city": "Cizre",
+   "lang": "tr-tr",
+   "ver": "1.0 (v49)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
    "uid": "7faade90",
    "t0": "04:39",
    "mins": 0.0,
@@ -125,7 +173,7 @@
   {
    "uid": "74faf841",
    "t0": "04:23",
-   "mins": 0.0,
+   "mins": 226.8,
    "model": "Moto E22i",
    "country": "Colombia",
    "city": "Piendamo",
@@ -316,22 +364,22 @@
   }
  ],
  "kinds": {
-  "human": 9,
+  "human": 11,
   "bot": 0,
   "me": 0,
   "dbg": 0
  },
  "bots": 0,
- "humans": 9,
+ "humans": 11,
  "versions": [
   {
    "ver": "1.0 (v51)",
-   "users": 5,
+   "users": 6,
    "installs": 0
   },
   {
    "ver": "1.0 (v49)",
-   "users": 3,
+   "users": 4,
    "installs": 1
   },
   {
@@ -347,12 +395,12 @@
    "vpn": 0
   },
   {
-   "country": "Spain",
-   "users": 1,
+   "country": "Türkiye",
+   "users": 2,
    "vpn": 0
   },
   {
-   "country": "Türkiye",
+   "country": "Colombia",
    "users": 1,
    "vpn": 0
   },
@@ -362,7 +410,12 @@
    "vpn": 0
   },
   {
-   "country": "Colombia",
+   "country": "Spain",
+   "users": 1,
+   "vpn": 0
+  },
+  {
+   "country": "India",
    "users": 1,
    "vpn": 0
   }
