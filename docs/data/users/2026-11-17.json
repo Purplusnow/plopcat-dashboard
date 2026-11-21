@@ -2,6 +2,24 @@
  "date": "2026-11-17",
  "users": [
   {
+   "uid": "3a67cdee",
+   "model": "CPH1969",
+   "country": "India",
+   "lang": "hi-in",
+   "ver": "1.0 (v50)",
+   "days": 2,
+   "last": "20261118",
+   "lv": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 0,
+   "removed": true,
+   "reached": 0
+  },
+  {
    "uid": "a43f9633",
    "model": "25062RN2DA",
    "country": "Iran",

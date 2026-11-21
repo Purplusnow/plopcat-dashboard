@@ -2,6 +2,24 @@
  "date": "2026-11-03",
  "users": [
   {
+   "uid": "69e76685",
+   "model": "F-52E",
+   "country": "Japan",
+   "lang": "ja-jp",
+   "ver": "1.0 (v51)",
+   "days": 3,
+   "last": "20261120",
+   "lv": 33,
+   "clears": 33,
+   "stuck": 0,
+   "ads": 3,
+   "buys": 0,
+   "spend": 0.0,
+   "pics": 2,
+   "removed": false,
+   "reached": 511
+  },
+  {
    "uid": "16b758af",
    "model": "SM-A075M",
    "country": "Brazil",
@@ -18,24 +36,6 @@
    "pics": 1,
    "removed": false,
    "reached": 511
-  },
-  {
-   "uid": "69e76685",
-   "model": "F-52E",
-   "country": "Japan",
-   "lang": "ja-jp",
-   "ver": "1.0 (v49)",
-   "days": 2,
-   "last": "20261104",
-   "lv": 12,
-   "clears": 12,
-   "stuck": 0,
-   "ads": 0,
-   "buys": 0,
-   "spend": 0.0,
-   "pics": 0,
-   "removed": false,
-   "reached": 127
   },
   {
    "uid": "9f096be0",
