@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21 12:45 KST",
+ "updated": "2026-11-21 21:00 KST",
  "project": "plopcat-6d336",
  "dataset": "analytics_549220184",
  "day": "20261121",
@@ -98,6 +98,54 @@
   }
  ],
  "users": [
+  {
+   "uid": "1d8c3135",
+   "t0": "19:50",
+   "mins": 0.0,
+   "model": "moto g15",
+   "country": "Peru",
+   "city": "",
+   "lang": "es-us",
+   "ver": "1.0 (v49)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": true,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
+   "uid": "a3f01347",
+   "t0": "19:24",
+   "mins": 0.0,
+   "model": "SM-A165F",
+   "country": "Iran",
+   "city": "Shiraz",
+   "lang": "fa-ir",
+   "ver": "1.0 (v49)",
+   "new": false,
+   "vpn": false,
+   "lv": 0,
+   "started": 0,
+   "clears": 0,
+   "stuck": 0,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
   {
    "uid": "27c5d739",
    "t0": "12:08",
@@ -339,6 +387,30 @@
    "kind": "human"
   },
   {
+   "uid": "7a898cdd",
+   "t0": "00:38",
+   "mins": 1210.5,
+   "model": "Redmi Note 9 Pro",
+   "country": "Iran",
+   "city": "",
+   "lang": "fa-ir",
+   "ver": "1.0 (v49)",
+   "new": false,
+   "vpn": false,
+   "lv": 688,
+   "started": 689,
+   "clears": 14,
+   "stuck": 1,
+   "ads": 0,
+   "shops": 0,
+   "buys": 0,
+   "removed": false,
+   "abuse": 0,
+   "reached": 0,
+   "side": [],
+   "kind": "human"
+  },
+  {
    "uid": "e5e791c9",
    "t0": "00:11",
    "mins": 1.1,
@@ -364,23 +436,23 @@
   }
  ],
  "kinds": {
-  "human": 11,
+  "human": 14,
   "bot": 0,
   "me": 0,
   "dbg": 0
  },
  "bots": 0,
- "humans": 11,
+ "humans": 14,
  "versions": [
+  {
+   "ver": "1.0 (v49)",
+   "users": 7,
+   "installs": 1
+  },
   {
    "ver": "1.0 (v51)",
    "users": 6,
    "installs": 0
-  },
-  {
-   "ver": "1.0 (v49)",
-   "users": 4,
-   "installs": 1
   },
   {
    "ver": "1.0 (v48)",
@@ -391,7 +463,7 @@
  "countries": [
   {
    "country": "Iran",
-   "users": 5,
+   "users": 7,
    "vpn": 0
   },
   {
@@ -405,17 +477,22 @@
    "vpn": 0
   },
   {
+   "country": "India",
+   "users": 1,
+   "vpn": 0
+  },
+  {
    "country": "Germany",
    "users": 1,
    "vpn": 0
   },
   {
-   "country": "Spain",
+   "country": "Peru",
    "users": 1,
    "vpn": 0
   },
   {
-   "country": "India",
+   "country": "Spain",
    "users": 1,
    "vpn": 0
   }
